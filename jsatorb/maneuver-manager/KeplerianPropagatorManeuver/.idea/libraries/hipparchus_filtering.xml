@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="hipparchus.filtering" type="repository">
+    <properties maven-id="org.hipparchus:hipparchus-filtering:3.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-filtering-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-core-3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

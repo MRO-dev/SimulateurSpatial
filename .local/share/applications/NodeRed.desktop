@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=NodeRed
+Type=Application
+Terminal=false
+Exec=bash -c "$HOME/.local/share/applications/open_links.sh"
+Icon=node-red-hexagon.png

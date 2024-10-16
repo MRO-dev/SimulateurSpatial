@@ -1,0 +1,95 @@
+//IMPULSE
+ /* Tests masses
+                       System.out.println("Initial mass: " + initialState.getMass());
+                        System.out.println("DV: " + DV);
+                        System.out.println("ISP: " + ISP);
+                        System.out.println("Calculated final mass: " + finalMass);*/
+
+                        // Orbite finale
+                        //Orbit finalOrbit = new KeplerianOrbit(newPV, initialState.getFrame(), manoeuverStartDate, Constants.EGM96_EARTH_MU);
+                        //KeplerianPropagator finalPropagator = new KeplerianPropagator(finalOrbit);
+                        //System.out.println("Before the maneuver:");
+                        //SpacecraftState stateBeforeManeuver = propagator.propagate(manoeuverStartDate.shiftedBy(-10));
+                        
+                        
+
+                        //printStateInfo(stateAfterManeuver);
+
+                        //finalState = new SpacecraftState(finalOrbit, finalMass);
+
+                        //SpacecraftState propagatedState = finalPropagator.propagate(manoeuverStartDate.shiftedBy(durationOfManoeuver));
+
+                        // orbite propagée avec nouvel etat
+                        //finalState = new SpacecraftState(propagatedState.getOrbit(), finalMass);
+
+
+//CONTINU
+// Date finale pour la propagation
+                       /* AbsoluteDate finalDate = new AbsoluteDate("2024-09-13T21:45:32.999Z", TimeScalesFactory.getUTC());
+
+                        double thrustStep = 1.0;  // Pas de temps en secondes
+                        double DVxPerStep = (DVx * DV) / durationOfManoeuver;  // Petit Delta-V en X
+                        double DVyPerStep = (DVy * DV) / durationOfManoeuver;  // Petit Delta-V en Y
+                        double DVzPerStep = (DVz * DV) / durationOfManoeuver;  // Petit Delta-V en Z
+
+                        double thrust = THRUST;  // Poussée en Newtons
+                        double isp = ISP;  // Impulsion spécifique en secondes
+                        double g0 = 9.80665;  // Accélération gravitationnelle
+
+                        SpacecraftState currentState = initialState;  // État initial
+                        double currentMass = initialState.getMass();  // Masse initiale
+
+                        // Boucle sur chaque petit pas de la manœuvre
+                        while (currentState.getDate().compareTo(finalDate) < 0) {
+                            // Mise à jour du petit Delta-V
+                            Vector3D thrustPerStep = new Vector3D(DVxPerStep, DVyPerStep, DVzPerStep);
+
+                            // Mise à jour de la vitesse avec le petit Delta-V
+                            Vector3D updatedVelocity = currentState.getPVCoordinates().getVelocity().add(thrustPerStep);
+
+                            // Mise à jour de la masse (carburant consommé)
+                            double fuelConsumedPerStep = (thrust * thrustStep) / (isp * g0);
+                            currentMass -= fuelConsumedPerStep;
+
+                            // Assurer que la masse ne descend pas sous la masse à vide
+                            if (currentMass < dryMass) {
+                                currentMass = dryMass;
+                            }
+
+                            // Créer un nouvel état avec la masse mise à jour
+                            PVCoordinates updatedPV = new PVCoordinates(currentState.getPVCoordinates().getPosition(), updatedVelocity);
+                            Orbit updatedOrbit = new KeplerianOrbit(updatedPV, currentState.getFrame(), currentState.getDate(), Constants.EGM96_EARTH_MU);
+
+                            // Propager l'état avec la nouvelle masse
+                            currentState = new SpacecraftState(updatedOrbit, currentMass);  // Mass is explicitly updated here
+
+                            // Créer un propagateur pour continuer la propagation avec l'état mis à jour
+                            KeplerianPropagator stepPropagator = new KeplerianPropagator(updatedOrbit);
+
+                            // Propager l'état jusqu'au prochain pas
+                            currentState = stepPropagator.propagate(currentState.getDate().shiftedBy(thrustStep));
+
+                            // Mise à jour du SpacecraftState avec la nouvelle masse après chaque itération
+                            currentState = new SpacecraftState(currentState.getOrbit(), currentMass);
+                        }
+
+                        // État final après toute la manœuvre continue
+                        finalState = currentState;*/
+                        /*double thrustStep = 1.0;
+                        double DVxPerStep = (DVx * DV) / durationOfManoeuver;
+                        double DVyPerStep = (DVy * DV) / durationOfManoeuver;
+                        double DVzPerStep = (DVz * DV) / durationOfManoeuver;
+                        SpacecraftState currentState = initialState;
+                        for (double t = 0; t < durationOfManoeuver; t += thrustStep) {
+                            // Petite impulsion
+                            Vector3D thrustPerStep = new Vector3D(DVxPerStep, DVyPerStep, DVzPerStep);
+                            Vector3D newVelocity = initialState.getPVCoordinates().getVelocity().add(thrustPerStep);
+                            PVCoordinates newPV = new PVCoordinates(initialState.getPVCoordinates().getPosition(), newVelocity);
+
+                            Orbit newOrbit = new KeplerianOrbit(newPV, initialState.getFrame(), initialState.getDate(), Constants.EGM96_EARTH_MU);
+
+                            // Nouvelle orbite
+                            KeplerianPropagator stepPropagator = new KeplerianPropagator(newOrbit);
+                            currentState = stepPropagator.propagate(currentState.getDate().shiftedBy(thrustStep));
+                        }
+                        finalState = currentState;*/

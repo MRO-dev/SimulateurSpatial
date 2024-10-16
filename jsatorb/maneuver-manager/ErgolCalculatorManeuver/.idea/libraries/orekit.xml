@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="orekit" type="repository">
+    <properties maven-id="org.orekit:orekit:11.3.3" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/orekit-11.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-core-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-geometry-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-ode-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-fitting-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-optim-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-filtering-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-stat-2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

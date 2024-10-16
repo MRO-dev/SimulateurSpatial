@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Space Desktop 2023.1.7
+Exec="/home/simulateurspatial/.local/share/JetBrains/Toolbox/apps/space-desktop/space" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/simulateurspatial/.local/share/JetBrains/Toolbox/dotDesktopIcons/Space Desktop-127030ce-a789-4cf9-a69d-da2de9bf2237.desktop.icon.svg
+Comment=A complete software development platform

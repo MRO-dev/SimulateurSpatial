@@ -1,0 +1,8 @@
+DryMass, ErgolMass, ISP, ManeuverType, SMA_1, SMA_2
+500
+359.332445
+300
+Hohmann
+7271.932140685531
+6500
+

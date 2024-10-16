@@ -1,0 +1,81 @@
+services:
+
+  # Mongo container
+  mongo:
+    container_name: ccc_mongo
+    image: anthonyeae/reposetoibien:monmongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=csug
+    volumes:
+      - dbvolume:/data/db:delegated
+    network_mode: bridge
+
+  # JSatOrb's backend container
+  backend:
+    container_name: jsatorb-backend-container
+    image: anthonyeae/reposetoibien:monjsat
+    ports:
+      - "8000:8000"
+    environment:
+     - PUID=1000
+     - PGID=1000
+    user: "1000:1000"
+    volumes:
+      - ./share/:/share:rw
+      - ".:/app:rw"
+      - "./data:/data:rw"
+    restart: always
+    network_mode: bridge
+
+  # JSatOrb's Celestrak container
+  celestrak:
+    container_name: celestrak-json-proxy-container
+    image: anthonyeae/reposetoibien:moncelestrak
+    ports:
+      - "7777:7777"
+    restart: always
+
+  # Node-Red container
+  nodered:
+    container_name: ccc_nodered
+    build:
+      context: /home/simulateurspatial/.node-red
+    image: anthonyeae/reposetoibien:monnode
+    user: "1000:1000"
+    environment:
+      - NODE_OPTIONS=--max_old_space_size=512
+      - VIRTUAL_HOST=127.0.0.1
+      - VIRTUAL_PORT=1880
+      - VIRTUAL_NETWORK=nginx-proxy
+      - TZ=Europe/Amsterdam
+      - WAIT_HOSTS=mongo:27017
+      # Adding Java 21 environment configuration
+      - JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+      - PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH
+    ports:
+      - "1880:1880"
+    volumes:
+      - /home/simulateurspatial/.node-red:/data:rw
+      - ".:/app:rw"
+      - ./log/nodered/:/log:rw
+    links:
+      - mongo:mongo
+      - backend:backend
+      - mosquitto:mosquitto
+    network_mode: bridge
+
+  mosquitto:
+    container_name: ccc_mosquitto
+    image: eclipse-mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - /home/simulateurspatial/mosquitto:/mosquitto/config:rw
+    network_mode: bridge
+
+volumes:
+  dbvolume:
+

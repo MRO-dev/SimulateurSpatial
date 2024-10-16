@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="hipparchus.core" level="application" />
+    <orderEntry type="library" name="hipparchus.geometry" level="application" />
+    <orderEntry type="library" name="hipparchus.fft" level="application" />
+    <orderEntry type="library" name="hipparchus.filtering" level="application" />
+    <orderEntry type="library" name="hipparchus.ode" level="application" />
+    <orderEntry type="library" name="hipparchus.stat" level="application" />
+    <orderEntry type="library" name="orekit" level="project" />
+    <orderEntry type="library" name="org.eclipse.paho.client.mqttv3-1.2.5" level="application" />
+  </component>
+</module>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate 2024.2.3
+Exec="/home/simulateurspatial/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/simulateurspatial/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea.svg
+Comment=The Leading Java and Kotlin IDE
+StartupWMClass=jetbrains-idea
+StartupNotify=true

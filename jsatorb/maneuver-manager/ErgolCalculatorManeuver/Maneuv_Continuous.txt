@@ -1,0 +1,6 @@
+Relative DATE, Dx, Dy, Dz, contdura
+97370.00022411346
+5
+0
+0
+600

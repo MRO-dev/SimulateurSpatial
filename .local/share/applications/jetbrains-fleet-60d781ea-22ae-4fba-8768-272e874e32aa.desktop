@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Fleet 1.41.101 Public Preview
+Exec="/home/simulateurspatial/.local/share/JetBrains/Toolbox/apps/fleet/bin/Fleet" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/simulateurspatial/.local/share/JetBrains/Toolbox/dotDesktopIcons/jetbrains-fleet-60d781ea-22ae-4fba-8768-272e874e32aa.desktop.icon.png
+Comment=More Than a Code Editor
+StartupWMClass=jetbrains-fleet
+MimeType=text/plain;inode/directory;x-scheme-handler/fleet;
