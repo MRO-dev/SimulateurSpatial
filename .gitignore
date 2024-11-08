@@ -40,3 +40,24 @@ package.json
 simulateur-spatial-token
 snap/
 .PrestoPlot/
+.face
+.face.icon
+.gnupg/
+.local/share/applications/Space Desktop-f9870197-25bb-43df-98f3-5763cea66a92.desktop
+.local/share/applications/jetbrains-aqua-ec7626f3-8368-4baa-9e05-ef9ea17aeb58.desktop
+.local/share/applications/jetbrains-fleet-46c050fa-8a7b-4cf8-87a2-c0295f7bafcc.desktop
+.local/share/applications/jetbrains-fleet.desktop
+.local/share/applications/jetbrains-gateway-45665c1a-abcc-4f14-93da-fa5906a61b84.desktop
+.local/share/applications/jetbrains-gateway.desktop
+.local/share/applications/jetbrains-idea-899e1372-c120-467e-8acc-2f153ff92aa1.desktop
+.local/share/applications/jetbrains-pycharm-309d1737-604e-4391-b931-d90c5d6eeb26.desktop
+.local/share/applications/jetbrains-webstorm-95727f7a-a448-442a-9e49-145dee079f32.desktop
+.local/share/applications/jetbrains-writerside-59f0cbf5-9f4a-4102-bcbe-b7bd61173b22.desktop
+.local/share/folks/
+.local/share/org.gnome.TextEditor/
+.local/share/sounds/
+.local/share/xorg/
+.local/share/yelp/
+.mozilla/
+.wget-hsts
+token

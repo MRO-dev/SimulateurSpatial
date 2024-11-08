@@ -157,9 +157,7 @@
             "4a4284af.a91d7c"
         ],
         "x": 94,
-        "y": 199,
-        "w": 912,
-        "h": 182
+        "y": 199
     },
     {
         "id": "312c8fe7.75cef",
@@ -195,9 +193,7 @@
             "11567371c0f67cc9"
         ],
         "x": 74,
-        "y": 439,
-        "w": 3202,
-        "h": 222
+        "y": 439
     },
     {
         "id": "b6d29b3c.89b878",
@@ -216,9 +212,7 @@
             "90bc963d.ab5238"
         ],
         "x": 94,
-        "y": 39,
-        "w": 912,
-        "h": 122
+        "y": 39
     },
     {
         "id": "d02d39d9.704b38",
@@ -337,7 +331,9 @@
             "8cb6f04c9bcdf194",
             "b2241bb2a12a8f16",
             "ffb4c4b51344ccf8",
-            "d0e791394ec64d0c"
+            "d0e791394ec64d0c",
+            "cee4def5e77bb830",
+            "2147ad17b59aa35b"
         ],
         "x": 3544,
         "y": 39,
@@ -457,9 +453,7 @@
             "ddff7293e03f0b82"
         ],
         "x": 154,
-        "y": 839,
-        "w": 3332,
-        "h": 242
+        "y": 839
     },
     {
         "id": "68821a62.dd81d4",
@@ -515,9 +509,7 @@
             "dc4fd25033b5651f"
         ],
         "x": 154,
-        "y": 1299,
-        "w": 2192,
-        "h": 422
+        "y": 1299
     },
     {
         "id": "ca417f4.d57648",
@@ -539,9 +531,7 @@
             "9d1f06ad.04cba8"
         ],
         "x": 154,
-        "y": 1119,
-        "w": 1222,
-        "h": 162
+        "y": 1119
     },
     {
         "id": "f9ac2a4f.ec0f18",
@@ -560,9 +550,7 @@
             "12859d93.ff2bb2"
         ],
         "x": 154,
-        "y": 419,
-        "w": 752,
-        "h": 142
+        "y": 419
     },
     {
         "id": "2b159612.3e728a",
@@ -600,9 +588,7 @@
             "5598c3c58ce87176"
         ],
         "x": 154,
-        "y": 119,
-        "w": 2972,
-        "h": 282
+        "y": 119
     },
     {
         "id": "4a641fde.c960f",
@@ -644,9 +630,7 @@
             "56d08e9d1e1b8ab3"
         ],
         "x": 154,
-        "y": 599,
-        "w": 3752,
-        "h": 202
+        "y": 599
     },
     {
         "id": "2345ff89d3122291",
@@ -1077,7 +1061,8 @@
             "844dc894dbd219b5",
             "94bc3f6dbc8d780f",
             "2b3c4d5e6f7g8h9i",
-            "1a2b3c4d5e6f7g8h"
+            "1a2b3c4d5e6f7g8h",
+            "eae52224ec3faa16"
         ],
         "x": 114,
         "y": 19,
@@ -1638,9 +1623,7 @@
             "758e3d3b8fb58f33"
         ],
         "x": 174,
-        "y": 279,
-        "w": 852,
-        "h": 282
+        "y": 279
     },
     {
         "id": "e570253ed9784b6a",
@@ -1666,9 +1649,7 @@
             "1c5f8b40f6f0c84d"
         ],
         "x": 174,
-        "y": 39,
-        "w": 472,
-        "h": 202
+        "y": 39
     },
     {
         "id": "1d9db200c8c462a8",
@@ -1742,9 +1723,7 @@
             "0d97d48b885c1636"
         ],
         "x": 3434,
-        "y": 4479,
-        "w": 712,
-        "h": 262
+        "y": 4479
     },
     {
         "id": "a61b6b0beb4dae17",
@@ -1770,9 +1749,7 @@
             "8d2ed2bbdcaf4084"
         ],
         "x": 54,
-        "y": 679,
-        "w": 692,
-        "h": 202
+        "y": 679
     },
     {
         "id": "1475cac370a7ea02",
@@ -1798,9 +1775,7 @@
             "868d8d56042016ef"
         ],
         "x": 54,
-        "y": 279,
-        "w": 692,
-        "h": 202
+        "y": 279
     },
     {
         "id": "12b73901907ee423",
@@ -1826,9 +1801,7 @@
             "6bdf2e2484a0da64"
         ],
         "x": 54,
-        "y": 79,
-        "w": 692,
-        "h": 202
+        "y": 79
     },
     {
         "id": "5335f31d2952084e",
@@ -1854,9 +1827,7 @@
             "e1aef5bdca676aae"
         ],
         "x": 54,
-        "y": 479,
-        "w": 692,
-        "h": 202
+        "y": 479
     },
     {
         "id": "741fd77f6d9b3131",
@@ -2073,9 +2044,7 @@
             "960f9003e5d3c003"
         ],
         "x": 54,
-        "y": 39,
-        "w": 712,
-        "h": 182
+        "y": 39
     },
     {
         "id": "723de58ee792edf6",
@@ -2092,9 +2061,7 @@
             "71d8882a7823592a"
         ],
         "x": 34,
-        "y": 71.5,
-        "w": 532,
-        "h": 189.5
+        "y": 71.5
     },
     {
         "id": "434126eb1a383e14",
@@ -2384,6 +2351,32 @@
         "h": 382
     },
     {
+        "id": "7f8477734cd0fd39",
+        "type": "group",
+        "z": "62c122b2f65be8e8",
+        "name": "AffichageErgols",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "177f98f1bfe9845d",
+            "7ae1bbb942260344",
+            "d16ced1d634dfe0d",
+            "62f1c54ca072b46e",
+            "template_node",
+            "658e46ea1a6cf5ce",
+            "3f7b49b3449bb776",
+            "b08943fa3e1348b6",
+            "79375e4e6264f9d4",
+            "362d0aae8e57995b",
+            "bed27095e2a1a071",
+            "ce61d97b9c64c9b7"
+        ],
+        "x": 4,
+        "y": 1059
+    },
+    {
         "id": "cb0fed7.3a64e1",
         "type": "group",
         "z": "107c9bc.328b364",
@@ -2417,34 +2410,6 @@
         "y": 39,
         "w": 1232,
         "h": 522
-    },
-    {
-        "id": "7f8477734cd0fd39",
-        "type": "group",
-        "z": "62c122b2f65be8e8",
-        "name": "AffichageErgols",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "177f98f1bfe9845d",
-            "7ae1bbb942260344",
-            "d16ced1d634dfe0d",
-            "62f1c54ca072b46e",
-            "template_node",
-            "658e46ea1a6cf5ce",
-            "3f7b49b3449bb776",
-            "b08943fa3e1348b6",
-            "79375e4e6264f9d4",
-            "362d0aae8e57995b",
-            "bed27095e2a1a071",
-            "ce61d97b9c64c9b7"
-        ],
-        "x": 4,
-        "y": 1059,
-        "w": 862,
-        "h": 469.5
     },
     {
         "id": "d9532912.7a0608",
@@ -6600,7 +6565,7 @@
         "group": "3dabe8df.a10df8",
         "order": 8,
         "width": 6,
-        "height": 1,
+        "height": "1",
         "options": [
             {
                 "label": "Start Date",
@@ -6634,7 +6599,8 @@
             [
                 "8d74ca2b.7c5e38",
                 "8755a720eb60c55f",
-                "94bc3f6dbc8d780f"
+                "94bc3f6dbc8d780f",
+                "eae52224ec3faa16"
             ]
         ]
     },
@@ -7043,10 +7009,6 @@
         "format": "{{msg.errorMessage}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1350,
         "y": 460,
         "wires": []
@@ -7579,10 +7541,6 @@
         "format": "{{msg.errorMessage}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1550,
         "y": 1480,
         "wires": []
@@ -7992,10 +7950,6 @@
         "format": "{{msg.dateString}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1320,
         "y": 1460,
         "wires": []
@@ -10725,10 +10679,6 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 2880,
         "y": 1060,
         "wires": []
@@ -10959,10 +10909,6 @@
         "format": "{{msg.dateString}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1700,
         "y": 1000,
         "wires": []
@@ -11031,10 +10977,6 @@
         "format": "{{msg.dateString}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1390,
         "y": 1160,
         "wires": []
@@ -11224,10 +11166,6 @@
         "format": "{{msg.errorMessage}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1910,
         "y": 1040,
         "wires": []
@@ -11923,10 +11861,6 @@
         "format": "{{msg.dateString}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1220,
         "y": 3460,
         "wires": []
@@ -12506,7 +12440,7 @@
         "name": "Max slider HOME",
         "func": "\nstart = Date.parse(msg.payload.startdate);\nend = Date.parse(msg.payload.enddate);\nmsg.body = [start/1000, end/1000];\nmsg.payload = msg.body;\nreturn msg;\n",
         "outputs": 1,
-        "noerr": 4,
+        "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -12524,7 +12458,7 @@
         "z": "dd1202fd.a2e23",
         "g": "4c6998b4.6db838",
         "name": "Formater les dates",
-        "func": "let startTimestamp = msg.payload[0] * 1000; // Convertir en millisecondes\nlet endTimestamp = msg.payload[1] * 1000;   // Convertir en millisecondes\n\n// Créer les objets Date en UTC\nlet startDate = new Date(startTimestamp);\nlet endDate = new Date(endTimestamp);\n\n// Formater les dates en UTC (GMT)\nmsg.payload = {\n    \"debut\": startDate.toUTCString(), // Format GMT\n    \"fin\": endDate.toUTCString()      // Format GMT\n};\n\nreturn msg;\n",
+        "func": "let startTimestamp = msg.payload[0] * 1000; // Convertir en millisecondes\nlet endTimestamp = msg.payload[1] * 1000;   // Convertir en millisecondes\n\n// Créer les objets Date en UTC\nlet startDate = new Date(startTimestamp);\nlet endDate = new Date(endTimestamp);\n\n// Formater les dates en UTC (GMT)\nmsg.payload = {\n    \"debut\": startDate, // Format GMT\n    \"fin\": endDate.toUTCString()      // Format GMT\n};\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -12547,8 +12481,8 @@
         "name": "Affichage des dates",
         "order": 0,
         "width": 6,
-        "height": 2,
-        "format": "<div>\n    <p>Début de la Simulation :<br> <strong>{{msg.payload.debut}}</strong></p>\n    <br> <!-- Saut de ligne supplémentaire pour plus de lisibilité -->\n    <p>Fin de la Simulation :<br> <strong>{{msg.payload.fin}}</strong></p>\n</div>",
+        "height": "3",
+        "format": "<div>\n    <br> <!-- Saut de ligne supplémentaire pour plus de lisibilité -->\n    <p>Début de la Simulation :<br> <strong>{{msg.payload.debut}}</strong></p>\n    <br> <!-- Saut de ligne supplémentaire pour plus de lisibilité -->\n    <p>Fin de la Simulation :<br> <strong>{{msg.payload.fin}}</strong></p>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -12559,6 +12493,23 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "eae52224ec3faa16",
+        "type": "debug",
+        "z": "dd1202fd.a2e23",
+        "g": "4c6998b4.6db838",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "e3ccf0456fcafedf",
@@ -15714,10 +15665,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1780,
         "y": 4220,
         "wires": []
@@ -16500,10 +16447,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 3150,
         "y": 260,
         "wires": []
@@ -16519,7 +16462,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {},\t        \"VISIBILITY\": {}\t    }\t}",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -25018,10 +24961,6 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 4160,
         "y": 1260,
         "wires": []
@@ -28313,6 +28252,43 @@
         "wires": []
     },
     {
+        "id": "cee4def5e77bb830",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "LLA-Visibility-Update2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {},\t        \"VISIBILITY\": {}\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3740,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2147ad17b59aa35b",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "A GARDER ",
+        "info": "Pour implémenter la visibilité des satellites par les stations au sol.",
+        "x": 3750,
+        "y": 80,
+        "wires": []
+    },
+    {
         "id": "dce3220a.a2827",
         "type": "function",
         "z": "6ac37828.4c7288",
@@ -28858,10 +28834,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 2250,
         "y": 1380,
         "wires": []
@@ -29956,10 +29928,6 @@
         "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
         "layout": "row-left",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 3010,
         "y": 200,
         "wires": []
@@ -42185,10 +42153,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 700,
         "y": 100,
         "wires": []
@@ -42296,10 +42260,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 700,
         "y": 200,
         "wires": []
@@ -42407,10 +42367,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 700,
         "y": 300,
         "wires": []
@@ -42518,10 +42474,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 700,
         "y": 420,
         "wires": []
@@ -44195,10 +44147,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 620,
         "y": 160,
         "wires": []
@@ -44294,10 +44242,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 640,
         "y": 240,
         "wires": []
@@ -44393,10 +44337,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 620,
         "y": 360,
         "wires": []
@@ -44471,10 +44411,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 640,
         "y": 440,
         "wires": []
@@ -44549,10 +44485,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 620,
         "y": 760,
         "wires": []
@@ -44627,10 +44559,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 640,
         "y": 840,
         "wires": []
@@ -44747,10 +44675,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 620,
         "y": 560,
         "wires": []
@@ -44825,10 +44749,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 640,
         "y": 640,
         "wires": []
@@ -45020,10 +44940,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 770,
         "y": 140,
         "wires": []
@@ -45113,10 +45029,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 790,
         "y": 240,
         "wires": []
@@ -45206,10 +45118,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 790,
         "y": 360,
         "wires": []
@@ -45299,10 +45207,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 790,
         "y": 460,
         "wires": []
@@ -45381,10 +45285,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1670,
         "y": 140,
         "wires": []
@@ -45463,10 +45363,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1670,
         "y": 240,
         "wires": []
@@ -45545,10 +45441,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1670,
         "y": 360,
         "wires": []
@@ -45646,10 +45538,6 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
         "x": 1690,
         "y": 460,
         "wires": []
@@ -46261,10 +46149,6 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
         "x": 640,
         "y": 180,
         "wires": []

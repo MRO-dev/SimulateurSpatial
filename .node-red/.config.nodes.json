@@ -770,8 +770,8 @@
     "node-red-contrib-ui-media": {
         "name": "node-red-contrib-ui-media",
         "version": "2.0.0",
-        "local": true,
-        "user": true,
+        "local": false,
+        "user": false,
         "nodes": {
             "ui_media": {
                 "name": "ui_media",
@@ -779,10 +779,10 @@
                     "ui_media"
                 ],
                 "enabled": true,
-                "local": true,
+                "local": false,
                 "user": false,
                 "module": "node-red-contrib-ui-media",
-                "file": "/data/node_modules/node-red-contrib-ui-media/ui_media.js"
+                "file": "/usr/src/node-red/node_modules/node-red-contrib-ui-media/ui_media.js"
             }
         }
     },

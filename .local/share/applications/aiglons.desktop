@@ -1,9 +1,9 @@
 [Desktop Entry]
-Version=1.0 
-Name=aiglons Jsatorb 
-Comment=Launch all docker containers 
-Exec=gnome-terminal --command "docker cp ./tle-latest-aiglons.txt ccc_nodered:usr/src/node-red/tle-latest-aiglons.txt" 
-Icon=aiglons.png 
-Terminal=true 
-Type=Application 
-Categories=Development;System; 
+Version=1.0
+Name=Aiglons Jsatorb
+Comment=Launch all Docker containers
+Exec=gnome-terminal -- bash -c "docker cp ./tle-latest-aiglons.txt ccc_nodered:/usr/src/node-red/tle-latest-aiglons.txt; exec bash"
+Icon=/home/simulateurspatial/.local/share/icons/aiglons.png
+Terminal=true
+Type=Application
+Categories=Development;System;

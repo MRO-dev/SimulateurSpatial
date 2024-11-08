@@ -3260,3 +3260,117 @@
 1729097872: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
 1729097872: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
 1729097872: Error: No such file or directory.
+1731017427: mosquitto version 2.0.20 starting
+1731017427: Config loaded from /mosquitto/config/mosquitto.conf.
+1731017427: Opening ipv4 listen socket on port 1883.
+1731017427: mosquitto version 2.0.20 running
+1731017521: mosquitto version 2.0.20 terminating
+1731017521: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731017521: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731017521: Error: No such file or directory.
+1731017527: mosquitto version 2.0.20 starting
+1731017527: Config loaded from /mosquitto/config/mosquitto.conf.
+1731017527: Opening ipv4 listen socket on port 1883.
+1731017527: mosquitto version 2.0.20 running
+1731017546: mosquitto version 2.0.20 terminating
+1731017546: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731017546: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731017546: Error: No such file or directory.
+1731017640: mosquitto version 2.0.20 starting
+1731017640: Config loaded from /mosquitto/config/mosquitto.conf.
+1731017640: Opening ipv4 listen socket on port 1883.
+1731017640: mosquitto version 2.0.20 running
+1731017660: mosquitto version 2.0.20 terminating
+1731017660: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731017660: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731017660: Error: No such file or directory.
+1731017717: mosquitto version 2.0.20 starting
+1731017717: Config loaded from /mosquitto/config/mosquitto.conf.
+1731017717: Opening ipv4 listen socket on port 1883.
+1731017717: mosquitto version 2.0.20 running
+1731017722: mosquitto version 2.0.20 terminating
+1731017722: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731017722: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731017722: Error: No such file or directory.
+1731017946: mosquitto version 2.0.20 starting
+1731017946: Config loaded from /mosquitto/config/mosquitto.conf.
+1731017946: Opening ipv4 listen socket on port 1883.
+1731017946: mosquitto version 2.0.20 running
+1731018066: New connection from 172.17.0.5:49166 on port 1883.
+1731018067: New client connected from 172.17.0.5:49166 as nodered_4c6a0240fbb4241c (p2, c1, k60).
+1731018267: Client nodered_4c6a0240fbb4241c closed its connection.
+1731018268: mosquitto version 2.0.20 terminating
+1731018268: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731018268: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731018268: Error: No such file or directory.
+1731018274: mosquitto version 2.0.20 starting
+1731018274: Config loaded from /mosquitto/config/mosquitto.conf.
+1731018274: Opening ipv4 listen socket on port 1883.
+1731018274: mosquitto version 2.0.20 running
+1731018277: New connection from 172.17.0.5:52886 on port 1883.
+1731018278: New client connected from 172.17.0.5:52886 as nodered_b9ab8ff7c4b34267 (p2, c1, k60).
+1731020075: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731020075: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731020075: Error: No such file or directory.
+1731021528: mosquitto version 2.0.20 terminating
+1731021528: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731021528: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731021528: Error: No such file or directory.
+1731022049: mosquitto version 2.0.20 starting
+1731022049: Config loaded from /mosquitto/config/mosquitto.conf.
+1731022049: Opening ipv4 listen socket on port 1883.
+1731022049: mosquitto version 2.0.20 running
+1731022064: New connection from 172.17.0.5:43278 on port 1883.
+1731022064: New client connected from 172.17.0.5:43278 as nodered_5a031bea3aa9c093 (p2, c1, k60).
+1731022122: mosquitto version 2.0.20 starting
+1731022122: Config loaded from /mosquitto/config/mosquitto.conf.
+1731022122: Opening ipv4 listen socket on port 1883.
+1731022122: mosquitto version 2.0.20 running
+1731022126: New connection from 172.17.0.5:59114 on port 1883.
+1731022126: New client connected from 172.17.0.5:59114 as nodered_87a0d1e0fcb5eb6a (p2, c1, k60).
+1731022412: Client nodered_87a0d1e0fcb5eb6a closed its connection.
+1731022413: mosquitto version 2.0.20 terminating
+1731022413: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731022413: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731022413: Error: No such file or directory.
+1731022437: mosquitto version 2.0.20 starting
+1731022437: Config loaded from /mosquitto/config/mosquitto.conf.
+1731022437: Opening ipv4 listen socket on port 1883.
+1731022437: mosquitto version 2.0.20 running
+1731022441: New connection from 172.17.0.5:35840 on port 1883.
+1731022441: New client connected from 172.17.0.5:35840 as nodered_129af5af5bb60d77 (p2, c1, k60).
+1731022530: mosquitto version 2.0.20 terminating
+1731022530: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731022530: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731022530: Error: No such file or directory.
+1731022610: mosquitto version 2.0.20 starting
+1731022610: Config loaded from /mosquitto/config/mosquitto.conf.
+1731022610: Opening ipv4 listen socket on port 1883.
+1731022610: mosquitto version 2.0.20 running
+1731022626: New connection from 172.17.0.5:52562 on port 1883.
+1731022626: New client connected from 172.17.0.5:52562 as nodered_1be64ad8bdb2eb73 (p2, c1, k60).
+1731022748: Client nodered_1be64ad8bdb2eb73 closed its connection.
+1731022749: mosquitto version 2.0.20 terminating
+1731022749: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731022749: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731022749: Error: No such file or directory.
+1731022754: mosquitto version 2.0.20 starting
+1731022754: Config loaded from /mosquitto/config/mosquitto.conf.
+1731022754: Opening ipv4 listen socket on port 1883.
+1731022754: mosquitto version 2.0.20 running
+1731022758: New connection from 172.17.0.5:38942 on port 1883.
+1731022758: New client connected from 172.17.0.5:38942 as nodered_156d35b41ffa80ef (p2, c1, k60).
+1731022844: New connection from 172.17.0.5:33832 on port 1883.
+1731022844: New client connected from 172.17.0.5:33832 as nodered_2e01db592da950b8 (p2, c1, k60).
+1731022991: New connection from 172.17.0.5:35092 on port 1883.
+1731022991: New client connected from 172.17.0.5:35092 as nodered_5069bf81f433af54 (p2, c1, k60).
+1731023142: New connection from 172.17.0.5:38680 on port 1883.
+1731023142: New client connected from 172.17.0.5:38680 as nodered_289ecdd779a8bae1 (p2, c1, k60).
+1731023202: New connection from 172.17.0.5:34910 on port 1883.
+1731023202: New client connected from 172.17.0.5:34910 as nodered_254871a799b30eb9 (p2, c1, k60).
+1731023243: New connection from 172.17.0.5:36386 on port 1883.
+1731023243: New client connected from 172.17.0.5:36386 as nodered_0357d0f7e1fd4874 (p2, c1, k60).
+1731023594: New connection from 172.17.0.5:54666 on port 1883.
+1731023594: New client connected from 172.17.0.5:54666 as nodered_f0a6e932e2082e63 (p2, c1, k60).
+1731023702: New connection from 172.17.0.5:33484 on port 1883.
+1731023702: New client connected from 172.17.0.5:33484 as nodered_cb03559a71c43b72 (p2, c1, k60).
