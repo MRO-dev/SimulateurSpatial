@@ -61,3 +61,6 @@ snap/
 .mozilla/
 .wget-hsts
 token
+.m2
+.pki
+Bureau/*

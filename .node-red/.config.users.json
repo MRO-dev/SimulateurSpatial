@@ -15,6 +15,10 @@
             "tours": {
                 "welcome": "2.2.2"
             }
-        }
+        },
+        "debug": {
+            "filter": "filterCurrent"
+        },
+        "menu-menu-item-sidebar": true
     }
 }

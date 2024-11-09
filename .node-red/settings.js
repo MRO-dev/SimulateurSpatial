@@ -418,6 +418,7 @@ module.exports = {
      */
     functionGlobalContext: {
         // os:require('os'),
+        fs: require('fs')
     },
 
     /** The maximum number of messages nodes will buffer internally as part of their

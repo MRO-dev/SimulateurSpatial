@@ -1243,5 +1243,25 @@
                 "file": "/data/node_modules/node-red-contrib-image-tools/app.js"
             }
         }
+    },
+    "node-red-contrib-play-soundfile": {
+        "name": "node-red-contrib-play-soundfile",
+        "version": "0.0.7",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "play-soundfile": {
+                "name": "play-soundfile",
+                "types": [
+                    "play-soundfile",
+                    "soundfile-directory"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-play-soundfile",
+                "file": "/data/node_modules/node-red-contrib-play-soundfile/play-soundfile.js"
+            }
+        }
     }
 }
