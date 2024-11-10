@@ -4800,3 +4800,908 @@
 1731175341: mosquitto version 2.0.20 running
 1731175358: New connection from 172.17.0.5:38120 on port 1883.
 1731175358: New client connected from 172.17.0.5:38120 as nodered_9d898f762f4309a4 (p2, c1, k60).
+1731176614: Client nodered_9d898f762f4309a4 closed its connection.
+1731176615: mosquitto version 2.0.20 terminating
+1731176615: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731176615: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731176615: Error: No such file or directory.
+1731176627: mosquitto version 2.0.20 starting
+1731176627: Config loaded from /mosquitto/config/mosquitto.conf.
+1731176627: Opening ipv4 listen socket on port 1883.
+1731176627: mosquitto version 2.0.20 running
+1731176631: New connection from 172.17.0.5:57170 on port 1883.
+1731176631: New client connected from 172.17.0.5:57170 as nodered_2ce722a478d9305b (p2, c1, k60).
+1731176712: Client nodered_2ce722a478d9305b closed its connection.
+1731176713: mosquitto version 2.0.20 terminating
+1731176713: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731176713: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731176713: Error: No such file or directory.
+1731176717: mosquitto version 2.0.20 starting
+1731176717: Config loaded from /mosquitto/config/mosquitto.conf.
+1731176717: Opening ipv4 listen socket on port 1883.
+1731176717: mosquitto version 2.0.20 running
+1731176721: New connection from 172.17.0.5:39340 on port 1883.
+1731176721: New client connected from 172.17.0.5:39340 as nodered_b5acfcd79a9338fd (p2, c1, k60).
+1731176807: Client nodered_b5acfcd79a9338fd closed its connection.
+1731176812: mosquitto version 2.0.20 starting
+1731176812: Config loaded from /mosquitto/config/mosquitto.conf.
+1731176812: Opening ipv4 listen socket on port 1883.
+1731176812: mosquitto version 2.0.20 running
+1731176816: New connection from 172.17.0.5:57114 on port 1883.
+1731176816: New client connected from 172.17.0.5:57114 as nodered_aa034375d4ccbe79 (p2, c1, k60).
+1731176954: Client nodered_aa034375d4ccbe79 closed its connection.
+1731176955: mosquitto version 2.0.20 terminating
+1731176955: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731176955: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731176955: Error: No such file or directory.
+1731176959: mosquitto version 2.0.20 starting
+1731176959: Config loaded from /mosquitto/config/mosquitto.conf.
+1731176959: Opening ipv4 listen socket on port 1883.
+1731176959: mosquitto version 2.0.20 running
+1731176963: New connection from 172.17.0.5:43134 on port 1883.
+1731176963: New client connected from 172.17.0.5:43134 as nodered_7d7c13fcd0f37695 (p2, c1, k60).
+1731177119: Client nodered_7d7c13fcd0f37695 closed its connection.
+1731177119: mosquitto version 2.0.20 terminating
+1731177119: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731177119: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731177119: Error: No such file or directory.
+1731177127: mosquitto version 2.0.20 starting
+1731177127: Config loaded from /mosquitto/config/mosquitto.conf.
+1731177127: Opening ipv4 listen socket on port 1883.
+1731177127: mosquitto version 2.0.20 running
+1731177131: New connection from 172.17.0.5:47450 on port 1883.
+1731177131: New client connected from 172.17.0.5:47450 as nodered_909fd426f02f48a8 (p2, c1, k60).
+1731177629: Client nodered_909fd426f02f48a8 closed its connection.
+1731177630: mosquitto version 2.0.20 terminating
+1731177630: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731177630: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731177630: Error: No such file or directory.
+1731177635: mosquitto version 2.0.20 starting
+1731177635: Config loaded from /mosquitto/config/mosquitto.conf.
+1731177635: Opening ipv4 listen socket on port 1883.
+1731177635: mosquitto version 2.0.20 running
+1731177639: New connection from 172.17.0.5:49124 on port 1883.
+1731177639: New client connected from 172.17.0.5:49124 as nodered_8d2aee69e6e080b1 (p2, c1, k60).
+1731178846: Client nodered_8d2aee69e6e080b1 closed its connection.
+1731178846: mosquitto version 2.0.20 terminating
+1731178846: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731178846: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731178846: Error: No such file or directory.
+1731178852: mosquitto version 2.0.20 starting
+1731178852: Config loaded from /mosquitto/config/mosquitto.conf.
+1731178852: Opening ipv4 listen socket on port 1883.
+1731178852: mosquitto version 2.0.20 running
+1731178857: New connection from 172.17.0.5:37948 on port 1883.
+1731178857: New client connected from 172.17.0.5:37948 as nodered_8559c1e46cb25519 (p2, c1, k60).
+1731178887: Client nodered_8559c1e46cb25519 closed its connection.
+1731178888: mosquitto version 2.0.20 terminating
+1731178888: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731178888: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731178888: Error: No such file or directory.
+1731178892: mosquitto version 2.0.20 starting
+1731178892: Config loaded from /mosquitto/config/mosquitto.conf.
+1731178892: Opening ipv4 listen socket on port 1883.
+1731178892: mosquitto version 2.0.20 running
+1731178896: New connection from 172.17.0.5:42300 on port 1883.
+1731178896: New client connected from 172.17.0.5:42300 as nodered_07b9ebf4e47b6c74 (p2, c1, k60).
+1731178932: Client nodered_07b9ebf4e47b6c74 closed its connection.
+1731178932: mosquitto version 2.0.20 terminating
+1731178932: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731178932: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731178932: Error: No such file or directory.
+1731178962: mosquitto version 2.0.20 starting
+1731178962: Config loaded from /mosquitto/config/mosquitto.conf.
+1731178962: Opening ipv4 listen socket on port 1883.
+1731178962: mosquitto version 2.0.20 running
+1731178966: New connection from 172.17.0.5:49368 on port 1883.
+1731178966: New client connected from 172.17.0.5:49368 as nodered_a7aad0e99506f214 (p2, c1, k60).
+1731179094: Client nodered_a7aad0e99506f214 closed its connection.
+1731179095: mosquitto version 2.0.20 terminating
+1731179095: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179095: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179095: Error: No such file or directory.
+1731179102: mosquitto version 2.0.20 starting
+1731179102: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179102: Opening ipv4 listen socket on port 1883.
+1731179102: mosquitto version 2.0.20 running
+1731179106: New connection from 172.17.0.5:51026 on port 1883.
+1731179106: New client connected from 172.17.0.5:51026 as nodered_b971853796fe2d38 (p2, c1, k60).
+1731179219: Client nodered_b971853796fe2d38 closed its connection.
+1731179219: mosquitto version 2.0.20 terminating
+1731179219: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179219: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179219: Error: No such file or directory.
+1731179223: mosquitto version 2.0.20 starting
+1731179223: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179223: Opening ipv4 listen socket on port 1883.
+1731179223: mosquitto version 2.0.20 running
+1731179228: New connection from 172.17.0.5:40168 on port 1883.
+1731179228: New client connected from 172.17.0.5:40168 as nodered_3a98b1911e4b5360 (p2, c1, k60).
+1731179254: Client nodered_3a98b1911e4b5360 closed its connection.
+1731179255: mosquitto version 2.0.20 terminating
+1731179255: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179255: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179255: Error: No such file or directory.
+1731179258: mosquitto version 2.0.20 starting
+1731179258: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179258: Opening ipv4 listen socket on port 1883.
+1731179258: mosquitto version 2.0.20 running
+1731179261: New connection from 172.17.0.5:50588 on port 1883.
+1731179262: New client connected from 172.17.0.5:50588 as nodered_25aa795de36ddbbd (p2, c1, k60).
+1731179556: Client nodered_25aa795de36ddbbd closed its connection.
+1731179557: mosquitto version 2.0.20 terminating
+1731179557: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179557: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179557: Error: No such file or directory.
+1731179561: mosquitto version 2.0.20 starting
+1731179561: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179561: Opening ipv4 listen socket on port 1883.
+1731179561: mosquitto version 2.0.20 running
+1731179565: New connection from 172.17.0.5:35424 on port 1883.
+1731179565: New client connected from 172.17.0.5:35424 as nodered_8ca9a87305c8f84d (p2, c1, k60).
+1731179707: Client nodered_8ca9a87305c8f84d closed its connection.
+1731179707: mosquitto version 2.0.20 terminating
+1731179707: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179707: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179707: Error: No such file or directory.
+1731179712: mosquitto version 2.0.20 starting
+1731179712: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179712: Opening ipv4 listen socket on port 1883.
+1731179712: mosquitto version 2.0.20 running
+1731179717: New connection from 172.17.0.5:49232 on port 1883.
+1731179717: New client connected from 172.17.0.5:49232 as nodered_0e2d3d787cf0dfa9 (p2, c1, k60).
+1731179947: Client nodered_0e2d3d787cf0dfa9 closed its connection.
+1731179948: mosquitto version 2.0.20 terminating
+1731179948: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731179948: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731179948: Error: No such file or directory.
+1731179959: mosquitto version 2.0.20 starting
+1731179959: Config loaded from /mosquitto/config/mosquitto.conf.
+1731179959: Opening ipv4 listen socket on port 1883.
+1731179959: mosquitto version 2.0.20 running
+1731179963: New connection from 172.17.0.5:54846 on port 1883.
+1731179963: New client connected from 172.17.0.5:54846 as nodered_92040d325404007f (p2, c1, k60).
+1731180060: New connection from 172.17.0.5:35504 on port 1883.
+1731180061: New client connected from 172.17.0.5:35504 as nodered_aa32f26494642019 (p2, c1, k60).
+1731181073: Client nodered_aa32f26494642019 closed its connection.
+1731181073: Client nodered_92040d325404007f closed its connection.
+1731181073: mosquitto version 2.0.20 terminating
+1731181073: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731181073: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731181073: Error: No such file or directory.
+1731181084: mosquitto version 2.0.20 starting
+1731181084: Config loaded from /mosquitto/config/mosquitto.conf.
+1731181084: Opening ipv4 listen socket on port 1883.
+1731181084: mosquitto version 2.0.20 running
+1731181088: New connection from 172.17.0.5:59008 on port 1883.
+1731181088: New client connected from 172.17.0.5:59008 as nodered_5ac26895a479b7cf (p2, c1, k60).
+1731181394: mosquitto version 2.0.20 terminating
+1731181394: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731181394: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731181394: Error: No such file or directory.
+1731181699: mosquitto version 2.0.20 starting
+1731181699: Config loaded from /mosquitto/config/mosquitto.conf.
+1731181699: Opening ipv4 listen socket on port 1883.
+1731181699: mosquitto version 2.0.20 running
+1731181713: mosquitto version 2.0.20 starting
+1731181713: Config loaded from /mosquitto/config/mosquitto.conf.
+1731181713: Opening ipv4 listen socket on port 1883.
+1731181713: mosquitto version 2.0.20 running
+1731181717: New connection from 172.17.0.5:34818 on port 1883.
+1731181717: New client connected from 172.17.0.5:34818 as nodered_ece0e5c7c4af2a9a (p2, c1, k60).
+1731181999: New connection from 172.17.0.5:55694 on port 1883.
+1731181999: New client connected from 172.17.0.5:55694 as nodered_d6c5d1bf179c600b (p2, c1, k60).
+1731182675: New connection from 172.17.0.5:40272 on port 1883.
+1731182675: New client connected from 172.17.0.5:40272 as nodered_5cfdfbb522c59daa (p2, c1, k60).
+1731183514: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731183514: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731183514: Error: No such file or directory.
+1731183618: New connection from 172.17.0.5:35798 on port 1883.
+1731183618: New client connected from 172.17.0.5:35798 as nodered_32d971546afa2b51 (p2, c1, k60).
+1731183688: New connection from 172.17.0.5:44512 on port 1883.
+1731183688: New client connected from 172.17.0.5:44512 as nodered_9c51b061ecc51cd8 (p2, c1, k60).
+1731183723: New connection from 172.17.0.5:53610 on port 1883.
+1731183723: New client connected from 172.17.0.5:53610 as nodered_50add4c1954624d7 (p2, c1, k60).
+1731183779: New connection from 172.17.0.5:60040 on port 1883.
+1731183779: New client connected from 172.17.0.5:60040 as nodered_76abee8a59b45150 (p2, c1, k60).
+1731183805: New connection from 172.17.0.5:34562 on port 1883.
+1731183805: New client connected from 172.17.0.5:34562 as nodered_6e9c36c098772e9c (p2, c1, k60).
+1731183902: New connection from 172.17.0.5:57954 on port 1883.
+1731183902: New client connected from 172.17.0.5:57954 as nodered_de0dec4a22a994b1 (p2, c1, k60).
+1731183925: New connection from 172.17.0.5:39560 on port 1883.
+1731183925: New client connected from 172.17.0.5:39560 as nodered_9e9d342bcdf8e47c (p2, c1, k60).
+1731183932: New connection from 172.17.0.5:34304 on port 1883.
+1731183932: New client connected from 172.17.0.5:34304 as nodered_572e4be994da4bbc (p2, c1, k60).
+1731183992: New connection from 172.17.0.5:45638 on port 1883.
+1731183992: New client connected from 172.17.0.5:45638 as nodered_2828d1014324f33f (p2, c1, k60).
+1731184186: New connection from 172.17.0.5:41434 on port 1883.
+1731184186: New client connected from 172.17.0.5:41434 as nodered_dca1262a5f145d7a (p2, c1, k60).
+1731184472: New connection from 172.17.0.5:40170 on port 1883.
+1731184472: New client connected from 172.17.0.5:40170 as nodered_06a42177fc3c9041 (p2, c1, k60).
+1731185083: New connection from 172.17.0.5:49076 on port 1883.
+1731185083: New client connected from 172.17.0.5:49076 as nodered_7e3304221dce1944 (p2, c1, k60).
+1731185315: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731185315: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731185315: Error: No such file or directory.
+1731185377: New connection from 172.17.0.5:56046 on port 1883.
+1731185377: New client connected from 172.17.0.5:56046 as nodered_d0cd25254bce8cb9 (p2, c1, k60).
+1731185424: New connection from 172.17.0.5:59532 on port 1883.
+1731185424: New client connected from 172.17.0.5:59532 as nodered_2089a96526b2c659 (p2, c1, k60).
+1731185493: New connection from 172.17.0.5:34114 on port 1883.
+1731185493: New client connected from 172.17.0.5:34114 as nodered_28e7a8b21ebb3801 (p2, c1, k60).
+1731185576: New connection from 172.17.0.5:56854 on port 1883.
+1731185576: New client connected from 172.17.0.5:56854 as nodered_bb5585dc1eb07e8f (p2, c1, k60).
+1731186928: New connection from 172.17.0.5:37158 on port 1883.
+1731186928: New client connected from 172.17.0.5:37158 as nodered_9d12b69ebd81f6f8 (p2, c1, k60).
+1731187116: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731187116: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731187116: Error: No such file or directory.
+1731188170: New connection from 172.17.0.5:51046 on port 1883.
+1731188170: New client connected from 172.17.0.5:51046 as nodered_7e423abe6336eec5 (p2, c1, k60).
+1731188239: New connection from 172.17.0.5:53296 on port 1883.
+1731188239: New client connected from 172.17.0.5:53296 as nodered_b685aad7df941d62 (p2, c1, k60).
+1731188311: New connection from 172.17.0.5:39926 on port 1883.
+1731188311: New client connected from 172.17.0.5:39926 as nodered_193da4950bb4eda0 (p2, c1, k60).
+1731188367: New connection from 172.17.0.5:57224 on port 1883.
+1731188367: New client connected from 172.17.0.5:57224 as nodered_d69f3afd818c567d (p2, c1, k60).
+1731188434: New connection from 172.17.0.5:35244 on port 1883.
+1731188434: New client connected from 172.17.0.5:35244 as nodered_622d784017959b6d (p2, c1, k60).
+1731188502: New connection from 172.17.0.5:53358 on port 1883.
+1731188502: New client connected from 172.17.0.5:53358 as nodered_256b8c82ce6682ca (p2, c1, k60).
+1731188890: New connection from 172.17.0.5:38218 on port 1883.
+1731188890: New client connected from 172.17.0.5:38218 as nodered_ddf082bc5ebf6bba (p2, c1, k60).
+1731188917: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731188917: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731188917: Error: No such file or directory.
+1731188964: New connection from 172.17.0.5:49630 on port 1883.
+1731188964: New client connected from 172.17.0.5:49630 as nodered_0b53387c140ec7ef (p2, c1, k60).
+1731189059: New connection from 172.17.0.5:51818 on port 1883.
+1731189059: New client connected from 172.17.0.5:51818 as nodered_b8094ec7cc3abd13 (p2, c1, k60).
+1731189073: New connection from 172.17.0.5:37218 on port 1883.
+1731189073: New client connected from 172.17.0.5:37218 as nodered_5884974956100be7 (p2, c1, k60).
+1731189110: New connection from 172.17.0.5:39614 on port 1883.
+1731189110: New client connected from 172.17.0.5:39614 as nodered_a35197f4887af542 (p2, c1, k60).
+1731189304: New connection from 172.17.0.5:59866 on port 1883.
+1731189304: New client connected from 172.17.0.5:59866 as nodered_3df0200352988225 (p2, c1, k60).
+1731189359: New connection from 172.17.0.5:52518 on port 1883.
+1731189359: New client connected from 172.17.0.5:52518 as nodered_42793e4f45a54d1b (p2, c1, k60).
+1731189427: New connection from 172.17.0.5:58376 on port 1883.
+1731189427: New client connected from 172.17.0.5:58376 as nodered_430a5cd8e7c146a0 (p2, c1, k60).
+1731189464: New connection from 172.17.0.5:52488 on port 1883.
+1731189464: New client connected from 172.17.0.5:52488 as nodered_54482732c30bd35b (p2, c1, k60).
+1731189566: New connection from 172.17.0.5:45418 on port 1883.
+1731189566: New client connected from 172.17.0.5:45418 as nodered_e42459eec5aee304 (p2, c1, k60).
+1731189591: New connection from 172.17.0.5:49882 on port 1883.
+1731189591: New client connected from 172.17.0.5:49882 as nodered_92cb007ab59b6cbd (p2, c1, k60).
+1731189615: New connection from 172.17.0.5:51854 on port 1883.
+1731189615: New client connected from 172.17.0.5:51854 as nodered_a630b33aed6ce8ce (p2, c1, k60).
+1731189641: New connection from 172.17.0.5:53948 on port 1883.
+1731189641: New client connected from 172.17.0.5:53948 as nodered_650414e917e5ceb1 (p2, c1, k60).
+1731189750: New connection from 172.17.0.5:59158 on port 1883.
+1731189750: New client connected from 172.17.0.5:59158 as nodered_b2716b4b8913b6b5 (p2, c1, k60).
+1731189864: New connection from 172.17.0.5:56716 on port 1883.
+1731189864: New client connected from 172.17.0.5:56716 as nodered_5e5735c7d606d181 (p2, c1, k60).
+1731189875: New connection from 172.17.0.5:51914 on port 1883.
+1731189875: New client connected from 172.17.0.5:51914 as nodered_5d54f659017b85f2 (p2, c1, k60).
+1731190087: New connection from 172.17.0.5:45352 on port 1883.
+1731190087: New client connected from 172.17.0.5:45352 as nodered_65e620eccb3aecc5 (p2, c1, k60).
+1731190210: New connection from 172.17.0.5:36540 on port 1883.
+1731190210: New client connected from 172.17.0.5:36540 as nodered_91817ecf6c3d2a7e (p2, c1, k60).
+1731190291: New connection from 172.17.0.5:45082 on port 1883.
+1731190291: New client connected from 172.17.0.5:45082 as nodered_7be45cbf507f379b (p2, c1, k60).
+1731190529: New connection from 172.17.0.5:51544 on port 1883.
+1731190529: New client connected from 172.17.0.5:51544 as nodered_366a3aef6f50e054 (p2, c1, k60).
+1731190667: New connection from 172.17.0.5:39108 on port 1883.
+1731190667: New client connected from 172.17.0.5:39108 as nodered_323ade6807a16359 (p2, c1, k60).
+1731190718: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731190718: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731190718: Error: No such file or directory.
+1731190863: New connection from 172.17.0.5:35710 on port 1883.
+1731190863: New client connected from 172.17.0.5:35710 as nodered_65afc021677f94bb (p2, c1, k60).
+1731190989: New connection from 172.17.0.5:42772 on port 1883.
+1731190989: New client connected from 172.17.0.5:42772 as nodered_0244d87267405069 (p2, c1, k60).
+1731191118: New connection from 172.17.0.5:42552 on port 1883.
+1731191118: New client connected from 172.17.0.5:42552 as nodered_c875379a0e36cffa (p2, c1, k60).
+1731191275: New connection from 172.17.0.5:39222 on port 1883.
+1731191275: New client connected from 172.17.0.5:39222 as nodered_6c0d997e64d667c0 (p2, c1, k60).
+1731191321: New connection from 172.17.0.5:39602 on port 1883.
+1731191321: New client connected from 172.17.0.5:39602 as nodered_369cb8dc6f44e5c2 (p2, c1, k60).
+1731191349: New connection from 172.17.0.5:48488 on port 1883.
+1731191349: New client connected from 172.17.0.5:48488 as nodered_ecfb51c12fea3a0b (p2, c1, k60).
+1731191376: New connection from 172.17.0.5:58468 on port 1883.
+1731191376: New client connected from 172.17.0.5:58468 as nodered_7c02a9943bd2ef62 (p2, c1, k60).
+1731191401: New connection from 172.17.0.5:40238 on port 1883.
+1731191401: New client connected from 172.17.0.5:40238 as nodered_56bbd998da46185f (p2, c1, k60).
+1731191583: New connection from 172.17.0.5:52746 on port 1883.
+1731191583: New client connected from 172.17.0.5:52746 as nodered_0cf79529c3063bbb (p2, c1, k60).
+1731191722: New connection from 172.17.0.5:58948 on port 1883.
+1731191722: New client connected from 172.17.0.5:58948 as nodered_ae513f7b69d3f54f (p2, c1, k60).
+1731191951: New connection from 172.17.0.5:59580 on port 1883.
+1731191951: New client connected from 172.17.0.5:59580 as nodered_6e92b70dec2ce2af (p2, c1, k60).
+1731192077: New connection from 172.17.0.5:34596 on port 1883.
+1731192077: New client connected from 172.17.0.5:34596 as nodered_4c92a986b75b8727 (p2, c1, k60).
+1731192135: New connection from 172.17.0.5:55358 on port 1883.
+1731192135: New client connected from 172.17.0.5:55358 as nodered_7290c1187e082bc0 (p2, c1, k60).
+1731192155: New connection from 172.17.0.5:46612 on port 1883.
+1731192155: New client connected from 172.17.0.5:46612 as nodered_be17127cb479c651 (p2, c1, k60).
+1731192255: New connection from 172.17.0.5:34034 on port 1883.
+1731192255: New client connected from 172.17.0.5:34034 as nodered_25363aef2f76d8cb (p2, c1, k60).
+1731192343: New connection from 172.17.0.5:35232 on port 1883.
+1731192343: New client connected from 172.17.0.5:35232 as nodered_7a823a8f9bd40a0f (p2, c1, k60).
+1731192445: New connection from 172.17.0.5:48656 on port 1883.
+1731192445: New client connected from 172.17.0.5:48656 as nodered_c6c248dc3a23dbd4 (p2, c1, k60).
+1731192476: New connection from 172.17.0.5:50182 on port 1883.
+1731192476: New client connected from 172.17.0.5:50182 as nodered_c3edc00c0dc9d8ea (p2, c1, k60).
+1731192519: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731192519: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731192519: Error: No such file or directory.
+1731192525: New connection from 172.17.0.5:33758 on port 1883.
+1731192525: New client connected from 172.17.0.5:33758 as nodered_30f91d129f823154 (p2, c1, k60).
+1731192628: New connection from 172.17.0.5:40820 on port 1883.
+1731192628: New client connected from 172.17.0.5:40820 as nodered_d67745d60d6f6164 (p2, c1, k60).
+1731192671: New connection from 172.17.0.5:45150 on port 1883.
+1731192671: New client connected from 172.17.0.5:45150 as nodered_914f0c63d2ac5a24 (p2, c1, k60).
+1731192919: New connection from 172.17.0.5:48270 on port 1883.
+1731192919: New client connected from 172.17.0.5:48270 as nodered_b9b6de1fae2d92b2 (p2, c1, k60).
+1731192941: New connection from 172.17.0.5:52458 on port 1883.
+1731192941: New client connected from 172.17.0.5:52458 as nodered_8d165c1168e13ffe (p2, c1, k60).
+1731192977: New connection from 172.17.0.5:46350 on port 1883.
+1731192977: New client connected from 172.17.0.5:46350 as nodered_44e21888fc953b84 (p2, c1, k60).
+1731193000: New connection from 172.17.0.5:33900 on port 1883.
+1731193000: New client connected from 172.17.0.5:33900 as nodered_2c1692b2946646c7 (p2, c1, k60).
+1731193052: New connection from 172.17.0.5:39422 on port 1883.
+1731193052: New client connected from 172.17.0.5:39422 as nodered_3d6b694f36f60ac5 (p2, c1, k60).
+1731193097: New connection from 172.17.0.5:36514 on port 1883.
+1731193097: New client connected from 172.17.0.5:36514 as nodered_de823c4d77303c06 (p2, c1, k60).
+1731193148: New connection from 172.17.0.5:60546 on port 1883.
+1731193148: New client connected from 172.17.0.5:60546 as nodered_c6bfacb17f0f10e1 (p2, c1, k60).
+1731193206: New connection from 172.17.0.5:45248 on port 1883.
+1731193206: New client connected from 172.17.0.5:45248 as nodered_f0168f20f67d95a4 (p2, c1, k60).
+1731193317: New connection from 172.17.0.5:53900 on port 1883.
+1731193317: New client connected from 172.17.0.5:53900 as nodered_c490b73ec40c5eed (p2, c1, k60).
+1731194040: New connection from 172.17.0.5:54904 on port 1883.
+1731194041: New client connected from 172.17.0.5:54904 as nodered_771798e206506efa (p2, c1, k60).
+1731194320: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731194320: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731194320: Error: No such file or directory.
+1731194415: New connection from 172.17.0.5:36542 on port 1883.
+1731194415: New client connected from 172.17.0.5:36542 as nodered_3c2a78f2a048407b (p2, c1, k60).
+1731194489: New connection from 172.17.0.5:52464 on port 1883.
+1731194489: New client connected from 172.17.0.5:52464 as nodered_3f7df14921c79ff9 (p2, c1, k60).
+1731194568: New connection from 172.17.0.5:46742 on port 1883.
+1731194568: New client connected from 172.17.0.5:46742 as nodered_a73efc51915a8445 (p2, c1, k60).
+1731194579: New connection from 172.17.0.5:39524 on port 1883.
+1731194579: New client connected from 172.17.0.5:39524 as nodered_948c4f04afa0b8fa (p2, c1, k60).
+1731194587: New connection from 172.17.0.5:39532 on port 1883.
+1731194587: New client connected from 172.17.0.5:39532 as nodered_6e35f069bd4b948d (p2, c1, k60).
+1731194631: Client nodered_6e35f069bd4b948d closed its connection.
+1731194631: Client nodered_a73efc51915a8445 closed its connection.
+1731194631: Client nodered_3f7df14921c79ff9 closed its connection.
+1731194631: Client nodered_3c2a78f2a048407b closed its connection.
+1731194631: Client nodered_771798e206506efa closed its connection.
+1731194631: Client nodered_c490b73ec40c5eed closed its connection.
+1731194631: Client nodered_f0168f20f67d95a4 closed its connection.
+1731194631: Client nodered_c6bfacb17f0f10e1 closed its connection.
+1731194631: Client nodered_de823c4d77303c06 closed its connection.
+1731194631: Client nodered_3d6b694f36f60ac5 closed its connection.
+1731194631: Client nodered_2c1692b2946646c7 closed its connection.
+1731194631: Client nodered_44e21888fc953b84 closed its connection.
+1731194631: Client nodered_8d165c1168e13ffe closed its connection.
+1731194631: Client nodered_b9b6de1fae2d92b2 closed its connection.
+1731194631: Client nodered_914f0c63d2ac5a24 closed its connection.
+1731194631: Client nodered_d67745d60d6f6164 closed its connection.
+1731194631: Client nodered_c3edc00c0dc9d8ea closed its connection.
+1731194631: Client nodered_c6c248dc3a23dbd4 closed its connection.
+1731194631: Client nodered_7a823a8f9bd40a0f closed its connection.
+1731194631: Client nodered_25363aef2f76d8cb closed its connection.
+1731194631: Client nodered_be17127cb479c651 closed its connection.
+1731194631: Client nodered_7290c1187e082bc0 closed its connection.
+1731194631: Client nodered_30f91d129f823154 closed its connection.
+1731194631: Client nodered_4c92a986b75b8727 closed its connection.
+1731194631: Client nodered_6e92b70dec2ce2af closed its connection.
+1731194631: Client nodered_ae513f7b69d3f54f closed its connection.
+1731194631: Client nodered_7c02a9943bd2ef62 closed its connection.
+1731194631: Client nodered_56bbd998da46185f closed its connection.
+1731194631: Client nodered_50add4c1954624d7 closed its connection.
+1731194631: Client nodered_0cf79529c3063bbb closed its connection.
+1731194631: Client nodered_ecfb51c12fea3a0b closed its connection.
+1731194631: Client nodered_369cb8dc6f44e5c2 closed its connection.
+1731194631: Client nodered_6c0d997e64d667c0 closed its connection.
+1731194631: Client nodered_c875379a0e36cffa closed its connection.
+1731194631: Client nodered_0244d87267405069 closed its connection.
+1731194631: Client nodered_65afc021677f94bb closed its connection.
+1731194631: Client nodered_323ade6807a16359 closed its connection.
+1731194631: Client nodered_366a3aef6f50e054 closed its connection.
+1731194631: Client nodered_7be45cbf507f379b closed its connection.
+1731194631: Client nodered_91817ecf6c3d2a7e closed its connection.
+1731194631: Client nodered_65e620eccb3aecc5 closed its connection.
+1731194631: Client nodered_5d54f659017b85f2 closed its connection.
+1731194631: Client nodered_b2716b4b8913b6b5 closed its connection.
+1731194631: Client nodered_650414e917e5ceb1 closed its connection.
+1731194631: Client nodered_a630b33aed6ce8ce closed its connection.
+1731194631: Client nodered_5e5735c7d606d181 closed its connection.
+1731194631: Client nodered_92cb007ab59b6cbd closed its connection.
+1731194631: Client nodered_e42459eec5aee304 closed its connection.
+1731194631: Client nodered_54482732c30bd35b closed its connection.
+1731194631: Client nodered_42793e4f45a54d1b closed its connection.
+1731194631: Client nodered_3df0200352988225 closed its connection.
+1731194631: Client nodered_a35197f4887af542 closed its connection.
+1731194631: Client nodered_5884974956100be7 closed its connection.
+1731194631: Client nodered_b8094ec7cc3abd13 closed its connection.
+1731194631: Client nodered_0b53387c140ec7ef closed its connection.
+1731194631: Client nodered_430a5cd8e7c146a0 closed its connection.
+1731194631: Client nodered_ddf082bc5ebf6bba closed its connection.
+1731194631: Client nodered_256b8c82ce6682ca closed its connection.
+1731194631: Client nodered_622d784017959b6d closed its connection.
+1731194631: Client nodered_d69f3afd818c567d closed its connection.
+1731194631: Client nodered_193da4950bb4eda0 closed its connection.
+1731194631: Client nodered_b685aad7df941d62 closed its connection.
+1731194631: Client nodered_9d12b69ebd81f6f8 closed its connection.
+1731194631: Client nodered_7e423abe6336eec5 closed its connection.
+1731194631: Client nodered_bb5585dc1eb07e8f closed its connection.
+1731194631: Client nodered_28e7a8b21ebb3801 closed its connection.
+1731194631: Client nodered_2089a96526b2c659 closed its connection.
+1731194631: Client nodered_06a42177fc3c9041 closed its connection.
+1731194631: Client nodered_7e3304221dce1944 closed its connection.
+1731194631: Client nodered_dca1262a5f145d7a closed its connection.
+1731194631: Client nodered_2828d1014324f33f closed its connection.
+1731194631: Client nodered_572e4be994da4bbc closed its connection.
+1731194631: Client nodered_6e9c36c098772e9c closed its connection.
+1731194631: Client nodered_76abee8a59b45150 closed its connection.
+1731194631: Client nodered_9e9d342bcdf8e47c closed its connection.
+1731194631: Client nodered_de0dec4a22a994b1 closed its connection.
+1731194631: Client nodered_9c51b061ecc51cd8 closed its connection.
+1731194631: Client nodered_d0cd25254bce8cb9 closed its connection.
+1731194631: Client nodered_32d971546afa2b51 closed its connection.
+1731194631: Client nodered_5cfdfbb522c59daa closed its connection.
+1731194631: Client nodered_948c4f04afa0b8fa closed its connection.
+1731194631: Client nodered_d6c5d1bf179c600b closed its connection.
+1731194631: Client nodered_ece0e5c7c4af2a9a closed its connection.
+1731194835: mosquitto version 2.0.20 terminating
+1731194835: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731194835: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731194835: Error: No such file or directory.
+1731194840: mosquitto version 2.0.20 starting
+1731194840: Config loaded from /mosquitto/config/mosquitto.conf.
+1731194840: Opening ipv4 listen socket on port 1883.
+1731194840: mosquitto version 2.0.20 running
+1731194844: New connection from 172.17.0.5:45174 on port 1883.
+1731194844: New client connected from 172.17.0.5:45174 as nodered_6bca04c9a9e0aa7e (p2, c1, k60).
+1731194862: New connection from 172.17.0.5:52764 on port 1883.
+1731194862: New client connected from 172.17.0.5:52764 as nodered_9ca4c0f88c64ac8f (p2, c1, k60).
+1731194889: New connection from 172.17.0.5:44470 on port 1883.
+1731194889: New client connected from 172.17.0.5:44470 as nodered_a3055cfafbe9a0b8 (p2, c1, k60).
+1731195034: New connection from 172.17.0.5:45106 on port 1883.
+1731195034: New client connected from 172.17.0.5:45106 as nodered_6e7417092660fe6c (p2, c1, k60).
+1731195225: New connection from 172.17.0.5:32776 on port 1883.
+1731195225: New client connected from 172.17.0.5:32776 as nodered_40b91ee3c9ee55c0 (p2, c1, k60).
+1731195296: New connection from 172.17.0.5:52744 on port 1883.
+1731195296: New client connected from 172.17.0.5:52744 as nodered_cd92383ae431b1e3 (p2, c1, k60).
+1731195418: New connection from 172.17.0.5:60944 on port 1883.
+1731195418: New client connected from 172.17.0.5:60944 as nodered_25143e801d79d081 (p2, c1, k60).
+1731195535: New connection from 172.17.0.5:47990 on port 1883.
+1731195535: New client connected from 172.17.0.5:47990 as nodered_ef67e667fcd61fd9 (p2, c1, k60).
+1731196266: New connection from 172.17.0.5:46606 on port 1883.
+1731196266: New client connected from 172.17.0.5:46606 as nodered_611fec28e983da90 (p2, c1, k60).
+1731196397: New connection from 172.17.0.5:32848 on port 1883.
+1731196398: New client connected from 172.17.0.5:32848 as nodered_97ba9a5fc029c4cf (p2, c1, k60).
+1731196584: New connection from 172.17.0.5:53612 on port 1883.
+1731196584: New client connected from 172.17.0.5:53612 as nodered_bcfcba8c038fc586 (p2, c1, k60).
+1731196641: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731196641: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731196641: Error: No such file or directory.
+1731196725: New connection from 172.17.0.5:35220 on port 1883.
+1731196725: New client connected from 172.17.0.5:35220 as nodered_8a9251c81c8a13f6 (p2, c1, k60).
+1731196876: New connection from 172.17.0.5:48400 on port 1883.
+1731196876: New client connected from 172.17.0.5:48400 as nodered_1d58f5e09ebefa60 (p2, c1, k60).
+1731197527: New connection from 172.17.0.5:36280 on port 1883.
+1731197527: New client connected from 172.17.0.5:36280 as nodered_f632cd7382c27f4b (p2, c1, k60).
+1731197858: New connection from 172.17.0.5:58808 on port 1883.
+1731197858: New client connected from 172.17.0.5:58808 as nodered_e93f1751cc5dc72f (p2, c1, k60).
+1731198442: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731198442: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731198442: Error: No such file or directory.
+1731198454: New connection from 172.17.0.5:38582 on port 1883.
+1731198454: New client connected from 172.17.0.5:38582 as nodered_71d5c5b209aaa15e (p2, c1, k60).
+1731198639: New connection from 172.17.0.5:37224 on port 1883.
+1731198639: New client connected from 172.17.0.5:37224 as nodered_f8751958679c1dc9 (p2, c1, k60).
+1731198787: New connection from 172.17.0.5:36224 on port 1883.
+1731198787: New client connected from 172.17.0.5:36224 as nodered_36587f876bbfcde9 (p2, c1, k60).
+1731198870: New connection from 172.17.0.5:58028 on port 1883.
+1731198870: New client connected from 172.17.0.5:58028 as nodered_15848366cce38d7f (p2, c1, k60).
+1731199015: New connection from 172.17.0.5:46060 on port 1883.
+1731199015: New client connected from 172.17.0.5:46060 as nodered_c398c5c22774b48a (p2, c1, k60).
+1731199114: New connection from 172.17.0.5:54096 on port 1883.
+1731199114: New client connected from 172.17.0.5:54096 as nodered_d27e39d3dad8f0a4 (p2, c1, k60).
+1731199212: New connection from 172.17.0.5:37952 on port 1883.
+1731199212: New client connected from 172.17.0.5:37952 as nodered_70eb6c26c915a068 (p2, c1, k60).
+1731199323: New connection from 172.17.0.5:58912 on port 1883.
+1731199323: New client connected from 172.17.0.5:58912 as nodered_f9c5bfe742e1c020 (p2, c1, k60).
+1731199389: New connection from 172.17.0.5:50156 on port 1883.
+1731199389: New client connected from 172.17.0.5:50156 as nodered_2e24b246a986580b (p2, c1, k60).
+1731199516: New connection from 172.17.0.5:50562 on port 1883.
+1731199516: New client connected from 172.17.0.5:50562 as nodered_b5f636f4c5a6af22 (p2, c1, k60).
+1731199538: New connection from 172.17.0.5:34078 on port 1883.
+1731199538: New client connected from 172.17.0.5:34078 as nodered_252dc102f134eb05 (p2, c1, k60).
+1731199551: New connection from 172.17.0.5:36152 on port 1883.
+1731199551: New client connected from 172.17.0.5:36152 as nodered_179bf2ef8af3b341 (p2, c1, k60).
+1731199574: New connection from 172.17.0.5:54862 on port 1883.
+1731199574: New client connected from 172.17.0.5:54862 as nodered_9ded077fb7d84e80 (p2, c1, k60).
+1731199600: New connection from 172.17.0.5:45088 on port 1883.
+1731199600: New client connected from 172.17.0.5:45088 as nodered_93d5c01b47146f32 (p2, c1, k60).
+1731199618: New connection from 172.17.0.5:35058 on port 1883.
+1731199618: New client connected from 172.17.0.5:35058 as nodered_729423e040535b9a (p2, c1, k60).
+1731199645: New connection from 172.17.0.5:38502 on port 1883.
+1731199645: New client connected from 172.17.0.5:38502 as nodered_ad6e4a764282e115 (p2, c1, k60).
+1731199669: New connection from 172.17.0.5:45982 on port 1883.
+1731199669: New client connected from 172.17.0.5:45982 as nodered_981db3e6cfa21953 (p2, c1, k60).
+1731199735: New connection from 172.17.0.5:58030 on port 1883.
+1731199735: New client connected from 172.17.0.5:58030 as nodered_fd10ffe96d4374e5 (p2, c1, k60).
+1731199832: New connection from 172.17.0.5:34316 on port 1883.
+1731199832: New client connected from 172.17.0.5:34316 as nodered_eb48ad9e878e0aae (p2, c1, k60).
+1731199907: New connection from 172.17.0.5:48182 on port 1883.
+1731199907: New client connected from 172.17.0.5:48182 as nodered_af1493851e2018a4 (p2, c1, k60).
+1731199920: New connection from 172.17.0.5:37498 on port 1883.
+1731199920: New client connected from 172.17.0.5:37498 as nodered_b9ae1f7ad071591a (p2, c1, k60).
+1731199946: New connection from 172.17.0.5:53870 on port 1883.
+1731199946: New client connected from 172.17.0.5:53870 as nodered_72ae44178ef74a99 (p2, c1, k60).
+1731199965: New connection from 172.17.0.5:50124 on port 1883.
+1731199966: New client connected from 172.17.0.5:50124 as nodered_6a78691e222c9365 (p2, c1, k60).
+1731200048: New connection from 172.17.0.5:58686 on port 1883.
+1731200048: New client connected from 172.17.0.5:58686 as nodered_4af93bc272608292 (p2, c1, k60).
+1731200064: New connection from 172.17.0.5:42694 on port 1883.
+1731200064: New client connected from 172.17.0.5:42694 as nodered_1222ae65883db218 (p2, c1, k60).
+1731200096: New connection from 172.17.0.5:44196 on port 1883.
+1731200096: New client connected from 172.17.0.5:44196 as nodered_5b486f53deece250 (p2, c1, k60).
+1731200117: New connection from 172.17.0.5:45484 on port 1883.
+1731200117: New client connected from 172.17.0.5:45484 as nodered_1da2c35e93244188 (p2, c1, k60).
+1731200140: New connection from 172.17.0.5:58156 on port 1883.
+1731200140: New client connected from 172.17.0.5:58156 as nodered_5430ff37f85a8f52 (p2, c1, k60).
+1731200162: New connection from 172.17.0.5:40988 on port 1883.
+1731200162: New client connected from 172.17.0.5:40988 as nodered_3f44a7b33841aaac (p2, c1, k60).
+1731200186: New connection from 172.17.0.5:45944 on port 1883.
+1731200186: New client connected from 172.17.0.5:45944 as nodered_5b473a0367a2eaf7 (p2, c1, k60).
+1731200228: New connection from 172.17.0.5:54304 on port 1883.
+1731200229: New client connected from 172.17.0.5:54304 as nodered_ef47359295207b74 (p2, c1, k60).
+1731200243: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731200243: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731200243: Error: No such file or directory.
+1731200273: New connection from 172.17.0.5:57296 on port 1883.
+1731200273: New client connected from 172.17.0.5:57296 as nodered_ac8cae0e9610a114 (p2, c1, k60).
+1731200289: New connection from 172.17.0.5:49244 on port 1883.
+1731200289: New client connected from 172.17.0.5:49244 as nodered_b4a2cc408c693387 (p2, c1, k60).
+1731200307: New connection from 172.17.0.5:53286 on port 1883.
+1731200307: New client connected from 172.17.0.5:53286 as nodered_9750c6ebf2338aec (p2, c1, k60).
+1731200336: New connection from 172.17.0.5:45042 on port 1883.
+1731200336: New client connected from 172.17.0.5:45042 as nodered_13efc6fbab73e7e2 (p2, c1, k60).
+1731200358: New connection from 172.17.0.5:60104 on port 1883.
+1731200358: New client connected from 172.17.0.5:60104 as nodered_7942d03caf4121b6 (p2, c1, k60).
+1731200385: New connection from 172.17.0.5:34894 on port 1883.
+1731200385: New client connected from 172.17.0.5:34894 as nodered_f5e44d72eace67d7 (p2, c1, k60).
+1731200472: New connection from 172.17.0.5:45574 on port 1883.
+1731200472: New client connected from 172.17.0.5:45574 as nodered_91920a97968757c8 (p2, c1, k60).
+1731200532: New connection from 172.17.0.5:46310 on port 1883.
+1731200532: New client connected from 172.17.0.5:46310 as nodered_9d49754593ec841d (p2, c1, k60).
+1731200552: New connection from 172.17.0.5:58044 on port 1883.
+1731200552: New client connected from 172.17.0.5:58044 as nodered_354a106ec6b03be5 (p2, c1, k60).
+1731200598: New connection from 172.17.0.5:56306 on port 1883.
+1731200598: New client connected from 172.17.0.5:56306 as nodered_3381d33a1fe6e652 (p2, c1, k60).
+1731200634: New connection from 172.17.0.5:38184 on port 1883.
+1731200634: New client connected from 172.17.0.5:38184 as nodered_1e47d1e7a1bf02e5 (p2, c1, k60).
+1731200667: New connection from 172.17.0.5:58732 on port 1883.
+1731200667: New client connected from 172.17.0.5:58732 as nodered_8f9ce3915db87632 (p2, c1, k60).
+1731200701: New connection from 172.17.0.5:50218 on port 1883.
+1731200701: New client connected from 172.17.0.5:50218 as nodered_e3d98cd0ad954cd5 (p2, c1, k60).
+1731200960: New connection from 172.17.0.5:44264 on port 1883.
+1731200960: New client connected from 172.17.0.5:44264 as nodered_cc7651f0b8d9c29b (p2, c1, k60).
+1731201017: New connection from 172.17.0.5:37012 on port 1883.
+1731201017: New client connected from 172.17.0.5:37012 as nodered_adf0ac6e33abefa3 (p2, c1, k60).
+1731201208: New connection from 172.17.0.5:38648 on port 1883.
+1731201208: New client connected from 172.17.0.5:38648 as nodered_2a29d63f2806fbd7 (p2, c1, k60).
+1731201228: New connection from 172.17.0.5:51414 on port 1883.
+1731201228: New client connected from 172.17.0.5:51414 as nodered_04c819eade14bab8 (p2, c1, k60).
+1731201359: New connection from 172.17.0.5:39638 on port 1883.
+1731201359: New client connected from 172.17.0.5:39638 as nodered_cfd090c5edaf5978 (p2, c1, k60).
+1731201936: New connection from 172.17.0.5:35816 on port 1883.
+1731201936: New client connected from 172.17.0.5:35816 as nodered_e22671bfa61c005c (p2, c1, k60).
+1731201982: Client nodered_e22671bfa61c005c closed its connection.
+1731201982: Client nodered_cfd090c5edaf5978 closed its connection.
+1731201982: Client nodered_04c819eade14bab8 closed its connection.
+1731201982: Client nodered_2a29d63f2806fbd7 closed its connection.
+1731201982: Client nodered_adf0ac6e33abefa3 closed its connection.
+1731201982: Client nodered_cc7651f0b8d9c29b closed its connection.
+1731201982: Client nodered_e3d98cd0ad954cd5 closed its connection.
+1731201982: Client nodered_8f9ce3915db87632 closed its connection.
+1731201982: Client nodered_1e47d1e7a1bf02e5 closed its connection.
+1731201982: Client nodered_3381d33a1fe6e652 closed its connection.
+1731201982: Client nodered_354a106ec6b03be5 closed its connection.
+1731201982: Client nodered_f5e44d72eace67d7 closed its connection.
+1731201982: Client nodered_7942d03caf4121b6 closed its connection.
+1731201982: Client nodered_13efc6fbab73e7e2 closed its connection.
+1731201982: Client nodered_9d49754593ec841d closed its connection.
+1731201982: Client nodered_9750c6ebf2338aec closed its connection.
+1731201982: Client nodered_b4a2cc408c693387 closed its connection.
+1731201982: Client nodered_ef47359295207b74 closed its connection.
+1731201982: Client nodered_91920a97968757c8 closed its connection.
+1731201982: Client nodered_5b473a0367a2eaf7 closed its connection.
+1731201982: Client nodered_3f44a7b33841aaac closed its connection.
+1731201982: Client nodered_ac8cae0e9610a114 closed its connection.
+1731201982: Client nodered_5430ff37f85a8f52 closed its connection.
+1731201982: Client nodered_1da2c35e93244188 closed its connection.
+1731201982: Client nodered_1222ae65883db218 closed its connection.
+1731201982: Client nodered_4af93bc272608292 closed its connection.
+1731201982: Client nodered_6a78691e222c9365 closed its connection.
+1731201982: Client nodered_5b486f53deece250 closed its connection.
+1731201982: Client nodered_72ae44178ef74a99 closed its connection.
+1731201982: Client nodered_b9ae1f7ad071591a closed its connection.
+1731201982: Client nodered_eb48ad9e878e0aae closed its connection.
+1731201982: Client nodered_fd10ffe96d4374e5 closed its connection.
+1731201982: Client nodered_981db3e6cfa21953 closed its connection.
+1731201982: Client nodered_729423e040535b9a closed its connection.
+1731201982: Client nodered_93d5c01b47146f32 closed its connection.
+1731201982: Client nodered_ad6e4a764282e115 closed its connection.
+1731201982: Client nodered_9ded077fb7d84e80 closed its connection.
+1731201982: Client nodered_179bf2ef8af3b341 closed its connection.
+1731201982: Client nodered_252dc102f134eb05 closed its connection.
+1731201982: Client nodered_2e24b246a986580b closed its connection.
+1731201982: Client nodered_f9c5bfe742e1c020 closed its connection.
+1731201982: Client nodered_70eb6c26c915a068 closed its connection.
+1731201982: Client nodered_d27e39d3dad8f0a4 closed its connection.
+1731201982: Client nodered_b5f636f4c5a6af22 closed its connection.
+1731201982: Client nodered_c398c5c22774b48a closed its connection.
+1731201982: Client nodered_15848366cce38d7f closed its connection.
+1731201982: Client nodered_36587f876bbfcde9 closed its connection.
+1731201982: Client nodered_f8751958679c1dc9 closed its connection.
+1731201982: Client nodered_71d5c5b209aaa15e closed its connection.
+1731201982: Client nodered_1d58f5e09ebefa60 closed its connection.
+1731201982: Client nodered_8a9251c81c8a13f6 closed its connection.
+1731201982: Client nodered_bcfcba8c038fc586 closed its connection.
+1731201982: Client nodered_97ba9a5fc029c4cf closed its connection.
+1731201982: Client nodered_611fec28e983da90 closed its connection.
+1731201982: Client nodered_ef67e667fcd61fd9 closed its connection.
+1731201982: Client nodered_25143e801d79d081 closed its connection.
+1731201982: Client nodered_cd92383ae431b1e3 closed its connection.
+1731201982: Client nodered_40b91ee3c9ee55c0 closed its connection.
+1731201982: Client nodered_a3055cfafbe9a0b8 closed its connection.
+1731201982: Client nodered_6e7417092660fe6c closed its connection.
+1731201982: Client nodered_e93f1751cc5dc72f closed its connection.
+1731201982: Client nodered_f632cd7382c27f4b closed its connection.
+1731201982: Client nodered_af1493851e2018a4 closed its connection.
+1731201982: Client nodered_9ca4c0f88c64ac8f closed its connection.
+1731201982: Client nodered_6bca04c9a9e0aa7e closed its connection.
+1731201999: mosquitto version 2.0.20 terminating
+1731201999: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731201999: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731201999: Error: No such file or directory.
+1731202005: mosquitto version 2.0.20 starting
+1731202005: Config loaded from /mosquitto/config/mosquitto.conf.
+1731202005: Opening ipv4 listen socket on port 1883.
+1731202005: mosquitto version 2.0.20 running
+1731202009: New connection from 172.17.0.5:59560 on port 1883.
+1731202009: New client connected from 172.17.0.5:59560 as nodered_5a77135658aadedd (p2, c1, k60).
+1731202268: New connection from 172.17.0.5:58096 on port 1883.
+1731202268: New client connected from 172.17.0.5:58096 as nodered_990627a90901d9cf (p2, c1, k60).
+1731202464: New connection from 172.17.0.5:34198 on port 1883.
+1731202464: New client connected from 172.17.0.5:34198 as nodered_8b36d8e89fba4604 (p2, c1, k60).
+1731202567: New connection from 172.17.0.5:48564 on port 1883.
+1731202567: New client connected from 172.17.0.5:48564 as nodered_9581596fd4efb7d4 (p2, c1, k60).
+1731203806: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731203806: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731203806: Error: No such file or directory.
+1731204482: New connection from 172.17.0.5:41918 on port 1883.
+1731204482: New client connected from 172.17.0.5:41918 as nodered_eed2352beb29bae2 (p2, c1, k60).
+1731204655: New connection from 172.17.0.5:50116 on port 1883.
+1731204655: New client connected from 172.17.0.5:50116 as nodered_0c53a12918f7e705 (p2, c1, k60).
+1731204698: New connection from 172.17.0.5:59050 on port 1883.
+1731204698: New client connected from 172.17.0.5:59050 as nodered_e06635643649a7e8 (p2, c1, k60).
+1731204721: New connection from 172.17.0.5:39270 on port 1883.
+1731204721: New client connected from 172.17.0.5:39270 as nodered_90c1a93672fa8c25 (p2, c1, k60).
+1731204852: New connection from 172.17.0.5:53366 on port 1883.
+1731204852: New client connected from 172.17.0.5:53366 as nodered_fc52919a410b462a (p2, c1, k60).
+1731204898: New connection from 172.17.0.5:48162 on port 1883.
+1731204898: New client connected from 172.17.0.5:48162 as nodered_7b0719cd2cd8ff7c (p2, c1, k60).
+1731204932: New connection from 172.17.0.5:41112 on port 1883.
+1731204932: New client connected from 172.17.0.5:41112 as nodered_ad929329fb59aa3f (p2, c1, k60).
+1731205059: New connection from 172.17.0.5:52738 on port 1883.
+1731205059: New client connected from 172.17.0.5:52738 as nodered_01f82fd6df86d25a (p2, c1, k60).
+1731205178: New connection from 172.17.0.5:40028 on port 1883.
+1731205178: New client connected from 172.17.0.5:40028 as nodered_e1ab65f0687deb69 (p2, c1, k60).
+1731205187: New connection from 172.17.0.5:34740 on port 1883.
+1731205187: New client connected from 172.17.0.5:34740 as nodered_d8b08513fb41debc (p2, c1, k60).
+1731205268: New connection from 172.17.0.5:52098 on port 1883.
+1731205268: New client connected from 172.17.0.5:52098 as nodered_b3c76d85c8ba904f (p2, c1, k60).
+1731205548: New connection from 172.17.0.5:59378 on port 1883.
+1731205548: New client connected from 172.17.0.5:59378 as nodered_1c442562f805fe57 (p2, c1, k60).
+1731205607: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731205607: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731205607: Error: No such file or directory.
+1731205715: New connection from 172.17.0.5:51766 on port 1883.
+1731205715: New client connected from 172.17.0.5:51766 as nodered_16e50f2e3a08706e (p2, c1, k60).
+1731205834: New connection from 172.17.0.5:50522 on port 1883.
+1731205834: New client connected from 172.17.0.5:50522 as nodered_e252f19a0fabef0a (p2, c1, k60).
+1731205844: New connection from 172.17.0.5:36840 on port 1883.
+1731205844: New client connected from 172.17.0.5:36840 as nodered_d2a2170f252b7ea9 (p2, c1, k60).
+1731205933: New connection from 172.17.0.5:53664 on port 1883.
+1731205934: New client connected from 172.17.0.5:53664 as nodered_081fe1e670d25827 (p2, c1, k60).
+1731206136: New connection from 172.17.0.5:48210 on port 1883.
+1731206137: New client connected from 172.17.0.5:48210 as nodered_a22b1c369b525c98 (p2, c1, k60).
+1731206495: New connection from 172.17.0.5:40342 on port 1883.
+1731206495: New client connected from 172.17.0.5:40342 as nodered_6c178f921c685b9f (p2, c1, k60).
+1731206546: New connection from 172.17.0.5:43414 on port 1883.
+1731206546: New client connected from 172.17.0.5:43414 as nodered_4e4346fbbfc491fc (p2, c1, k60).
+1731206571: New connection from 172.17.0.5:51218 on port 1883.
+1731206571: New client connected from 172.17.0.5:51218 as nodered_98c11cb0a7d924f2 (p2, c1, k60).
+1731206582: New connection from 172.17.0.5:41236 on port 1883.
+1731206582: New client connected from 172.17.0.5:41236 as nodered_0118c4bc2ba7cf95 (p2, c1, k60).
+1731206834: New connection from 172.17.0.5:36762 on port 1883.
+1731206834: New client connected from 172.17.0.5:36762 as nodered_5dbdaeca04b05230 (p2, c1, k60).
+1731206846: New connection from 172.17.0.5:44450 on port 1883.
+1731206846: New client connected from 172.17.0.5:44450 as nodered_9045ce04755431fa (p2, c1, k60).
+1731206907: New connection from 172.17.0.5:43504 on port 1883.
+1731206907: New client connected from 172.17.0.5:43504 as nodered_4d632e53fb3c0adc (p2, c1, k60).
+1731206918: New connection from 172.17.0.5:44992 on port 1883.
+1731206918: New client connected from 172.17.0.5:44992 as nodered_7e6413faf25398ec (p2, c1, k60).
+1731207180: New connection from 172.17.0.5:58452 on port 1883.
+1731207180: New client connected from 172.17.0.5:58452 as nodered_f1af4d5cd683cc7f (p2, c1, k60).
+1731207352: New connection from 172.17.0.5:33900 on port 1883.
+1731207352: New client connected from 172.17.0.5:33900 as nodered_514079d71ca5f691 (p2, c1, k60).
+1731207408: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731207408: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731207408: Error: No such file or directory.
+1731207481: New connection from 172.17.0.5:37062 on port 1883.
+1731207481: New client connected from 172.17.0.5:37062 as nodered_0f0104e473155044 (p2, c1, k60).
+1731207510: New connection from 172.17.0.5:34354 on port 1883.
+1731207510: New client connected from 172.17.0.5:34354 as nodered_9416f910a1fe92a4 (p2, c1, k60).
+1731207888: New connection from 172.17.0.5:55910 on port 1883.
+1731207888: New client connected from 172.17.0.5:55910 as nodered_2ddbd65ccc01bc72 (p2, c1, k60).
+1731208257: Client nodered_2ddbd65ccc01bc72 closed its connection.
+1731208257: Client nodered_9416f910a1fe92a4 closed its connection.
+1731208257: Client nodered_0f0104e473155044 closed its connection.
+1731208257: Client nodered_514079d71ca5f691 closed its connection.
+1731208257: Client nodered_f1af4d5cd683cc7f closed its connection.
+1731208257: Client nodered_4d632e53fb3c0adc closed its connection.
+1731208257: Client nodered_5dbdaeca04b05230 closed its connection.
+1731208257: Client nodered_9045ce04755431fa closed its connection.
+1731208257: Client nodered_0118c4bc2ba7cf95 closed its connection.
+1731208257: Client nodered_98c11cb0a7d924f2 closed its connection.
+1731208257: Client nodered_4e4346fbbfc491fc closed its connection.
+1731208257: Client nodered_6c178f921c685b9f closed its connection.
+1731208257: Client nodered_a22b1c369b525c98 closed its connection.
+1731208257: Client nodered_081fe1e670d25827 closed its connection.
+1731208257: Client nodered_d2a2170f252b7ea9 closed its connection.
+1731208257: Client nodered_e252f19a0fabef0a closed its connection.
+1731208257: Client nodered_16e50f2e3a08706e closed its connection.
+1731208257: Client nodered_1c442562f805fe57 closed its connection.
+1731208257: Client nodered_b3c76d85c8ba904f closed its connection.
+1731208257: Client nodered_d8b08513fb41debc closed its connection.
+1731208257: Client nodered_e1ab65f0687deb69 closed its connection.
+1731208257: Client nodered_01f82fd6df86d25a closed its connection.
+1731208257: Client nodered_ad929329fb59aa3f closed its connection.
+1731208257: Client nodered_7b0719cd2cd8ff7c closed its connection.
+1731208257: Client nodered_fc52919a410b462a closed its connection.
+1731208257: Client nodered_90c1a93672fa8c25 closed its connection.
+1731208257: Client nodered_e06635643649a7e8 closed its connection.
+1731208257: Client nodered_0c53a12918f7e705 closed its connection.
+1731208257: Client nodered_eed2352beb29bae2 closed its connection.
+1731208257: Client nodered_9581596fd4efb7d4 closed its connection.
+1731208257: Client nodered_8b36d8e89fba4604 closed its connection.
+1731208257: Client nodered_7e6413faf25398ec closed its connection.
+1731208257: Client nodered_990627a90901d9cf closed its connection.
+1731208257: Client nodered_5a77135658aadedd closed its connection.
+1731208288: mosquitto version 2.0.20 starting
+1731208288: Config loaded from /mosquitto/config/mosquitto.conf.
+1731208288: Opening ipv4 listen socket on port 1883.
+1731208288: mosquitto version 2.0.20 running
+1731208292: New connection from 172.17.0.5:43890 on port 1883.
+1731208292: New client connected from 172.17.0.5:43890 as nodered_abe000477f1f906e (p2, c1, k60).
+1731208299: Client nodered_abe000477f1f906e closed its connection.
+1731208299: mosquitto version 2.0.20 terminating
+1731208299: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731208299: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731208299: Error: No such file or directory.
+1731208354: mosquitto version 2.0.20 starting
+1731208354: Config loaded from /mosquitto/config/mosquitto.conf.
+1731208354: Opening ipv4 listen socket on port 1883.
+1731208354: mosquitto version 2.0.20 running
+1731208358: New connection from 172.17.0.5:35314 on port 1883.
+1731208358: New client connected from 172.17.0.5:35314 as nodered_1ccb78e5e9d598f9 (p2, c1, k60).
+1731208470: Client nodered_1ccb78e5e9d598f9 closed its connection.
+1731208474: mosquitto version 2.0.20 starting
+1731208474: Config loaded from /mosquitto/config/mosquitto.conf.
+1731208474: Opening ipv4 listen socket on port 1883.
+1731208474: mosquitto version 2.0.20 running
+1731208478: New connection from 172.17.0.5:59146 on port 1883.
+1731208478: New client connected from 172.17.0.5:59146 as nodered_c4e88cd3255315c1 (p2, c1, k60).
+1731208543: New connection from 172.17.0.5:56982 on port 1883.
+1731208543: New client connected from 172.17.0.5:56982 as nodered_26445cb6d7a12e5d (p2, c1, k60).
+1731208621: New connection from 172.17.0.5:45142 on port 1883.
+1731208622: New client connected from 172.17.0.5:45142 as nodered_a9d68cb28361e680 (p2, c1, k60).
+1731208720: Client nodered_a9d68cb28361e680 closed its connection.
+1731208720: Client nodered_26445cb6d7a12e5d closed its connection.
+1731208720: Client nodered_c4e88cd3255315c1 closed its connection.
+1731208728: mosquitto version 2.0.20 starting
+1731208728: Config loaded from /mosquitto/config/mosquitto.conf.
+1731208728: Opening ipv4 listen socket on port 1883.
+1731208728: mosquitto version 2.0.20 running
+1731208732: New connection from 172.17.0.5:58888 on port 1883.
+1731208732: New client connected from 172.17.0.5:58888 as nodered_b1875952451b1e9a (p2, c1, k60).
+1731208956: New connection from 172.17.0.5:54520 on port 1883.
+1731208957: New client connected from 172.17.0.5:54520 as nodered_40c6cd4edb9b0ca4 (p2, c1, k60).
+1731208982: New connection from 172.17.0.5:37994 on port 1883.
+1731208982: New client connected from 172.17.0.5:37994 as nodered_8438a187b66655fa (p2, c1, k60).
+1731209069: New connection from 172.17.0.5:42930 on port 1883.
+1731209069: New client connected from 172.17.0.5:42930 as nodered_3da30ea579a30759 (p2, c1, k60).
+1731209179: New connection from 172.17.0.5:44886 on port 1883.
+1731209179: New client connected from 172.17.0.5:44886 as nodered_d6acfa182941ab91 (p2, c1, k60).
+1731209271: New connection from 172.17.0.5:43494 on port 1883.
+1731209271: New client connected from 172.17.0.5:43494 as nodered_b862958af30958f6 (p2, c1, k60).
+1731209333: New connection from 172.17.0.5:37770 on port 1883.
+1731209333: New client connected from 172.17.0.5:37770 as nodered_2e149255787f64ea (p2, c1, k60).
+1731209497: New connection from 172.17.0.5:58092 on port 1883.
+1731209497: New client connected from 172.17.0.5:58092 as nodered_0e3764c350f90312 (p2, c1, k60).
+1731209613: New connection from 172.17.0.5:46048 on port 1883.
+1731209613: New client connected from 172.17.0.5:46048 as nodered_85e21f110cb0318a (p2, c1, k60).
+1731209707: New connection from 172.17.0.5:43454 on port 1883.
+1731209707: New client connected from 172.17.0.5:43454 as nodered_0d83e52aaac09e9c (p2, c1, k60).
+1731209827: New connection from 172.17.0.5:37850 on port 1883.
+1731209827: New client connected from 172.17.0.5:37850 as nodered_6184012fd5d4ef12 (p2, c1, k60).
+1731210279: New connection from 172.17.0.5:60504 on port 1883.
+1731210279: New client connected from 172.17.0.5:60504 as nodered_7317bb5d60a6925f (p2, c1, k60).
+1731210440: New connection from 172.17.0.5:40684 on port 1883.
+1731210440: New client connected from 172.17.0.5:40684 as nodered_b8d8cfc1cad9c58f (p2, c1, k60).
+1731210459: New connection from 172.17.0.5:56942 on port 1883.
+1731210459: New client connected from 172.17.0.5:56942 as nodered_27cdf710332b2673 (p2, c1, k60).
+1731210466: New connection from 172.17.0.5:56952 on port 1883.
+1731210466: New client connected from 172.17.0.5:56952 as nodered_39efdca04e5aa87b (p2, c1, k60).
+1731210522: New connection from 172.17.0.5:39690 on port 1883.
+1731210522: New client connected from 172.17.0.5:39690 as nodered_710fad9409a7175c (p2, c1, k60).
+1731210529: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731210529: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731210529: Error: No such file or directory.
+1731210561: New connection from 172.17.0.5:34064 on port 1883.
+1731210561: New client connected from 172.17.0.5:34064 as nodered_bdfeda6aec2205ab (p2, c1, k60).
+1731210570: New connection from 172.17.0.5:34826 on port 1883.
+1731210570: New client connected from 172.17.0.5:34826 as nodered_40a5b38455b4eaed (p2, c1, k60).
+1731210671: New connection from 172.17.0.5:45882 on port 1883.
+1731210671: New client connected from 172.17.0.5:45882 as nodered_d2acc787f8dd3187 (p2, c1, k60).
+1731210894: New connection from 172.17.0.5:40212 on port 1883.
+1731210894: New client connected from 172.17.0.5:40212 as nodered_e5ea9ac8f4fe6357 (p2, c1, k60).
+1731210953: New connection from 172.17.0.5:37084 on port 1883.
+1731210953: New client connected from 172.17.0.5:37084 as nodered_75ac5a21d5c3b9b9 (p2, c1, k60).
+1731211394: New connection from 172.17.0.5:58140 on port 1883.
+1731211394: New client connected from 172.17.0.5:58140 as nodered_4fbe565d27d371e9 (p2, c1, k60).
+1731211504: New connection from 172.17.0.5:32816 on port 1883.
+1731211504: New client connected from 172.17.0.5:32816 as nodered_63a24ec8b9b520ed (p2, c1, k60).
+1731211649: Client nodered_63a24ec8b9b520ed closed its connection.
+1731211649: Client nodered_4fbe565d27d371e9 closed its connection.
+1731211649: Client nodered_d2acc787f8dd3187 closed its connection.
+1731211649: Client nodered_40a5b38455b4eaed closed its connection.
+1731211649: Client nodered_bdfeda6aec2205ab closed its connection.
+1731211649: Client nodered_710fad9409a7175c closed its connection.
+1731211649: Client nodered_39efdca04e5aa87b closed its connection.
+1731211649: Client nodered_27cdf710332b2673 closed its connection.
+1731211649: Client nodered_b8d8cfc1cad9c58f closed its connection.
+1731211649: Client nodered_7317bb5d60a6925f closed its connection.
+1731211649: Client nodered_6184012fd5d4ef12 closed its connection.
+1731211649: Client nodered_0d83e52aaac09e9c closed its connection.
+1731211649: Client nodered_85e21f110cb0318a closed its connection.
+1731211649: Client nodered_0e3764c350f90312 closed its connection.
+1731211649: Client nodered_2e149255787f64ea closed its connection.
+1731211649: Client nodered_b862958af30958f6 closed its connection.
+1731211649: Client nodered_75ac5a21d5c3b9b9 closed its connection.
+1731211649: Client nodered_d6acfa182941ab91 closed its connection.
+1731211649: Client nodered_3da30ea579a30759 closed its connection.
+1731211649: Client nodered_8438a187b66655fa closed its connection.
+1731211649: Client nodered_e5ea9ac8f4fe6357 closed its connection.
+1731211649: Client nodered_40c6cd4edb9b0ca4 closed its connection.
+1731211649: Client nodered_b1875952451b1e9a closed its connection.
+1731211649: mosquitto version 2.0.20 terminating
+1731211649: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1731211649: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1731211649: Error: No such file or directory.
+1731211670: mosquitto version 2.0.20 starting
+1731211670: Config loaded from /mosquitto/config/mosquitto.conf.
+1731211670: Opening ipv4 listen socket on port 1883.
+1731211670: mosquitto version 2.0.20 running
+1731211674: New connection from 172.17.0.5:35378 on port 1883.
+1731211674: New client connected from 172.17.0.5:35378 as nodered_6b750bfda1b617f4 (p2, c1, k60).
