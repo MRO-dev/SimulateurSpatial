@@ -60,7 +60,9 @@ services:
     volumes:
       - /home/simulateurspatial/.node-red:/data:rw
       - ".:/app:rw"
-      - ./log/nodered/:/log:rw
+      - "./log/nodered/:/log:rw"
+      # Ajout du volume pour permettre les permissions d'écriture sur le dossier de destination
+      - "/app/jsatorb-rest-api/files/default_Sat/Data/Backup/:/app/jsatorb-rest-api/files/default_Sat/Data/Backup/:rw"
     links:
       - mongo:mongo
       - backend:backend

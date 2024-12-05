@@ -179,8 +179,8 @@ class HAL_MissionAnalysis(PropagationTimeSettings):
            # propagator.addForceModel(NewtonianAttraction(self.mu))
             propagator.setInitialState(initialState)
             propagator.setOrbitType(initialOrbit.getType())
-            print("Initial Position :", initialOrbit.getPVCoordinates())
-            print("Initial Orbit :", initialOrbit)
+           # print("Initial Position :", initialOrbit.getPVCoordinates())
+           # print("Initial Orbit :", initialOrbit)
            # print("Initial date :", initialOrbit.getDate())
            
            # propagator = KeplerianPropagator(initialOrbit)
@@ -238,11 +238,12 @@ class HAL_MissionAnalysis(PropagationTimeSettings):
             #    print("Initial :", sat["propagator"]) 
             #    print("Initial :", sat["propagator"].getInitialState()) 
                 sat["initialState"] = sat["propagator"].getInitialState().getOrbit() 
-                print("Initialization: TLE of {} was propagated from {} to {}".format(satName, initialDateCur, self.absoluteStartTime))
-                print("New Position :", sat["initialState"].getPVCoordinates())
+                #print("Initialization: TLE of {} was propagated from {} to {}".format(satName, initialDateCur, self.absoluteStartTime))
+                #print("New Position :", sat["initialState"].getPVCoordinates())
             elif "isTLE" in sat and initialDateCur.compareTo(self.absoluteStartTime) == 0:
-                print("Initialization: TLE of {} was propagated from {} to {}".format(satName, initialDateCur, self.absoluteStartTime))
-                print("New Position :", sat["initialState"].getPVCoordinates())
+                 True
+                 #print("Initialization: TLE of {} was propagated from {} to {}".format(satName, initialDateCur, self.absoluteStartTime))
+             #   print("New Position :", sat["initialState"].getPVCoordinates())
              #   print("Initial :", sat["propagator"].getInitialState()) 
         # Initialize python array in dictionary
         for key, value in self.satelliteList.items():

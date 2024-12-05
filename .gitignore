@@ -61,3 +61,8 @@ snap/
 .mozilla/
 .wget-hsts
 token
+.codeium/
+.continue/
+.m2/
+.pki/
+Bureau/

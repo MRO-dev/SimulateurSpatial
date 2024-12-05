@@ -140,8 +140,8 @@ class AEMGenerator:
             # propagator.addForceModel(NewtonianAttraction(self.mu))
             propagator.setInitialState(initialState)
             propagator.setOrbitType(initialOrbit.getType())
-            print("Initial Position :", initialOrbit.getPVCoordinates())
-            print("Initial Orbit :", initialOrbit)
+            #print("Initial Position :", initialOrbit.getPVCoordinates())
+            #print("Initial Orbit :", initialOrbit)
 ####
             self.satellite = {
                 "name": sat["name"],

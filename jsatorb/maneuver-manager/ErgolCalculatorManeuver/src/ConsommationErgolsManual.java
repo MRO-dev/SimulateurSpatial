@@ -72,6 +72,6 @@ public class ConsommationErgolsManual {
 
     // Méthode pour calculer la masse finale après une manœuvre impulsionnelle
     public static double calculateFinalMass(double initialMass, double deltaV, double ISP, double g0) {
-        return initialMass * FastMath.exp(-deltaV / (ISP * g0));
+        return initialMass * FastMath.exp(Math.abs(-deltaV)/ (ISP * g0));
     }
 }

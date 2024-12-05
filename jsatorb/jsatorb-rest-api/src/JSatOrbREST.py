@@ -3,15 +3,26 @@ import os
 import sys
 import io
 import zipfile
-import pathlib
-from bottle import HTTPResponse
+from pathlib import Path
+from datetime import datetime
+from bottle import Bottle, request, response, HTTPResponse
+
+# Initialize the Bottle application
+app = Bottle()
+
+import json
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 #### Give visibility on processing modules called from the REST API
-# Add mission analysis module 
+# Add mission analysis module
 sys.path.append('../jsatorb-visibility-service/src')
-# Add eclipses module 
+# Add eclipses module
 sys.path.append('../jsatorb-eclipse-service/src')
-# Add Date conversion module 
+# Add Date conversion module
 sys.path.append('../jsatorb-date-conversion/src')
 # Add JSatOrb common module: AEM and MEM generators
 sys.path.append('../jsatorb-common/src')
@@ -36,214 +47,254 @@ from EclipseCalculator import HAL_SatPos, EclipseCalculator
 from FileGenerator import FileGenerator
 from VTSGenerator import VTSGenerator
 from ccsds2cic import ccsds2cic
-from MissionDataManager import writeMissionDataFile, loadMissionDataFile, listMissionDataFile, duplicateMissionDataFile, isMissionDataFileExists, deleteMissionDataFile
+from MissionDataManager import writeMissionDataFile, loadMissionDataFile, listMissionDataFile, duplicateMissionDataFile, \
+    isMissionDataFileExists, deleteMissionDataFile
 from CoverageGenerator import CoverageGenerator
 from VTSGeneratorCoverage import VTSGeneratorCoverage
 from datetime import datetime
 import json
 
-app = application = bottle.default_app()
 
-# the decorator
+# Helper Functions
+
 def enable_cors(fn):
     def _enable_cors(*args, **kwargs):
-        # set CORS headers
         response.headers['Access-Control-Allow-Origin'] = '*'
         response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS, DELETE'
-        response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
-
-        if bottle.request.method != 'OPTIONS':
-            # actual request; reply with the actual response
+        response.headers[
+            'Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
+        if request.method != 'OPTIONS':
             return fn(*args, **kwargs)
+
     return _enable_cors
 
-# Display received HTTP request on stdout.
-def showRequest(req):
-    """Display received HTTP request on stdout."""
-    print("RECEIVED REQUEST --------------------------------------------------")
-    print(req)
-    print("END OF RECEIVED REQUEST -------------------------------------------")
 
-# Display sent HTTP response on stdout.
-def showResponse(res):
-    """Display sent HTTP response on stdout."""
-    print("SENT RESPONSE (truncated to 1000 char) ----------------------------")
-    print(res[0:1000])
-    print("END OF SENT RESPONSE ----------------------------------------------")
+def show_request(req):
+    """Log received HTTP request."""
+    logger.info("RECEIVED REQUEST --------------------------------------------------")
+    logger.info(req)
+    logger.info("END OF RECEIVED REQUEST -------------------------------------------")
 
-# Convert a boolean to a REST status value {"SUCCESS, "FAIL"}.
-def boolToRESTStatus(value):
-    """Convert a boolean to a REST status value {"SUCCESS, "FAIL"}."""
-    if (value == True):
-        return "SUCCESS"
-    else:
-        return "FAIL"
 
-# Build a formatted REST response (SMD= Status, Message, Data) as a dictionary.
-def buildSMDResponse(status, message, data):
+def show_response(res):
+    """Log sent HTTP response."""
+    logger.info("SENT RESPONSE (truncated to 1000 char) ----------------------------")
+    logger.info(res[:1000])
+    logger.info("END OF SENT RESPONSE ----------------------------------------------")
+
+
+def bool_to_rest_status(value):
+    """Convert a boolean to a REST status value {"SUCCESS", "FAIL"}."""
+    return "SUCCESS" if value else "FAIL"
+
+
+def build_smd_response(status, message, data):
     """
-    Build a formatted REST response as a dictionary: 
-    {"status": <operation status: "SUCCESS" or "FAIL">, "message": <error message if "FAIL" is returned>, "data": <response data>}
+    Build a formatted REST response as a dictionary:
+    {
+        "status": <operation status: "SUCCESS" or "FAIL">,
+        "message": <error message if "FAIL" is returned>,
+        "data": <response data>
+    }
     """
-
     return {"status": status, "message": message, "data": data}
+
+
+def error_response(error_name):
+    """Return an error response as JSON."""
+    return json.dumps({"error": error_name})
+
+
+def get_list_of_files(dir_name):
+    """
+    Efficiently retrieve all file paths within a directory tree.
+    """
+    return [str(path) for path in Path(dir_name).rglob('*') if path.is_file()]
+
+
+def zipped_vts_response(vts_folder, mission):
+    """
+    Create an HTTP response containing the VTS compressed data structure.
+    """
+    buf = io.BytesIO()
+    list_of_files = get_list_of_files(vts_folder)
+
+    with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as zipfh:
+        for individual_file in list_of_files:
+            # Compute relative path for the archive
+            arcname = os.path.relpath(individual_file, vts_folder)
+            zipfh.write(individual_file, arcname)
+
+    buf.seek(0)
+    filename = f'vts-{mission}-content.vz'
+
+    r = HTTPResponse(status=200, body=buf)
+    r.set_header('Content-Type', 'application/vnd+cssi.vtsproject+zip')
+    r.set_header('Content-Disposition', f"attachment; filename='{filename}'")
+    r.set_header('Access-Control-Expose-Headers', 'Content-Disposition')
+    r.set_header('Access-Control-Allow-Origin', '*')
+    r.set_header('vtsFlag', 'ready')
+
+    return r
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-visibility-service
 # ROUTE         : /propagation/satellites
 # METHOD        : POST
-# FUNCTIONNALITY: Ephemerids processing 
+# FUNCTIONALITY : Ephemerids processing
 # -----------------------------------------------------------------------------
-@app.route('/propagation/satellites', method=['OPTIONS','POST'])
+@app.route('/propagation/satellites', method=['OPTIONS', 'POST'])
 @enable_cors
-def satelliteJSON():
+def satellite_json():
     response.content_type = 'application/json'
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
-    header = data['header']
-    satellites = data['satellites']
-    step = header['step']
-    endDate = header['timeEnd']
+    header = data.get('header', {})
+    satellites = data.get('satellites', [])
+    step = header.get('step')
+    end_date = header.get('timeEnd')
+    celestial_body = header.get('celestialBody', 'EARTH')
 
-    # Assign default value ('EARTH') if celestial body is undefined.
-    if 'celestialBody' in header:
-        celestialBody=header['celestialBody']
-    else:
-        celestialBody = 'EARTH'
-        
-    newMission = HAL_MissionAnalysis(step, endDate, celestialBody)    
+    new_mission = HAL_MissionAnalysis(step, end_date, celestial_body)
 
     if 'timeStart' in header:
-        newMission.setStartTime(header['timeStart'])
+        new_mission.setStartTime(header['timeStart'])
 
     for sat in satellites:
-        newMission.addSatellite(sat)
+        new_mission.addSatellite(sat)
 
-    newMission.propagate()
+    new_mission.propagate()
 
-    res = json.dumps(newMission.getJSONEphemerids())
-    showResponse(res)
+    res = json.dumps(new_mission.getJSONEphemerids())
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-visibility-service
 # ROUTE         : /propagation/visibility
 # METHOD        : POST
-# FUNCTIONNALITY: Visibility processing
+# FUNCTIONALITY : Visibility processing
 # -----------------------------------------------------------------------------
 @app.route('/propagation/visibility', method=['OPTIONS', 'POST'])
 @enable_cors
 def satelliteOEM():
     response.content_type = 'application/json'
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
-    header = data['header']
-    satellites = data['satellites']
-    groundStations = data['groundStations']
-    step = header['step']
-    endDate = header['timeEnd']
+    header = data.get('header', {})
+    satellites = data.get('satellites', [])
+    ground_stations = data.get('groundStations', [])
+    step = header.get('step')
+    end_date = header.get('timeEnd')
 
-    # Assign default value ('EARTH') if celestial body is undefined.
-    if 'celestialBody' in header:
-        celestialBody=header['celestialBody']
-    else:
-        celestialBody = 'EARTH'
-        
-    newMission = HAL_MissionAnalysis(step, endDate, celestialBody)    
+    celestial_body = header.get('celestialBody', 'EARTH')
+
+    new_mission = HAL_MissionAnalysis(step, end_date, celestial_body)
     if 'timeStart' in header:
-        newMission.setStartTime(header['timeStart'])
+        new_mission.setStartTime(header['timeStart'])
 
-    for sat in  satellites:
-        newMission.addSatellite(sat)
+    for sat in satellites:
+        new_mission.addSatellite(sat)
 
-    for gs in groundStations:
-        newMission.addGroundStation(gs)
+    for gs in ground_stations:
+        new_mission.addGroundStation(gs)
 
-    newMission.propagate()
+    new_mission.propagate()
 
-    res = json.dumps(newMission.getVisibility())
-    showResponse(res)
+    res = json.dumps(new_mission.getVisibility())
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-eclipse-service
 # ROUTE         : /propagation/eclipses
 # METHOD        : POST
-# FUNCTIONNALITY: Eclipse processing
+# FUNCTIONALITY : Eclipse processing
 # -----------------------------------------------------------------------------
-@app.route('/propagation/eclipses', method=['OPTIONS','POST'])
+@app.route('/propagation/eclipses', method=['OPTIONS', 'POST'])
 @enable_cors
 def EclipseCalculatorREST():
     response.content_type = 'application/json'
-    
+
     data = request.json
-    showRequest(json.dumps(data))
-    
+    show_request(json.dumps(data))
+
     stringDateFormat = '%Y-%m-%dT%H:%M:%S'
 
     try:
-        header = data['header']
-        sat = data['satellite']
+        header = data.get('header', {})
+        sat = data.get('satellite', {})
 
-        stringDate = str( header['timeStart'] )
-        stringDateEnd = str( header['timeEnd'] )
+        stringDate = str(header.get('timeStart', ''))
+        stringDateEnd = str(header.get('timeEnd', ''))
 
-        typeSat = str( sat['type'] )
-        if 'keplerian' in typeSat:
-            sma = float( sat['sma'] )
+        typeSat = str(sat.get('type', ''))
+        if 'keplerian' in typeSat.lower():
+            sma = float(sat.get('sma', 0))
             if sma < 6371000:
-                res = ValueError('bad sma value')
+                raise ValueError('bad sma value')
             else:
-                ecc = float( sat['ecc'] )
-                inc = float( sat['inc'] )
-                pa = float( sat['pa'] )
-                raan = float( sat['raan'] )
-                lv = float( sat['meanAnomaly'] )
-                calculator = EclipseCalculator(HAL_SatPos(sma, ecc, inc, pa, raan, lv, 'keplerian'),
-                    datetime.strptime(stringDate, stringDateFormat), datetime.strptime(stringDateEnd, stringDateFormat))
-                res = eclipseToJSON( calculator.getEclipse() )
+                ecc = float(sat.get('ecc', 0))
+                inc = float(sat.get('inc', 0))
+                pa = float(sat.get('pa', 0))
+                raan = float(sat.get('raan', 0))
+                lv = float(sat.get('meanAnomaly', 0))
+                calculator = EclipseCalculator(
+                    HAL_SatPos(sma, ecc, inc, pa, raan, lv, 'keplerian'),
+                    datetime.strptime(stringDate, stringDateFormat),
+                    datetime.strptime(stringDateEnd, stringDateFormat)
+                )
+                res = eclipseToJSON(calculator.getEclipse())
 
-        elif 'cartesian' in typeSat:
-            x = float( sat['x'] )
-            y = float( sat['y'] )
-            z = float( sat['z'] )
-            vx = float( sat['vx'] )
-            vy = float( sat['vy'] )
-            vz = float( sat['vz'] )
-            calculator = EclipseCalculator(HAL_SatPos(x, y, z, vx, vy, vz, 'cartesian'), 
-                datetime.strptime(stringDate, stringDateFormat), datetime.strptime(stringDateEnd, stringDateFormat))
-            res = eclipseToJSON( calculator.getEclipse() )
+        elif 'cartesian' in typeSat.lower():
+            x = float(sat.get('x', 0))
+            y = float(sat.get('y', 0))
+            z = float(sat.get('z', 0))
+            vx = float(sat.get('vx', 0))
+            vy = float(sat.get('vy', 0))
+            vz = float(sat.get('vz', 0))
+            calculator = EclipseCalculator(
+                HAL_SatPos(x, y, z, vx, vy, vz, 'cartesian'),
+                datetime.strptime(stringDate, stringDateFormat),
+                datetime.strptime(stringDateEnd, stringDateFormat)
+            )
+            res = eclipseToJSON(calculator.getEclipse())
 
         else:
-            res = error('bad type')
+            res = error_response('bad type')
 
     except Exception as e:
-        res = error(type(e).__name__ + str(e.args))
+        res = error_response(type(e).__name__ + ": " + str(e.args))
 
-    showResponse(res)
+    show_response(res)
     return res
 
 
 def error(errorName):
     return '{"error": "' + errorName + '"}'
 
+
 def eclipseToJSON(eclipse):
-    eclipseDictionary = []
+    eclipse_dictionary = []
 
     for el in eclipse:
         obj = {}
-        obj['start'] = el[0].toString()
-        obj['end'] = el[1].toString()
-        eclipseDictionary.append(obj)
+        obj['start'] = el[0].isoformat()  # Changed to isoformat for proper JSON serialization
+        obj['end'] = el[1].isoformat()
+        eclipse_dictionary.append(obj)
 
-    return json.dumps(eclipseDictionary)
+    return json.dumps(eclipse_dictionary)
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-date-conversion
 # ROUTE         : /dateconversion
-# FUNCTIONNALITY: Date conversion from ISO-8601 to JD and MJD
+# FUNCTIONALITY : Date conversion from ISO-8601 to JD and MJD
 # -----------------------------------------------------------------------------
 @app.route('/dateconversion', method=['OPTIONS', 'POST'])
 @enable_cors
@@ -251,31 +302,31 @@ def DateConversionREST():
     response.content_type = 'application/json'
 
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
     try:
-        header = data['header']
-        dateToConvert = header['dateToConvert']
-        targetFormat = header['targetFormat']
+        header = data.get('header', {})
+        date_to_convert = header.get('dateToConvert', '')
+        target_format = header.get('targetFormat', '')
 
-        newDate = HAL_DateConversion(dateToConvert, targetFormat)
+        new_date = HAL_DateConversion(date_to_convert, target_format)
 
         # Return json with converted date in 'dateConverted'
-
-        result = newDate.getDateTime()
-        errorMessage = ''
+        result = new_date.getDateTime()
+        error_message = ''
     except Exception as e:
         result = None
-        errorMessage = str(e)
+        error_message = str(e)
 
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(result!=None), errorMessage, result))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result is not None), error_message, result))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-constellation-generator
 # ROUTE         : /constellationgenerator
-# FUNCTIONNALITY: Generates a satelittes constellation, according to a set
+# FUNCTIONALITY : Generates a satellites constellation, according to a set
 #                 of parameters.
 # -----------------------------------------------------------------------------
 @app.route('/constellationgenerator', method=['OPTIONS', 'POST'])
@@ -284,10 +335,10 @@ def ConstellationGeneratorREST():
     response.content_type = 'application/json'
 
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
     try:
-        header = data['header']
+        header = data.get('header', {})
 
         # Give directly the header part of the request, as the arguments/parameter
         # names are the same that the one expected in the constellation generator.
@@ -296,316 +347,246 @@ def ConstellationGeneratorREST():
         # The generator returned data can be directly put into the JSON data part of the HTTP response.
         result = generator.generate()
 
-        errorMessage = ''
+        error_message = ''
     except Exception as e:
         result = None
-        errorMessage = str(e)
+        error_message = str(e)
 
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(result!=None), errorMessage, result))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result is not None), error_message, result))
+    show_response(res)
     return res
-
-# -----------------------------------------------------------------------------------------
-# VTS ZIP FILE BLOB RESPONSE HELPER FUNCTIONS
-# -----------------------------------------------------------------------------------------
-
-def getListOfFiles(dirName):
-    """
-    For the given path, get the List of all files in the directory tree (recursively)
-
-    Parameters:
-        dirName The folder to list the files of.
-    Returns
-        The list of files beginning with the same path given by dirName.
-    """
-    # create a list of file and sub directories 
-    # names in the given directory 
-    listOfFile = os.listdir(dirName)
-    allFiles = list()
-    # Iterate over all the entries
-    for entry in listOfFile:
-        # Create full path
-        fullPath = os.path.join(dirName, entry)
-        # If entry is a directory then get the list of files in this directory 
-        if os.path.isdir(fullPath):
-            allFiles = allFiles + getListOfFiles(fullPath)
-        else:
-            allFiles.append(fullPath)
-                
-    return allFiles
-
-def zipped_vts_response(vts_folder, mission):
-    """
-    Create an HTTP response containing the VTS compressed data structure in its body
-
-    Parameters:
-        vts_folder The folder which content has to be compressed and encapsulated into an http response.
-        mission The mission name used to give a name to the zip attachment content.
-    Returns:
-        The HTTP Response containg the VTS compressed content, or None if zipRoot is not child of vts_folder
-    """
-
-    buf = io.BytesIO()
-    # Get the list of all files in directory tree at given path
-    listOfFiles = getListOfFiles(vts_folder)
-
-    with zipfile.ZipFile(buf, 'w') as zipfh:
-        for individualFile in listOfFiles:
-            fileSegments = individualFile.split('/')
-            fileSegmentsTruncated = fileSegments[1:]
-            fileFinalFilename = '/'.join(fileSegmentsTruncated)
-            dt = datetime.now()
-            timeinfo = (dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
-            info = zipfile.ZipInfo(fileFinalFilename, timeinfo)
-            info.compress_type = zipfile.ZIP_DEFLATED
-            with open(individualFile, 'rb') as content_file:
-                content = content_file.read()
-                zipfh.writestr(info, content)
-    buf.seek(0)
-
-    filename = 'vts-' + mission + '-content.vz'
-
-    r = HTTPResponse(status=200, body=buf)
-    # Set theJSatOrb custom content type (to force the JSatorb GUI Web browser to ask which application to use to manage the received data).
-    r.set_header('Content-Type', 'application/vnd+cssi.vtsproject+zip') 
-    # Give the recommended filename for the received data (and give the mission name in it, as the filename structure is: vts-<mission-name>-content.vz).
-    r.set_header('Content-Disposition', "attachment; filename='" + filename + "'")
-    # Expose the ContentDisposition header item (hence the recommended filename).
-    r.set_header('Access-Control-Expose-Headers', 'Content-Disposition')
-    # Do not restrict the request origin.
-    r.set_header('Access-Control-Allow-Origin', '*')
-    #New header by EAE to warn nodered that VTS should be restarted
-    r.set_header('vtsFlag', 'ready') 
-    print(r)
-    
-    
-    return r
-
-# -----------------------------------------------------------------------------------------
-# END OF VTS ZIP FILE BLOB RESPONSE HELPER FUNCTIONS
-# -----------------------------------------------------------------------------------------
 
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-file-generation
-# ROUTE         : /propagation/eclipses
+# ROUTE         : /vts
 # METHOD        : POST
-# FUNCTIONNALITY: Eclipse processing
+# FUNCTIONALITY : Generate VTS files and respond with a zipped archive.
 # -----------------------------------------------------------------------------
 @app.route('/vts', method=['OPTIONS', 'POST'])
 @enable_cors
-def FileGenerationREST():
-    #response.content_type = 'application/json'
+def file_generation_rest():
     data = request.json
-    showRequest(json.dumps(data))
-  #  print(data)
-    try:
-        header = data['header']
-        print(header)
-        satellites = data['satellites']
-        groundStations = data['groundStations']
-        options = data['options']
-        
-        if 'celestialBody' not in header: header['celestialBody'] = 'EARTH'
-        celestialBody = str( header['celestialBody'] )
+    show_request(json.dumps(data))
 
-        if 'mission' not in header: header['mission'] = 'default_' + satellites[0]['name']
+    try:
+        header = data.get('header', {})
+        satellites = data.get('satellites', [])
+        ground_stations = data.get('groundStations', [])
+        options = data.get('options', {})
+
+        celestial_body = str(header.get('celestialBody', 'EARTH'))
+        header['celestialBody'] = celestial_body  # Ensure 'celestialBody' exists in header
+
+        mission = header.get('mission', f"default_{satellites[0]['name'] if satellites else 'unknown'}")
 
         if "COVERAGE" in options:
-            optionsCoverage = options["COVERAGE"]
-
-            projectFolder = 'files/' + header['mission'] + '_coverage/'
-            dataFolder = projectFolder + 'Data/'
-            modelFolder = projectFolder + 'Models/'
-            if not os.path.isdir(projectFolder):
-                os.mkdir(projectFolder)
-                os.mkdir(dataFolder)
-            elif not os.path.isdir(dataFolder):
-                os.mkdir(dataFolder)
-            copy_tree('files/Models', modelFolder)
-
-            covGen = CoverageGenerator(celestialBody, satellites)
-            covGen.compute(optionsCoverage)
-            covGen.saveTypeData(modelFolder)
-
-            nameVtsFile = projectFolder + '/' + header['mission'] + '_coverage.vts'
-            vtsGenerator = VTSGeneratorCoverage(nameVtsFile, 'mainModelCoverage.vts', '../jsatorb-coverage-service/src/')
-            vtsGenerator.generate(header, options, groundStations)
-
+            project_folder = Path('files') / f"{mission}_coverage"
         else:
-            step = float( header['step'] )
-            startDate = str( header['timeStart'] )
-            endDate = str( header['timeEnd'] )
-            print("startDate")
-            print(startDate)
-            projectFolder = 'files/' + header['mission'] + '/'
-            dataFolder = projectFolder + 'Data/'
-            if not os.path.isdir(projectFolder):
-                os.mkdir(projectFolder)
-                os.mkdir(dataFolder)
-            elif not os.path.isdir(dataFolder):
-                os.mkdir(dataFolder)
-            copy_tree('files/Models', projectFolder+'Models')
+            project_folder = Path('files') / mission
 
-            fileGenerator = FileGenerator(startDate, endDate, step, celestialBody, satellites, groundStations, options)
-            fileGenerator.generate(dataFolder)
-            header['timeStart'] = startDate # 180723 Trying to force the start date in config 
-            nameVtsFile = projectFolder + '/' + header['mission'] + '.vts'
-            vtsGenerator = VTSGenerator(nameVtsFile, 'mainModel.vts', '../jsatorb-common/src/VTS/')
-            vtsGenerator.generate(header, options, satellites, groundStations)
-            
-            print("No Coverage")
-            print(header)
-            
-        result = ""
-        errorMessage = 'Files generated'
+        data_folder = project_folder / 'Data'
+        model_folder = project_folder / 'Models'
 
-        # Success response
-        res = zipped_vts_response(projectFolder, header['mission'])
-        if (not res == None):
-            print('Returning compressed VTS data structure as Response')
+        # Create necessary directories
+        os.makedirs(data_folder, exist_ok=True)
+        model_folder.mkdir(parents=True, exist_ok=True)
+
+        # Copy Models efficiently
+        copy_source = Path('files') / 'Models'
+        copy_destination = model_folder
+        if copy_source.exists():
+            copy_tree(str(copy_source), str(copy_destination))
         else:
-            result = "FAIL"
-            message = "REST API internal error while creating the VTS archive !"
+            logger.warning(f"Source Models directory does not exist: {copy_source}")
 
-            res = json.dumps(buildSMDResponse(boolToRESTStatus(result!=None), errorMessage, result))            
-            showResponse(res)
+        if "COVERAGE" in options:
+            options_coverage = options.get("COVERAGE", {})
+            cov_gen = CoverageGenerator(celestial_body, satellites)
+            cov_gen.compute(options_coverage)
+            cov_gen.saveTypeData(str(model_folder))
+
+            name_vts_file = project_folder / f"{mission}_coverage.vts"
+            vts_generator = VTSGeneratorCoverage(
+                str(name_vts_file),
+                'mainModelCoverage.vts',
+                '../jsatorb-coverage-service/src/'
+            )
+            vts_generator.generate(header, options, ground_stations)
+        else:
+            step = float(header.get('step', 60.0))  # Default step to 60 if not provided
+            start_date = str(header.get('timeStart', ''))
+            end_date = str(header.get('timeEnd', ''))
+
+            file_generator = FileGenerator(
+                start_date, end_date, step, celestial_body, satellites, ground_stations, options
+            )
+            file_generator.generate(str(data_folder))
+
+            # Update header with start date
+            header['timeStart'] = start_date
+            name_vts_file = project_folder / f"{mission}.vts"
+            vts_generator = VTSGenerator(
+                str(name_vts_file),
+                'mainModel.vts',
+                '../jsatorb-common/src/VTS/'
+            )
+            vts_generator.generate(header, options, satellites, ground_stations)
+
+            logger.info("No Coverage")
+            logger.info(header)
+
+            # Create zip response
+        res = zipped_vts_response(str(project_folder), mission)
+        logger.info('Returning compressed VTS data structure as Response')
 
     except Exception as e:
-        result = None
-        errorMessage = str(e)
-
-        # Error response
-        print('An error occured while producing the compressed VTS data structure !')
-        res = json.dumps(buildSMDResponse(boolToRESTStatus(result!=None), errorMessage, result))
-        showResponse(res)
+        error_message = str(e)
+        logger.error('An error occurred while producing the compressed VTS data structure!')
+        res = json.dumps(build_smd_response("FAIL", error_message, None))
+        show_response(res)
 
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/<missionName>
 # METHOD        : POST
-# FUNCTIONNALITY: Store mission data into a file
+# FUNCTIONALITY : Store mission data into a file
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/<missionName>', method=['OPTIONS', 'POST'])
 @enable_cors
 def MissionDataStoreREST(missionName):
     response.content_type = 'application/json'
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
     result = writeMissionDataFile(data, missionName)
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(result[0]), result[1], ""))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result[0]), result[1], ""))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/<missionName>
 # METHOD        : GET
-# FUNCTIONNALITY: Load mission data previously stored
+# FUNCTIONALITY : Load mission data previously stored
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/<missionName>', method=['OPTIONS', 'GET'])
 @enable_cors
 def MissionDataLoadREST(missionName):
     response.content_type = 'application/json'
-    data = request.json
-    showRequest(json.dumps(data))
+    # GET requests typically don't have a body, so removing request.json
+    # data = request.json
+    # show_request(json.dumps(data))  # This would fail if data is None
+
+    logger.info(f"Loading mission data for mission: {missionName}")
 
     result = loadMissionDataFile(missionName)
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(not result[0]==None), result[1], result[0]))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result[0] is not None), result[1], result[0]))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/list
 # METHOD        : GET
-# FUNCTIONNALITY: Get a list of mission data previously stored
+# FUNCTIONALITY : Get a list of mission data previously stored
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/list', method=['OPTIONS', 'GET'])
 @enable_cors
 def MissionDataListREST():
     response.content_type = 'application/json'
-    data = request.json
-    showRequest(json.dumps(data))
+    # GET requests typically don't have a body, so removing request.json
+    # data = request.json
+    # show_request(json.dumps(data))  # This would fail if data is None
 
     result = listMissionDataFile()
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse("SUCCESS", "List of available mission data sets", result))
-    showResponse(res)
+    res = json.dumps(build_smd_response("SUCCESS", "List of available mission data sets", result))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/duplicate
 # METHOD        : POST
-# FUNCTIONNALITY: Duplicate mission data to another mission file
+# FUNCTIONALITY : Duplicate mission data to another mission file
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/duplicate', method=['OPTIONS', 'POST'])
 @enable_cors
 def MissionDataDuplicateREST():
     response.content_type = 'application/json'
     data = request.json
-    showRequest(json.dumps(data))
+    show_request(json.dumps(data))
 
-    header = data['header']
-    srcMissionName = header['srcMission']
-    destMissionName = header['destMission']
+    header = data.get('header', {})
+    src_mission_name = header.get('srcMission', '')
+    dest_mission_name = header.get('destMission', '')
 
-    result = duplicateMissionDataFile(srcMissionName, destMissionName)
+    result = duplicateMissionDataFile(src_mission_name, dest_mission_name)
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(result[0]), result[1], ""))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result[0]), result[1], ""))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/check/<missionName>
 # METHOD        : GET
-# FUNCTIONNALITY: Check if a mission data file exists
+# FUNCTIONALITY : Check if a mission data file exists
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/check/<missionName>', method=['OPTIONS', 'GET'])
 @enable_cors
 def CheckMissionDataREST(missionName):
     response.content_type = 'application/json'
-    data = request.json
-    showRequest(json.dumps(data))
+    # GET requests typically don't have a body, so removing request.json
+    # data = request.json
+    # show_request(json.dumps(data))  # This would fail if data is None
 
     result = isMissionDataFileExists(missionName)
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse("SUCCESS", "Check if a mission data set exists", result))
-    showResponse(res)
+    res = json.dumps(build_smd_response("SUCCESS", "Check if a mission data set exists", result))
+    show_response(res)
     return res
+
 
 # -----------------------------------------------------------------------------
 # MODULE        : jsatorb-common
 # ROUTE         : /missiondata/<missionName>
 # METHOD        : DELETE
-# FUNCTIONNALITY: Delete a mission data file
+# FUNCTIONALITY : Delete a mission data file
 # -----------------------------------------------------------------------------
 @app.route('/missiondata/<missionName>', method=['OPTIONS', 'DELETE'])
 @enable_cors
 def DeleteMissionDataREST(missionName):
     response.content_type = 'application/json'
-    data = request.json
-    showRequest(json.dumps(data))
+    # DELETE requests typically don't have a body, so removing request.json
+    # data = request.json
+    # show_request(json.dumps(data))  # This would fail if data is None
 
     result = deleteMissionDataFile(missionName)
 
     # Return a JSON formatted response containing the REST operation result: status, message and data.
-    res = json.dumps(buildSMDResponse(boolToRESTStatus(result[0]), result[1], ""))
-    showResponse(res)
+    res = json.dumps(build_smd_response(bool_to_rest_status(result[0]), result[1], ""))
+    show_response(res)
     return res
 
 
 if __name__ == '__main__':
-    bottle.run(host = '0.0.0.0', port = 8000)
+    # For development purposes only. For production, consider using Gunicorn or another WSGI server.
+    app.run(host='0.0.0.0', port=8000, debug=False, reloader=False)
+
+

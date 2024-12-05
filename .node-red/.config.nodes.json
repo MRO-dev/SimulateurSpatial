@@ -1263,5 +1263,34 @@
                 "file": "/data/node_modules/node-red-contrib-play-soundfile/play-soundfile.js"
             }
         }
+    },
+    "node-red-contrib-fs-ops": {
+        "name": "node-red-contrib-fs-ops",
+        "version": "1.6.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "fs-ops": {
+                "name": "fs-ops",
+                "types": [
+                    "fs-ops-move",
+                    "fs-ops-copy",
+                    "fs-ops-delete",
+                    "fs-ops-access",
+                    "fs-ops-size",
+                    "fs-ops-stats",
+                    "fs-ops-link",
+                    "fs-ops-type",
+                    "fs-ops-dir",
+                    "fs-ops-mkdir",
+                    "fs-ops-mktmpdir"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-fs-ops",
+                "file": "/data/node_modules/node-red-contrib-fs-ops/fs-ops.js"
+            }
+        }
     }
 }

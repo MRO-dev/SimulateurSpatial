@@ -123,6 +123,7 @@ public class HohmannTransfert {
         bufferedWriter.write(String.format("%.6f", (finalState.getPVCoordinates().getPosition().getNorm() - 6378137.0) / 1000.0));
         bufferedWriter.newLine();
         bufferedWriter.write(String.format("%.12f", finalState.getA() / 1000.0));
+        System.out.println("SMA (Semi-major axis): " + finalState.getA() / 1000.0 + " km");
         bufferedWriter.newLine();
         bufferedWriter.write(String.format("%.7f", finalState.getE()));
         bufferedWriter.newLine();
@@ -144,7 +145,7 @@ public class HohmannTransfert {
 
     // Method to send a file via MQTT
     private static void sendFileViaMQTT(String filePath) {
-        String broker = "tcp://mosquitto:1883";  // Adresse du broker MQTT
+        String broker = "tcp://localhost:1883";  // Adresse du broker MQTT
         String topic = "resultat/fichier";  // Sujet sur lequel publier
         String clientId = "JavaMQTTSender";
 
@@ -170,6 +171,8 @@ public class HohmannTransfert {
     }
 
     public static void computeHohmann() throws IOException {
+        // if eccentriciy > 5E-3 :
+        //Hohmann --> Bielliptic
         // Define frame and initial orbit
         Frame eme2000 = FramesFactory.getEME2000();
         AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
@@ -206,16 +209,19 @@ public class HohmannTransfert {
         Vector3D positionBeforeManeuver = initialState.getPVCoordinates().getPosition();
 
 
-        // Use new method to check if we are near apogee or perigee and decide the impulse direction
-        if (isNearApogeeOrPerigee(positionBeforeManeuver, initialOrbit)) {
-            System.out.println("Applying impulse without reversing direction.");
-            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-        } else {
-            System.out.println("Reversing impulse direction.");
-            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1).negate();
-        }
+//        // Use new method to check if we are near apogee or perigee and decide the impulse direction
+//        if (isNearApogeeOrPerigee(positionBeforeManeuver, initialOrbit)) {
+//            System.out.println("Applying impulse without reversing direction.");
+//            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
+//        } else {
+//            System.out.println("Reversing impulse direction.");
+//            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1).negate();
+//        }
 
-        DateDetector maneuverTrigger = new DateDetector(initialDate.shiftedBy(1));
+        directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
+
+
+        DateDetector maneuverTrigger = new DateDetector(initialDate.shiftedBy(0.001));
         ImpulseManeuver firstManeuver = new ImpulseManeuver(maneuverTrigger, directionImpulse1, ISP);
 
         // Propagate the orbit with first maneuver
@@ -226,12 +232,13 @@ public class HohmannTransfert {
         if ((finalMassAfterFirstManeuver - DRYMASS) < 0) {
             throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
         }
-        // Propagate to 1 hour after first maneuver and log the state
-        SpacecraftState finalState = propagator.propagate(initialDate.shiftedBy(1));
+
+        SpacecraftState finalState = propagator.propagate(initialDate.shiftedBy(0.001));
 
         // Second maneuver (DV2) at the correct moment (apogee)
-        finalState = propagator.propagate(finalState.getDate().shiftedBy(deltaT));  // Using calculated deltaT
-        finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterFirstManeuver);
+        finalState = propagator.propagate(finalState.getDate().shiftedBy(deltaT));
+        //Mettre Apside Detector et update la masse
+        //finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterFirstManeuver);
         AbsoluteDate manoeuverEndDate = finalState.getDate();
 
         Orbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
@@ -259,9 +266,9 @@ public class HohmannTransfert {
         // Now calculate the second maneuver
         Vector3D velocityBeforeSecondManeuver = finalState.getPVCoordinates().getVelocity();
         Vector3D directionImpulse2 = velocityBeforeSecondManeuver.normalize().scalarMultiply(DV2);
-        manoeuverEndDate = finalState.getDate().shiftedBy(1);
+        manoeuverEndDate = finalState.getDate().shiftedBy(0.001);
 
-        DateDetector secondManeuverTrigger = new DateDetector(finalState.getDate().shiftedBy(1));
+        DateDetector secondManeuverTrigger = new DateDetector(finalState.getDate().shiftedBy(0.001));
         ImpulseManeuver secondManeuver = new ImpulseManeuver(secondManeuverTrigger, directionImpulse2, ISP);
 
         // Propagate the orbit after the second maneuver
@@ -295,6 +302,7 @@ public class HohmannTransfert {
 
         // Send file after second maneuver (final)
         sendFileViaMQTT("Result.txt");
+
     }
 
     public static void computeBiElliptic() throws IOException {
@@ -329,7 +337,7 @@ public class HohmannTransfert {
         // Appliquer le premier manoeuvre (DV1)
         Vector3D velocityBeforeManeuver = initialState.getPVCoordinates().getVelocity();
         Vector3D directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-        ImpulseManeuver firstManeuver = new ImpulseManeuver(new DateDetector(initialDate.shiftedBy(1)), directionImpulse1, ISP);
+        ImpulseManeuver firstManeuver = new ImpulseManeuver(new DateDetector(initialDate.shiftedBy(0.001)), directionImpulse1, ISP);
 
         // Propager l'orbite après le premier manoeuvre
         KeplerianPropagator propagator = new KeplerianPropagator(initialOrbit);
@@ -337,7 +345,7 @@ public class HohmannTransfert {
         double finalMassAfterFirstManeuver = calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
         System.out.println("Masse après premier manoeuvre : " + finalMassAfterFirstManeuver + " kg");
 
-        SpacecraftState stateAfterFirstManeuver = propagator.propagate(initialDate.shiftedBy(1));
+        SpacecraftState stateAfterFirstManeuver = propagator.propagate(initialDate.shiftedBy(0.001));
         stateAfterFirstManeuver = new SpacecraftState(stateAfterFirstManeuver.getOrbit(), finalMassAfterFirstManeuver);
 
         // Appliquer le deuxième manoeuvre (DV2) à l'apogée de l'orbite intermédiaire
@@ -347,14 +355,14 @@ public class HohmannTransfert {
 
         Vector3D velocityBeforeSecondManeuver = stateAtApogee.getPVCoordinates().getVelocity();
         Vector3D directionImpulse2 = velocityBeforeSecondManeuver.normalize().scalarMultiply(DV2);
-        ImpulseManeuver secondManeuver = new ImpulseManeuver(new DateDetector(stateAtApogee.getDate().shiftedBy(1)), directionImpulse2, ISP);
+        ImpulseManeuver secondManeuver = new ImpulseManeuver(new DateDetector(stateAtApogee.getDate().shiftedBy(0.001)), directionImpulse2, ISP);
 
         // Propager l'orbite après le deuxième manoeuvre
         propagator.addEventDetector(secondManeuver);
         double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver ,DV2 ,ISP ,g0);
         System.out.println("Masse après deuxième manoeuvre : " + finalMassAfterSecondManeuver + " kg");
 
-        SpacecraftState stateAfterSecondManeuver = propagator.propagate(stateAtApogee.getDate().shiftedBy(1));
+        SpacecraftState stateAfterSecondManeuver = propagator.propagate(stateAtApogee.getDate().shiftedBy(0.001));
         stateAfterSecondManeuver = new SpacecraftState(stateAfterSecondManeuver.getOrbit(), finalMassAfterSecondManeuver);
 
         // Appliquer le troisième manoeuvre (DV3) pour circulariser l'orbite finale
@@ -363,14 +371,14 @@ public class HohmannTransfert {
 
         Vector3D velocityBeforeThirdManeuver = stateAtPerigee.getPVCoordinates().getVelocity();
         Vector3D directionImpulse3 = velocityBeforeThirdManeuver.normalize().scalarMultiply(DV3);
-        ImpulseManeuver thirdManeuver = new ImpulseManeuver(new DateDetector(stateAtPerigee.getDate().shiftedBy(1)), directionImpulse3, ISP);
+        ImpulseManeuver thirdManeuver = new ImpulseManeuver(new DateDetector(stateAtPerigee.getDate().shiftedBy(0.001)), directionImpulse3, ISP);
 
         // Propager l'orbite finale après le troisième manoeuvre
         propagator.addEventDetector(thirdManeuver);
         double finalMassAfterThirdManeuver = finalMassAfterSecondManeuver * FastMath.exp(-DV3 / (ISP * g0));
         System.out.println("Masse finale après troisième manoeuvre : " + finalMassAfterThirdManeuver + " kg");
 
-        SpacecraftState finalState = propagator.propagate(stateAtPerigee.getDate().shiftedBy(1));
+        SpacecraftState finalState = propagator.propagate(stateAtPerigee.getDate().shiftedBy(0.001));
         finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterThirdManeuver);
 
         // Enregistrement des résultats finaux
@@ -378,6 +386,7 @@ public class HohmannTransfert {
 
         // Envoyer les résultats via MQTT
         sendFileViaMQTT("Result.txt");
+
     }
 
 
@@ -414,11 +423,12 @@ public class HohmannTransfert {
 
 
     // Method to calculate the time to apogee (or perigee) in a Hohmann transfer
-    public static double calculateTimeToApogee(double SMA1, double SMA2) {
-        double a_transfer = (SMA1 + SMA2) / 2.0;  // Semi-major axis of the transfer orbit
-        double period = 2 * Math.PI * Math.sqrt(Math.pow(a_transfer, 3) / MU);  // Orbital period of the transfer orbit
-        return period / 2.0;  // Time to reach apogee (or perigee) is half the orbital period
+    public static double calculateTimeToApogee(double SMA1_m, double SMA2_m) {
+        double a_transfer = (SMA1_m + SMA2_m) / 2.0; // Semi-major axis of the transfer orbit in meters
+        double period = 2 * Math.PI * Math.sqrt(Math.pow(a_transfer, 3) / MU); // Orbital period in seconds
+        return period / 2.0; // Time to reach apogee (or perigee) in seconds
     }
+
 
     // New method to check if near apogee or perigee
     public static boolean isNearApogeeOrPerigee(Vector3D position, KeplerianOrbit orbit) {

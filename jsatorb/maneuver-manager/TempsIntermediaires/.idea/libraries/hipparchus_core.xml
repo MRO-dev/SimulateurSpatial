@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="hipparchus.core" type="repository">
+    <properties maven-id="org.hipparchus:hipparchus-core:3.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hipparchus-core-3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

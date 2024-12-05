@@ -1,0 +1,18 @@
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, Simu duration stop,ManeuverType,Integrator,DV
+2024-09-12T18:42:41.999Z
+7000.400695170647
+0.001
+1.710 
+4.363
+1.571
+0.0000
+500
+2.5
+0.2
+300
+50
+97373.00022411346
+Impulse
+RK4
+5
+

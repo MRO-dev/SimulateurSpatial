@@ -2,7 +2,7 @@
   <artifact type="jar" name="HohmannTransfert:jar">
     <output-path>$PROJECT_DIR$/..</output-path>
     <root id="archive" name="HohmannTransfert.jar">
-      <element id="module-output" name="HohmannTransfert" />
+      <element id="module-output" name="KeplerianPropagatorManeuver" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-core-3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-stat-3.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-core-3.1.jar" path-in-jar="/" />
