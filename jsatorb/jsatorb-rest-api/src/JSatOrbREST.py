@@ -379,12 +379,14 @@ def file_generation_rest():
         header['celestialBody'] = celestial_body  # Ensure 'celestialBody' exists in header
 
         mission = header.get('mission', f"default_{satellites[0]['name'] if satellites else 'unknown'}")
-
+        if(len(satellites) )<= 1:
+            mission = 'default_Sat'
         if "COVERAGE" in options:
             project_folder = Path('files') / f"{mission}_coverage"
         else:
             project_folder = Path('files') / mission
-
+            print(mission)
+            print(project_folder)
         data_folder = project_folder / 'Data'
         model_folder = project_folder / 'Models'
 

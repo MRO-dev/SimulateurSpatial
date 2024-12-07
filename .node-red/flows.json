@@ -155,10 +155,8 @@
             "f225da6f.835808",
             "cb0fed7.3a64e1"
         ],
-        "x": 38,
-        "y": 13,
-        "w": 1284,
-        "h": 574
+        "x": -32,
+        "y": -47
     },
     {
         "id": "1fd96d24.c576c3",
@@ -258,7 +256,9 @@
             "bd944618.65d4c8"
         ],
         "x": 2094,
-        "y": 3919
+        "y": 3919,
+        "w": 632,
+        "h": 442
     },
     {
         "id": "1e404e3b.14ce32",
@@ -276,7 +276,9 @@
             "287ac47f.0441ac"
         ],
         "x": 1474,
-        "y": 59
+        "y": 59,
+        "w": 352,
+        "h": 182
     },
     {
         "id": "c6dcd18b.ea624",
@@ -313,46 +315,9 @@
             "24e475a7e7cc30b0"
         ],
         "x": 2254,
-        "y": -1
-    },
-    {
-        "id": "5293fd84.fa1844",
-        "type": "group",
-        "z": "7c68352c.1b47bc",
-        "name": "Query for JSatOrb API REST to update VTS files",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "58ea7c57.11f754",
-            "a5bc4015.3f8fa",
-            "3dce35b.ba5adca",
-            "105fdd91.9d22d2",
-            "e8df78b.012af88",
-            "4de09aa7.179f04",
-            "79a8517a3d50ba46",
-            "ed91f7078814f403",
-            "ed6b13ca02a5a70d",
-            "aeaa99f2.5cf4f8",
-            "18dac48b6fa1899c",
-            "b84d6b0d444acde7",
-            "813073f9113a2daf",
-            "279f6bac680aabe9",
-            "01e51961a76d77a0",
-            "72f9a7c1e4e8ac50",
-            "5a8ee579df55828c",
-            "0b6a2fcc56b1307a",
-            "8cb6f04c9bcdf194",
-            "b2241bb2a12a8f16",
-            "ffb4c4b51344ccf8",
-            "d0e791394ec64d0c",
-            "cee4def5e77bb830",
-            "2147ad17b59aa35b",
-            "e53c4b5d7212fd87"
-        ],
-        "x": 3544,
-        "y": -1
+        "y": -1,
+        "w": 1192,
+        "h": 382
     },
     {
         "id": "4e981e1c.9c0d",
@@ -368,7 +333,9 @@
             "97d64ebb.eedeb"
         ],
         "x": 114,
-        "y": 3679
+        "y": 3679,
+        "w": 363,
+        "h": 82
     },
     {
         "id": "571e2c55.406334",
@@ -395,7 +362,9 @@
             "b4f92e23ab3d8349"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1282,
+        "h": 262
     },
     {
         "id": "3ccbb53f.0e92ea",
@@ -419,7 +388,9 @@
             "a8f379dc355cc865"
         ],
         "x": 1334,
-        "y": 3959
+        "y": 3959,
+        "w": 672,
+        "h": 362
     },
     {
         "id": "a70ba86a.746ad8",
@@ -735,13 +706,14 @@
             "0599a22e1f0c18ca",
             "1018c17f521a78d5",
             "94d0137eed1571be",
-            "c07911fabe8939a9",
-            "8b6c35cfb038088b",
             "8d78da0b6b8b6b6b",
-            "61f4316899cdb467"
+            "61f4316899cdb467",
+            "58b79c85054ff2f6"
         ],
         "x": 654,
-        "y": 659
+        "y": 659,
+        "w": 2352,
+        "h": 702
     },
     {
         "id": "4be805205e728ae6",
@@ -764,7 +736,9 @@
             "85bda3f55da806af"
         ],
         "x": 114,
-        "y": 3839
+        "y": 3839,
+        "w": 1112,
+        "h": 242
     },
     {
         "id": "32829735bc4f3d16",
@@ -809,7 +783,9 @@
             "118f0f492f55ac0a"
         ],
         "x": 1094,
-        "y": 1979
+        "y": 1979,
+        "w": 1712,
+        "h": 382
     },
     {
         "id": "3dd210d88054dfaa",
@@ -837,7 +813,9 @@
             "753a66a0e91c8b65"
         ],
         "x": 114,
-        "y": 4359
+        "y": 4359,
+        "w": 1972,
+        "h": 202
     },
     {
         "id": "f47ebdbe9aa02fbc",
@@ -876,7 +854,9 @@
             "8a57318edf3a260a"
         ],
         "x": 294,
-        "y": 2979
+        "y": 2979,
+        "w": 1452,
+        "h": 222
     },
     {
         "id": "9a5f859dacc543ae",
@@ -908,7 +888,9 @@
             "27fa46bdf416727e"
         ],
         "x": 114,
-        "y": 3239
+        "y": 3239,
+        "w": 1452,
+        "h": 182
     },
     {
         "id": "69e1011093603bba",
@@ -940,7 +922,9 @@
             "1d8f9124f6c023ac"
         ],
         "x": 104,
-        "y": 3459
+        "y": 3459,
+        "w": 1582,
+        "h": 182
     },
     {
         "id": "fdab8259e2b1d755",
@@ -988,7 +972,9 @@
             "0ea9525a009058f4"
         ],
         "x": 1074,
-        "y": 1499
+        "y": 1499,
+        "w": 1432,
+        "h": 362
     },
     {
         "id": "d79f942338defd7f",
@@ -1024,7 +1010,9 @@
             "378c5b1017d00b9f"
         ],
         "x": 534,
-        "y": 299
+        "y": 299,
+        "w": 1712,
+        "h": 302
     },
     {
         "id": "4c6998b4.6db838",
@@ -1059,9 +1047,7 @@
             "eae52224ec3faa16"
         ],
         "x": 114,
-        "y": 19,
-        "w": 1022,
-        "h": 342
+        "y": 19
     },
     {
         "id": "72a2d4bc14d948f6",
@@ -1103,7 +1089,9 @@
             "34c17ae1e756d864"
         ],
         "x": 1014,
-        "y": 2499
+        "y": 2499,
+        "w": 1212,
+        "h": 382
     },
     {
         "id": "25671b51f351320d",
@@ -1127,7 +1115,9 @@
             "adebc33415b96346"
         ],
         "x": 3434,
-        "y": 1219
+        "y": 1219,
+        "w": 842,
+        "h": 162
     },
     {
         "id": "d986a879ef5d40e6",
@@ -1157,7 +1147,9 @@
             "bf5a0c7c968ace0f"
         ],
         "x": 2704,
-        "y": 1259
+        "y": 1259,
+        "w": 522,
+        "h": 422
     },
     {
         "id": "9a9dfd74ece6e34c",
@@ -1228,10 +1220,13 @@
             "927793742fe2a26b",
             "4aaa72e66efc6e22",
             "5981caa54d0d3dda",
-            "d06c32609ea7ce1b"
+            "d06c32609ea7ce1b",
+            "104b3e91f2133bb5"
         ],
         "x": 3454,
-        "y": 359
+        "y": 339,
+        "w": 1532,
+        "h": 842
     },
     {
         "id": "25175e791aace242",
@@ -1299,9 +1294,7 @@
             "348f2fc735a457f3"
         ],
         "x": 254,
-        "y": 1499,
-        "w": 1842,
-        "h": 442
+        "y": 1499
     },
     {
         "id": "4797f1c91f3170ab",
@@ -1366,9 +1359,7 @@
             "6d295facb58534db"
         ],
         "x": 254,
-        "y": 1959,
-        "w": 1832,
-        "h": 442
+        "y": 1959
     },
     {
         "id": "8cebe66fd2fcaadb",
@@ -1438,9 +1429,7 @@
             "e1c315f120a309e0"
         ],
         "x": 264,
-        "y": 2419,
-        "w": 1982,
-        "h": 462
+        "y": 2419
     },
     {
         "id": "6207162a83e4a4d1",
@@ -1467,9 +1456,7 @@
             "fb20bf89f9a8900b"
         ],
         "x": 194,
-        "y": 2959,
-        "w": 1112,
-        "h": 162
+        "y": 2959
     },
     {
         "id": "bde6ea157d76a8b0",
@@ -1527,9 +1514,7 @@
             "c086f8d07bff1f6a"
         ],
         "x": 354,
-        "y": 379,
-        "w": 1112,
-        "h": 502
+        "y": 379
     },
     {
         "id": "9364dbbaeae7efcc",
@@ -1557,9 +1542,7 @@
             "a9a84e889621e77f"
         ],
         "x": 1174,
-        "y": 79,
-        "w": 972,
-        "h": 202
+        "y": 79
     },
     {
         "id": "ef7c6a255dddba2f",
@@ -1585,9 +1568,7 @@
             "36edc6de3f4aea19"
         ],
         "x": 2634,
-        "y": 959,
-        "w": 432,
-        "h": 382
+        "y": 959
     },
     {
         "id": "8634c7d9435a8b95",
@@ -1608,9 +1589,7 @@
             "758e3d3b8fb58f33"
         ],
         "x": 174,
-        "y": 379,
-        "w": 852,
-        "h": 282
+        "y": 379
     },
     {
         "id": "e570253ed9784b6a",
@@ -1634,14 +1613,11 @@
             "fcb6777d67efa239",
             "c67ec5067dc22890",
             "1c5f8b40f6f0c84d",
-            "805ac2520bb9e911",
             "167f1c74c0957544",
             "d7d49fc7358015e5"
         ],
         "x": 194,
-        "y": 39,
-        "w": 532,
-        "h": 302
+        "y": 39
     },
     {
         "id": "1d9db200c8c462a8",
@@ -1691,7 +1667,9 @@
             "4f6a448fcc452112"
         ],
         "x": 3014,
-        "y": 3219
+        "y": 3219,
+        "w": 1152,
+        "h": 802
     },
     {
         "id": "9c8f7f2b5249150e",
@@ -1713,7 +1691,9 @@
             "0d97d48b885c1636"
         ],
         "x": 3434,
-        "y": 4479
+        "y": 4479,
+        "w": 712,
+        "h": 262
     },
     {
         "id": "a61b6b0beb4dae17",
@@ -1872,9 +1852,7 @@
             "4589f3046d66a2df"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1702,
-        "h": 542
+        "y": 19
     },
     {
         "id": "6011c97c4327735d",
@@ -1898,9 +1876,7 @@
             "8e0b25ba91d60a62"
         ],
         "x": 174,
-        "y": 579,
-        "w": 1112,
-        "h": 182
+        "y": 579
     },
     {
         "id": "5dd0526663d52573",
@@ -1960,17 +1936,20 @@
             "cbf3317bf16016f5",
             "cd7a52bb4ca2d0f5",
             "caa6a1c96c2f0961",
-            "3a5b6e039d3032f5",
             "8f24ed5b8ec995ed",
             "ab02042148a5f97a",
             "961ca2a2fc11d841",
             "2573f33ae7988d13",
             "8b873cf2d5df3d31",
             "a6856dc8edf83891",
-            "92a1f2c597e30167"
+            "92a1f2c597e30167",
+            "098b276ca212f2c4",
+            "a5ff53e5e4c198e1"
         ],
         "x": 3394,
-        "y": 1899
+        "y": 1899,
+        "w": 1532,
+        "h": 822
     },
     {
         "id": "400721a2c2769c0e",
@@ -1992,7 +1971,9 @@
             "472ddc8b042b18ad"
         ],
         "x": 3854,
-        "y": 1499
+        "y": 1499,
+        "w": 892,
+        "h": 162
     },
     {
         "id": "3500e6d55cf0a0c8",
@@ -2009,12 +1990,14 @@
         },
         "nodes": [
             "3f4a217fd6976826",
-            "5ce64a7b087a06e5"
+            "5ce64a7b087a06e5",
+            "7b5db4ce6542300b",
+            "fb8c3572b2c748c0",
+            "a7400d2baf7391aa",
+            "ae7cd6589be97892"
         ],
         "x": 1514,
-        "y": 231.5,
-        "w": 472,
-        "h": 97
+        "y": 239
     },
     {
         "id": "26d8e3a389b016a3",
@@ -2048,9 +2031,7 @@
             "71d8882a7823592a"
         ],
         "x": 34,
-        "y": 71.5,
-        "w": 532,
-        "h": 189.5
+        "y": 71.5
     },
     {
         "id": "434126eb1a383e14",
@@ -2077,9 +2058,7 @@
             "f74a4b622c3f515a"
         ],
         "x": 174,
-        "y": 779,
-        "w": 912,
-        "h": 202
+        "y": 779
     },
     {
         "id": "cc681a6adf75def8",
@@ -2144,9 +2123,7 @@
             "19cdc35c8aa36a2d"
         ],
         "x": 274,
-        "y": 899,
-        "w": 2312,
-        "h": 482
+        "y": 899
     },
     {
         "id": "1be479826e16e852",
@@ -2202,9 +2179,7 @@
             "2a4f42941e2b799c"
         ],
         "x": 24,
-        "y": 3219,
-        "w": 2712,
-        "h": 622
+        "y": 3219
     },
     {
         "id": "7801a0a985539b08",
@@ -2264,9 +2239,7 @@
             "566f0687ef8387cb"
         ],
         "x": 14,
-        "y": 659,
-        "w": 1772,
-        "h": 1402
+        "y": 659
     },
     {
         "id": "4b45f3397f2f64b2",
@@ -2307,9 +2280,7 @@
             "41e5fe03e3e239c0"
         ],
         "x": 34,
-        "y": 2119,
-        "w": 1832,
-        "h": 1542
+        "y": 2119
     },
     {
         "id": "7f8477734cd0fd39",
@@ -2335,9 +2306,7 @@
             "ce61d97b9c64c9b7"
         ],
         "x": 4,
-        "y": 1059,
-        "w": 862,
-        "h": 469.5
+        "y": 1059
     },
     {
         "id": "4c0adca48375c892",
@@ -2375,10 +2344,58 @@
             "be321a9033361f03",
             "5030b864c5ce503d",
             "1d83106db0c091cd",
-            "1a7828f90ec7810d"
+            "1a7828f90ec7810d",
+            "d97910492e060e73",
+            "c409a15d1ad51b59"
         ],
         "x": 3314,
-        "y": 2739
+        "y": 2739,
+        "w": 1472,
+        "h": 362
+    },
+    {
+        "id": "5293fd84.fa1844",
+        "type": "group",
+        "z": "7c68352c.1b47bc",
+        "name": "Query for JSatOrb API REST to update VTS files",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "58ea7c57.11f754",
+            "a5bc4015.3f8fa",
+            "3dce35b.ba5adca",
+            "105fdd91.9d22d2",
+            "e8df78b.012af88",
+            "4de09aa7.179f04",
+            "79a8517a3d50ba46",
+            "ed91f7078814f403",
+            "ed6b13ca02a5a70d",
+            "aeaa99f2.5cf4f8",
+            "b84d6b0d444acde7",
+            "813073f9113a2daf",
+            "279f6bac680aabe9",
+            "01e51961a76d77a0",
+            "5a8ee579df55828c",
+            "0b6a2fcc56b1307a",
+            "8cb6f04c9bcdf194",
+            "b2241bb2a12a8f16",
+            "ffb4c4b51344ccf8",
+            "d0e791394ec64d0c",
+            "cee4def5e77bb830",
+            "2147ad17b59aa35b",
+            "e53c4b5d7212fd87",
+            "8e64d0448f085117",
+            "bce915815eb2fab4",
+            "72f9a7c1e4e8ac50",
+            "9cdeb252bc6af462",
+            "33dd7b2edfd43b13"
+        ],
+        "x": 3544,
+        "y": -1,
+        "w": 1402,
+        "h": 382
     },
     {
         "id": "cb0fed7.3a64e1",
@@ -2408,12 +2425,24 @@
             "4519c16515fddae3",
             "eee1275b3aa61402",
             "1e6c927613bb91ab",
-            "e2657a5bea29945e"
+            "e2657a5bea29945e",
+            "triggerFunction",
+            "4047f428f2231390",
+            "93fe89ce8903b3be",
+            "0e2dbebeb0c26305",
+            "1828c0a97e91eb11",
+            "a64aa89b124a0d0d",
+            "e207364cce175612",
+            "8e709b7b1cc9bd07",
+            "e57ecd8922630372",
+            "45e19228aa39ceb1",
+            "575bc1b26324641e",
+            "64cbfe5e2bae5606",
+            "0f41e91b50d161c6",
+            "c6e9ed348bf2c443"
         ],
-        "x": 64,
-        "y": 39,
-        "w": 1232,
-        "h": 522
+        "x": -6,
+        "y": -21
     },
     {
         "id": "d9532912.7a0608",
@@ -3642,6 +3671,23 @@
         "order": 1
     },
     {
+        "id": "dashboardGroup",
+        "type": "ui_group",
+        "name": "Main Group",
+        "tab": "dashboardTab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dashboardTab",
+        "type": "ui_tab",
+        "name": "Main Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
         "id": "f225da6f.835808",
         "type": "link out",
         "z": "107c9bc.328b364",
@@ -3653,8 +3699,8 @@
             "ce2c1d1e.f767",
             "c2e6aaa2c3a2e09f"
         ],
-        "x": 505,
-        "y": 520,
+        "x": 495,
+        "y": 580,
         "wires": []
     },
     {
@@ -3667,8 +3713,8 @@
         "links": [
             "b9a6ef87.24de3"
         ],
-        "x": 665,
-        "y": 340,
+        "x": 615,
+        "y": 400,
         "wires": []
     },
     {
@@ -3677,13 +3723,10 @@
         "z": "107c9bc.328b364",
         "g": "cb0fed7.3a64e1",
         "name": "START VTS",
-        "links": [
-            "90cba714.f229f8",
-            "eda817f1.b02c58",
-            "f0b7682.7fe4098"
-        ],
-        "x": 665,
-        "y": 260,
+        "mode": "link",
+        "links": [],
+        "x": 605,
+        "y": 340,
         "wires": []
     },
     {
@@ -3696,8 +3739,8 @@
         "links": [
             "4336a6fd.067998"
         ],
-        "x": 485,
-        "y": 480,
+        "x": 525,
+        "y": 540,
         "wires": []
     },
     {
@@ -3707,8 +3750,8 @@
         "g": "cb0fed7.3a64e1",
         "name": "2nd STEP : START VTS ",
         "info": "",
-        "x": 200,
-        "y": 80,
+        "x": 790,
+        "y": 360,
         "wires": []
     },
     {
@@ -3718,8 +3761,8 @@
         "g": "cb0fed7.3a64e1",
         "name": "3rd STEP : TLE UPDATE REQUEST",
         "info": "",
-        "x": 550,
-        "y": 80,
+        "x": 740,
+        "y": 120,
         "wires": []
     },
     {
@@ -3729,8 +3772,8 @@
         "g": "cb0fed7.3a64e1",
         "name": "PERMANENT : REFRESH DASHBOARD",
         "info": "",
-        "x": 250,
-        "y": 320,
+        "x": 290,
+        "y": 380,
         "wires": []
     },
     {
@@ -3753,8 +3796,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 260,
+        "x": 200,
+        "y": 340,
         "wires": [
             [
                 "1df6f4783011c9ba"
@@ -3780,8 +3823,8 @@
             "ccf9f6d431ed64cc",
             "e7a2222d78b89f73"
         ],
-        "x": 525,
-        "y": 340,
+        "x": 485,
+        "y": 400,
         "wires": []
     },
     {
@@ -3804,8 +3847,8 @@
             "0d62970b216a315a",
             "b75bd948c971663a"
         ],
-        "x": 525,
-        "y": 260,
+        "x": 485,
+        "y": 340,
         "wires": [
             []
         ]
@@ -3832,8 +3875,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 190,
-        "y": 520,
+        "x": 230,
+        "y": 580,
         "wires": [
             [
                 "931b309d.f0a88"
@@ -3853,8 +3896,8 @@
             "51f47fc0821c4093",
             "6254fed12b6d11e0"
         ],
-        "x": 435,
-        "y": 260,
+        "x": 385,
+        "y": 340,
         "wires": []
     },
     {
@@ -3870,8 +3913,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 700,
-        "y": 200,
+        "x": 830,
+        "y": 180,
         "wires": [
             [
                 "eee1275b3aa61402",
@@ -3904,11 +3947,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 180,
-        "y": 200,
+        "x": 120,
+        "y": 180,
         "wires": [
             [
-                "a74eff43bace63eb"
+                "triggerFunction"
             ]
         ]
     },
@@ -3919,16 +3962,14 @@
         "g": "cb0fed7.3a64e1",
         "name": "MEM FLUSH",
         "links": [
-            "0a13adeab708b2b4",
-            "5ab99c0c9192c682",
             "3a5b6e039d3032f5",
-            "69112b71376aaccc"
+            "5ab99c0c9192c682"
         ],
-        "x": 235,
-        "y": 140,
+        "x": 85,
+        "y": 60,
         "wires": [
             [
-                "a74eff43bace63eb"
+                "1828c0a97e91eb11"
             ]
         ]
     },
@@ -3946,8 +3987,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 200,
+        "x": 1300,
+        "y": 180,
         "wires": []
     },
     {
@@ -3964,8 +4005,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 280,
+        "x": 1300,
+        "y": 140,
         "wires": []
     },
     {
@@ -3979,8 +4020,8 @@
             "ecb276912a78b4e7",
             "d1a214987ab144c3"
         ],
-        "x": 1165,
-        "y": 120,
+        "x": 1225,
+        "y": 100,
         "wires": []
     },
     {
@@ -3992,8 +4033,8 @@
         "links": [
             "1beb1794d7479693"
         ],
-        "x": 225,
-        "y": 420,
+        "x": 265,
+        "y": 480,
         "wires": [
             [
                 "931b309d.f0a88"
@@ -4025,7 +4066,7 @@
         "y": 280,
         "wires": [
             [
-                "5ce64a7b087a06e5"
+                "7b5db4ce6542300b"
             ]
         ]
     },
@@ -4042,8 +4083,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1880,
-        "y": 280,
+        "x": 2220,
+        "y": 400,
         "wires": [
             [],
             [],
@@ -5968,7 +6009,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1330,
+        "x": 1370,
         "y": 3880,
         "wires": []
     },
@@ -5992,7 +6033,7 @@
         "order": 1,
         "width": "0",
         "height": "0",
-        "format": "\n<script type=\"text/javascript\">\n    (async function() {\n        const socket = new WebSocket(\"ws://localhost:1880/ws/files\");\n\n        socket.onopen = function() {\n            console.log(\"Connexion WebSocket établie avec succès.\");\n        };\n        const socketLoad = new WebSocket(\"ws://localhost:1880/ws/filesLoad\");\n\n        socketLoad.onopen = function() {\n            console.log(\"Connexion WebSocket pour le chargement établie avec succès.\");\n        };\n\n        socket.onerror = function(error) {\n            console.error(\"Erreur de connexion WebSocket : \", error);\n        };\n\n        async function readDirectory(directoryHandle) {\n            const filesContent = [];\n\n            async function traverseDirectory(handle, path = \"\") {\n                for await (const [name, child] of handle.entries()) {\n                    const childPath = path ? `${path}/${name}` : name;\n\n                    if (child.kind === \"directory\") {\n                        const dirObj = { name, type: \"directory\", children: [] };\n                        filesContent.push(dirObj);\n                        await traverseDirectory(child, childPath);\n                    } else if (child.kind === \"file\") {\n                        const file = await child.getFile();\n                        const content = await file.text();\n\n                        filesContent.push({\n                            name: name,\n                            type: \"file\",\n                            content: content,\n                            path: childPath  \n                        });\n                    }\n                }\n            }\n\n            await traverseDirectory(directoryHandle);\n            return filesContent;\n        }\n\n        async function selectAndSendFolder() {\n            try {\n                const dirHandle = await window.showDirectoryPicker();\n                console.log(\"Dossier source sélectionné :\", dirHandle);\n\n                const filesContent = await readDirectory(dirHandle);\n                \n                // Création de l'objet à envoyer\n                const dataToSend = {\n                    destinationPath: \"/app/jsatorb-rest-api/files/default_Sat/Data/Backup/\",\n                    filesContent: filesContent\n                };\n\n                // Vérification du format JSON avant envoi\n                if (typeof dataToSend === 'object') {\n                    socketLoad.send(JSON.stringify(dataToSend));\n                    console.log(\"Contenu du dossier envoyé via WebSocket.\");\n                    alert(\"Les fichiers et dossiers ont été envoyés pour être copiés dans le dossier prédéfini.\");\n                } else {\n                    console.error(\"Erreur : Le contenu n'est pas au format JSON attendu.\");\n                }\n                \n            } catch (error) {\n                console.error(\"Erreur lors de la sélection du dossier : \", error);\n            }\n        }\n\n        socket.onmessage = function(event) {\n            console.log(\"Message WebSocket reçu :\", event.data);\n            try {\n                const data = JSON.parse(event.data);\n                console.log(\"Données interprétées :\", data);\n\n                if (data.payload && data.payload.command === \"selectFolder\") {\n                    console.log(\"Commande de sélection de dossier détectée, lancement de `selectAndSendFolder`.\");\n                    selectAndSendFolder();\n                }\n            } catch (error) {\n                console.error(\"Erreur lors de l'interprétation des données WebSocket :\", error);\n            }\n        };\n\n        document.getElementById('selectFolderButtonLoad').addEventListener('click', selectAndSendFolder);\n        \n    })();\n</script>\n",
+        "format": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css\">\n<script type=\"text/javascript\">\n    (async function() {\n        const socket = new WebSocket(\"ws://localhost:1880/ws/files\");\n\n        socket.onopen = function() {\n            console.log(\"Connexion WebSocket établie avec succès.\");\n        };\n        const socketLoad = new WebSocket(\"ws://localhost:1880/ws/filesLoad\");\n\n        socketLoad.onopen = function() {\n            console.log(\"Connexion WebSocket pour le chargement établie avec succès.\");\n        };\n\n        socket.onerror = function(error) {\n            console.error(\"Erreur de connexion WebSocket : \", error);\n        };\n\n        async function readDirectory(directoryHandle) {\n            const filesContent = [];\n\n            async function traverseDirectory(handle, path = \"\") {\n                for await (const [name, child] of handle.entries()) {\n                    const childPath = path ? `${path}/${name}` : name;\n\n                    if (child.kind === \"directory\") {\n                        const dirObj = { name, type: \"directory\", children: [] };\n                        filesContent.push(dirObj);\n                        await traverseDirectory(child, childPath);\n                    } else if (child.kind === \"file\") {\n                        const file = await child.getFile();\n                        const content = await file.text();\n\n                        filesContent.push({\n                            name: name,\n                            type: \"file\",\n                            content: content,\n                            path: childPath  \n                        });\n                    }\n                }\n            }\n\n            await traverseDirectory(directoryHandle);\n            return filesContent;\n        }\n\n        async function selectAndSendFolder() {\n            try {\n                const dirHandle = await window.showDirectoryPicker();\n                console.log(\"Dossier source sélectionné :\", dirHandle);\n\n                const filesContent = await readDirectory(dirHandle);\n                \n                // Création de l'objet à envoyer\n                const dataToSend = {\n                    destinationPath: \"/app/jsatorb-rest-api/files/default_Sat/Data/Backup/\",\n                    filesContent: filesContent\n                };\n\n                // Vérification du format JSON avant envoi\n                if (typeof dataToSend === 'object') {\n                    socketLoad.send(JSON.stringify(dataToSend));\n                    console.log(\"Contenu du dossier envoyé via WebSocket.\");\n                    alert(\"Les fichiers et dossiers ont été envoyés pour être copiés dans le dossier prédéfini.\");\n                } else {\n                    console.error(\"Erreur : Le contenu n'est pas au format JSON attendu.\");\n                }\n                \n            } catch (error) {\n                console.error(\"Erreur lors de la sélection du dossier : \", error);\n            }\n        }\n\n        socket.onmessage = function(event) {\n            console.log(\"Message WebSocket reçu :\", event.data);\n            try {\n                const data = JSON.parse(event.data);\n                console.log(\"Données interprétées :\", data);\n\n                if (data.payload && data.payload.command === \"selectFolder\") {\n                    console.log(\"Commande de sélection de dossier détectée, lancement de `selectAndSendFolder`.\");\n                    selectAndSendFolder();\n                }\n            } catch (error) {\n                console.error(\"Erreur lors de l'interprétation des données WebSocket :\", error);\n            }\n        };\n\n        document.getElementById('selectFolderButtonLoad').addEventListener('click', selectAndSendFolder);\n        \n    })();\n</script>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -6568,6 +6609,387 @@
                 "b28deb14bbf6cdb9"
             ]
         ]
+    },
+    {
+        "id": "triggerFunction",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "4047f428f2231390"
+            ]
+        ]
+    },
+    {
+        "id": "4047f428f2231390",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "3dabe8df.a10df8",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn {\n      background-color: #f44336;\n    }\n    \n    #nonBtn:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les fichiers OEM de l'ensemble des satellites définis.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn\">Oui</button>\n        <button id=\"nonBtn\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "93fe89ce8903b3be"
+            ]
+        ]
+    },
+    {
+        "id": "93fe89ce8903b3be",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "0e2dbebeb0c26305",
+                "a74eff43bace63eb"
+            ]
+        ]
+    },
+    {
+        "id": "0e2dbebeb0c26305",
+        "type": "debug",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1828c0a97e91eb11",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "a64aa89b124a0d0d"
+            ]
+        ]
+    },
+    {
+        "id": "a64aa89b124a0d0d",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "3dabe8df.a10df8",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn2 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn2:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn2 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn2:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal2\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera toutes les TLEs à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn2\">Oui</button>\n        <button id=\"nonBtn2\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal2');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn2').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn2').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "e207364cce175612"
+            ]
+        ]
+    },
+    {
+        "id": "e207364cce175612",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "a74eff43bace63eb",
+                "8e709b7b1cc9bd07"
+            ]
+        ]
+    },
+    {
+        "id": "8e709b7b1cc9bd07",
+        "type": "link out",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "POP UP DELETE",
+        "mode": "link",
+        "links": [
+            "104b3e91f2133bb5",
+            "d6b3e2740b382ae3"
+        ],
+        "x": 465,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e57ecd8922630372",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 20,
+        "wires": [
+            [
+                "45e19228aa39ceb1"
+            ]
+        ]
+    },
+    {
+        "id": "45e19228aa39ceb1",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "3dabe8df.a10df8",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn3 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn3:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn3 {\n      background-color: #f44336;\n    }\n\n    #nonBtn3:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal3\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera les TLEs à partir de la base de données Aiglons.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn3\">Oui</button>\n        <button id=\"nonBtn3\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal3');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn3').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn3').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 320,
+        "y": 20,
+        "wires": [
+            [
+                "575bc1b26324641e"
+            ]
+        ]
+    },
+    {
+        "id": "575bc1b26324641e",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 20,
+        "wires": [
+            [
+                "0f41e91b50d161c6",
+                "a74eff43bace63eb"
+            ]
+        ]
+    },
+    {
+        "id": "64cbfe5e2bae5606",
+        "type": "link in",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "links": [
+            "098b276ca212f2c4"
+        ],
+        "x": 35,
+        "y": 20,
+        "wires": [
+            [
+                "e57ecd8922630372"
+            ]
+        ]
+    },
+    {
+        "id": "0f41e91b50d161c6",
+        "type": "link out",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "DELETE DB AIGLONS",
+        "mode": "link",
+        "links": [
+            "a5ff53e5e4c198e1"
+        ],
+        "x": 555,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "c6e9ed348bf2c443",
+        "type": "link in",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "links": [
+            "0a13adeab708b2b4"
+        ],
+        "x": 405,
+        "y": 180,
+        "wires": [
+            [
+                "a74eff43bace63eb"
+            ]
+        ]
+    },
+    {
+        "id": "7b5db4ce6542300b",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "3500e6d55cf0a0c8",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1900,
+        "y": 280,
+        "wires": [
+            [
+                "fb8c3572b2c748c0"
+            ]
+        ]
+    },
+    {
+        "id": "fb8c3572b2c748c0",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "3500e6d55cf0a0c8",
+        "group": "3dabe8df.a10df8",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn4 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn4:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn4 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn4:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal4\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les dernières TLEs enregistrées.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn4\">Oui</button>\n        <button id=\"nonBtn4\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal4');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn4').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn4').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1880,
+        "y": 340,
+        "wires": [
+            [
+                "a7400d2baf7391aa"
+            ]
+        ]
+    },
+    {
+        "id": "a7400d2baf7391aa",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "3500e6d55cf0a0c8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2050,
+        "y": 340,
+        "wires": [
+            [
+                "5ce64a7b087a06e5",
+                "ae7cd6589be97892"
+            ]
+        ]
+    },
+    {
+        "id": "ae7cd6589be97892",
+        "type": "debug",
+        "z": "107c9bc.328b364",
+        "g": "3500e6d55cf0a0c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2210,
+        "y": 320,
+        "wires": []
     },
     {
         "id": "bd28d1663b4119ac",
@@ -14050,7 +14472,7 @@
         "name": "FLUSH MEM ON START",
         "mode": "link",
         "links": [
-            "3186623bfab93670"
+            "c6e9ed348bf2c443"
         ],
         "x": 445,
         "y": 100,
@@ -14398,11 +14820,9 @@
         "name": "REFRESH DB",
         "links": [
             "1dd663aebe5da599",
-            "8b873cf2d5df3d31",
-            "38d34e66ed011043",
-            "8ce6aaece4554c4e",
             "32b53bf9aadd2c46",
-            "208ad953a8652763"
+            "38d34e66ed011043",
+            "8b873cf2d5df3d31"
         ],
         "x": 625,
         "y": 400,
@@ -14512,7 +14932,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
+        "x": 210,
         "y": 420,
         "wires": []
     },
@@ -14759,7 +15179,7 @@
         "order": 1,
         "width": "4",
         "height": 4,
-        "format": "<img src=\"{{msg.payload}}\" alt=\"Image\" style=\"width: 100%; height: auto;\"/>",
+        "format": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css\">\n<img src=\"{{msg.payload}}\" alt=\"Image\" style=\"width: 100%; height: auto;\"/>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -15656,24 +16076,6 @@
         ]
     },
     {
-        "id": "aeaa99f2.5cf4f8",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "check X sat",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4010,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "5aa49bbf.e8b304",
         "type": "http request",
         "z": "7c68352c.1b47bc",
@@ -16435,100 +16837,6 @@
                 "804d4875e2f1648a"
             ]
         ]
-    },
-    {
-        "id": "58ea7c57.11f754",
-        "type": "http request",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "http request OEM/AEM",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://backend:8000/vts",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 4230,
-        "y": 160,
-        "wires": [
-            [
-                "a5bc4015.3f8fa",
-                "72f9a7c1e4e8ac50"
-            ]
-        ]
-    },
-    {
-        "id": "a5bc4015.3f8fa",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "OEM",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4430,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "3dce35b.ba5adca",
-        "type": "comment",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "Sub-Module VTS files Updating",
-        "info": "",
-        "x": 4450,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "105fdd91.9d22d2",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "joinwait reload",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4200,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "e8df78b.012af88",
-        "type": "comment",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "API request preparation",
-        "info": "",
-        "x": 4000,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "4de09aa7.179f04",
-        "type": "comment",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "MACHINE DEPENDENCE",
-        "info": "TLE_STORK.txt",
-        "x": 4450,
-        "y": 300,
-        "wires": [],
-        "icon": "node-red-contrib-alarm/alarm.png"
     },
     {
         "id": "848d6f10.6746c",
@@ -17614,66 +17922,6 @@
         "x": 3150,
         "y": 260,
         "wires": []
-    },
-    {
-        "id": "79a8517a3d50ba46",
-        "type": "change",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "LLA-Visibility-Update2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3980,
-        "y": 160,
-        "wires": [
-            [
-                "105fdd91.9d22d2",
-                "58ea7c57.11f754"
-            ]
-        ]
-    },
-    {
-        "id": "ed91f7078814f403",
-        "type": "join-wait",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "paths": "[\"path_12\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
-        "pathsToExpire": "",
-        "useRegex": false,
-        "warnUnmatched": false,
-        "pathTopic": "paths",
-        "pathTopicType": "msg",
-        "correlationTopic": "",
-        "correlationTopicType": "msg",
-        "timeout": "60",
-        "timeoutUnits": "1000",
-        "exactOrder": "false",
-        "firstMsg": "true",
-        "mapPayload": "true",
-        "disableComplete": false,
-        "persistOnRestart": false,
-        "x": 3720,
-        "y": 160,
-        "wires": [
-            [
-                "aeaa99f2.5cf4f8",
-                "79a8517a3d50ba46"
-            ],
-            []
-        ]
     },
     {
         "id": "bc58e5ec55a98be1",
@@ -18962,8 +19210,7 @@
                 "472fd34f5a4b63ee",
                 "7abf459108d1bb9a",
                 "eb7e570c18ebe251",
-                "0599a22e1f0c18ca",
-                "c07911fabe8939a9"
+                "0599a22e1f0c18ca"
             ]
         ]
     },
@@ -20230,7 +20477,8 @@
         "y": 1020,
         "wires": [
             [
-                "9218e67ae12ff56e"
+                "9218e67ae12ff56e",
+                "58b79c85054ff2f6"
             ]
         ]
     },
@@ -21899,7 +22147,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 3570,
-        "y": 540,
+        "y": 520,
         "wires": [
             [
                 "1b4cf2db17592916",
@@ -21920,7 +22168,7 @@
         "stream": false,
         "addname": "",
         "x": 3550,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "bc15dda52775a710"
@@ -22304,7 +22552,7 @@
         "finalize": "",
         "libs": [],
         "x": 3560,
-        "y": 640,
+        "y": 620,
         "wires": [
             [
                 "8063232e20158d5a"
@@ -22333,7 +22581,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 3550,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "19a75b7b1a234d67",
@@ -22354,7 +22602,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "beaf0a11e85d749d"
@@ -22374,7 +22622,7 @@
         "finalize": "",
         "libs": [],
         "x": 3562,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "f30d12dd2058bef2",
@@ -22403,7 +22651,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "877350886188357e"
@@ -22423,7 +22671,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "5adba86582d125c4"
@@ -22443,7 +22691,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 740,
+        "y": 720,
         "wires": [
             [
                 "11bfbb0c7f9356a8"
@@ -22463,7 +22711,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "a6585fdd8837e646"
@@ -22483,7 +22731,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "5bf24823ff268871"
@@ -22503,7 +22751,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "6cfe4705ace96064"
@@ -22523,7 +22771,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 740,
+        "y": 720,
         "wires": [
             [
                 "70b73ab02c552d95"
@@ -22543,7 +22791,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 800,
+        "y": 780,
         "wires": [
             [
                 "bb6892277131a073"
@@ -22563,7 +22811,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 800,
+        "y": 780,
         "wires": [
             [
                 "e94dd6a4d99bc2fb"
@@ -22583,7 +22831,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "05a7b7228758721a"
@@ -22603,7 +22851,7 @@
         "finalize": "",
         "libs": [],
         "x": 4148,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "8677dba8b1f81479"
@@ -22618,7 +22866,7 @@
         "name": "Repeupler les DB",
         "info": "",
         "x": 3680,
-        "y": 480,
+        "y": 460,
         "wires": []
     },
     {
@@ -22634,7 +22882,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4490,
-        "y": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -22650,7 +22898,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4490,
-        "y": 620,
+        "y": 600,
         "wires": []
     },
     {
@@ -22666,7 +22914,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4490,
-        "y": 680,
+        "y": 660,
         "wires": []
     },
     {
@@ -22682,7 +22930,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4490,
-        "y": 740,
+        "y": 720,
         "wires": []
     },
     {
@@ -22698,7 +22946,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4500,
-        "y": 800,
+        "y": 780,
         "wires": []
     },
     {
@@ -22714,7 +22962,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4500,
-        "y": 860,
+        "y": 840,
         "wires": []
     },
     {
@@ -22730,7 +22978,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 500,
+        "y": 480,
         "wires": []
     },
     {
@@ -22746,7 +22994,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -22762,7 +23010,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 620,
+        "y": 600,
         "wires": []
     },
     {
@@ -22778,7 +23026,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 680,
+        "y": 660,
         "wires": []
     },
     {
@@ -22794,7 +23042,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4860,
-        "y": 740,
+        "y": 720,
         "wires": []
     },
     {
@@ -22810,7 +23058,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4860,
-        "y": 800,
+        "y": 780,
         "wires": []
     },
     {
@@ -22826,7 +23074,7 @@
         "finalize": "",
         "libs": [],
         "x": 4500,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "c6a21b7e1f49e8fc",
@@ -22866,7 +23114,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 4500,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "f9e0d8bfc76d2ea9"
@@ -22886,7 +23134,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 920,
+        "y": 900,
         "wires": [
             [
                 "4c44820c369f21d8"
@@ -22906,7 +23154,7 @@
         "finalize": "",
         "libs": [],
         "x": 4150,
-        "y": 920,
+        "y": 900,
         "wires": [
             [
                 "cc2f6f7ecc60d930"
@@ -22926,7 +23174,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4480,
-        "y": 920,
+        "y": 900,
         "wires": []
     },
     {
@@ -22942,7 +23190,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 860,
+        "y": 840,
         "wires": []
     },
     {
@@ -22958,7 +23206,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 980,
+        "y": 960,
         "wires": [
             [
                 "695184832771955f"
@@ -22978,7 +23226,7 @@
         "finalize": "",
         "libs": [],
         "x": 4150,
-        "y": 980,
+        "y": 960,
         "wires": [
             [
                 "cb779cec6c69d361"
@@ -22998,7 +23246,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4480,
-        "y": 980,
+        "y": 960,
         "wires": []
     },
     {
@@ -23014,7 +23262,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4850,
-        "y": 920,
+        "y": 900,
         "wires": []
     },
     {
@@ -23030,7 +23278,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 1040,
+        "y": 1020,
         "wires": [
             [
                 "a329faec55f61f76"
@@ -23050,7 +23298,7 @@
         "finalize": "",
         "libs": [],
         "x": 4150,
-        "y": 1040,
+        "y": 1020,
         "wires": [
             [
                 "1cc6fcbc62a009cb"
@@ -23070,7 +23318,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4480,
-        "y": 1040,
+        "y": 1020,
         "wires": []
     },
     {
@@ -23086,7 +23334,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4840,
-        "y": 980,
+        "y": 960,
         "wires": []
     },
     {
@@ -23102,7 +23350,7 @@
         "finalize": "",
         "libs": [],
         "x": 3832,
-        "y": 1120,
+        "y": 1100,
         "wires": [
             [
                 "243383b13419e82a"
@@ -23122,7 +23370,7 @@
         "finalize": "",
         "libs": [],
         "x": 4160,
-        "y": 1100,
+        "y": 1080,
         "wires": [
             [
                 "52dbdd123e7091c0",
@@ -23145,7 +23393,7 @@
         "multi": false,
         "operation": "insert",
         "x": 4480,
-        "y": 1100,
+        "y": 1080,
         "wires": []
     },
     {
@@ -23161,7 +23409,7 @@
         "multi": false,
         "operation": "delete",
         "x": 4840,
-        "y": 1040,
+        "y": 1020,
         "wires": []
     },
     {
@@ -23359,10 +23607,9 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 4070,
-        "y": 480,
+        "y": 460,
         "wires": [
             [
-                "f9e0d8bfc76d2ea9",
                 "5ab99c0c9192c682"
             ]
         ]
@@ -25792,34 +26039,6 @@
         "wires": []
     },
     {
-        "id": "ed6b13ca02a5a70d",
-        "type": "link in",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "JOINWAIT XSAT",
-        "links": [
-            "13e6783f699d391f",
-            "1a19adb69a35a3a7",
-            "41a32e4cc747f910",
-            "d51fcddeda0e0de7",
-            "24606f59b812db66",
-            "ac147f0729ad1810",
-            "68c5a6850e745a21",
-            "f7f9c11d1f2382ae",
-            "8943bd9a10115aea",
-            "be24a5a05268a710",
-            "2072d02e.cd2d4"
-        ],
-        "x": 3585,
-        "y": 160,
-        "wires": [
-            [
-                "ed91f7078814f403",
-                "18dac48b6fa1899c"
-            ]
-        ]
-    },
-    {
         "id": "13e6783f699d391f",
         "type": "link out",
         "z": "7c68352c.1b47bc",
@@ -26228,68 +26447,6 @@
         "wires": []
     },
     {
-        "id": "72f9a7c1e4e8ac50",
-        "type": "switch",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "property": "headers.vtsflag",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "ready",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 4410,
-        "y": 180,
-        "wires": [
-            [
-                "5a8ee579df55828c"
-            ]
-        ]
-    },
-    {
-        "id": "0b6a2fcc56b1307a",
-        "type": "function",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "func": "msg.payload=\"Situation updated\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4760,
-        "y": 100,
-        "wires": [
-            [
-                "ffb4c4b51344ccf8",
-                "d0e791394ec64d0c",
-                "e53c4b5d7212fd87"
-            ]
-        ]
-    },
-    {
-        "id": "ffb4c4b51344ccf8",
-        "type": "link out",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "c67ec5067dc22890"
-        ],
-        "x": 4895,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "3803c3c602de1c33",
         "type": "debug",
         "z": "7c68352c.1b47bc",
@@ -26548,20 +26705,6 @@
         ]
     },
     {
-        "id": "d0e791394ec64d0c",
-        "type": "link out",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "640bcc1f704ee31a"
-        ],
-        "x": 4895,
-        "y": 100,
-        "wires": []
-    },
-    {
         "id": "657f20487bb1e584",
         "type": "function",
         "z": "7c68352c.1b47bc",
@@ -26578,188 +26721,6 @@
             [
                 "a7cf0aedfca0d674"
             ]
-        ]
-    },
-    {
-        "id": "5a8ee579df55828c",
-        "type": "exec",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python concatenate.py",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "concatenate",
-        "x": 4550,
-        "y": 180,
-        "wires": [
-            [
-                "8cb6f04c9bcdf194",
-                "0b6a2fcc56b1307a"
-            ],
-            [
-                "b2241bb2a12a8f16"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "b2241bb2a12a8f16",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "CONCATENATE  ERROR",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4790,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "8cb6f04c9bcdf194",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "CONCATENATE OUT",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4780,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "813073f9113a2daf",
-        "type": "exec",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python copymem.py",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "copymem",
-        "x": 3800,
-        "y": 260,
-        "wires": [
-            [
-                "279f6bac680aabe9",
-                "b84d6b0d444acde7"
-            ],
-            [
-                "01e51961a76d77a0"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "01e51961a76d77a0",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "COPYMEM ERROR",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4060,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "279f6bac680aabe9",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "COPYMEM OUT",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4050,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "b84d6b0d444acde7",
-        "type": "change",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "Set path_12",
-        "rules": [
-            {
-                "t": "set",
-                "p": "paths",
-                "pt": "msg",
-                "to": "path_12",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3730,
-        "y": 200,
-        "wires": [
-            [
-                "ed91f7078814f403"
-            ]
-        ]
-    },
-    {
-        "id": "18dac48b6fa1899c",
-        "type": "join-wait",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "paths": "[\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
-        "pathsToExpire": "",
-        "useRegex": false,
-        "warnUnmatched": false,
-        "pathTopic": "paths",
-        "pathTopicType": "msg",
-        "correlationTopic": "",
-        "correlationTopicType": "msg",
-        "timeout": "60",
-        "timeoutUnits": "1000",
-        "exactOrder": "false",
-        "firstMsg": "true",
-        "mapPayload": "true",
-        "disableComplete": false,
-        "persistOnRestart": false,
-        "x": 3640,
-        "y": 280,
-        "wires": [
-            [
-                "813073f9113a2daf"
-            ],
-            []
         ]
     },
     {
@@ -26810,10 +26771,12 @@
         "name": "MEM FLUSH FOR RESCUE DB",
         "mode": "link",
         "links": [
-            "3186623bfab93670"
+            "3186623bfab93670",
+            "8703f9d5dd80ac0f",
+            "46786d711e5af4e8"
         ],
-        "x": 4365,
-        "y": 440,
+        "x": 4205,
+        "y": 400,
         "wires": []
     },
     {
@@ -26868,7 +26831,7 @@
         ],
         "uncaught": false,
         "x": 3812,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "1926d3943dce7523",
@@ -26891,7 +26854,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 4030,
-        "y": 440,
+        "y": 420,
         "wires": []
     },
     {
@@ -26915,7 +26878,7 @@
         "to": "",
         "reg": false,
         "x": 4630,
-        "y": 420,
+        "y": 400,
         "wires": [
             [
                 "f9e0d8bfc76d2ea9"
@@ -26931,8 +26894,8 @@
         "links": [
             "60708c380b4d96f0"
         ],
-        "x": 4455,
-        "y": 420,
+        "x": 4485,
+        "y": 400,
         "wires": [
             [
                 "b448f6837eae385f"
@@ -26950,7 +26913,7 @@
             "3853f0aecc249b02"
         ],
         "x": 4755,
-        "y": 1160,
+        "y": 1140,
         "wires": []
     },
     {
@@ -26972,7 +26935,7 @@
         "repair": false,
         "outputs": 1,
         "x": 4450,
-        "y": 1160,
+        "y": 1140,
         "wires": [
             [
                 "34c234d7767900b6"
@@ -26998,7 +26961,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 4630,
-        "y": 1160,
+        "y": 1140,
         "wires": [
             [
                 "1dd663aebe5da599"
@@ -28068,24 +28031,9 @@
         "y": 2000,
         "wires": [
             [
-                "8ce9e6a65847b662",
-                "3a5b6e039d3032f5"
+                "098b276ca212f2c4"
             ]
         ]
-    },
-    {
-        "id": "3a5b6e039d3032f5",
-        "type": "link out",
-        "z": "7c68352c.1b47bc",
-        "g": "5dd0526663d52573",
-        "name": "MEM FLUSH FOR RESCUE DB",
-        "mode": "link",
-        "links": [
-            "3186623bfab93670"
-        ],
-        "x": 4265,
-        "y": 1980,
-        "wires": []
     },
     {
         "id": "8f24ed5b8ec995ed",
@@ -28489,7 +28437,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3672,
-        "y": 420,
+        "y": 400,
         "wires": []
     },
     {
@@ -28507,7 +28455,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3572,
-        "y": 960,
+        "y": 940,
         "wires": []
     },
     {
@@ -28521,7 +28469,7 @@
             "063d6204bbca5ae5"
         ],
         "x": 3915,
-        "y": 400,
+        "y": 380,
         "wires": []
     },
     {
@@ -28538,7 +28486,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 4192,
-        "y": 1160,
+        "y": 1140,
         "wires": []
     },
     {
@@ -28957,43 +28905,6 @@
         "wires": []
     },
     {
-        "id": "cee4def5e77bb830",
-        "type": "change",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "LLA-Visibility-Update2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {},\t        \"VISIBILITY\": {}\t    }\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3740,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2147ad17b59aa35b",
-        "type": "comment",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "A GARDER ",
-        "info": "Pour implémenter la visibilité des satellites par les stations au sol.",
-        "x": 3750,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "a8f379dc355cc865",
         "type": "ui_template",
         "z": "7c68352c.1b47bc",
@@ -29120,7 +29031,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"180\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -29144,7 +29055,7 @@
         "z": "7c68352c.1b47bc",
         "g": "4c0adca48375c892",
         "name": "",
-        "paths": "[\"path_102\",\"path_12\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
+        "paths": "[\"path_101\",\"path_12\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
         "pathsToExpire": "",
         "useRegex": false,
         "warnUnmatched": false,
@@ -29404,7 +29315,8 @@
         "wires": [
             [
                 "3e608b3210a3b71b",
-                "2decf83c3304a112"
+                "2decf83c3304a112",
+                "d97910492e060e73"
             ]
         ]
     },
@@ -29454,8 +29366,8 @@
         "links": [
             "c67ec5067dc22890"
         ],
-        "x": 4735,
-        "y": 2840,
+        "x": 4725,
+        "y": 2800,
         "wires": []
     },
     {
@@ -29510,46 +29422,6 @@
         "wires": []
     },
     {
-        "id": "c07911fabe8939a9",
-        "type": "change",
-        "z": "7c68352c.1b47bc",
-        "g": "2345ff89d3122291",
-        "name": "Set path_101",
-        "rules": [
-            {
-                "t": "set",
-                "p": "paths",
-                "pt": "msg",
-                "to": "path_101",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 1140,
-        "wires": [
-            [
-                "8b6c35cfb038088b"
-            ]
-        ]
-    },
-    {
-        "id": "8b6c35cfb038088b",
-        "type": "link out",
-        "z": "7c68352c.1b47bc",
-        "g": "2345ff89d3122291",
-        "name": "Propagation B1",
-        "mode": "link",
-        "links": [],
-        "x": 775,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "4c5d356d4499b947",
         "type": "change",
         "z": "7c68352c.1b47bc",
@@ -29571,7 +29443,9 @@
         "x": 3370,
         "y": 520,
         "wires": [
-            []
+            [
+                "ed91f7078814f403"
+            ]
         ]
     },
     {
@@ -29702,6 +29576,442 @@
         ]
     },
     {
+        "id": "58ea7c57.11f754",
+        "type": "http request",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "http request OEM/AEM",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://backend:8000/vts",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 4230,
+        "y": 160,
+        "wires": [
+            [
+                "a5bc4015.3f8fa",
+                "72f9a7c1e4e8ac50"
+            ]
+        ]
+    },
+    {
+        "id": "a5bc4015.3f8fa",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "OEM",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4430,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3dce35b.ba5adca",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "Sub-Module VTS files Updating",
+        "info": "",
+        "x": 4510,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "105fdd91.9d22d2",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "joinwait reload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e8df78b.012af88",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "API request preparation",
+        "info": "",
+        "x": 4000,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4de09aa7.179f04",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "MACHINE DEPENDENCE",
+        "info": "TLE_STORK.txt",
+        "x": 4310,
+        "y": 320,
+        "wires": [],
+        "icon": "node-red-contrib-alarm/alarm.png"
+    },
+    {
+        "id": "79a8517a3d50ba46",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "LLA-Visibility-Update2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"180\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3980,
+        "y": 160,
+        "wires": [
+            [
+                "105fdd91.9d22d2",
+                "58ea7c57.11f754"
+            ]
+        ]
+    },
+    {
+        "id": "ed91f7078814f403",
+        "type": "join-wait",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "paths": "[\"path_100\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
+        "pathsToExpire": "",
+        "useRegex": false,
+        "warnUnmatched": false,
+        "pathTopic": "paths",
+        "pathTopicType": "msg",
+        "correlationTopic": "",
+        "correlationTopicType": "msg",
+        "timeout": "60",
+        "timeoutUnits": "1000",
+        "exactOrder": "false",
+        "firstMsg": "true",
+        "mapPayload": "true",
+        "disableComplete": false,
+        "persistOnRestart": false,
+        "x": 3720,
+        "y": 160,
+        "wires": [
+            [
+                "aeaa99f2.5cf4f8",
+                "79a8517a3d50ba46"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ed6b13ca02a5a70d",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "JOINWAIT XSAT",
+        "links": [
+            "13e6783f699d391f",
+            "1a19adb69a35a3a7",
+            "41a32e4cc747f910",
+            "d51fcddeda0e0de7",
+            "24606f59b812db66",
+            "ac147f0729ad1810",
+            "68c5a6850e745a21",
+            "f7f9c11d1f2382ae",
+            "8943bd9a10115aea",
+            "be24a5a05268a710",
+            "2072d02e.cd2d4"
+        ],
+        "x": 3585,
+        "y": 160,
+        "wires": [
+            [
+                "ed91f7078814f403"
+            ]
+        ]
+    },
+    {
+        "id": "aeaa99f2.5cf4f8",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "check X sat",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3950,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "813073f9113a2daf",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python copymem.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copymem",
+        "x": 3700,
+        "y": 300,
+        "wires": [
+            [
+                "279f6bac680aabe9",
+                "b84d6b0d444acde7"
+            ],
+            [
+                "01e51961a76d77a0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "279f6bac680aabe9",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "COPYMEM OUT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4050,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "01e51961a76d77a0",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "COPYMEM ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4040,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "72f9a7c1e4e8ac50",
+        "type": "switch",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "property": "headers.vtsflag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ready",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 4430,
+        "y": 160,
+        "wires": [
+            [
+                "813073f9113a2daf"
+            ]
+        ]
+    },
+    {
+        "id": "5a8ee579df55828c",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python concatenate.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "concatenate",
+        "x": 4590,
+        "y": 180,
+        "wires": [
+            [
+                "8cb6f04c9bcdf194",
+                "0b6a2fcc56b1307a"
+            ],
+            [
+                "b2241bb2a12a8f16"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0b6a2fcc56b1307a",
+        "type": "function",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "func": "msg.payload=\"Situation updated\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4700,
+        "y": 120,
+        "wires": [
+            [
+                "ffb4c4b51344ccf8",
+                "d0e791394ec64d0c",
+                "e53c4b5d7212fd87"
+            ]
+        ]
+    },
+    {
+        "id": "8cb6f04c9bcdf194",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "CONCATENATE OUT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4780,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b2241bb2a12a8f16",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "CONCATENATE  ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4790,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ffb4c4b51344ccf8",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "c67ec5067dc22890"
+        ],
+        "x": 4895,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d0e791394ec64d0c",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "640bcc1f704ee31a"
+        ],
+        "x": 4895,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cee4def5e77bb830",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "LLA-Visibility-Update2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {},\t        \"VISIBILITY\": {}\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3740,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2147ad17b59aa35b",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "A GARDER ",
+        "info": "Pour implémenter la visibilité des satellites par les stations au sol.",
+        "x": 3750,
+        "y": 80,
+        "wires": []
+    },
+    {
         "id": "e53c4b5d7212fd87",
         "type": "debug",
         "z": "7c68352c.1b47bc",
@@ -29717,6 +30027,233 @@
         "statusType": "auto",
         "x": 4820,
         "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b84d6b0d444acde7",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "Set path_12",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths",
+                "pt": "msg",
+                "to": "path_12",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3670,
+        "y": 220,
+        "wires": [
+            [
+                "8e64d0448f085117"
+            ]
+        ]
+    },
+    {
+        "id": "8e64d0448f085117",
+        "type": "join-wait",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "paths": "[\"path_12\"]",
+        "pathsToExpire": "",
+        "useRegex": false,
+        "warnUnmatched": false,
+        "pathTopic": "paths",
+        "pathTopicType": "msg",
+        "correlationTopic": "",
+        "correlationTopicType": "msg",
+        "timeout": "60",
+        "timeoutUnits": "1000",
+        "exactOrder": "false",
+        "firstMsg": "true",
+        "mapPayload": "true",
+        "disableComplete": false,
+        "persistOnRestart": false,
+        "x": 4240,
+        "y": 260,
+        "wires": [
+            [
+                "bce915815eb2fab4",
+                "5a8ee579df55828c",
+                "9cdeb252bc6af462"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bce915815eb2fab4",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4410,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "104b3e91f2133bb5",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "g": "9a9dfd74ece6e34c",
+        "name": "DELETE BDD",
+        "links": [
+            "8e709b7b1cc9bd07",
+            "59f0292ae65fb83b"
+        ],
+        "x": 4305,
+        "y": 480,
+        "wires": [
+            [
+                "f9e0d8bfc76d2ea9"
+            ]
+        ]
+    },
+    {
+        "id": "098b276ca212f2c4",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "g": "5dd0526663d52573",
+        "name": "RESCUE TLE AIGLONS",
+        "mode": "link",
+        "links": [
+            "64cbfe5e2bae5606"
+        ],
+        "x": 4155,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "a5ff53e5e4c198e1",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "g": "5dd0526663d52573",
+        "name": "DELETE DB TLE AIGLONS",
+        "links": [
+            "0f41e91b50d161c6"
+        ],
+        "x": 4275,
+        "y": 2020,
+        "wires": [
+            [
+                "8ce9e6a65847b662"
+            ]
+        ]
+    },
+    {
+        "id": "58b79c85054ff2f6",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "name": "TEST TLE1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "9cdeb252bc6af462",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat && python copy_vts_conf.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy vts_conf",
+        "x": 4600,
+        "y": 280,
+        "wires": [
+            [
+                "33dd7b2edfd43b13"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "33dd7b2edfd43b13",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4750,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d97910492e060e73",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "4c0adca48375c892",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat && rm default_Sat.vts && python copy_vts_conf_backup.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy vts_conf",
+        "x": 4380,
+        "y": 3000,
+        "wires": [
+            [
+                "c409a15d1ad51b59"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c409a15d1ad51b59",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "4c0adca48375c892",
+        "name": "TEST BACKUP VTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4640,
+        "y": 3020,
         "wires": []
     },
     {
@@ -35188,8 +35725,8 @@
         "y": 520,
         "wires": [
             [
-                "7669ab0c0d0926af",
-                "1093096c2260921d"
+                "1093096c2260921d",
+                "7669ab0c0d0926af"
             ]
         ]
     },
@@ -35363,7 +35900,7 @@
         "type": "function",
         "z": "a9c7c6499fb06192",
         "name": "echange",
-        "func": "\nif(msg.payload[0].version == \"New TLE\" ){\n    var tmp =msg.payload[0];\n    msg.payload[0]= msg.payload[1];\n    msg.payload[1]=tmp;\n}\n\nreturn msg;",
+        "func": "\nif(msg.payload[0].version == \"New TLE\" ){\n    var tmp =msg.payload[0];\n    msg.payload[0]= tmp;\n    msg.payload[1]=\"\";\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -35373,7 +35910,8 @@
         "y": 740,
         "wires": [
             [
-                "8689ab60c352e350"
+                "8689ab60c352e350",
+                "9d157c44361e9d20"
             ]
         ]
     },
@@ -43574,6 +44112,23 @@
         "wires": []
     },
     {
+        "id": "9d157c44361e9d20",
+        "type": "debug",
+        "z": "a9c7c6499fb06192",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4730,
+        "y": 800,
+        "wires": []
+    },
+    {
         "id": "8671293235efd906",
         "type": "link in",
         "z": "62c122b2f65be8e8",
@@ -49308,11 +49863,12 @@
         "order": 2,
         "width": "20",
         "height": "18",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "format": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css\">\n<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 2770,
         "y": 580,
         "wires": [
@@ -51973,9 +52529,9 @@
         "wires": [
             [
                 "4e5dd8e0ab94d018",
-                "805ac2520bb9e911",
                 "d7d53386b355ddc5",
-                "b60bf935c41b2e7f"
+                "b79ec549a72b8687",
+                "627734fa542c5768"
             ]
         ]
     },
@@ -52030,9 +52586,9 @@
         "wires": [
             [
                 "b48acc271cc4016c",
-                "805ac2520bb9e911",
                 "84cf34ad113c1846",
-                "b60bf935c41b2e7f"
+                "b79ec549a72b8687",
+                "627734fa542c5768"
             ]
         ]
     },
@@ -52108,8 +52664,8 @@
             [
                 "167f1c74c0957544",
                 "1c5f8b40f6f0c84d",
-                "805ac2520bb9e911",
-                "b60bf935c41b2e7f"
+                "b79ec549a72b8687",
+                "627734fa542c5768"
             ]
         ]
     },
@@ -52245,7 +52801,8 @@
         "wires": [
             [
                 "2953ffcc68f6be38",
-                "758e3d3b8fb58f33"
+                "758e3d3b8fb58f33",
+                "11d1c90a96340c32"
             ]
         ]
     },
@@ -52294,28 +52851,6 @@
         ]
     },
     {
-        "id": "805ac2520bb9e911",
-        "type": "ui_template",
-        "z": "62804953b962105f",
-        "g": "e570253ed9784b6a",
-        "group": "3dabe8df.a10df8",
-        "name": "Custom Notification",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    .ui-notification {\n    position: fixed;\n    top: 0px;\n    right: 0px;\n    padding: 21px 50px;\n    background-color: #001f3f;\n    color: white;\n    border-radius: 5px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n    visibility: hidden;\n    opacity: 0;\n    transform: translateY(-20px);\n    transition: opacity 0.3s, transform 0.3s;\n    z-index: 10000;\n    font-size: 18px; /* Increase the font size here */\n}\n\n\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let msgCount = 0;\n\n    function showNewNotification(message, type = 'success') {\n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n\n        // Update message count to force refresh\n        msgCount++;\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n\n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n    }\n\n    // Watch for messages with immediate response\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n\n        let payload = msg.payload;\n        let message, type;\n\n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n\n        // Show notification immediately\n        showNewNotification(message, type);\n    }, true);\n\n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 610,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "167f1c74c0957544",
         "type": "debug",
         "z": "62804953b962105f",
@@ -52357,9 +52892,7 @@
         "x": 400,
         "y": 260,
         "wires": [
-            [
-                "805ac2520bb9e911"
-            ]
+            []
         ]
     },
     {
@@ -52395,22 +52928,43 @@
         "wires": []
     },
     {
-        "id": "b60bf935c41b2e7f",
+        "id": "b79ec549a72b8687",
         "type": "ui_template",
         "z": "62804953b962105f",
-        "group": "cbb369e33298cfeb",
-        "name": "Custom Notification",
-        "order": 0,
+        "group": "3dabe8df.a10df8",
+        "name": "UI Notigication Home",
+        "order": 5,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .ui-notification {\n    position: fixed;\n    top: 0px;\n    right: 0px;\n    padding: 21px 50px;\n    background-color: #001f3f;\n    color: white;\n    border-radius: 5px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n    visibility: hidden;\n    opacity: 0;\n    transform: translateY(-20px);\n    transition: opacity 0.3s, transform 0.3s;\n    z-index: 10000;\n    font-size: 18px; /* Increase the font size here */\n}\n\n\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let msgCount = 0;\n\n    function showNewNotification(message, type = 'success') {\n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n\n        // Update message count to force refresh\n        msgCount++;\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n\n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n    }\n\n    // Watch for messages with immediate response\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n\n        let payload = msg.payload;\n        let message, type;\n\n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n\n        // Show notification immediately\n        showNewNotification(message, type);\n    }, true);\n\n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n})(scope);\n</script>",
+        "format": "<style>\n    .ui-notification {\n        position: fixed;\n        top: 0px;\n        right: 0px;\n        padding: 21px 50px;\n        background-color: #001f3f;\n        color: white;\n        border-radius: 5px;\n        box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n        visibility: hidden;\n        opacity: 0;\n        transform: translateY(-20px);\n        transition: opacity 0.3s, transform 0.3s;\n        z-index: 10000;\n        font-size: 18px;\n    }\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    // Generate a unique page load ID\n    const pageLoadId = Date.now().toString();\n    localStorage.setItem('pageLoadId', pageLoadId);\n    \n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let isFirstLoad = true;\n    \n    function showNewNotification(message, type = 'success') {\n        // Skip notifications on page load\n        if (isFirstLoad) {\n            isFirstLoad = false;\n            return;\n        }\n        \n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n        \n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n        \n        // Store the message with the current page load ID\n        localStorage.setItem('lastNotification', JSON.stringify({\n            message: message,\n            type: type,\n            pageLoadId: pageLoadId,\n            timestamp: Date.now()\n        }));\n    }\n    \n    // Watch for messages\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n        \n        let payload = msg.payload;\n        let message, type;\n        \n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n        \n        // Check if this is a new message for the current page load\n        const lastNotification = localStorage.getItem('lastNotification');\n        if (lastNotification) {\n            const lastMsg = JSON.parse(lastNotification);\n            if (lastMsg.pageLoadId !== pageLoadId) {\n                // Different page load, don't show old notification\n                showNewNotification(message, type);\n            } else if (lastMsg.message !== message) {\n                // Same page load but different message\n                showNewNotification(message, type);\n            }\n        } else {\n            // No previous notification\n            showNewNotification(message, type);\n        }\n    }, true);\n    \n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n    \n    // Clear notification visibility on page unload\n    window.addEventListener('beforeunload', function() {\n        notificationElement.classList.remove('visible');\n    });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 950,
+        "x": 800,
         "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "627734fa542c5768",
+        "type": "ui_template",
+        "z": "62804953b962105f",
+        "group": "cbb369e33298cfeb",
+        "name": "UI Notigication BLUE1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .ui-notification {\n        position: fixed;\n        top: 0px;\n        right: 0px;\n        padding: 21px 50px;\n        background-color: #001f3f;\n        color: white;\n        border-radius: 5px;\n        box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n        visibility: hidden;\n        opacity: 0;\n        transform: translateY(-20px);\n        transition: opacity 0.3s, transform 0.3s;\n        z-index: 10000;\n        font-size: 18px;\n    }\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    // Generate a unique page load ID\n    const pageLoadId = Date.now().toString();\n    localStorage.setItem('pageLoadId', pageLoadId);\n    \n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let isFirstLoad = true;\n    \n    function showNewNotification(message, type = 'success') {\n        // Skip notifications on page load\n        if (isFirstLoad) {\n            isFirstLoad = false;\n            return;\n        }\n        \n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n        \n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n        \n        // Store the message with the current page load ID\n        localStorage.setItem('lastNotification', JSON.stringify({\n            message: message,\n            type: type,\n            pageLoadId: pageLoadId,\n            timestamp: Date.now()\n        }));\n    }\n    \n    // Watch for messages\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n        \n        let payload = msg.payload;\n        let message, type;\n        \n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n        \n        // Check if this is a new message for the current page load\n        const lastNotification = localStorage.getItem('lastNotification');\n        if (lastNotification) {\n            const lastMsg = JSON.parse(lastNotification);\n            if (lastMsg.pageLoadId !== pageLoadId) {\n                // Different page load, don't show old notification\n                showNewNotification(message, type);\n            } else if (lastMsg.message !== message) {\n                // Same page load but different message\n                showNewNotification(message, type);\n            }\n        } else {\n            // No previous notification\n            showNewNotification(message, type);\n        }\n    }, true);\n    \n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n    \n    // Clear notification visibility on page unload\n    window.addEventListener('beforeunload', function() {\n        notificationElement.classList.remove('visible');\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 820,
+        "y": 80,
         "wires": [
             []
         ]

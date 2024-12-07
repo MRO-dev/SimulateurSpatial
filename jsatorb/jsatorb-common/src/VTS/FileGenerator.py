@@ -101,6 +101,7 @@ class FileGenerator:
                 responses['OEM'] = oem_converted
                 oem_file = f"{nameFolder}/{sat['name']}_OEM_POSITION.TXT"
                 oem_file_ccsds = f"{nameFolder}/{sat['name']}_OEM_POSITION.TXT_ccsds"
+                print(oem_file)
                 with open(oem_file_ccsds, 'w') as file:
                     file.write(oem_data)
                 ccsds2cic(oem_file_ccsds, oem_file, self.body)
