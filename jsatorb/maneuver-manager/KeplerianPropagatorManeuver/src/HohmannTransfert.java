@@ -378,6 +378,17 @@ public class HohmannTransfert {
         double finalMassAfterThirdManeuver = finalMassAfterSecondManeuver * FastMath.exp(-DV3 / (ISP * g0));
         System.out.println("Masse finale après troisième manoeuvre : " + finalMassAfterThirdManeuver + " kg");
 
+        // Calcul de la masse après la première manœuvre
+        finalMassAfterFirstManeuver = calculateFinalMass(initialMass, DV1, ISP, g0);
+        double ergolConsumedFirstManeuver = initialMass - finalMassAfterFirstManeuver;
+
+        // Calcul de la masse après la deuxième manœuvre
+        finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver, DV2, ISP, g0);
+        double ergolConsumedSecondManeuver = finalMassAfterFirstManeuver - finalMassAfterSecondManeuver;
+
+        // Calcul total de la consommation d'ergols
+        double totalErgolConsumed = ergolConsumedFirstManeuver + ergolConsumedSecondManeuver;
+
         SpacecraftState finalState = propagator.propagate(stateAtPerigee.getDate().shiftedBy(0.001));
         finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterThirdManeuver);
 

@@ -155,8 +155,10 @@
             "f225da6f.835808",
             "cb0fed7.3a64e1"
         ],
-        "x": -32,
-        "y": -47
+        "x": -12,
+        "y": -47,
+        "w": 1474,
+        "h": 694
     },
     {
         "id": "1fd96d24.c576c3",
@@ -256,9 +258,7 @@
             "bd944618.65d4c8"
         ],
         "x": 2094,
-        "y": 3919,
-        "w": 632,
-        "h": 442
+        "y": 3919
     },
     {
         "id": "1e404e3b.14ce32",
@@ -276,9 +276,7 @@
             "287ac47f.0441ac"
         ],
         "x": 1474,
-        "y": 59,
-        "w": 352,
-        "h": 182
+        "y": 59
     },
     {
         "id": "c6dcd18b.ea624",
@@ -315,9 +313,7 @@
             "24e475a7e7cc30b0"
         ],
         "x": 2254,
-        "y": -1,
-        "w": 1192,
-        "h": 382
+        "y": -1
     },
     {
         "id": "4e981e1c.9c0d",
@@ -333,9 +329,7 @@
             "97d64ebb.eedeb"
         ],
         "x": 114,
-        "y": 3679,
-        "w": 363,
-        "h": 82
+        "y": 3679
     },
     {
         "id": "571e2c55.406334",
@@ -362,9 +356,7 @@
             "b4f92e23ab3d8349"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1282,
-        "h": 262
+        "y": 19
     },
     {
         "id": "3ccbb53f.0e92ea",
@@ -388,9 +380,7 @@
             "a8f379dc355cc865"
         ],
         "x": 1334,
-        "y": 3959,
-        "w": 672,
-        "h": 362
+        "y": 3959
     },
     {
         "id": "a70ba86a.746ad8",
@@ -708,12 +698,12 @@
             "94d0137eed1571be",
             "8d78da0b6b8b6b6b",
             "61f4316899cdb467",
-            "58b79c85054ff2f6"
+            "58b79c85054ff2f6",
+            "f7ec29fc0b7587f6",
+            "35e824d21806ad1a"
         ],
         "x": 654,
-        "y": 659,
-        "w": 2352,
-        "h": 702
+        "y": 659
     },
     {
         "id": "4be805205e728ae6",
@@ -736,9 +726,7 @@
             "85bda3f55da806af"
         ],
         "x": 114,
-        "y": 3839,
-        "w": 1112,
-        "h": 242
+        "y": 3839
     },
     {
         "id": "32829735bc4f3d16",
@@ -783,9 +771,7 @@
             "118f0f492f55ac0a"
         ],
         "x": 1094,
-        "y": 1979,
-        "w": 1712,
-        "h": 382
+        "y": 1979
     },
     {
         "id": "3dd210d88054dfaa",
@@ -813,9 +799,7 @@
             "753a66a0e91c8b65"
         ],
         "x": 114,
-        "y": 4359,
-        "w": 1972,
-        "h": 202
+        "y": 4359
     },
     {
         "id": "f47ebdbe9aa02fbc",
@@ -854,9 +838,7 @@
             "8a57318edf3a260a"
         ],
         "x": 294,
-        "y": 2979,
-        "w": 1452,
-        "h": 222
+        "y": 2979
     },
     {
         "id": "9a5f859dacc543ae",
@@ -888,9 +870,7 @@
             "27fa46bdf416727e"
         ],
         "x": 114,
-        "y": 3239,
-        "w": 1452,
-        "h": 182
+        "y": 3239
     },
     {
         "id": "69e1011093603bba",
@@ -922,9 +902,7 @@
             "1d8f9124f6c023ac"
         ],
         "x": 104,
-        "y": 3459,
-        "w": 1582,
-        "h": 182
+        "y": 3459
     },
     {
         "id": "fdab8259e2b1d755",
@@ -972,9 +950,7 @@
             "0ea9525a009058f4"
         ],
         "x": 1074,
-        "y": 1499,
-        "w": 1432,
-        "h": 362
+        "y": 1499
     },
     {
         "id": "d79f942338defd7f",
@@ -1010,9 +986,7 @@
             "378c5b1017d00b9f"
         ],
         "x": 534,
-        "y": 299,
-        "w": 1712,
-        "h": 302
+        "y": 299
     },
     {
         "id": "4c6998b4.6db838",
@@ -1089,9 +1063,7 @@
             "34c17ae1e756d864"
         ],
         "x": 1014,
-        "y": 2499,
-        "w": 1212,
-        "h": 382
+        "y": 2499
     },
     {
         "id": "25671b51f351320d",
@@ -1115,9 +1087,7 @@
             "adebc33415b96346"
         ],
         "x": 3434,
-        "y": 1219,
-        "w": 842,
-        "h": 162
+        "y": 1219
     },
     {
         "id": "d986a879ef5d40e6",
@@ -1147,9 +1117,7 @@
             "bf5a0c7c968ace0f"
         ],
         "x": 2704,
-        "y": 1259,
-        "w": 522,
-        "h": 422
+        "y": 1259
     },
     {
         "id": "9a9dfd74ece6e34c",
@@ -1224,9 +1192,7 @@
             "104b3e91f2133bb5"
         ],
         "x": 3454,
-        "y": 339,
-        "w": 1532,
-        "h": 842
+        "y": 339
     },
     {
         "id": "25175e791aace242",
@@ -1667,9 +1633,7 @@
             "4f6a448fcc452112"
         ],
         "x": 3014,
-        "y": 3219,
-        "w": 1152,
-        "h": 802
+        "y": 3219
     },
     {
         "id": "9c8f7f2b5249150e",
@@ -1691,9 +1655,7 @@
             "0d97d48b885c1636"
         ],
         "x": 3434,
-        "y": 4479,
-        "w": 712,
-        "h": 262
+        "y": 4479
     },
     {
         "id": "a61b6b0beb4dae17",
@@ -1947,9 +1909,7 @@
             "a5ff53e5e4c198e1"
         ],
         "x": 3394,
-        "y": 1899,
-        "w": 1532,
-        "h": 822
+        "y": 1899
     },
     {
         "id": "400721a2c2769c0e",
@@ -1968,12 +1928,17 @@
             "92e0db73f92c1c5d",
             "711bd6f73f5164ca",
             "331dd35712a62381",
-            "472ddc8b042b18ad"
+            "472ddc8b042b18ad",
+            "2207b00d6dc97dcd",
+            "cca155df83b092e7",
+            "4458e9f6ba29353e",
+            "cc4ac44801069917",
+            "5672ee467e4d6dd7",
+            "f39fd29450499bc7",
+            "fd0c7283182a866f"
         ],
         "x": 3854,
-        "y": 1499,
-        "w": 892,
-        "h": 162
+        "y": 1499
     },
     {
         "id": "3500e6d55cf0a0c8",
@@ -1997,7 +1962,9 @@
             "ae7cd6589be97892"
         ],
         "x": 1514,
-        "y": 239
+        "y": 239,
+        "w": 812,
+        "h": 209.5
     },
     {
         "id": "26d8e3a389b016a3",
@@ -2239,7 +2206,9 @@
             "566f0687ef8387cb"
         ],
         "x": 14,
-        "y": 659
+        "y": 659,
+        "w": 1772,
+        "h": 1402
     },
     {
         "id": "4b45f3397f2f64b2",
@@ -2277,10 +2246,13 @@
             "cb9efc3cb62637db",
             "2fca9295b1770eb7",
             "80163a833e982934",
-            "41e5fe03e3e239c0"
+            "41e5fe03e3e239c0",
+            "88a57e6348eb2fe6"
         ],
         "x": 34,
-        "y": 2119
+        "y": 2119,
+        "w": 1832,
+        "h": 1542
     },
     {
         "id": "7f8477734cd0fd39",
@@ -2349,9 +2321,7 @@
             "c409a15d1ad51b59"
         ],
         "x": 3314,
-        "y": 2739,
-        "w": 1472,
-        "h": 362
+        "y": 2739
     },
     {
         "id": "5293fd84.fa1844",
@@ -2393,9 +2363,7 @@
             "33dd7b2edfd43b13"
         ],
         "x": 3544,
-        "y": -1,
-        "w": 1402,
-        "h": 382
+        "y": -1
     },
     {
         "id": "cb0fed7.3a64e1",
@@ -2439,10 +2407,21 @@
             "575bc1b26324641e",
             "64cbfe5e2bae5606",
             "0f41e91b50d161c6",
-            "c6e9ed348bf2c443"
+            "c6e9ed348bf2c443",
+            "de5dee05de6b8e9e",
+            "ae14d2fbd88bc3fd",
+            "bad28b61b5a13e69",
+            "36ea142cb6fa37f2",
+            "ac1d7003ea3661a2",
+            "198bef93ba6919c4",
+            "8a53b0c700f25da8",
+            "0ba4a96964d7b75b",
+            "133b2bf208469cec"
         ],
-        "x": -6,
-        "y": -21
+        "x": 14,
+        "y": -21,
+        "w": 1422,
+        "h": 642
     },
     {
         "id": "d9532912.7a0608",
@@ -3713,8 +3692,8 @@
         "links": [
             "b9a6ef87.24de3"
         ],
-        "x": 615,
-        "y": 400,
+        "x": 535,
+        "y": 460,
         "wires": []
     },
     {
@@ -3750,8 +3729,8 @@
         "g": "cb0fed7.3a64e1",
         "name": "2nd STEP : START VTS ",
         "info": "",
-        "x": 790,
-        "y": 360,
+        "x": 810,
+        "y": 340,
         "wires": []
     },
     {
@@ -3772,8 +3751,8 @@
         "g": "cb0fed7.3a64e1",
         "name": "PERMANENT : REFRESH DASHBOARD",
         "info": "",
-        "x": 290,
-        "y": 380,
+        "x": 240,
+        "y": 440,
         "wires": []
     },
     {
@@ -3783,7 +3762,7 @@
         "g": "cb0fed7.3a64e1",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 9,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3791,6 +3770,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "#477500",
+        "className": "",
         "icon": "fa-globe",
         "payload": "",
         "payloadType": "str",
@@ -3823,8 +3803,8 @@
             "ccf9f6d431ed64cc",
             "e7a2222d78b89f73"
         ],
-        "x": 485,
-        "y": 400,
+        "x": 445,
+        "y": 460,
         "wires": []
     },
     {
@@ -3861,7 +3841,7 @@
         "g": "cb0fed7.3a64e1",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 10,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3905,7 +3885,7 @@
         "type": "exec",
         "z": "107c9bc.328b364",
         "g": "cb0fed7.3a64e1",
-        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python memxterminator.py",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python memxterminator_teams.py",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -3913,7 +3893,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 830,
+        "x": 850,
         "y": 180,
         "wires": [
             [
@@ -3933,7 +3913,7 @@
         "g": "cb0fed7.3a64e1",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 5,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3942,7 +3922,7 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "",
+        "icon": "fa-trash",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
@@ -3965,7 +3945,7 @@
             "3a5b6e039d3032f5",
             "5ab99c0c9192c682"
         ],
-        "x": 85,
+        "x": 155,
         "y": 60,
         "wires": [
             [
@@ -4048,7 +4028,7 @@
         "g": "3500e6d55cf0a0c8",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4057,7 +4037,7 @@
         "color": "",
         "bgcolor": "",
         "className": "",
-        "icon": "",
+        "icon": "fa-trash",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
@@ -4133,16 +4113,16 @@
         "g": "7801a0a985539b08",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 7,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
         "label": "Sauvegarder Situation",
         "tooltip": "",
         "color": "",
-        "bgcolor": "",
+        "bgcolor": "#4682B4",
         "className": "",
-        "icon": "",
+        "icon": "fa-floppy-o",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
@@ -5239,16 +5219,16 @@
         "g": "4b45f3397f2f64b2",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 8,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
         "label": "Charger Situation",
         "tooltip": "",
         "color": "",
-        "bgcolor": "",
+        "bgcolor": "#4682B4",
         "className": "",
-        "icon": "",
+        "icon": "fa-upload ",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
@@ -5297,7 +5277,8 @@
         "wires": [
             [
                 "c0022c9453c88f35",
-                "e30b2629fad101ec"
+                "e30b2629fad101ec",
+                "88a57e6348eb2fe6"
             ],
             [
                 "c5750cc143845755"
@@ -6031,8 +6012,8 @@
         "group": "b10e0a54.7b0198",
         "name": "Charger dossier",
         "order": 1,
-        "width": "0",
-        "height": "0",
+        "width": 0,
+        "height": 0,
         "format": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css\">\n<script type=\"text/javascript\">\n    (async function() {\n        const socket = new WebSocket(\"ws://localhost:1880/ws/files\");\n\n        socket.onopen = function() {\n            console.log(\"Connexion WebSocket établie avec succès.\");\n        };\n        const socketLoad = new WebSocket(\"ws://localhost:1880/ws/filesLoad\");\n\n        socketLoad.onopen = function() {\n            console.log(\"Connexion WebSocket pour le chargement établie avec succès.\");\n        };\n\n        socket.onerror = function(error) {\n            console.error(\"Erreur de connexion WebSocket : \", error);\n        };\n\n        async function readDirectory(directoryHandle) {\n            const filesContent = [];\n\n            async function traverseDirectory(handle, path = \"\") {\n                for await (const [name, child] of handle.entries()) {\n                    const childPath = path ? `${path}/${name}` : name;\n\n                    if (child.kind === \"directory\") {\n                        const dirObj = { name, type: \"directory\", children: [] };\n                        filesContent.push(dirObj);\n                        await traverseDirectory(child, childPath);\n                    } else if (child.kind === \"file\") {\n                        const file = await child.getFile();\n                        const content = await file.text();\n\n                        filesContent.push({\n                            name: name,\n                            type: \"file\",\n                            content: content,\n                            path: childPath  \n                        });\n                    }\n                }\n            }\n\n            await traverseDirectory(directoryHandle);\n            return filesContent;\n        }\n\n        async function selectAndSendFolder() {\n            try {\n                const dirHandle = await window.showDirectoryPicker();\n                console.log(\"Dossier source sélectionné :\", dirHandle);\n\n                const filesContent = await readDirectory(dirHandle);\n                \n                // Création de l'objet à envoyer\n                const dataToSend = {\n                    destinationPath: \"/app/jsatorb-rest-api/files/default_Sat/Data/Backup/\",\n                    filesContent: filesContent\n                };\n\n                // Vérification du format JSON avant envoi\n                if (typeof dataToSend === 'object') {\n                    socketLoad.send(JSON.stringify(dataToSend));\n                    console.log(\"Contenu du dossier envoyé via WebSocket.\");\n                    alert(\"Les fichiers et dossiers ont été envoyés pour être copiés dans le dossier prédéfini.\");\n                } else {\n                    console.error(\"Erreur : Le contenu n'est pas au format JSON attendu.\");\n                }\n                \n            } catch (error) {\n                console.error(\"Erreur lors de la sélection du dossier : \", error);\n            }\n        }\n\n        socket.onmessage = function(event) {\n            console.log(\"Message WebSocket reçu :\", event.data);\n            try {\n                const data = JSON.parse(event.data);\n                console.log(\"Données interprétées :\", data);\n\n                if (data.payload && data.payload.command === \"selectFolder\") {\n                    console.log(\"Commande de sélection de dossier détectée, lancement de `selectAndSendFolder`.\");\n                    selectAndSendFolder();\n                }\n            } catch (error) {\n                console.error(\"Erreur lors de l'interprétation des données WebSocket :\", error);\n            }\n        };\n\n        document.getElementById('selectFolderButtonLoad').addEventListener('click', selectAndSendFolder);\n        \n    })();\n</script>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -6593,17 +6574,17 @@
         "z": "107c9bc.328b364",
         "group": "b10e0a54.7b0198",
         "name": "Sélection de dossier",
-        "order": 19,
-        "width": "0",
-        "height": "0",
-        "format": "\n<script type=\"text/javascript\">\n    (async function() {\n        const socket = new WebSocket(\"ws://localhost:1880/ws/files\");\n\n        socket.onopen = function() {\n            console.log(\"Connexion WebSocket établie avec succès.\");\n        };\n\n        socket.onerror = function(error) {\n            console.error(\"Erreur de connexion WebSocket : \", error);\n        };\n\n        socket.onmessage = async function(event) {\n            try {\n                const data = JSON.parse(event.data);\n                console.log(\"Données reçues via WebSocket :\", data);\n\n                const filesAndDirs = data.filesContent;\n\n                if (!Array.isArray(filesAndDirs)) {\n                    console.error(\"Structure de données inattendue :\", filesAndDirs);\n                    return;\n                }\n\n                for (let item of filesAndDirs) {\n                    if (!item.name || !item.type || (item.type === \"file\" && item.content === undefined)) {\n                        console.error(\"Élément invalide dans filesContent : \", item);\n                        return;\n                    }\n                }\n\n                async function copyItem(item, parentDirHandle) {\n                    if (item.type === \"directory\") {\n                        console.log(`Création du dossier : ${item.name}`);\n                        const dirHandle = await parentDirHandle.getDirectoryHandle(item.name, { create: true });\n                        for (let child of item.children) {\n                            await copyItem(child, dirHandle);\n                        }\n                    } else if (item.type === \"file\" && item.content) {\n                        console.log(`Copie du fichier : ${item.name}`);\n                        const fileHandle = await parentDirHandle.getFileHandle(item.name, { create: true });\n                        const writable = await fileHandle.createWritable();\n                        await writable.write(item.content);\n                        await writable.close();\n                        console.log(`Fichier ${item.name} copié avec succès.`);\n                    } else {\n                        console.warn(`Élément ignoré : ${item.name}`);\n                    }\n                }\n\n                // Remplacement du bouton par une demande automatique de dossier\n                try {\n                    const dirHandle = await window.showDirectoryPicker();\n                    console.log(\"Dossier de destination sélectionné :\", dirHandle);\n\n                    for (let item of filesAndDirs) {\n                        await copyItem(item, dirHandle);\n                    }\n\n                    alert(\"Tous les fichiers et dossiers ont été copiés dans le dossier sélectionné.\");\n                } catch (error) {\n                    console.error(\"Erreur lors de la sélection ou de la copie : \", error);\n                    alert(\"Annulation de la sélection.\");\n                }\n                \n            } catch (error) {\n                console.error(\"Erreur lors du traitement des données WebSocket :\", error);\n            }\n        };\n\n        socket.onclose = function() {\n            console.log(\"Connexion WebSocket fermée.\");\n        };\n    })();\n</script>\n",
+        "order": 12,
+        "width": 6,
+        "height": 3,
+        "format": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n    <title>File Copy Template</title>\n    <style>\n        .button {\n            padding: 10px 20px;\n            font-size: 16px;\n            border-radius: 4px;\n            border: none;\n            background-color: #4CAF50;\n            color: white;\n            cursor: pointer;\n            margin: 10px;\n        }\n        .button:disabled {\n            background-color: #cccccc;\n            cursor: not-allowed;\n        }\n        .status {\n            margin: 10px;\n            padding: 10px;\n            border-radius: 4px;\n        }\n        .error {\n            background-color: #ffebee;\n            color: #c62828;\n        }\n        .success {\n            background-color: #e8f5e9;\n            color: #2e7d32;\n        }\n        .progress {\n            background-color: #e3f2fd;\n            color: #1565c0;\n        }\n    </style>\n</head>\n<body>\n    <div id=\"filePickerSection\">\n        <button id=\"selectFolderButton\" class=\"button\" style=\"display:none;\">Select Folder and Copy Files</button>\n        <div id=\"statusMessage\" class=\"status\"></div>\n    </div>\n\n    <script type=\"text/javascript\">\n    (function() {\n        const selectFolderButton = document.getElementById('selectFolderButton');\n        const statusMessage = document.getElementById('statusMessage');\n        let filesAndDirsData = null;\n        let isPickerActive = false;\n        let wsRetryCount = 0;\n        const MAX_RETRIES = 3;\n\n        function showStatus(message, type = 'progress') {\n            statusMessage.textContent = message;\n            statusMessage.className = `status ${type}`;\n        }\n\n        function connectWebSocket() {\n            const socket = new WebSocket(`${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.hostname}:1880/ws/files`);\n\n            socket.onopen = function() {\n                console.log(\"WebSocket connection established successfully.\");\n                wsRetryCount = 0;\n                showStatus(\"Connected to server\", \"success\");\n            };\n\n            socket.onerror = function(error) {\n                console.error(\"WebSocket connection error: \", error);\n                showStatus(\"Connection error. Please check your connection.\", \"error\");\n            };\n\n            socket.onmessage = function(event) {\n                try {\n                    const data = JSON.parse(event.data);\n                    console.log(\"Data received from WebSocket\");\n\n                    if (!data.filesContent || !Array.isArray(data.filesContent)) {\n                        throw new Error(\"Invalid data structure received\");\n                    }\n\n                    const filesAndDirs = data.filesContent;\n                    for (let item of filesAndDirs) {\n                        if (!item.name || !item.type || (item.type === \"file\" && item.content === undefined)) {\n                            throw new Error(`Invalid element in filesContent: ${JSON.stringify(item)}`);\n                        }\n                    }\n\n                    filesAndDirsData = filesAndDirs;\n                    selectFolderButton.style.display = 'inline-block';\n                    showStatus(\"Please wait for the signal before starting the file copy process.\", \"success\");\n                } catch (error) {\n                    console.error(\"Error processing WebSocket data:\", error);\n                    showStatus(\"Loading processing...\", \"error\");\n                }\n            };\n\n            socket.onclose = function() {\n                console.log(\"WebSocket connection closed.\");\n                if (wsRetryCount < MAX_RETRIES) {\n                    wsRetryCount++;\n                    showStatus(`Connection lost. Retrying... (${wsRetryCount}/${MAX_RETRIES})`, \"error\");\n                    setTimeout(connectWebSocket, 3000);\n                } else {\n                    showStatus(\"Could not establish connection. Please refresh the page.\", \"error\");\n                }\n            };\n\n            return socket;\n        }\n\n        let socket = connectWebSocket();\n\n        async function copyItem(item, parentDirHandle, updateProgress) {\n            try {\n                if (item.type === \"directory\") {\n                    updateProgress(`Creating directory: ${item.name}`);\n                    const dirHandle = await parentDirHandle.getDirectoryHandle(item.name, { create: true });\n                    for (let child of item.children) {\n                        await copyItem(child, dirHandle, updateProgress);\n                    }\n                } else if (item.type === \"file\" && item.content) {\n                    updateProgress(`Copying file: ${item.name}`);\n                    const fileHandle = await parentDirHandle.getFileHandle(item.name, { create: true });\n                    const writable = await fileHandle.createWritable();\n                    await writable.write(item.content);\n                    await writable.close();\n                }\n            } catch (error) {\n                // Handle copying errors gracefully\n                updateProgress(`Error processing ${item.name}: ${error.message}`, \"error\");\n            }\n        }\n\n        selectFolderButton.addEventListener('click', async function() {\n            if (!filesAndDirsData) {\n                showStatus(\"No files or directories to copy.\", \"error\");\n                return;\n            }\n\n            if (isPickerActive) {\n                showStatus(\"File picker is already active. Please wait.\", \"error\");\n                return;\n            }\n\n            isPickerActive = true;\n            selectFolderButton.disabled = true;\n\n            try {\n                let dirHandle = null;\n                try {\n                    dirHandle = await window.showDirectoryPicker();\n                } catch (error) {\n                    if (error.name === 'AbortError') {\n                        // User cancelled directory selection\n                        showStatus(\"Directory selection was cancelled.\", \"error\");\n                        return; // Do not throw an error, just return\n                    }\n                    // Some other error occurred while showing directory picker\n                    console.error(\"Error selecting directory:\", error);\n                    showStatus(\"An error occurred while selecting directory.\", \"error\");\n                    return;\n                }\n\n                const permission = await dirHandle.requestPermission({ mode: 'readwrite' });\n                if (permission !== 'granted') {\n                    showStatus(\"Write permission not granted.\", \"error\");\n                    return;\n                }\n\n                showStatus(\"Starting file copy process...\", \"progress\");\n                \n                for (let item of filesAndDirsData) {\n                    await copyItem(item, dirHandle, (message, type = 'progress') => {\n                        showStatus(message, type);\n                    });\n                }\n\n                showStatus(\"All files and directories have been copied successfully!\", \"success\");\n                selectFolderButton.style.display = 'none';\n\n            } catch (error) {\n                console.error(\"Error:\", error);\n                showStatus(\"An unexpected error occurred.\", \"error\");\n            } finally {\n                isPickerActive = false;\n                if (selectFolderButton.style.display !== 'none') {\n                    selectFolderButton.disabled = false;\n                }\n            }\n        });\n    })();\n    </script>\n</body>\n</html>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 180,
-        "y": 3960,
+        "x": 200,
+        "y": 3940,
         "wires": [
             [
                 "b28deb14bbf6cdb9"
@@ -6635,9 +6616,9 @@
         "type": "ui_template",
         "z": "107c9bc.328b364",
         "g": "cb0fed7.3a64e1",
-        "group": "3dabe8df.a10df8",
+        "group": "89c6e42c.26d338",
         "name": "",
-        "order": 4,
+        "order": 10,
         "width": 0,
         "height": 0,
         "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn {\n      background-color: #f44336;\n    }\n    \n    #nonBtn:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les fichiers OEM de l'ensemble des satellites définis.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn\">Oui</button>\n        <button id=\"nonBtn\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
@@ -6694,7 +6675,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
+        "x": 650,
         "y": 240,
         "wires": []
     },
@@ -6723,9 +6704,9 @@
         "type": "ui_template",
         "z": "107c9bc.328b364",
         "g": "cb0fed7.3a64e1",
-        "group": "3dabe8df.a10df8",
+        "group": "e7d5b9e4.972fe8",
         "name": "",
-        "order": 4,
+        "order": 11,
         "width": 0,
         "height": 0,
         "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn2 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn2:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn2 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn2:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal2\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera toutes les TLEs à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn2\">Oui</button>\n        <button id=\"nonBtn2\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal2');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn2').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn2').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
@@ -6809,9 +6790,9 @@
         "type": "ui_template",
         "z": "107c9bc.328b364",
         "g": "cb0fed7.3a64e1",
-        "group": "3dabe8df.a10df8",
+        "group": "89c6e42c.26d338",
         "name": "",
-        "order": 4,
+        "order": 8,
         "width": 0,
         "height": 0,
         "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn3 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn3:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn3 {\n      background-color: #f44336;\n    }\n\n    #nonBtn3:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal3\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera les TLEs à partir de la base de données Aiglons.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn3\">Oui</button>\n        <button id=\"nonBtn3\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal3');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn3').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn3').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
@@ -6864,8 +6845,8 @@
         "links": [
             "098b276ca212f2c4"
         ],
-        "x": 35,
-        "y": 20,
+        "x": 245,
+        "y": 60,
         "wires": [
             [
                 "e57ecd8922630372"
@@ -6928,9 +6909,9 @@
         "type": "ui_template",
         "z": "107c9bc.328b364",
         "g": "3500e6d55cf0a0c8",
-        "group": "3dabe8df.a10df8",
+        "group": "89c6e42c.26d338",
         "name": "",
-        "order": 4,
+        "order": 9,
         "width": 0,
         "height": 0,
         "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn4 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn4:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn4 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn4:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal4\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les dernières TLEs enregistrées.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn4\">Oui</button>\n        <button id=\"nonBtn4\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal4');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn4').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn4').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
@@ -6990,6 +6971,289 @@
         "x": 2210,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "88a57e6348eb2fe6",
+        "type": "exec",
+        "z": "107c9bc.328b364",
+        "g": "4b45f3397f2f64b2",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat && rm Backup",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1060,
+        "y": 2340,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "de5dee05de6b8e9e",
+        "type": "exec",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python memxterminator.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2b8b1da4247a7ad3",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af9615b2a4c1e4cd",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 379,
+        "y": 279,
+        "wires": [
+            [
+                "ae14d2fbd88bc3fd"
+            ]
+        ]
+    },
+    {
+        "id": "ae14d2fbd88bc3fd",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "3dabe8df.a10df8",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn7 {\n      background-color: #4CAF50;\n    }\n\n    #ouiBtn7:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn7 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn7:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal7\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera toutes les TLEs à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn7\">Oui</button>\n        <button id=\"nonBtn7\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal7');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 200);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn7').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn7').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "2b8b1da4247a7ad3"
+            ]
+        ]
+    },
+    {
+        "id": "bad28b61b5a13e69",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 400,
+        "wires": [
+            [
+                "198bef93ba6919c4"
+            ]
+        ]
+    },
+    {
+        "id": "36ea142cb6fa37f2",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac1d7003ea3661a2",
+        "type": "ui_button",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "group": "b10e0a54.7b0198",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "DELETE ALL MEMS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "fa-trash",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "af9615b2a4c1e4cd"
+            ]
+        ]
+    },
+    {
+        "id": "198bef93ba6919c4",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "e7d5b9e4.972fe8",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn9 {\n      background-color: #4CAF50;\n    }\n\n    #ouiBtn9:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn9 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn9:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal9\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera toutes les TLEs à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn9\">Oui</button>\n        <button id=\"nonBtn9\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal9');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 200);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn9').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn9').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1020,
+        "y": 400,
+        "wires": [
+            [
+                "36ea142cb6fa37f2"
+            ]
+        ]
+    },
+    {
+        "id": "8a53b0c700f25da8",
+        "type": "ui_button",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "group": "b10e0a54.7b0198",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESCUE ALL TLE DATABASES",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "fa-trash",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 400,
+        "wires": [
+            [
+                "bad28b61b5a13e69"
+            ]
+        ]
+    },
+    {
+        "id": "0ba4a96964d7b75b",
+        "type": "ui_button",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "group": "b10e0a54.7b0198",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "REFRESH ALL VTS SATs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "fa-trash",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "133b2bf208469cec",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "e85e692d.e47bb8",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 60,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "bd28d1663b4119ac",
@@ -13797,7 +14061,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<div>\n    <!-- Bouton pour ouvrir la pop-up -->\n    <button id=\"tleSetter_openModal\">Initialisation des paramètres</button>\n\n    <!-- La pop-up modale -->\n    <div id=\"tleSetter_myModal\" class=\"modal\">\n        <!-- Contenu de la pop-up -->\n        <div class=\"modal-content\">\n            <span class=\"tleSetter_close\">&#10006;</span> <!-- Symbole de croix ajusté -->\n            <h2 id=\"tleSetter_modalTitle\">TLE Setter</h2>\n            <!-- Titre centré -->\n            <form id=\"tleSetter_dynamicForm\">\n                <!-- Les champs dynamiques apparaîtront ici -->\n                <div id=\"tleSetter_inputField\"></div>\n                <!-- Bouton de soumission dans la pop-up -->\n                <button type=\"button\" id=\"tleSetter_submitButton\">Valider les paramètres</button>\n            </form>\n        </div>\n    </div>\n</div>\n\n<script type=\"text/javascript\">\n    (function(scope) {\n        // Préfixer tous les noms de variables\n        var modal = document.getElementById(\"tleSetter_myModal\");\n        var btn = document.getElementById(\"tleSetter_openModal\");\n        var span = document.getElementsByClassName(\"tleSetter_close\")[0];\n        var inputField = document.getElementById('tleSetter_inputField');\n        var modalTitle = document.getElementById('tleSetter_modalTitle');\n        var isFormSubmitted = false;\n\n        // Ouvrir la pop-up lorsque l'utilisateur clique sur le bouton\n        btn.onclick = function() {\n            modal.style.display = \"block\";\n            generateForm(); // Générer le formulaire\n        };\n\n        // Fermer la pop-up lorsque l'utilisateur clique sur la croix\n        span.onclick = function() {\n            modal.style.display = \"none\";\n        };\n\n        // Fermer la pop-up si l'utilisateur clique en dehors de celle-ci\n        window.onclick = function(event) {\n            if (event.target == modal) {\n                modal.style.display = \"none\";\n            }\n        };\n\n        // Fonction pour générer les champs du formulaire\n        function generateForm() {\n            // Effacer les anciens champs du formulaire\n            inputField.innerHTML = \"\";\n\n            // Mettre à jour le titre de la pop-up\n            modalTitle.innerText = \"TLE Setter\";\n\n            // Générer les nouveaux champs du formulaire\n            inputField.innerHTML = `\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"incli\">Inclination i (°) [2,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_incli\" name=\"incli\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"raan\">RAAN Ω (°) [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_raan\" name=\"raan\" class=\"form-control\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"ecc\">Eccentricity e [7] :</label>\n                        <input type=\"text\" id=\"tleSetter_ecc\" name=\"ecc\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"aop\">AoP ω (°) [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_aop\" name=\"aop\" class=\"form-control\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"meana\">Mean Anomaly M [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_meana\" name=\"meana\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"mean\">Mean motion N [2,14] :</label>\n                        <input type=\"text\" id=\"tleSetter_mean\" name=\"mean\" class=\"form-control\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"dry_mass\">Dry Mass (kg) :</label>\n                        <input type=\"text\" id=\"tleSetter_dry_mass\" name=\"dry_mass\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"ergol_mass\">Initial Ergol Mass (kg) :</label>\n                        <input type=\"text\" id=\"tleSetter_ergol_mass\" name=\"ergol_mass\" class=\"form-control\" />\n                    </div>\n                </div>\n            `;\n        }\n\n        // Fonction pour envoyer les données du formulaire\n        function sendData() {\n            var formData = {};\n\n            // Récupérer tous les champs du formulaire\n            var elements = document.querySelectorAll('#tleSetter_dynamicForm input');\n\n            // Remplir formData avec les valeurs des champs de saisie\n            elements.forEach(function(input) {\n                if (input.name && input.value !== \"\" && input.value !== undefined) {\n                    formData[input.name] = input.value;\n                }\n            });\n\n            // Envoyer les données via Node-RED uniquement si des champs sont remplis\n            if (Object.keys(formData).length > 0) {\n                scope.send({ payload: formData });\n\n                // Réinitialiser le formulaire après la soumission\n                isFormSubmitted = false;\n\n                // Fermer la pop-up après la soumission\n                modal.style.display = \"none\";\n            } else {\n                alert(\"Veuillez remplir les champs avant de soumettre.\");\n            }\n        }\n\n        // Associer la fonction sendData au bouton de soumission\n        document.getElementById('tleSetter_submitButton').onclick = function() {\n            // Activer la soumission du formulaire\n            isFormSubmitted = true;\n\n            // Vérifier si le formulaire a été généré avant de soumettre\n            if (inputField.innerHTML.trim() !== \"\") {\n                sendData(); // Envoyer les données lorsque le formulaire est affiché\n            } else {\n                alert(\"Veuillez remplir les champs avant de soumettre.\");\n            }\n        };\n\n        // Réinitialiser isFormSubmitted après la fermeture du formulaire pour permettre de nouvelles soumissions\n        scope.on('input', function(msg) {\n            if (isFormSubmitted) {\n                isFormSubmitted = false;\n            }\n        });\n    })(scope);\n</script>\n\n<!-- Styles pour la pop-up modale -->\n<style>\n    /* Le fond de la pop-up */\n    /* Le fond de la pop-up */\n#tleSetter_myModal {\n    display: none;\n    position: fixed;\n    z-index: 10;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.7);\n    overflow: auto;\n}\n\n/* Contenu de la pop-up */\n#tleSetter_myModal .modal-content {\n    background-color: #fefefe;\n    margin: 5% auto;\n    padding: 20px;\n    border: 1px solid #888;\n    width: 50%; /* Ajusté pour une meilleure apparence */\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),\n        0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    z-index: 11;\n    position: relative;\n    max-width: 800px;\n}\n\n/* Centrer le titre */\n#tleSetter_myModal .modal-content h2 {\n    text-align: center;\n    margin-top: 0;\n}\n\n/* Bouton pour fermer la pop-up */\n.tleSetter_close {\n    color: red;\n    font-size: 28px; /* Taille ajustée */\n    font-weight: bold;\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 0px; /* Réduire le padding pour coller au coin */\n    cursor: pointer;\n}\n\n.tleSetter_close:hover,\n.tleSetter_close:focus {\n    color: darkred;\n    text-decoration: none;\n    transform: scale(1.1); /* Agrandir légèrement au survol */\n}\n\n/* Form rows */\n#tleSetter_myModal .form-row {\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 15px;\n}\n\n/* Form groups within rows */\n#tleSetter_myModal .form-row .form-group {\n    width: 48%; /* Ajuster pour deux colonnes */\n}\n\n/* Form labels and fields */\n#tleSetter_myModal .form-group label {\n    display: block;\n    margin-bottom: 5px;\n    font-weight: bold;\n    color: #333;\n}\n\n#tleSetter_myModal .form-group input {\n    width: 100%;\n    padding: 8px;\n    box-sizing: border-box;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    color: black; /* Set input text color to black */\n    background-color: white; /* Optional: Ensure background is white */\n}\n\n/* Placeholder text styling */\n#tleSetter_myModal .form-group input::placeholder {\n    color: #666; /* Medium gray */\n    opacity: 1; /* Ensure visibility */\n}\n\n/* Style pour le bouton de soumission */\n#tleSetter_submitButton {\n    display: block;\n    width: 100%;\n    padding: 10px;\n    background-color: #5cb85c;\n    color: white;\n    font-size: 16px;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n}\n\n#tleSetter_submitButton:hover {\n    background-color: #4cae4c;\n}\n\n</style>\n",
+        "format": "<div>\n    <!-- Button to open the pop-up -->\n    <button id=\"tleSetter_openModal\">Initialisation des Paramètres</button>\n\n    <!-- The modal pop-up -->\n    <div id=\"tleSetter_myModal\" class=\"modal\">\n        <!-- Modal content -->\n        <div class=\"modal-content\">\n            <span class=\"tleSetter_close\">&#10006;</span> <!-- Close symbol -->\n            <h2 id=\"tleSetter_modalTitle\">TLE Setter</h2>\n            <!-- Centered title -->\n            <form id=\"tleSetter_dynamicForm\">\n                <!-- Dynamic fields will appear here -->\n                <div id=\"tleSetter_inputField\"></div>\n                <!-- Submit button inside the pop-up -->\n                <button type=\"button\" id=\"tleSetter_submitButton\">Valider les paramètres</button>\n            </form>\n        </div>\n    </div>\n</div>\n\n<script type=\"text/javascript\">\n    (function(scope) {\n        // Prefix all variable names\n        var modal = document.getElementById(\"tleSetter_myModal\");\n        var btn = document.getElementById(\"tleSetter_openModal\");\n        var span = document.getElementsByClassName(\"tleSetter_close\")[0];\n        var inputField = document.getElementById('tleSetter_inputField');\n        var modalTitle = document.getElementById('tleSetter_modalTitle');\n        var isFormSubmitted = false;\n\n        // Earth's gravitational parameter (mu) in km^3/s^2\n        const MU = 398600.4418;\n\n        // Open the modal when the user clicks the button\n        btn.onclick = function() {\n            modal.style.display = \"block\";\n            generateForm(); // Generate the form\n        };\n\n        // Close the modal when the user clicks on the close symbol\n        span.onclick = function() {\n            modal.style.display = \"none\";\n        };\n\n        // Close the modal if the user clicks outside of it\n        window.onclick = function(event) {\n            if (event.target == modal) {\n                modal.style.display = \"none\";\n            }\n        };\n\n        // Function to generate the form fields\n        function generateForm() {\n            // Clear previous form fields\n            inputField.innerHTML = \"\";\n\n            // Update the modal title\n            modalTitle.innerText = \"TLE Setter\";\n\n            // Generate new form fields\n            inputField.innerHTML = `\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"incli\">Inclination i (°) [2,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_incli\" name=\"incli\" class=\"form-control\" placeholder=\"e.g., 98.7\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"raan\">RAAN Ω (°) [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_raan\" name=\"raan\" class=\"form-control\" placeholder=\"e.g., 123.45\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"ecc\">Eccentricity e [7] :</label>\n                        <input type=\"text\" id=\"tleSetter_ecc\" name=\"ecc\" class=\"form-control\" placeholder=\"e.g., 0.0001234\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"aop\">AoP ω (°) [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_aop\" name=\"aop\" class=\"form-control\" placeholder=\"e.g., 45.67\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"meana\">Mean Anomaly M [3,4] :</label>\n                        <input type=\"text\" id=\"tleSetter_meana\" name=\"meana\" class=\"form-control\" placeholder=\"e.g., 10.89\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"mean\">Semi-Major Axis (km) [>6600 km] :</label>\n                        <input type=\"text\" id=\"tleSetter_mean\" name=\"mean\" class=\"form-control\" placeholder=\"e.g., 7000\" />\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label for=\"dry_mass\">Dry Mass (kg) :</label>\n                        <input type=\"text\" id=\"tleSetter_dry_mass\" name=\"dry_mass\" class=\"form-control\" placeholder=\"e.g., 500\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"ergol_mass\">Initial Ergol Mass (kg) :</label>\n                        <input type=\"text\" id=\"tleSetter_ergol_mass\" name=\"ergol_mass\" class=\"form-control\" placeholder=\"e.g., 300\" />\n                    </div>\n                </div>\n            `;\n        }\n\n        // Function to send form data\n        function sendData() {\n            var formData = {};\n\n            // Retrieve all form fields\n            var elements = document.querySelectorAll('#tleSetter_dynamicForm input');\n\n            // Populate formData with input field values\n            elements.forEach(function(input) {\n                if (input.name && input.value.trim() !== \"\") {\n                    formData[input.name] = input.value.trim();\n                }\n            });\n\n            // Validate that required fields are filled\n            var requiredFields = ['incli', 'raan', 'ecc', 'aop', 'meana', 'mean', 'dry_mass', 'ergol_mass'];\n            var allFieldsFilled = requiredFields.every(field => formData.hasOwnProperty(field));\n\n            if (!allFieldsFilled) {\n                alert(\"Veuillez remplir tous les champs requis avant de soumettre.\");\n                return;\n            }\n\n            // Parse Semi-Major Axis (a) from formData.mean\n            var a = parseFloat(formData.mean);\n            if (isNaN(a) || a <= 6600) {\n                alert(\"Veuillez entrer une Semi-Major Axis valide supérieure à 6600 km.\");\n                return;\n            }\n\n            // Calculate Mean Motion (N) in rev/day\n            // N = (86400 / (2 * pi)) * sqrt(mu / a^3)\n            var meanMotion = (86400 / (2 * Math.PI)) * Math.sqrt(MU / Math.pow(a, 3));\n            // Round to appropriate decimal places, e.g., 5 decimals\n            meanMotion = meanMotion.toFixed(5);\n\n            // Update formData.mean with Mean Motion\n            formData.mean = meanMotion;\n\n            // Optional: Log the conversion for debugging\n            console.log(`Semi-Major Axis (a): ${a} km`);\n            console.log(`Calculated Mean Motion (N): ${meanMotion} rev/day`);\n\n            // Send the data via Node-RED\n            scope.send({ payload: formData });\n\n            // Reset form submission state\n            isFormSubmitted = false;\n\n            // Close the modal after submission\n            modal.style.display = \"none\";\n        }\n\n        // Associate the sendData function with the submit button\n        document.getElementById('tleSetter_submitButton').onclick = function() {\n            // Set the form submission state\n            isFormSubmitted = true;\n\n            // Check if the form has been generated before submitting\n            if (inputField.innerHTML.trim() !== \"\") {\n                sendData(); // Send the data when the form is displayed\n            } else {\n                alert(\"Veuillez remplir tous les champs requis avant de soumettre.\");\n            }\n        };\n\n        // Reset isFormSubmitted after form closure to allow new submissions\n        scope.on('input', function(msg) {\n            if (isFormSubmitted) {\n                isFormSubmitted = false;\n            }\n        });\n    })(scope);\n</script>\n\n<!-- Styles for the modal pop-up -->\n<style>\n    /* Modal background */\n    #tleSetter_myModal {\n        display: none;\n        position: fixed;\n        z-index: 10;\n        left: 0;\n        top: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.7);\n        overflow: auto;\n    }\n\n    /* Modal content */\n    #tleSetter_myModal .modal-content {\n        background-color: #fefefe;\n        margin: 5% auto;\n        padding: 20px;\n        border: 1px solid #888;\n        width: 50%;\n        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),\n                    0 6px 20px 0 rgba(0, 0, 0, 0.19);\n        z-index: 11;\n        position: relative;\n        max-width: 800px;\n    }\n\n    /* Center the title */\n    #tleSetter_myModal .modal-content h2 {\n        text-align: center;\n        margin-top: 0;\n    }\n\n    /* Close button */\n    .tleSetter_close {\n        color: red;\n        font-size: 28px;\n        font-weight: bold;\n        position: absolute;\n        top: 10px;\n        right: 20px;\n        cursor: pointer;\n    }\n\n    .tleSetter_close:hover,\n    .tleSetter_close:focus {\n        color: darkred;\n        text-decoration: none;\n        transform: scale(1.1);\n    }\n\n    /* Form rows */\n    #tleSetter_myModal .form-row {\n        display: flex;\n        justify-content: space-between;\n        margin-bottom: 15px;\n    }\n\n    /* Form groups within rows */\n    #tleSetter_myModal .form-row .form-group {\n        width: 48%;\n    }\n\n    /* Form labels and fields */\n    #tleSetter_myModal .form-group label {\n        display: block;\n        margin-bottom: 5px;\n        font-weight: bold;\n        color: #333;\n    }\n\n    #tleSetter_myModal .form-group input {\n        width: 100%;\n        padding: 8px;\n        box-sizing: border-box;\n        border: 1px solid #ccc;\n        border-radius: 4px;\n        color: black;\n        background-color: white;\n    }\n\n    /* Placeholder text styling */\n    #tleSetter_myModal .form-group input::placeholder {\n        color: #666;\n        opacity: 1;\n    }\n\n    /* Submit button styling */\n    #tleSetter_submitButton {\n        display: block;\n        width: 100%;\n        padding: 10px;\n        background-color: #5cb85c;\n        color: white;\n        font-size: 16px;\n        border: none;\n        border-radius: 4px;\n        cursor: pointer;\n    }\n\n    #tleSetter_submitButton:hover {\n        background-color: #4cae4c;\n    }\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "resendOnRefresh": true,
@@ -14744,7 +15008,7 @@
         "g": "6011c97c4327735d",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 11,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -15154,7 +15418,7 @@
         "g": "434126eb1a383e14",
         "group": "b10e0a54.7b0198",
         "name": "EAE Logo",
-        "order": 4,
+        "order": 2,
         "width": 6,
         "height": 5,
         "format": "<div style=\"overflow-y: scroll; scrollbar-width: none; -ms-overflow-style: none; height: 100vh;\">\n    <img src=\"{{msg.payload}}\" alt=\"Image\" style=\"width: 100%; height: auto;\"/>\n</div>\n\n<style>\n    /* Masquer la barre de défilement sur les navigateurs WebKit */\n    div::-webkit-scrollbar {\n        display: none;\n    }\n</style>\n",
@@ -16240,9 +16504,9 @@
         "y": 880,
         "wires": [
             [
-                "09b6f94b45eb28b7",
                 "b8234c2a75bb5ae9",
-                "823834c6c8859a3a"
+                "823834c6c8859a3a",
+                "35e824d21806ad1a"
             ]
         ]
     },
@@ -17644,7 +17908,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2690,
+        "x": 2770,
         "y": 960,
         "wires": [
             [
@@ -19384,10 +19648,9 @@
         "links": [
             "09590295c75c8703",
             "3315d3a560dc2c89",
-            "cfcab2023a094cdc",
             "39bc328534852ef6",
-            "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "cfcab2023a094cdc"
         ],
         "x": 1945,
         "y": 1140,
@@ -19838,7 +20101,8 @@
         "y": 760,
         "wires": [
             [
-                "c07207dbde9b5985"
+                "c07207dbde9b5985",
+                "f7ec29fc0b7587f6"
             ]
         ]
     },
@@ -23426,7 +23690,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2860,
+        "x": 2900,
         "y": 980,
         "wires": []
     },
@@ -23592,7 +23856,7 @@
         "g": "9a9dfd74ece6e34c",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 12,
+        "order": 10,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -23767,8 +24031,8 @@
         "g": "2345ff89d3122291",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -23778,7 +24042,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2520,
+        "x": 2530,
         "y": 760,
         "wires": [
             [
@@ -26228,7 +26492,7 @@
         "z": "7c68352c.1b47bc",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 13,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -26242,11 +26506,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3090,
-        "y": 560,
+        "x": 2570,
+        "y": 600,
         "wires": [
             [
-                "39bc328534852ef6"
+                "545f50f9a16626ed"
             ]
         ]
     },
@@ -26348,8 +26612,8 @@
         "type": "ui_text",
         "z": "7c68352c.1b47bc",
         "g": "25671b51f351320d",
-        "group": "b10e0a54.7b0198",
-        "order": 16,
+        "group": "e85e692d.e47bb8",
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -26681,7 +26945,8 @@
         "y": 1580,
         "wires": [
             [
-                "c45c0e4863b2664e"
+                "c45c0e4863b2664e",
+                "2207b00d6dc97dcd"
             ]
         ]
     },
@@ -28013,7 +28278,7 @@
         "g": "5dd0526663d52573",
         "name": "",
         "group": "b10e0a54.7b0198",
-        "order": 14,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -28338,7 +28603,8 @@
         "y": 1540,
         "wires": [
             [
-                "c45c0e4863b2664e"
+                "c45c0e4863b2664e",
+                "cca155df83b092e7"
             ]
         ]
     },
@@ -28388,7 +28654,8 @@
         "y": 1620,
         "wires": [
             [
-                "c45c0e4863b2664e"
+                "c45c0e4863b2664e",
+                "4458e9f6ba29353e"
             ]
         ]
     },
@@ -28911,9 +29178,9 @@
         "g": "3ccbb53f.0e92ea",
         "group": "3dabe8df.a10df8",
         "name": "iframe for Home",
-        "order": 0,
-        "width": "6",
-        "height": "10",
+        "order": 4,
+        "width": 6,
+        "height": 9,
         "format": "<style>\n    .iframe-container {\n        width: 100%;\n        height: 100%;\n        overflow: hidden;\n    }\n.iframe-container {\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n}\n\niframe {\n    width: calc(100% + 20px); /* Augmente la largeur pour masquer la scrollbar */\n    height: 100%;\n    border: none;\n    margin-right: -20px; /* Cache la scrollbar à droite */\n    \n    -ms-overflow-style: none;  /* IE et Edge */\n    scrollbar-width: none;  /* Firefox */\n}\n\niframe::-webkit-scrollbar {\n    display: none; /* Chrome, Safari et Opera */\n}\n\n</style>\n\n<div class=\"iframe-container\">\n    <iframe src=\"https://uphere.space/\"></iframe>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -29041,7 +29308,7 @@
         "to": "",
         "reg": false,
         "x": 3820,
-        "y": 2920,
+        "y": 2900,
         "wires": [
             [
                 "6038a62d3834191f",
@@ -29680,7 +29947,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"180\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"400\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -29905,8 +30172,8 @@
         "wires": [
             [
                 "ffb4c4b51344ccf8",
-                "d0e791394ec64d0c",
-                "e53c4b5d7212fd87"
+                "e53c4b5d7212fd87",
+                "d0e791394ec64d0c"
             ]
         ]
     },
@@ -30255,6 +30522,278 @@
         "x": 4640,
         "y": 3020,
         "wires": []
+    },
+    {
+        "id": "2207b00d6dc97dcd",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "TEST VTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4470,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "cca155df83b092e7",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "TEST VTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4430,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "4458e9f6ba29353e",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "TEST VTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4250,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "cc4ac44801069917",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "command": "ping 192.168.1.181",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 4470,
+        "y": 1640,
+        "wires": [
+            [
+                "5672ee467e4d6dd7"
+            ],
+            [
+                "f39fd29450499bc7"
+            ],
+            [
+                "fd0c7283182a866f"
+            ]
+        ]
+    },
+    {
+        "id": "5672ee467e4d6dd7",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4650,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "f39fd29450499bc7",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4650,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "fd0c7283182a866f",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "400721a2c2769c0e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4670,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "4ba4f9614cca635f",
+        "type": "ui_template",
+        "z": "7c68352c.1b47bc",
+        "group": "89c6e42c.26d338",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn5 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn5:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn5 {\n      background-color: #f44336;\n    }\n\n    #nonBtn5:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal5\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rafraîchira les données de VTS en se basant sur la base de données de Celestrak.<br><br>\n        Si vous souhaitez démarrer un nouvel horizon de simulation, il est recommandé de cliquer préalablement sur \"REFRESH TLE DATABASE\"\n        <br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn5\">Oui</button>\n        <button id=\"nonBtn5\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal5');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'refreshVTS') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn5').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn5').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2960,
+        "y": 600,
+        "wires": [
+            [
+                "45da61dbd1633d5a",
+                "ef0f407c2c6885b7"
+            ]
+        ]
+    },
+    {
+        "id": "545f50f9a16626ed",
+        "type": "function",
+        "z": "7c68352c.1b47bc",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'refreshVTS' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2760,
+        "y": 600,
+        "wires": [
+            [
+                "4ba4f9614cca635f"
+            ]
+        ]
+    },
+    {
+        "id": "45da61dbd1633d5a",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "name": "TEST VTS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3210,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ef0f407c2c6885b7",
+        "type": "switch",
+        "z": "7c68352c.1b47bc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 3090,
+        "y": 560,
+        "wires": [
+            [
+                "39bc328534852ef6"
+            ]
+        ]
+    },
+    {
+        "id": "f7ec29fc0b7587f6",
+        "type": "delay",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2450,
+        "y": 800,
+        "wires": [
+            [
+                "08298fee71f7bff1"
+            ]
+        ]
+    },
+    {
+        "id": "35e824d21806ad1a",
+        "type": "delay",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2630,
+        "y": 920,
+        "wires": [
+            [
+                "09b6f94b45eb28b7"
+            ]
+        ]
     },
     {
         "id": "dce3220a.a2827",
@@ -31859,15 +32398,15 @@
         "z": "6ac37828.4c7288",
         "g": "2b159612.3e728a",
         "name": "",
-        "group": "b10e0a54.7b0198",
-        "order": 15,
+        "group": "e7d5b9e4.972fe8",
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": false,
         "label": "SAT Position UPDATE",
         "tooltip": "",
         "color": "",
-        "bgcolor": "#FF0000",
+        "bgcolor": "#301934",
         "className": "",
         "icon": "fa-refresh",
         "payload": "CMD TIME PLAY",
@@ -31888,7 +32427,7 @@
         "z": "6ac37828.4c7288",
         "g": "2b159612.3e728a",
         "group": "89c6e42c.26d338",
-        "order": 8,
+        "order": 12,
         "width": 6,
         "height": 1,
         "name": "Satpos on writing",
@@ -44928,7 +45467,8 @@
         "y": 580,
         "wires": [
             [
-                "bd17ed80315e78dc"
+                "bd17ed80315e78dc",
+                "2ccc5576295e8163"
             ]
         ]
     },
@@ -48974,6 +49514,23 @@
         "wires": []
     },
     {
+        "id": "2ccc5576295e8163",
+        "type": "debug",
+        "z": "62c122b2f65be8e8",
+        "name": "TEST ERGOLS FINAL",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4020,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "609a932ba1f54397",
         "type": "ui_form",
         "z": "c852882eb324b626",
@@ -52760,7 +53317,7 @@
         "g": "8634c7d9435a8b95",
         "group": "b10e0a54.7b0198",
         "name": "Player Template",
-        "order": 18,
+        "order": 17,
         "width": 0,
         "height": 0,
         "format": "\n<audio id=\"audioPlayer\">\n  <source src=\"/audio\" type=\"audio/mpeg\">\n\n</audio>\n\n<script>\n  var audio = document.getElementById(\"audioPlayer\");\n\n  \n  \n  // Play the audio\n  function playAudio() {\n    audio.play();\n  }\n\n  // Pause the audio\n  function pauseAudio() {\n    audio.pause();\n  }\n\n  // Stop the audio and reset the playback time\n  function stopAudio() {\n    audio.pause();\n    audio.currentTime = 0;\n  }\n\n  // Set the volume based on the provided value\n  function setVolume(volume) {\n    if (!isNaN(volume) && volume >= 0 && volume <= 100) {\n      var normalizedVolume = volume / 100;\n      audio.volume = normalizedVolume;\n    }\n  }\n  scope.$watch('msg.payload', function(volume) {setVolume(volume);});\n  // Initialize the volume on load\n  \n\n  // Play the audio on load\n  document.addEventListener(\"DOMContentLoaded\", function(event) {\n    audio.play();\n  });\n  playAudio();\n</script>\n",
@@ -52931,9 +53488,9 @@
         "id": "b79ec549a72b8687",
         "type": "ui_template",
         "z": "62804953b962105f",
-        "group": "3dabe8df.a10df8",
+        "group": "89c6e42c.26d338",
         "name": "UI Notigication Home",
-        "order": 5,
+        "order": 11,
         "width": 0,
         "height": 0,
         "format": "<style>\n    .ui-notification {\n        position: fixed;\n        top: 0px;\n        right: 0px;\n        padding: 21px 50px;\n        background-color: #001f3f;\n        color: white;\n        border-radius: 5px;\n        box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n        visibility: hidden;\n        opacity: 0;\n        transform: translateY(-20px);\n        transition: opacity 0.3s, transform 0.3s;\n        z-index: 10000;\n        font-size: 18px;\n    }\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    // Generate a unique page load ID\n    const pageLoadId = Date.now().toString();\n    localStorage.setItem('pageLoadId', pageLoadId);\n    \n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let isFirstLoad = true;\n    \n    function showNewNotification(message, type = 'success') {\n        // Skip notifications on page load\n        if (isFirstLoad) {\n            isFirstLoad = false;\n            return;\n        }\n        \n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n        \n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n        \n        // Store the message with the current page load ID\n        localStorage.setItem('lastNotification', JSON.stringify({\n            message: message,\n            type: type,\n            pageLoadId: pageLoadId,\n            timestamp: Date.now()\n        }));\n    }\n    \n    // Watch for messages\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n        \n        let payload = msg.payload;\n        let message, type;\n        \n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n        \n        // Check if this is a new message for the current page load\n        const lastNotification = localStorage.getItem('lastNotification');\n        if (lastNotification) {\n            const lastMsg = JSON.parse(lastNotification);\n            if (lastMsg.pageLoadId !== pageLoadId) {\n                // Different page load, don't show old notification\n                showNewNotification(message, type);\n            } else if (lastMsg.message !== message) {\n                // Same page load but different message\n                showNewNotification(message, type);\n            }\n        } else {\n            // No previous notification\n            showNewNotification(message, type);\n        }\n    }, true);\n    \n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n    \n    // Clear notification visibility on page unload\n    window.addEventListener('beforeunload', function() {\n        notificationElement.classList.remove('visible');\n    });\n})(scope);\n</script>",
