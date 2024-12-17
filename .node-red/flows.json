@@ -157,7 +157,7 @@
         ],
         "x": -12,
         "y": -47,
-        "w": 1474,
+        "w": 1544,
         "h": 694
     },
     {
@@ -700,9 +700,12 @@
             "61f4316899cdb467",
             "58b79c85054ff2f6",
             "f7ec29fc0b7587f6",
-            "35e824d21806ad1a"
+            "35e824d21806ad1a",
+            "3caca984d43a0458",
+            "e457cfd254c5c098",
+            "4d57473e9c0639bc"
         ],
-        "x": 654,
+        "x": 194,
         "y": 659
     },
     {
@@ -1906,10 +1909,11 @@
             "a6856dc8edf83891",
             "92a1f2c597e30167",
             "098b276ca212f2c4",
-            "a5ff53e5e4c198e1"
+            "a5ff53e5e4c198e1",
+            "f14b823ad76bc396"
         ],
         "x": 3394,
-        "y": 1899
+        "y": 1839
     },
     {
         "id": "400721a2c2769c0e",
@@ -2143,7 +2147,8 @@
             "9f31f83050ba6492",
             "8786be0e275d6e81",
             "d8fce67289934963",
-            "2a4f42941e2b799c"
+            "2a4f42941e2b799c",
+            "ea89cffe40a7a0bf"
         ],
         "x": 24,
         "y": 3219
@@ -2203,12 +2208,15 @@
             "7d99b706fb4b501b",
             "4ef5aecfb8ee18ab",
             "38d34e66ed011043",
-            "566f0687ef8387cb"
+            "566f0687ef8387cb",
+            "a4ed00fe71128c7d",
+            "d7c4d4ab7b2c55db",
+            "9a29991b1357e024"
         ],
         "x": 14,
-        "y": 659,
+        "y": 639,
         "w": 1772,
-        "h": 1402
+        "h": 1422
     },
     {
         "id": "4b45f3397f2f64b2",
@@ -2343,10 +2351,6 @@
             "ed91f7078814f403",
             "ed6b13ca02a5a70d",
             "aeaa99f2.5cf4f8",
-            "b84d6b0d444acde7",
-            "813073f9113a2daf",
-            "279f6bac680aabe9",
-            "01e51961a76d77a0",
             "5a8ee579df55828c",
             "0b6a2fcc56b1307a",
             "8cb6f04c9bcdf194",
@@ -2356,14 +2360,55 @@
             "cee4def5e77bb830",
             "2147ad17b59aa35b",
             "e53c4b5d7212fd87",
-            "8e64d0448f085117",
-            "bce915815eb2fab4",
             "72f9a7c1e4e8ac50",
-            "9cdeb252bc6af462",
-            "33dd7b2edfd43b13"
+            "33dd7b2edfd43b13",
+            "73f805cb802528a7",
+            "2f6ca90871f27075"
         ],
-        "x": 3544,
+        "x": 3474,
         "y": -1
+    },
+    {
+        "id": "f9035d5a2a57dc75",
+        "type": "group",
+        "z": "7c68352c.1b47bc",
+        "name": "Query for JSatOrb API REST to update VTS files",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "cc993d5237b4ab75",
+            "02246f9bacb02d0d",
+            "ed1f1854bfdd42df",
+            "a2f5a07a52e0702d",
+            "208fbaec66263871",
+            "a28638d5a72bfa40",
+            "04a939aa8d984ef1",
+            "e0e62f07ca4e391e",
+            "8c4538d2189874b0",
+            "ce8ed2997e37e803",
+            "320ea35152c4b484",
+            "5303c9394479ae66",
+            "bd2092b1652d1ae2",
+            "74280a45f33d072a",
+            "9ec1f63f02462117",
+            "e52d1bcc966ff6ad",
+            "aa343756a6543700",
+            "53268bfc77a9baaf",
+            "940f14dc9b5b79d7",
+            "968319d5ad47d00b",
+            "0facf16a6feed06e",
+            "816c1832c1b53d0d",
+            "e2d9c7d875e296cd",
+            "4f742aee13de8d7c",
+            "c446f6d40a8b85e8",
+            "671c0c988d6b8a93",
+            "7dbcddb056ad261f",
+            "5ba8037d51e5bcca"
+        ],
+        "x": 3204,
+        "y": 4059
     },
     {
         "id": "cb0fed7.3a64e1",
@@ -2410,17 +2455,17 @@
             "c6e9ed348bf2c443",
             "de5dee05de6b8e9e",
             "ae14d2fbd88bc3fd",
-            "bad28b61b5a13e69",
-            "36ea142cb6fa37f2",
             "ac1d7003ea3661a2",
-            "198bef93ba6919c4",
-            "8a53b0c700f25da8",
             "0ba4a96964d7b75b",
-            "133b2bf208469cec"
+            "133b2bf208469cec",
+            "99da802f8da8596e",
+            "7125f89be6b5907f",
+            "421e1e6011f99174",
+            "e97861653a7ba31d"
         ],
         "x": 14,
         "y": -21,
-        "w": 1422,
+        "w": 1492,
         "h": 642
     },
     {
@@ -3927,7 +3972,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 120,
+        "x": 140,
         "y": 180,
         "wires": [
             [
@@ -3967,7 +4012,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
+        "x": 1370,
         "y": 180,
         "wires": []
     },
@@ -3985,7 +4030,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
+        "x": 1370,
         "y": 140,
         "wires": []
     },
@@ -4000,8 +4045,8 @@
             "ecb276912a78b4e7",
             "d1a214987ab144c3"
         ],
-        "x": 1225,
-        "y": 100,
+        "x": 1415,
+        "y": 20,
         "wires": []
     },
     {
@@ -4117,7 +4162,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Sauvegarder Situation",
+        "label": "SAVE SITUATION",
         "tooltip": "",
         "color": "",
         "bgcolor": "#4682B4",
@@ -4127,12 +4172,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 150,
         "y": 740,
         "wires": [
             [
-                "d5f8a51e9308e828",
-                "42c902364159b8b1"
+                "42c902364159b8b1",
+                "a4ed00fe71128c7d"
             ]
         ]
     },
@@ -4177,8 +4222,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
-        "y": 700,
+        "x": 150,
+        "y": 680,
         "wires": []
     },
     {
@@ -5223,7 +5268,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Charger Situation",
+        "label": "LOAD SITUATION",
         "tooltip": "",
         "color": "",
         "bgcolor": "#4682B4",
@@ -5753,8 +5798,8 @@
         "y": 4020,
         "wires": [
             [
-                "d19b16ea2da59160",
-                "cd46c427d8aaa805"
+                "cd46c427d8aaa805",
+                "d19b16ea2da59160"
             ]
         ]
     },
@@ -6621,7 +6666,7 @@
         "order": 10,
         "width": 0,
         "height": 0,
-        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn {\n      background-color: #f44336;\n    }\n    \n    #nonBtn:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les fichiers OEM de l'ensemble des satellites définis.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn\">Oui</button>\n        <button id=\"nonBtn\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn {\n      background-color: #f44336;\n    }\n    \n    #nonBtn:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action supprimera les fichiers OEM de l'ensemble des satellites prédéfinis : BLUE TEAM / RED TEAM.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn\">Oui</button>\n        <button id=\"nonBtn\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -6876,7 +6921,7 @@
         "links": [
             "0a13adeab708b2b4"
         ],
-        "x": 405,
+        "x": 385,
         "y": 180,
         "wires": [
             [
@@ -7006,10 +7051,12 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1130,
-        "y": 280,
+        "x": 1030,
+        "y": 260,
         "wires": [
-            [],
+            [
+                "1e6c927613bb91ab"
+            ],
             [],
             []
         ]
@@ -7034,7 +7081,9 @@
         "x": 690,
         "y": 280,
         "wires": [
-            []
+            [
+                "de5dee05de6b8e9e"
+            ]
         ]
     },
     {
@@ -7081,50 +7130,6 @@
         ]
     },
     {
-        "id": "bad28b61b5a13e69",
-        "type": "function",
-        "z": "107c9bc.328b364",
-        "g": "cb0fed7.3a64e1",
-        "name": "Trigger Pop-up",
-        "func": "return { payload: 'showPopup' };",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 400,
-        "wires": [
-            [
-                "198bef93ba6919c4"
-            ]
-        ]
-    },
-    {
-        "id": "36ea142cb6fa37f2",
-        "type": "switch",
-        "z": "107c9bc.328b364",
-        "g": "cb0fed7.3a64e1",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "oui",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1170,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ac1d7003ea3661a2",
         "type": "ui_button",
         "z": "107c9bc.328b364",
@@ -7154,59 +7159,6 @@
         ]
     },
     {
-        "id": "198bef93ba6919c4",
-        "type": "ui_template",
-        "z": "107c9bc.328b364",
-        "g": "cb0fed7.3a64e1",
-        "group": "e7d5b9e4.972fe8",
-        "name": "",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn9 {\n      background-color: #4CAF50;\n    }\n\n    #ouiBtn9:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn9 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn9:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal9\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rechargera et écrasera toutes les TLEs à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn9\">Oui</button>\n        <button id=\"nonBtn9\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal9');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 200);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn9').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn9').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1020,
-        "y": 400,
-        "wires": [
-            [
-                "36ea142cb6fa37f2"
-            ]
-        ]
-    },
-    {
-        "id": "8a53b0c700f25da8",
-        "type": "ui_button",
-        "z": "107c9bc.328b364",
-        "g": "cb0fed7.3a64e1",
-        "name": "",
-        "group": "b10e0a54.7b0198",
-        "order": 15,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "RESCUE ALL TLE DATABASES",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#FF0000",
-        "className": "",
-        "icon": "fa-trash",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 590,
-        "y": 400,
-        "wires": [
-            [
-                "bad28b61b5a13e69"
-            ]
-        ]
-    },
-    {
         "id": "0ba4a96964d7b75b",
         "type": "ui_button",
         "z": "107c9bc.328b364",
@@ -7227,10 +7179,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 750,
-        "y": 460,
+        "x": 690,
+        "y": 400,
         "wires": [
-            []
+            [
+                "99da802f8da8596e"
+            ]
         ]
     },
     {
@@ -7249,11 +7203,155 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 780,
+        "x": 800,
         "y": 60,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "99da802f8da8596e",
+        "type": "function",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 400,
+        "wires": [
+            [
+                "7125f89be6b5907f"
+            ]
+        ]
+    },
+    {
+        "id": "7125f89be6b5907f",
+        "type": "ui_template",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "group": "e7d5b9e4.972fe8",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn9 {\n      background-color: #4CAF50;\n    }\n\n    #ouiBtn9:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn9 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn9:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal9\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Attention : cette action rafraîchira toutes les données VTS de l'ensemble des satellites à partir de la base de données de Celestrak.<br><br>\n        Êtes-vous sûr de vouloir poursuivre ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn9\">Oui</button>\n        <button id=\"nonBtn9\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal9');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 200);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn9').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn9').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1140,
+        "y": 400,
+        "wires": [
+            [
+                "421e1e6011f99174"
+            ]
+        ]
+    },
+    {
+        "id": "421e1e6011f99174",
+        "type": "switch",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 400,
+        "wires": [
+            [
+                "e97861653a7ba31d"
+            ]
+        ]
+    },
+    {
+        "id": "e97861653a7ba31d",
+        "type": "link out",
+        "z": "107c9bc.328b364",
+        "g": "cb0fed7.3a64e1",
+        "name": "REFRESH ALL VTS SATs",
+        "mode": "link",
+        "links": [
+            "e34b751145065be7"
+        ],
+        "x": 1225,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a4ed00fe71128c7d",
+        "type": "exec",
+        "z": "107c9bc.328b364",
+        "g": "7801a0a985539b08",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data && rm -rf Backup",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 530,
+        "y": 700,
+        "wires": [
+            [
+                "d7c4d4ab7b2c55db",
+                "d5f8a51e9308e828"
+            ],
+            [
+                "9a29991b1357e024"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d7c4d4ab7b2c55db",
+        "type": "debug",
+        "z": "107c9bc.328b364",
+        "g": "7801a0a985539b08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9a29991b1357e024",
+        "type": "debug",
+        "z": "107c9bc.328b364",
+        "g": "7801a0a985539b08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "bd28d1663b4119ac",
@@ -8069,7 +8167,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 815,
         "y": 280,
@@ -8232,7 +8331,10 @@
             "db7e42c1aee637bd",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 195,
         "y": 220,
@@ -14180,7 +14282,9 @@
         "x": 850,
         "y": 3800,
         "wires": [
-            []
+            [
+                "ea89cffe40a7a0bf"
+            ]
         ]
     },
     {
@@ -14220,7 +14324,7 @@
         "type": "ui_text",
         "z": "dd1202fd.a2e23",
         "group": "8da1955ffecc49fe",
-        "order": 4,
+        "order": 5,
         "width": 10,
         "height": 1,
         "name": "",
@@ -14368,6 +14472,20 @@
                 "47a36946d8fa8d38"
             ]
         ]
+    },
+    {
+        "id": "ea89cffe40a7a0bf",
+        "type": "link out",
+        "z": "dd1202fd.a2e23",
+        "g": "1be479826e16e852",
+        "name": "TimeManeuverTrigger",
+        "mode": "link",
+        "links": [
+            "587b221ea8971329"
+        ],
+        "x": 995,
+        "y": 3800,
+        "wires": []
     },
     {
         "id": "e3ccf0456fcafedf",
@@ -17183,7 +17301,7 @@
         "repair": false,
         "outputs": 2,
         "x": 610,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
                 "2002146a.dd37ac"
@@ -19459,22 +19577,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 760,
-        "y": 1060,
+        "x": 300,
+        "y": 900,
         "wires": [
             [
-                "abf049d1b139611c",
-                "5e9981620393537d",
-                "de1b34b4051c103e",
-                "27e3cd807b7dd36f",
-                "cf8728c9f3d62ae1",
-                "ec94bcaf7ccbbade",
-                "b99ef16ba1924c22",
-                "98e2adb0a1d844fb",
-                "472fd34f5a4b63ee",
-                "7abf459108d1bb9a",
-                "eb7e570c18ebe251",
-                "0599a22e1f0c18ca"
+                "3caca984d43a0458"
             ]
         ]
     },
@@ -19650,7 +19757,10 @@
             "3315d3a560dc2c89",
             "39bc328534852ef6",
             "90fb241377880fb6",
-            "cfcab2023a094cdc"
+            "cfcab2023a094cdc",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1945,
         "y": 1140,
@@ -19671,7 +19781,10 @@
             "ec94bcaf7ccbbade",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1575,
         "y": 1460,
@@ -19693,7 +19806,10 @@
             "b99ef16ba1924c22",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1825,
         "y": 2020,
@@ -19715,7 +19831,10 @@
             "98e2adb0a1d844fb",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1395,
         "y": 2540,
@@ -24126,7 +24245,10 @@
             "b6d33c55a0d06540",
             "bc9a8d46d71b2c0a",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1835,
         "y": 360,
@@ -24150,7 +24272,10 @@
             "a7c69bfe050e2d25",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1185,
         "y": 560,
@@ -24235,7 +24360,10 @@
             "bc9a8d46d71b2c0a",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 355,
         "y": 3080,
@@ -24254,7 +24382,10 @@
             "bc9a8d46d71b2c0a",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1745,
         "y": 3240,
@@ -24273,7 +24404,10 @@
             "bc9a8d46d71b2c0a",
             "39bc328534852ef6",
             "28c0d298350e66d0",
-            "90fb241377880fb6"
+            "90fb241377880fb6",
+            "5b2a4de095e1e430",
+            "a5a253759a41f09c",
+            "1f5277e3b3e49a5a"
         ],
         "x": 1735,
         "y": 3460,
@@ -26312,7 +26446,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2895,
         "y": 900,
@@ -26327,7 +26462,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2575,
         "y": 1660,
@@ -26343,7 +26479,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2565,
         "y": 2220,
@@ -26358,7 +26495,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2475,
         "y": 2640,
@@ -26374,7 +26512,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 1585,
         "y": 3060,
@@ -26389,7 +26528,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2505,
         "y": 3340,
@@ -26404,7 +26544,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2665,
         "y": 3520,
@@ -26419,7 +26560,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 2235,
         "y": 540,
@@ -26435,7 +26577,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 3315,
         "y": 160,
@@ -26451,7 +26594,8 @@
         "links": [
             "ed6b13ca02a5a70d",
             "f462010c0466fdea",
-            "e2f3f03425eed5dd"
+            "e2f3f03425eed5dd",
+            "8c4538d2189874b0"
         ],
         "x": 3265,
         "y": 200,
@@ -26533,7 +26677,7 @@
             "ccf9f6d431ed64cc",
             "e7a2222d78b89f73"
         ],
-        "x": 3225,
+        "x": 3205,
         "y": 540,
         "wires": []
     },
@@ -26959,7 +27103,8 @@
         "links": [
             "d0e791394ec64d0c",
             "5ead832e790372af",
-            "2decf83c3304a112"
+            "2decf83c3304a112",
+            "968319d5ad47d00b"
         ],
         "x": 4105,
         "y": 1580,
@@ -29531,8 +29676,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 4250,
-        "y": 2940,
+        "x": 4150,
+        "y": 2980,
         "wires": [
             [
                 "867f27cd04e03942"
@@ -29552,8 +29697,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "concatenate",
-        "x": 4390,
-        "y": 2940,
+        "x": 4330,
+        "y": 2920,
         "wires": [
             [
                 "55bd8ee8081f4e8a",
@@ -29601,8 +29746,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4620,
-        "y": 2920,
+        "x": 4660,
+        "y": 2940,
         "wires": []
     },
     {
@@ -29619,8 +29764,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4630,
-        "y": 2960,
+        "x": 4650,
+        "y": 2980,
         "wires": []
     },
     {
@@ -29721,7 +29866,8 @@
         "z": "7c68352c.1b47bc",
         "name": "refreshVTSin",
         "links": [
-            "39bc328534852ef6"
+            "39bc328534852ef6",
+            "5b2a4de095e1e430"
         ],
         "x": 3245,
         "y": 440,
@@ -29880,7 +30026,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4430,
+        "x": 4410,
         "y": 40,
         "wires": []
     },
@@ -29909,8 +30055,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4060,
-        "y": 60,
+        "x": 4220,
+        "y": 100,
         "wires": []
     },
     {
@@ -29947,7 +30093,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"400\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"600\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
                 "tot": "jsonata"
             }
         ],
@@ -29971,7 +30117,7 @@
         "z": "7c68352c.1b47bc",
         "g": "5293fd84.fa1844",
         "name": "",
-        "paths": "[\"path_100\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
+        "paths": "[\"path_100\",\"path_12\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
         "pathsToExpire": "",
         "useRegex": false,
         "warnUnmatched": false,
@@ -30015,10 +30161,11 @@
             "be24a5a05268a710",
             "2072d02e.cd2d4"
         ],
-        "x": 3585,
-        "y": 160,
+        "x": 3515,
+        "y": 140,
         "wires": [
             [
+                "73f805cb802528a7",
                 "ed91f7078814f403"
             ]
         ]
@@ -30037,70 +30184,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3950,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "813073f9113a2daf",
-        "type": "exec",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python copymem.py",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "copymem",
-        "x": 3700,
-        "y": 300,
-        "wires": [
-            [
-                "279f6bac680aabe9",
-                "b84d6b0d444acde7"
-            ],
-            [
-                "01e51961a76d77a0"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "279f6bac680aabe9",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "COPYMEM OUT",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4050,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "01e51961a76d77a0",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "COPYMEM ERROR",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4040,
-        "y": 340,
+        "x": 3970,
+        "y": 220,
         "wires": []
     },
     {
@@ -30122,10 +30207,10 @@
         "repair": false,
         "outputs": 1,
         "x": 4430,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
-                "813073f9113a2daf"
+                "5a8ee579df55828c"
             ]
         ]
     },
@@ -30142,7 +30227,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "concatenate",
-        "x": 4590,
+        "x": 4530,
         "y": 180,
         "wires": [
             [
@@ -30173,7 +30258,8 @@
             [
                 "ffb4c4b51344ccf8",
                 "e53c4b5d7212fd87",
-                "d0e791394ec64d0c"
+                "d0e791394ec64d0c",
+                "2f6ca90871f27075"
             ]
         ]
     },
@@ -30297,84 +30383,6 @@
         "wires": []
     },
     {
-        "id": "b84d6b0d444acde7",
-        "type": "change",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "Set path_12",
-        "rules": [
-            {
-                "t": "set",
-                "p": "paths",
-                "pt": "msg",
-                "to": "path_12",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3670,
-        "y": 220,
-        "wires": [
-            [
-                "8e64d0448f085117"
-            ]
-        ]
-    },
-    {
-        "id": "8e64d0448f085117",
-        "type": "join-wait",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "paths": "[\"path_12\"]",
-        "pathsToExpire": "",
-        "useRegex": false,
-        "warnUnmatched": false,
-        "pathTopic": "paths",
-        "pathTopicType": "msg",
-        "correlationTopic": "",
-        "correlationTopicType": "msg",
-        "timeout": "60",
-        "timeoutUnits": "1000",
-        "exactOrder": "false",
-        "firstMsg": "true",
-        "mapPayload": "true",
-        "disableComplete": false,
-        "persistOnRestart": false,
-        "x": 4240,
-        "y": 260,
-        "wires": [
-            [
-                "bce915815eb2fab4",
-                "5a8ee579df55828c",
-                "9cdeb252bc6af462"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "bce915815eb2fab4",
-        "type": "debug",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4410,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "104b3e91f2133bb5",
         "type": "link in",
         "z": "7c68352c.1b47bc",
@@ -30442,34 +30450,11 @@
         "wires": []
     },
     {
-        "id": "9cdeb252bc6af462",
-        "type": "exec",
-        "z": "7c68352c.1b47bc",
-        "g": "5293fd84.fa1844",
-        "command": "cd /app/jsatorb-rest-api/files/default_Sat && python copy_vts_conf.py",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "copy vts_conf",
-        "x": 4600,
-        "y": 280,
-        "wires": [
-            [
-                "33dd7b2edfd43b13"
-            ],
-            [],
-            []
-        ]
-    },
-    {
         "id": "33dd7b2edfd43b13",
         "type": "debug",
         "z": "7c68352c.1b47bc",
         "g": "5293fd84.fa1844",
-        "name": "",
+        "name": "VTS CONF BACKUP",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -30478,7 +30463,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4750,
+        "x": 4800,
         "y": 260,
         "wires": []
     },
@@ -30494,9 +30479,9 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "copy vts_conf",
-        "x": 4380,
-        "y": 3000,
+        "name": "copy vts_conf_backup",
+        "x": 4400,
+        "y": 3020,
         "wires": [
             [
                 "c409a15d1ad51b59"
@@ -30792,6 +30777,908 @@
         "wires": [
             [
                 "09b6f94b45eb28b7"
+            ]
+        ]
+    },
+    {
+        "id": "cc993d5237b4ab75",
+        "type": "http request",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "http request OEM/AEM",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://backend:8000/vts",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 3890,
+        "y": 4220,
+        "wires": [
+            [
+                "02246f9bacb02d0d",
+                "671c0c988d6b8a93"
+            ]
+        ]
+    },
+    {
+        "id": "02246f9bacb02d0d",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "OEM",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4090,
+        "y": 4100,
+        "wires": []
+    },
+    {
+        "id": "ed1f1854bfdd42df",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "Sub-Module VTS files Updating",
+        "info": "",
+        "x": 4170,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "a2f5a07a52e0702d",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "joinwait reload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3720,
+        "y": 4120,
+        "wires": []
+    },
+    {
+        "id": "208fbaec66263871",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "API request preparation",
+        "info": "",
+        "x": 3660,
+        "y": 4160,
+        "wires": []
+    },
+    {
+        "id": "a28638d5a72bfa40",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "MACHINE DEPENDENCE",
+        "info": "TLE_STORK.txt",
+        "x": 3970,
+        "y": 4380,
+        "wires": [],
+        "icon": "node-red-contrib-alarm/alarm.png"
+    },
+    {
+        "id": "04a939aa8d984ef1",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "LLA-Visibility-Update2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"400\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {}\t       \t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3640,
+        "y": 4220,
+        "wires": [
+            [
+                "a2f5a07a52e0702d",
+                "cc993d5237b4ab75"
+            ]
+        ]
+    },
+    {
+        "id": "e0e62f07ca4e391e",
+        "type": "join-wait",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "paths": "[\"path_106\",\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
+        "pathsToExpire": "",
+        "useRegex": false,
+        "warnUnmatched": false,
+        "pathTopic": "paths",
+        "pathTopicType": "msg",
+        "correlationTopic": "",
+        "correlationTopicType": "msg",
+        "timeout": "60",
+        "timeoutUnits": "1000",
+        "exactOrder": "false",
+        "firstMsg": "true",
+        "mapPayload": "true",
+        "disableComplete": false,
+        "persistOnRestart": false,
+        "x": 3380,
+        "y": 4220,
+        "wires": [
+            [
+                "ce8ed2997e37e803",
+                "04a939aa8d984ef1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8c4538d2189874b0",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "JOINWAIT XSAT",
+        "links": [
+            "13e6783f699d391f",
+            "1a19adb69a35a3a7",
+            "41a32e4cc747f910",
+            "d51fcddeda0e0de7",
+            "24606f59b812db66",
+            "ac147f0729ad1810",
+            "68c5a6850e745a21",
+            "f7f9c11d1f2382ae",
+            "8943bd9a10115aea",
+            "be24a5a05268a710",
+            "2072d02e.cd2d4"
+        ],
+        "x": 3245,
+        "y": 4220,
+        "wires": [
+            [
+                "e0e62f07ca4e391e"
+            ]
+        ]
+    },
+    {
+        "id": "ce8ed2997e37e803",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "check X sat",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3610,
+        "y": 4260,
+        "wires": []
+    },
+    {
+        "id": "320ea35152c4b484",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "Set path_12",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths",
+                "pt": "msg",
+                "to": "path_12",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3330,
+        "y": 4280,
+        "wires": [
+            [
+                "4f742aee13de8d7c"
+            ]
+        ]
+    },
+    {
+        "id": "5303c9394479ae66",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python copymem.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copymem",
+        "x": 3360,
+        "y": 4360,
+        "wires": [
+            [
+                "bd2092b1652d1ae2",
+                "320ea35152c4b484"
+            ],
+            [
+                "74280a45f33d072a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bd2092b1652d1ae2",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "COPYMEM OUT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3710,
+        "y": 4360,
+        "wires": []
+    },
+    {
+        "id": "74280a45f33d072a",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "COPYMEM ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3700,
+        "y": 4400,
+        "wires": []
+    },
+    {
+        "id": "9ec1f63f02462117",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python concatenate.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "concatenate",
+        "x": 4250,
+        "y": 4260,
+        "wires": [
+            [
+                "aa343756a6543700",
+                "e52d1bcc966ff6ad"
+            ],
+            [
+                "53268bfc77a9baaf"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e52d1bcc966ff6ad",
+        "type": "function",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "func": "msg.payload=\"Situation updated\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4360,
+        "y": 4180,
+        "wires": [
+            [
+                "940f14dc9b5b79d7",
+                "e2d9c7d875e296cd",
+                "968319d5ad47d00b"
+            ]
+        ]
+    },
+    {
+        "id": "aa343756a6543700",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "CONCATENATE OUT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4440,
+        "y": 4220,
+        "wires": []
+    },
+    {
+        "id": "53268bfc77a9baaf",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "CONCATENATE  ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4450,
+        "y": 4260,
+        "wires": []
+    },
+    {
+        "id": "940f14dc9b5b79d7",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "c67ec5067dc22890"
+        ],
+        "x": 4555,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "968319d5ad47d00b",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "640bcc1f704ee31a"
+        ],
+        "x": 4555,
+        "y": 4180,
+        "wires": []
+    },
+    {
+        "id": "0facf16a6feed06e",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "LLA-Visibility-Update2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"header\": {\t        \"timeStart\": msg.paths.path_8.startdate,\t        \"timeEnd\": msg.paths.path_8.enddate,\t        \"step\": \"60\"\t    },\t    \"satellites\": [\t        {\t            \"name\": \"Sat\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_1[0],\t            \"line2\": msg.paths.path_1[1]\t        },\t        {\t            \"name\": \"PLEIADES1A\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_2[0],\t            \"line2\": msg.paths.path_2[1]\t        },\t        {\t            \"name\": \"PLEIADES1B\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_11[0],\t            \"line2\": msg.paths.path_11[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO3\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_10[0],\t            \"line2\": msg.paths.path_10[1]\t        },\t        {\t            \"name\": \"PLEIADES-NEO4\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_9[0],\t            \"line2\": msg.paths.path_9[1]\t        },\t        {\t            \"name\": \"BLUE1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_3[0],\t            \"line2\": msg.paths.path_3[1]\t        },\t        {\t            \"name\": \"BLUE2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_4[0],\t            \"line2\": msg.paths.path_4[1]\t        },\t        {\t            \"name\": \"RED1\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_5[0],\t            \"line2\": msg.paths.path_5[1]\t        },\t        {\t            \"name\": \"RED2\",\t            \"type\": \"tle\",\t            \"line1\": msg.paths.path_6[0],\t            \"line2\": msg.paths.path_6[1]\t        }\t    ],\t    \"groundStations\": [\t        msg.paths.path_7\t    ],\t    \"options\": {\t        \"CARTESIAN\": {},\t        \"ATTITUDE\": {\t            \"law\": \"LOF_LVLH\"\t        },\t        \"LLA\": {},\t        \"VISIBILITY\": {}\t    }\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3400,
+        "y": 4180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "816c1832c1b53d0d",
+        "type": "comment",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "A GARDER ",
+        "info": "Pour implémenter la visibilité des satellites par les stations au sol.",
+        "x": 3410,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "e2d9c7d875e296cd",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "SIT UPDATED",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4480,
+        "y": 4100,
+        "wires": []
+    },
+    {
+        "id": "4f742aee13de8d7c",
+        "type": "join-wait",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "paths": "[\"path_12\"]",
+        "pathsToExpire": "",
+        "useRegex": false,
+        "warnUnmatched": false,
+        "pathTopic": "paths",
+        "pathTopicType": "msg",
+        "correlationTopic": "",
+        "correlationTopicType": "msg",
+        "timeout": "60",
+        "timeoutUnits": "1000",
+        "exactOrder": "false",
+        "firstMsg": "true",
+        "mapPayload": "true",
+        "disableComplete": false,
+        "persistOnRestart": false,
+        "x": 3900,
+        "y": 4320,
+        "wires": [
+            [
+                "c446f6d40a8b85e8",
+                "9ec1f63f02462117",
+                "7dbcddb056ad261f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c446f6d40a8b85e8",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4070,
+        "y": 4340,
+        "wires": []
+    },
+    {
+        "id": "671c0c988d6b8a93",
+        "type": "switch",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "property": "headers.vtsflag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ready",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 4090,
+        "y": 4220,
+        "wires": [
+            [
+                "5303c9394479ae66"
+            ]
+        ]
+    },
+    {
+        "id": "7dbcddb056ad261f",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat && python copy_vts_conf.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy vts_conf",
+        "x": 4260,
+        "y": 4340,
+        "wires": [
+            [
+                "5ba8037d51e5bcca"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5ba8037d51e5bcca",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "g": "f9035d5a2a57dc75",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4410,
+        "y": 4320,
+        "wires": []
+    },
+    {
+        "id": "e34b751145065be7",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "name": "",
+        "links": [
+            "e97861653a7ba31d"
+        ],
+        "x": 2805,
+        "y": 4260,
+        "wires": [
+            [
+                "1f5277e3b3e49a5a"
+            ]
+        ]
+    },
+    {
+        "id": "4c27ab248004bbc6",
+        "type": "link in",
+        "z": "7c68352c.1b47bc",
+        "name": "",
+        "links": [
+            "1f5277e3b3e49a5a"
+        ],
+        "x": 2955,
+        "y": 4160,
+        "wires": [
+            [
+                "2c09a6d77dc488f7"
+            ]
+        ]
+    },
+    {
+        "id": "1f5277e3b3e49a5a",
+        "type": "link out",
+        "z": "7c68352c.1b47bc",
+        "name": "refreshAllVTS",
+        "mode": "link",
+        "links": [
+            "04828409f3c8eb98",
+            "118f0f492f55ac0a",
+            "1e9676e414d32f76",
+            "220556fdf5358e27",
+            "32528e58bc954e44",
+            "34c17ae1e756d864",
+            "af9822fbee098e88",
+            "c9235065a31da113",
+            "ccf9f6d431ed64cc",
+            "e7a2222d78b89f73",
+            "4c27ab248004bbc6"
+        ],
+        "x": 2875,
+        "y": 4260,
+        "wires": []
+    },
+    {
+        "id": "2c09a6d77dc488f7",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "name": "Set path_106",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths",
+                "pt": "msg",
+                "to": "path_106",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3090,
+        "y": 4160,
+        "wires": [
+            [
+                "e0e62f07ca4e391e"
+            ]
+        ]
+    },
+    {
+        "id": "f14b823ad76bc396",
+        "type": "ui_button",
+        "z": "7c68352c.1b47bc",
+        "g": "5dd0526663d52573",
+        "name": "",
+        "group": "b10e0a54.7b0198",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "REFRESH VTS AIGLONS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#10FFFF",
+        "className": "",
+        "icon": "fa-globe",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 4070,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73f805cb802528a7",
+        "type": "join-wait",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "name": "",
+        "paths": "[\"path_11\",\"path_10\",\"path_9\",\"path_8\",\"path_7\", \"path_6\", \"path_5\", \"path_4\", \"path_3\", \"path_2\", \"path_1\"]",
+        "pathsToExpire": "",
+        "useRegex": false,
+        "warnUnmatched": false,
+        "pathTopic": "paths",
+        "pathTopicType": "msg",
+        "correlationTopic": "",
+        "correlationTopicType": "msg",
+        "timeout": "60",
+        "timeoutUnits": "1000",
+        "exactOrder": "false",
+        "firstMsg": "true",
+        "mapPayload": "true",
+        "disableComplete": false,
+        "persistOnRestart": false,
+        "x": 3600,
+        "y": 280,
+        "wires": [
+            [
+                "f57d0b4b1087ef62"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f57d0b4b1087ef62",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat/Data&& python copymem.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copymem",
+        "x": 3800,
+        "y": 280,
+        "wires": [
+            [
+                "30940967b1dae0f5",
+                "1b05298ffe278727"
+            ],
+            [
+                "852c92e77c4ebfbb"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1b05298ffe278727",
+        "type": "change",
+        "z": "7c68352c.1b47bc",
+        "name": "Set path_12",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths",
+                "pt": "msg",
+                "to": "path_12",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3730,
+        "y": 220,
+        "wires": [
+            [
+                "ed91f7078814f403"
+            ]
+        ]
+    },
+    {
+        "id": "852c92e77c4ebfbb",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "name": "COPYMEM ERROR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4060,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "30940967b1dae0f5",
+        "type": "debug",
+        "z": "7c68352c.1b47bc",
+        "name": "COPYMEM OUT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4050,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2f6ca90871f27075",
+        "type": "exec",
+        "z": "7c68352c.1b47bc",
+        "g": "5293fd84.fa1844",
+        "command": "cd /app/jsatorb-rest-api/files/default_Sat && rm default_Sat.vts && python copy_vts_conf_backup.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy vts_conf_backup",
+        "x": 4600,
+        "y": 260,
+        "wires": [
+            [
+                "33dd7b2edfd43b13"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3caca984d43a0458",
+        "type": "function",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "e457cfd254c5c098"
+            ]
+        ]
+    },
+    {
+        "id": "e457cfd254c5c098",
+        "type": "ui_template",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "group": "5a7810372552815e",
+        "name": "",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn {\n      background-color: #f44336;\n    }\n    \n    #nonBtn:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Cette action initialisera un satellite (TLEs & masse) à partir des données entrées.<br><br>\n        Voulez-vous confirmer ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn\">Oui</button>\n        <button id=\"nonBtn\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 340,
+        "y": 960,
+        "wires": [
+            [
+                "4d57473e9c0639bc"
+            ]
+        ]
+    },
+    {
+        "id": "4d57473e9c0639bc",
+        "type": "switch",
+        "z": "7c68352c.1b47bc",
+        "g": "2345ff89d3122291",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 960,
+        "wires": [
+            [
+                "eb7e570c18ebe251",
+                "cf8728c9f3d62ae1",
+                "ec94bcaf7ccbbade",
+                "b99ef16ba1924c22",
+                "98e2adb0a1d844fb",
+                "472fd34f5a4b63ee",
+                "7abf459108d1bb9a",
+                "de1b34b4051c103e",
+                "abf049d1b139611c",
+                "5e9981620393537d",
+                "0599a22e1f0c18ca",
+                "27e3cd807b7dd36f"
             ]
         ]
     },
@@ -42935,7 +43822,7 @@
         "d": true,
         "group": "5a7810372552815e",
         "name": "",
-        "order": 10,
+        "order": 11,
         "width": 0,
         "height": 0,
         "format": "<style>\n  /* CSS style for labels */\n  #select_20 .md-select-value span,\n  #select_20 .md-text,\n  #select_25 .md-select-value span,\n  #select_25 .md-text {\n    color: #ffffff !important;\n  }\n</style>\n\n<md-input-container>\n  <label for=\"maneuver\">Maneuver</label>\n  <md-select ng-model=\"maneuver\" id=\"select_20\">\n    <md-option value=\"Impulse\">Impulse</md-option>\n    <md-option value=\"Continuous\">Continuous</md-option>\n  </md-select>\n</md-input-container>\n\n<md-input-container>\n  <label for=\"integrator\">Integrator</label>\n  <md-select ng-model=\"integrator\" style=\"color: #ffffff !important;\" id=\"select_25\">\n    <md-option value=\"RK4\">RungeKutta4</md-option>\n    <md-option value=\"DP\">DormandPrince</md-option>\n  </md-select>\n</md-input-container>\n\n<br>\n\n<button ng-click=\"send({payload: {maneuverType: maneuver, integrator: integrator}})\" class=\"md-raised nr-dashboard-form-button md-button md-ink-ripple\" id=\"thrustButton\">Submit</button>\n",
@@ -43577,9 +44464,7 @@
         "y": 900,
         "wires": [
             [
-                "2d435f23aa966168",
-                "78ed0576c46a296c",
-                "649976e64d5c201f"
+                "760b3d0a63c706a7"
             ]
         ]
     },
@@ -43618,22 +44503,6 @@
         "statusType": "auto",
         "x": 490,
         "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "2d435f23aa966168",
-        "type": "debug",
-        "z": "a9c7c6499fb06192",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 370,
-        "y": 840,
         "wires": []
     },
     {
@@ -44668,6 +45537,74 @@
         "wires": []
     },
     {
+        "id": "760b3d0a63c706a7",
+        "type": "function",
+        "z": "a9c7c6499fb06192",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 840,
+        "wires": [
+            [
+                "15ce479d884995ab"
+            ]
+        ]
+    },
+    {
+        "id": "15ce479d884995ab",
+        "type": "ui_template",
+        "z": "a9c7c6499fb06192",
+        "group": "5a7810372552815e",
+        "name": "",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: fixed;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;  /* Added white text color */\n    }\n    \n    /* Oui Button */\n    #ouiBtn2 {\n      background-color: #4CAF50;\n    }\n    \n    #ouiBtn2:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn2 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn2:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <!-- Confirmation Modal -->\n  <div id=\"confirmationModal2\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n    <div class=\"modal-content\">\n        <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n        Cette action déclenchera une manoeuvre manuelle à partir des paramètres entrés.<br><br>\n        Voulez-vous continuer ?\n      </p>\n      <div class=\"button-group\">\n        <button id=\"ouiBtn2\">Oui</button>\n        <button id=\"nonBtn2\">Non</button>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal2');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        // Optional: Add a slight delay for smoother appearance\n        setTimeout(function() {\n          modal.style.opacity = '1';\n        }, 10);\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        // Wait for the transition to complete before hiding\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn2').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn2').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 340,
+        "y": 840,
+        "wires": [
+            [
+                "2c6eb7f8e345fc06"
+            ]
+        ]
+    },
+    {
+        "id": "2c6eb7f8e345fc06",
+        "type": "switch",
+        "z": "a9c7c6499fb06192",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "649976e64d5c201f",
+                "78ed0576c46a296c"
+            ]
+        ]
+    },
+    {
         "id": "8671293235efd906",
         "type": "link in",
         "z": "62c122b2f65be8e8",
@@ -44944,7 +45881,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2300,
+        "x": 2320,
         "y": 460,
         "wires": [
             [
@@ -45199,7 +46136,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2310,
+        "x": 2330,
         "y": 740,
         "wires": [
             [
@@ -45337,10 +46274,11 @@
         "disableComplete": false,
         "persistOnRestart": false,
         "x": 2940,
-        "y": 580,
+        "y": 600,
         "wires": [
             [
-                "00325a39c1ef33ec"
+                "00325a39c1ef33ec",
+                "21a13f8e67ac40ea"
             ],
             []
         ]
@@ -45379,8 +46317,7 @@
         "y": 400,
         "wires": [
             [
-                "d6a752ed66ac3df0",
-                "a57a36dd95a8bf0b"
+                "d6a752ed66ac3df0"
             ]
         ]
     },
@@ -45427,8 +46364,7 @@
         "y": 460,
         "wires": [
             [
-                "ead1e720fa23bfc5",
-                "a57a36dd95a8bf0b"
+                "ead1e720fa23bfc5"
             ]
         ]
     },
@@ -45447,8 +46383,7 @@
         "y": 520,
         "wires": [
             [
-                "203eb4e56033374a",
-                "a57a36dd95a8bf0b"
+                "203eb4e56033374a"
             ]
         ]
     },
@@ -45675,7 +46610,7 @@
         "name": "Unix Time stamp of the manoeuver",
         "info": "",
         "x": 160,
-        "y": 560,
+        "y": 480,
         "wires": []
     },
     {
@@ -45734,11 +46669,11 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 4240,
-        "y": 400,
+        "x": 4180,
+        "y": 440,
         "wires": [
             [
-                "6c8f909bf6980924"
+                "962e08aa67480373"
             ]
         ]
     },
@@ -45801,10 +46736,10 @@
         "y": 580,
         "wires": [
             [
-                "e295f3d0449a1f23",
                 "d9c5d618a2049df3",
                 "b0fd1f59d6cae965",
-                "f4f1d7fb2f3d5e0e"
+                "f4f1d7fb2f3d5e0e",
+                "e295f3d0449a1f23"
             ],
             [
                 "b9d622b5be036a82"
@@ -46088,7 +47023,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3820,
+        "x": 3880,
         "y": 340,
         "wires": [
             []
@@ -46308,7 +47243,8 @@
         "y": 280,
         "wires": [
             [
-                "b51f416e81ec68e6"
+                "b51f416e81ec68e6",
+                "b75e04c99ae01618"
             ]
         ]
     },
@@ -46761,9 +47697,10 @@
         "wires": [
             [
                 "beb47c9292309997",
-                "576e051db6290a2f",
                 "414c2c6a614a2cbc",
-                "7f69cd7e7a9bc3c8"
+                "7f69cd7e7a9bc3c8",
+                "2cec9119e97b47f8",
+                "200c4afd697046ea"
             ]
         ]
     },
@@ -46867,22 +47804,6 @@
         "statusType": "auto",
         "x": 2940,
         "y": 700,
-        "wires": []
-    },
-    {
-        "id": "576e051db6290a2f",
-        "type": "debug",
-        "z": "62c122b2f65be8e8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 260,
         "wires": []
     },
     {
@@ -47043,8 +47964,7 @@
         "y": 920,
         "wires": [
             [
-                "3379719556e6a94d",
-                "21a13f8e67ac40ea"
+                "3379719556e6a94d"
             ]
         ]
     },
@@ -47214,7 +48134,7 @@
                 "t": "set",
                 "p": "filename",
                 "pt": "msg",
-                "to": "\"/app/maneuver-manager/ManeuverParameters.txt \"",
+                "to": "\"/app/maneuver-manager/ManeuverParameters.txt\"",
                 "tot": "jsonata"
             }
         ],
@@ -47328,7 +48248,7 @@
         "z": "62c122b2f65be8e8",
         "group": "8da1955ffecc49fe",
         "name": "BLUE1 Vehicule template",
-        "order": 5,
+        "order": 6,
         "width": 10,
         "height": "2",
         "format": "<style>\n    .form-container {\n        height: 100%;\n        display: flex;\n        flex-direction: column;\n        overflow-x: hidden;\n    }\n\n    .parameters-row {\n        display: flex;\n        justify-content: center;\n        margin-bottom: 10px;\n        margin-top: 20px;\n    }\n\n    .column {\n        flex: 1;\n        padding: 0 10px;\n        max-width: 300px;\n        box-sizing: border-box;\n    }\n\n    .md-input-container {\n        width: 100%;\n        margin: 10px 0px;\n        color: #ffffff !important;\n    }\n\n    .md-input-container label {\n        color: #ffffff !important;\n    }\n\n    .button-container {\n        display: flex;\n        flex-direction: column;\n        width: 100%;\n        padding: 0 10px;\n        box-sizing: border-box;\n    }\n\n    .button-container button {\n        width: 100%;\n        margin-top: 10px;\n    }\n\n    .button-container button:first-child {\n        margin-top: 20px;\n    }\n\n    .third-row {\n        margin-bottom: 30px;\n    }\n\n    .result-display {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        font-size: 16px;\n        color: white;\n        margin: 15px 0;\n    }\n\n    .result-value {\n        font-weight: bold;\n        color: #ffcc00;\n    }\n</style>\n\n<!-- HTML form structure -->\n<form id=\"myForm2\" class=\"nr-dashboard-theme md-content nr-dashboard-form ng-pristine ng-invalid ng-invalid-required\">\n    <div class=\"form-container\">\n        <!-- Centered Surface field with a top margin -->\n        <div class=\"parameters-row\">\n            <div class=\"column\">\n                <md-input-container class=\"md-block md-auto-horizontal-margin flex md-input-container\">\n                    <label for=\"form2_isp\">Isp (s)</label>\n                    <input type=\"text\" id=\"form2_isp\" name=\"isp\" ng-model=\"msg.payload.isp\" ng-change=\"send({payload: msg.payload})\">\n                </md-input-container>\n            </div>\n        </div>\n\n    </div>\n</form>",
@@ -47355,7 +48275,7 @@
         "z": "62c122b2f65be8e8",
         "group": "8da1955ffecc49fe",
         "name": "BLUE1 Vehicule Submit",
-        "order": 7,
+        "order": 8,
         "width": 10,
         "height": 1,
         "format": "<style>\n    .button-container {\n        display: flex;\n        flex-direction: column;\n        width: 100%;\n        padding: 0 10px;\n        box-sizing: border-box;\n    }\n\n    .button-container button {\n        width: 100%;\n        margin-top: 10px;\n    }\n\n    .button-container button:first-child {\n        margin-top: 20px;\n    }\n</style>\n\n<div class=\"button-container\">\n    <!-- Utilisation de ng-click pour envoyer msg.payload au clic -->\n    <button type=\"submit\" id=\"submitButtonb1\" class=\"md-raised md-button md-ink-ripple\" ng-click=\"send({payload: msg.payload})\">\n    Submit\n  </button>\n</div>",
@@ -47368,27 +48288,9 @@
         "y": 600,
         "wires": [
             [
-                "adfe44d70f44cef8",
-                "f7266902cd674aa6",
-                "f6467cd061d53b66"
+                "55e6b5216e7ac6ca"
             ]
         ]
-    },
-    {
-        "id": "adfe44d70f44cef8",
-        "type": "debug",
-        "z": "62c122b2f65be8e8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 470,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "ba521d9737df82b4",
@@ -47410,8 +48312,8 @@
         "mapPayload": "true",
         "disableComplete": false,
         "persistOnRestart": false,
-        "x": 860,
-        "y": 140,
+        "x": 880,
+        "y": 120,
         "wires": [
             [
                 "5212778ea1516316"
@@ -47682,7 +48584,7 @@
         "g": "7f8477734cd0fd39",
         "group": "8da1955ffecc49fe",
         "name": "Affichage Conso",
-        "order": 6,
+        "order": 7,
         "width": 10,
         "height": 2,
         "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Affichage Ergols</title>\n\n    <!-- Style pour masquer la barre de défilement tout en permettant le défilement -->\n    <style>\n        /* Conteneur principal pour masquer la barre de défilement */\n        .scroll-container {\n            height: 100vh;\n            overflow-y: scroll; /* Activer le défilement vertical */\n            scrollbar-width: none; /* Masquer la barre pour Firefox */\n        }\n\n        /* Masquer la barre de défilement pour Chrome, Safari, etc. */\n        .scroll-container::-webkit-scrollbar {\n            display: none; /* Masquer la barre de défilement */\n        }\n    </style>\n</head>\n\n<body>\n    <!-- Conteneur principal avec défilement masqué -->\n    <div class=\"scroll-container\">\n        <!-- Section pour afficher Ergols restants -->\n        <div class=\"result-display\">\n            Ergols disponibles avant manoeuvre (kg) : <span class=\"form2_ergolRemaining result-value\">--</span>\n        </div>\n\n        <!-- Section pour afficher Consommation d'ergols -->\n        <div class=\"result-display\">\n            Consommation d'ergols (kg) : <span class=\"form2_ergolResult result-value\">--</span>\n        </div>\n    </div>\n\n    <script type=\"text/javascript\">\n        (function(customScope) {\n            // Utiliser $watch pour surveiller les changements dans le payload\n            customScope.$watch('msg.payload', function(payload) {\n                console.log(\"Payload reçu :\", payload); // Pour vérifier si le payload est bien reçu\n                if (payload) {\n                    let ergolsRestants = payload.path_14[2];\n\n                    // Mise à jour de la valeur \"Ergols restants\"\n                    let formattedErgolsRestants = ergolsRestants.toFixed(2).replace('.', ',').replace(/\\B(?=(\\d{3})+(?!\\d))/g, \" \");\n                    let remainingElements = document.getElementsByClassName(\"form2_ergolRemaining\");\n                    for (let i = 0; i < remainingElements.length; i++) {\n                        remainingElements[i].textContent = formattedErgolsRestants + \" kg\";\n                    }\n\n                    // Récupérer la consommation d'ergols\n                    let consommation = payload.path_15[0].consommationErgols;\n\n                    // Formattage en notation française\n                    let formattedConsommation = consommation.toFixed(2).replace('.', ',').replace(/\\B(?=(\\d{3})+(?!\\d))/g, \" \");\n                    \n                    // Mettre à jour toutes les instances de consommation d'ergols\n                    let elements = document.getElementsByClassName(\"form2_ergolResult\");\n                    for (let i = 0; i < elements.length; i++) {\n                        elements[i].textContent = formattedConsommation + \" kg\";\n                    }\n                } else {\n                    console.log(\"Payload non valide ou consommationErgols manquant\");\n                }\n            });\n        })(scope);\n    </script>\n</body>\n\n</html>\n",
@@ -48322,8 +49224,8 @@
         "links": [
             "e6b1abc87d5a903a"
         ],
-        "x": 165,
-        "y": 520,
+        "x": 155,
+        "y": 500,
         "wires": [
             []
         ]
@@ -48945,10 +49847,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4430,
-        "y": 320,
+        "x": 4330,
+        "y": 340,
         "wires": [
             [
+                "36a9ac04f9b32883",
                 "b51f416e81ec68e6"
             ]
         ]
@@ -49528,6 +50431,310 @@
         "statusType": "auto",
         "x": 4020,
         "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b75e04c99ae01618",
+        "type": "debug",
+        "z": "62c122b2f65be8e8",
+        "name": "TLE BLUE1 BEFORE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4300,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "36a9ac04f9b32883",
+        "type": "debug",
+        "z": "62c122b2f65be8e8",
+        "name": "TLE BLUE1 AFTER",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4510,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "962e08aa67480373",
+        "type": "delay",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 4220,
+        "y": 380,
+        "wires": [
+            [
+                "6c8f909bf6980924"
+            ]
+        ]
+    },
+    {
+        "id": "2cec9119e97b47f8",
+        "type": "debug",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "268fe802ad4522bf",
+        "type": "inject",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a00bc3cfa203492b",
+        "type": "change",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "\"/app/maneuver-manager/TimeIntermediateParameters.txt\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 200,
+        "wires": [
+            [
+                "996b2486cd82659c"
+            ]
+        ]
+    },
+    {
+        "id": "996b2486cd82659c",
+        "type": "csv",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "sep": "\\n",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": true,
+        "include_null_values": true,
+        "x": 1390,
+        "y": 200,
+        "wires": [
+            [
+                "af205795341dd5ab"
+            ]
+        ]
+    },
+    {
+        "id": "af205795341dd5ab",
+        "type": "json",
+        "z": "62c122b2f65be8e8",
+        "name": "javascriptConvert",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 1570,
+        "y": 200,
+        "wires": [
+            [
+                "75366a1c973d929a"
+            ]
+        ]
+    },
+    {
+        "id": "75366a1c973d929a",
+        "type": "file",
+        "z": "62c122b2f65be8e8",
+        "name": "Data-storage",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1790,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "200c4afd697046ea",
+        "type": "function",
+        "z": "62c122b2f65be8e8",
+        "name": "TimeIntermediateParameters.txt format",
+        "func": "// Retrieve data from the incoming message payload\nvar pathData = msg.payload; \n\nif (pathData && typeof pathData === 'object') {\n    var manoeuvre = pathData.manoeuvre || 0;\n    var SMA_2 = pathData.SMA_2 || 0;\n\n    // Create a new payload with the retrieved values\n    msg.payload = [\n        \"ManeuverType, SMA_2\",\n        manoeuvre,\n        SMA_2\n    ];\n} else {\n    node.warn(\"The incoming payload is undefined or invalid.\");\n    // Handle the case where pathData is undefined or invalid\n    msg.payload = [\n        \"ManeuverType, SMA_2\",\n        0,\n        0\n    ];\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 200,
+        "wires": [
+            [
+                "a00bc3cfa203492b"
+            ]
+        ]
+    },
+    {
+        "id": "587b221ea8971329",
+        "type": "link in",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "links": [
+            "ea89cffe40a7a0bf"
+        ],
+        "x": 2195,
+        "y": 1000,
+        "wires": [
+            [
+                "aee1888fde0771c3"
+            ]
+        ]
+    },
+    {
+        "id": "55e6b5216e7ac6ca",
+        "type": "function",
+        "z": "62c122b2f65be8e8",
+        "name": "Trigger Pop-up",
+        "func": "return { payload: 'showPopup' };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "d4986e33f119a655"
+            ]
+        ]
+    },
+    {
+        "id": "d4986e33f119a655",
+        "type": "ui_template",
+        "z": "62c122b2f65be8e8",
+        "group": "5a7810372552815e",
+        "name": "",
+        "order": 9,
+        "width": "0",
+        "height": "0",
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Confirmation Modal</title>\n  <style>\n    body {\n      margin: 0;\n      padding: 0;\n      min-height: 50px;\n      position: relative;\n      background-color: #333333 !important; /* Dashboard dark theme background color */\n    }\n\n    .modal-container {\n      position: relative;\n      min-height: 1px;\n      background-color: #333333 !important; /* Match dashboard background */\n    }\n\n    /* Modal Overlay */\n    .modal {\n      display: none;\n      position: absolute;\n      z-index: 9999;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100vh;\n      overflow: hidden;\n      background-color: rgba(128, 128, 128, 0.6);\n      transition: opacity 0.3s ease;\n      opacity: 0;\n    }\n    \n    /* Modal Content */\n    .modal-content {\n      background-color: #244052;\n      margin: 15% auto;\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      max-width: 400px;\n      text-align: center;\n      border-radius: 8px;\n      box-shadow: 0 5px 15px rgba(0,0,0,0.9);\n      color: white;\n    }\n    \n    /* Button Group */\n    .button-group {\n      margin-top: 20px;\n    }\n    \n    /* Buttons */\n    .button-group button {\n      padding: 10px 20px;\n      margin: 0 15px;\n      font-size: 16px;\n      cursor: pointer;\n      border: none;\n      border-radius: 4px;\n      transition: background-color 0.3s ease;\n      color: white;\n    }\n    \n    /* Oui Button */\n    #ouiBtn15 {\n      background-color: #4CAF50;\n    }\n    #ouiBtn15:hover {\n      background-color: #45a049;\n    }\n    \n    /* Non Button */\n    #nonBtn15 {\n      background-color: #f44336;\n    }\n    \n    #nonBtn15:hover {\n      background-color: #da190b;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"modal-container\">\n    <!-- Confirmation Modal -->\n    <div id=\"confirmationModal15\" class=\"modal\" aria-labelledby=\"modalTitle\" role=\"dialog\" aria-modal=\"true\">\n      <div class=\"modal-content\">\n          <p id=\"modalTitle\" class=\"modal-text\" style=\"background-color: #244052 !important; color: white !important; padding: 10px; border-radius: 4px; font-size: 18px; margin: 0 0 20px 0; font-weight: bold;\">\n          Cette action déclenchera une manoeuvre prédéfinie à partir des paramètres entrés.<br><br>\n          Voulez-vous continuer ?\n        </p>\n        <div class=\"button-group\">\n          <button id=\"ouiBtn15\">Oui</button>\n          <button id=\"nonBtn15\">Non</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  <!-- JavaScript to Control Modal -->\n  <script>\n    (function(scope) {\n      // Reference to the modal element\n      var modal = document.getElementById('confirmationModal15');\n      \n      // Function to show the modal\n      function showModal() {\n        modal.style.display = 'block';\n        requestAnimationFrame(function() {\n          modal.style.opacity = '1';\n        });\n      }\n  \n      // Function to hide the modal\n      function hideModal() {\n        modal.style.opacity = '0';\n        setTimeout(function() {\n          modal.style.display = 'none';\n        }, 300);\n      }\n  \n      // Initialize modal as hidden\n      hideModal();\n  \n      // Watch for incoming messages\n      scope.$watch('msg', function(msg) {\n        if(msg && msg.payload === 'showPopup') {\n          showModal();\n        }\n      });\n  \n      // Handle \"Oui\" button click\n      document.getElementById('ouiBtn15').addEventListener('click', function() {\n        scope.send({payload: 'oui'});\n        hideModal();\n      });\n  \n      // Handle \"Non\" button click\n      document.getElementById('nonBtn15').addEventListener('click', function() {\n        scope.send({payload: 'non'});\n        hideModal();\n      });\n  \n      // Close modal when clicking outside the content\n      window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n          hideModal();\n        }\n      });\n    })(scope);\n  </script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "50896f46708a9311",
+                "c4767724a4611809"
+            ]
+        ]
+    },
+    {
+        "id": "50896f46708a9311",
+        "type": "switch",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "oui",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 620,
+        "wires": [
+            [
+                "f7266902cd674aa6",
+                "f6467cd061d53b66"
+            ]
+        ]
+    },
+    {
+        "id": "c4767724a4611809",
+        "type": "debug",
+        "z": "62c122b2f65be8e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 580,
         "wires": []
     },
     {
@@ -53213,7 +54420,8 @@
             "e4a3209a7bc18aab",
             "bd44410470f18aea",
             "f7b2b26448ca62c6",
-            "3e608b3210a3b71b"
+            "3e608b3210a3b71b",
+            "940f14dc9b5b79d7"
         ],
         "x": 365,
         "y": 200,
@@ -53509,12 +54717,12 @@
         "id": "627734fa542c5768",
         "type": "ui_template",
         "z": "62804953b962105f",
-        "group": "cbb369e33298cfeb",
+        "group": "8da1955ffecc49fe",
         "name": "UI Notigication BLUE1",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    .ui-notification {\n        position: fixed;\n        top: 0px;\n        right: 0px;\n        padding: 21px 50px;\n        background-color: #001f3f;\n        color: white;\n        border-radius: 5px;\n        box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n        visibility: hidden;\n        opacity: 0;\n        transform: translateY(-20px);\n        transition: opacity 0.3s, transform 0.3s;\n        z-index: 10000;\n        font-size: 18px;\n    }\n    .ui-notification.visible {\n        visibility: visible;\n        opacity: 1;\n        transform: translateY(0);\n    }\n    .ui-notification.success { background-color: #001f3f; }\n    .ui-notification.error { background-color: #dc3545; }\n    .ui-notification.info { background-color: #17a2b8; }\n    .ui-notification.warning { background-color: #ffc107; color: black; }\n</style>\n\n<div class=\"ui-notification\" id=\"uiNotification\"></div>\n\n<script>\n(function(scope) {\n    // Generate a unique page load ID\n    const pageLoadId = Date.now().toString();\n    localStorage.setItem('pageLoadId', pageLoadId);\n    \n    let notificationElement = document.getElementById('uiNotification');\n    let hideTimeout;\n    let isFirstLoad = true;\n    \n    function showNewNotification(message, type = 'success') {\n        // Skip notifications on page load\n        if (isFirstLoad) {\n            isFirstLoad = false;\n            return;\n        }\n        \n        // Clear any existing timeout\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n        \n        // Reset classes and update content\n        notificationElement.className = 'ui-notification';\n        void notificationElement.offsetWidth; // Force reflow\n        \n        notificationElement.textContent = message;\n        notificationElement.classList.add(type);\n        \n        // Show notification\n        requestAnimationFrame(() => {\n            notificationElement.classList.add('visible');\n        });\n        \n        // Set timeout to hide\n        hideTimeout = setTimeout(() => {\n            notificationElement.classList.remove('visible');\n        }, 3000);\n        \n        // Store the message with the current page load ID\n        localStorage.setItem('lastNotification', JSON.stringify({\n            message: message,\n            type: type,\n            pageLoadId: pageLoadId,\n            timestamp: Date.now()\n        }));\n    }\n    \n    // Watch for messages\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n        \n        let payload = msg.payload;\n        let message, type;\n        \n        if (typeof payload === 'object') {\n            message = payload.text || 'Notification';\n            type = payload.type || 'success';\n        } else {\n            message = payload.toString();\n            type = 'success';\n        }\n        \n        // Check if this is a new message for the current page load\n        const lastNotification = localStorage.getItem('lastNotification');\n        if (lastNotification) {\n            const lastMsg = JSON.parse(lastNotification);\n            if (lastMsg.pageLoadId !== pageLoadId) {\n                // Different page load, don't show old notification\n                showNewNotification(message, type);\n            } else if (lastMsg.message !== message) {\n                // Same page load but different message\n                showNewNotification(message, type);\n            }\n        } else {\n            // No previous notification\n            showNewNotification(message, type);\n        }\n    }, true);\n    \n    // Cleanup\n    scope.$on('$destroy', function() {\n        if (hideTimeout) {\n            clearTimeout(hideTimeout);\n        }\n    });\n    \n    // Clear notification visibility on page unload\n    window.addEventListener('beforeunload', function() {\n        notificationElement.classList.remove('visible');\n    });\n})(scope);\n</script>",
+        "order": 9,
+        "width": "0",
+        "height": "0",
+        "format": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Notification System</title>\n    <style>\n        /* Replace your current card styling with this */\n.nr-dashboard-theme md-card.nr-dashboard-card {\n    background-color: transparent !important;\n    box-shadow: none !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n.nr-dashboard-theme md-card.nr-dashboard-card .nr-dashboard-cardcontent {\n    background-color: transparent !important;\n    padding: 0 !important;\n}\n\n/* Make sure the notification container itself is also transparent */\n.notification-container {\n    background-color: transparent !important;\n}\n\n        body {\n            margin: 0;\n            padding: 0;\n            min-height: 1px;\n        }\n\n        .notification-container {\n            min-height: 1px;\n            background-color: transparent; /* Transparent or #333333, as you prefer */\n            position: relative;\n        }\n\n        .ui-notification {\n            position: fixed;\n            top: 0px;\n            right: 0px;\n            padding: 21px 50px;\n            background-color: #001f3f;\n            color: white;\n            border-radius: 5px;\n            box-shadow: 0 2px 10px rgba(0,0,0,0.2);\n            visibility: hidden;\n            opacity: 0;\n            transform: translateY(-20px);\n            transition: opacity 0.3s, transform 0.3s;\n            z-index: 10000;\n            font-size: 18px;\n        }\n\n        .ui-notification.visible {\n            visibility: visible;\n            opacity: 1;\n            transform: translateY(0);\n        }\n\n        .ui-notification.success { background-color: #001f3f; }\n        .ui-notification.error { background-color: #dc3545; }\n        .ui-notification.info { background-color: #17a2b8; }\n        .ui-notification.warning { background-color: #ffc107; color: black; }\n    </style>\n</head>\n<body>\n    <div class=\"notification-container\">\n        <div class=\"ui-notification\" id=\"uiNotification\"></div>\n    </div>\n\n    <script>\n    (function(scope) {\n        const pageLoadId = Date.now().toString();\n        localStorage.setItem('pageLoadId', pageLoadId);\n        \n        let notificationElement = document.getElementById('uiNotification');\n        let hideTimeout;\n        let isFirstLoad = true;\n        \n        function showNewNotification(message, type = 'success') {\n            // Skip notifications on first load\n            if (isFirstLoad) {\n                isFirstLoad = false;\n                return;\n            }\n\n            if (hideTimeout) clearTimeout(hideTimeout);\n\n            notificationElement.className = 'ui-notification';\n            void notificationElement.offsetWidth; // Force reflow\n\n            notificationElement.textContent = message;\n            notificationElement.classList.add(type);\n\n            requestAnimationFrame(() => {\n                notificationElement.classList.add('visible');\n            });\n\n            hideTimeout = setTimeout(() => {\n                notificationElement.classList.remove('visible');\n            }, 3000);\n\n            localStorage.setItem('lastNotification', JSON.stringify({\n                message: message,\n                type: type,\n                pageLoadId: pageLoadId,\n                timestamp: Date.now()\n            }));\n        }\n\n        scope.$watch('msg', function(msg) {\n            if (!msg || !msg.payload) return;\n\n            let payload = msg.payload;\n            let message, type;\n\n            if (typeof payload === 'object') {\n                message = payload.text || 'Notification';\n                type = payload.type || 'success';\n            } else {\n                message = payload.toString();\n                type = 'success';\n            }\n\n            const lastNotification = localStorage.getItem('lastNotification');\n            if (lastNotification) {\n                const lastMsg = JSON.parse(lastNotification);\n                if (lastMsg.pageLoadId !== pageLoadId) {\n                    showNewNotification(message, type);\n                } else if (lastMsg.message !== message) {\n                    showNewNotification(message, type);\n                }\n            } else {\n                showNewNotification(message, type);\n            }\n        }, true);\n\n        scope.$on('$destroy', function() {\n            if (hideTimeout) clearTimeout(hideTimeout);\n        });\n\n        window.addEventListener('beforeunload', function() {\n            notificationElement.classList.remove('visible');\n        });\n    })(scope);\n    </script>\n</body>\n</html>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,

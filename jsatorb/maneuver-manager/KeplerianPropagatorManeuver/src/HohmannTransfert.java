@@ -145,7 +145,7 @@ public class HohmannTransfert {
 
     // Method to send a file via MQTT
     private static void sendFileViaMQTT(String filePath) {
-        String broker = "tcp://localhost:1883";  // Adresse du broker MQTT
+        String broker = "tcp://mosquitto:1883";  // Adresse du broker MQTT
         String topic = "resultat/fichier";  // Sujet sur lequel publier
         String clientId = "JavaMQTTSender";
 
@@ -197,6 +197,14 @@ public class HohmannTransfert {
 
         System.out.println("Delta-V1 (First maneuver): " + DV1 + " m/s");
         System.out.println("Delta-V2 (Second maneuver): " + DV2 + " m/s");
+        double massIntermediaire =  calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
+        double masseFinale = calculateFinalMass(massIntermediaire ,DV2 ,ISP ,g0);
+        //Veerifier si masseFinale >= DRYMASS sinon erreur !
+        if (masseFinale<DRYMASS){
+            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
+        }
+
+
 
         // Calculate the time to apogee (or perigee) after the first maneuver
         double deltaT = calculateTimeToApogee(SMA, SMA_2);

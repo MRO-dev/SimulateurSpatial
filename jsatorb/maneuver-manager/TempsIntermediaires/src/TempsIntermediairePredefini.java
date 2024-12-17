@@ -77,9 +77,9 @@ public class TempsIntermediairePredefini {
             DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(1));
             ISP = new Double(1.0);
             ERGOL = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(2));
-            MANEUV_TYPE = Files.readAllLines(Paths.get("CommandData.txt")).get(13);
+            MANEUV_TYPE = Files.readAllLines(Paths.get("TimeIntermediateParameters.txt")).get(1);
             ManeuverType = MANEUV_TYPE;
-            SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(14)) * 1000.0;
+            SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get("TimeIntermediateParameters.txt")).get(2)) * 1000.0;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
