@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
+import java.util.List;
 
 public class HohmannTransfert {
 
@@ -37,6 +38,7 @@ public class HohmannTransfert {
     static DataProvidersManager manager = DataContext.getDefault().getDataProvidersManager();
     // Read input data from file
     static String DATE;
+    static String APSIDE_DATE;
     static double SMA; // Initial semi-major axis (in meters)
     static double ECC;
     static double INC;
@@ -52,6 +54,17 @@ public class HohmannTransfert {
     static {
         try {
             DATE = Files.readAllLines(Paths.get("Data.txt")).get(1);
+            try {
+                List<String> lines = Files.readAllLines(Paths.get("LastManeuverDate.txt"));
+                if (!lines.isEmpty()) {
+                    APSIDE_DATE= lines.get(lines.size() - 1);
+                    System.out.println("Last line: " + APSIDE_DATE);
+                } else {
+                    System.out.println("File is empty.");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             SMA = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(2)) * 1000.0;
             ECC = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(3));
             INC = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(4)));
@@ -177,6 +190,7 @@ public class HohmannTransfert {
         Frame eme2000 = FramesFactory.getEME2000();
         AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
         AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
 
         // Define the initial Keplerian orbit
         KeplerianOrbit initialOrbit = new KeplerianOrbit(SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN, eme2000, initialDate, MU);
@@ -189,6 +203,7 @@ public class HohmannTransfert {
         System.out.println("ECC (Initial eccentricity): " + initialOrbit.getE());
         System.out.println("Mass (Initial mass): " + initialState.getMass() + " kg");
         System.out.println("Initial Date: " + initialDate);
+        System.out.println("Apside Date: " + apsideDate);
 
         // Calculate the Delta-Vs for the Hohmann transfer and log them
         double[] deltaVs = calculateDeltaVs(SMA, SMA_2);
@@ -200,12 +215,25 @@ public class HohmannTransfert {
         double massIntermediaire =  calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
         double masseFinale = calculateFinalMass(massIntermediaire ,DV2 ,ISP ,g0);
         //Veerifier si masseFinale >= DRYMASS sinon erreur !
-        if (masseFinale<DRYMASS){
-            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
+        System.out.println("Initial masse" + initialMass);
+        System.out.println("Ergols " + ERGOL);
+        System.out.println("ISP" + ISP);
+        System.out.println("Masse finale" + masseFinale);
+        if (initialDate.isBefore(apsideDate)) {
+            System.out.println("initialDate is before apsideDate.");
+        } else if (initialDate.isAfter(apsideDate)) {
+            throw new IllegalArgumentException("La date initiale est posterieure à la date de l'apside.");
+        } else {
+            System.out.println("initialDate is equal to apsideDate.");
         }
 
-
-
+        double carburant_limite = Math.pow(10, -3);
+        if (masseFinale<DRYMASS || ERGOL<carburant_limite) {
+            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
+        }
+        if (ECC>0.05) {
+            throw new IllegalArgumentException("Eccentricity trop importante");
+        }
         // Calculate the time to apogee (or perigee) after the first maneuver
         double deltaT = calculateTimeToApogee(SMA, SMA_2);
         System.out.println("Time to Apogee/Perigee (Delta T): " + deltaT + " s");
@@ -237,9 +265,9 @@ public class HohmannTransfert {
         propagator.addEventDetector(firstManeuver);
         double finalMassAfterFirstManeuver =  calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
         System.out.println("Final mass after first maneuver: " + finalMassAfterFirstManeuver + " kg");
-        if ((finalMassAfterFirstManeuver - DRYMASS) < 0) {
-            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
-        }
+//        if ((finalMassAfterFirstManeuver - DRYMASS) < 0) {
+//            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
+//        }
 
         SpacecraftState finalState = propagator.propagate(initialDate.shiftedBy(0.001));
 
@@ -261,6 +289,7 @@ public class HohmannTransfert {
         long timestampMillis = Math.round(durationInSeconds * 1000);  // Convert seconds to milliseconds
         System.out.println("Time Stamp post-maneuvre :" + manoeuverEndDate);
         System.out.println("Manoeuver end date as timestamp in milliseconds: " + timestampMillis);
+
         FileWriter writer = new FileWriter("PostManeuverDate.txt", true);
         BufferedWriter bufferedWriter = new BufferedWriter(writer);
         bufferedWriter.newLine();
@@ -269,6 +298,7 @@ public class HohmannTransfert {
         bufferedWriter.write(String.valueOf(timestampMillis));
         bufferedWriter.newLine();
         bufferedWriter.close();
+
         sendFileViaMQTT("Result.txt");
 
         // Now calculate the second maneuver
@@ -283,9 +313,7 @@ public class HohmannTransfert {
         propagator = new KeplerianPropagator(finalState.getOrbit());
         propagator.addEventDetector(secondManeuver);
         double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver ,DV2 ,ISP ,g0);
-        if ((finalMassAfterSecondManeuver - DRYMASS) < 0) {
-            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
-        }
+
         System.out.println("Final mass after second maneuver: " + finalMassAfterSecondManeuver + " kg");
         finalState = propagator.propagate(secondManeuverTrigger.getDate());
         finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterSecondManeuver);
@@ -303,6 +331,14 @@ public class HohmannTransfert {
         bufferedWriter.write("Date post - maneuvre");
         bufferedWriter.newLine();
         bufferedWriter.write(String.valueOf(timestampMillis));
+        bufferedWriter.newLine();
+        bufferedWriter.close();
+        writer = new FileWriter("LastManeuverDate.txt", true);
+        bufferedWriter = new BufferedWriter(writer);
+        bufferedWriter.newLine();
+        bufferedWriter.write("Date post - maneuvre");
+        bufferedWriter.newLine();
+        bufferedWriter.write(String.valueOf(manoeuverEndDate));
         bufferedWriter.newLine();
         bufferedWriter.close();
         // Log final maneuver results to Result.txt

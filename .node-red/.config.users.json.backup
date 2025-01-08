@@ -27,10 +27,10 @@
             }
         },
         "debug": {
-            "filter": "filterSelected",
+            "filter": "filterCurrent",
             "clearType": "all"
         },
         "menu-menu-item-sidebar": true,
-        "menu-menu-item-palette": true
+        "menu-menu-item-palette": false
     }
 }

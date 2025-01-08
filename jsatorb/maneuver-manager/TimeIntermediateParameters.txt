@@ -1,4 +1,4 @@
 ManeuverType, SMA_2
 Hohmann
-14231
+12000
 
