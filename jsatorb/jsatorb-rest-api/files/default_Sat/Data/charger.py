@@ -102,6 +102,13 @@ if os.path.exists(result_file):
     shutil.copy2(result_file, backup_result_path)
     print("Copied 'Result.txt' from {} to {}".format(result_file, backup_result_path))
     
+    # Copie du fichier Result.txt a partir de son emplacement specifique
+result_file = os.path.join(backup_manoeuver_dir, "LastManeuverDate.txt")
+if os.path.exists(result_file):
+    backup_result_path = os.path.join(result_file_dir, "LastManeuverDate.txt")
+    shutil.copy2(result_file, backup_result_path)
+    print("Copied 'LastManeuverDate.txt' from {} to {}".format(result_file, backup_result_path))
+    
 # Copie du fichier Result.txt a partir de son emplacement specifique
 result_file = os.path.join(backup_manoeuver_dir, "blue1-tle-mongo.json")
 if os.path.exists(result_file):

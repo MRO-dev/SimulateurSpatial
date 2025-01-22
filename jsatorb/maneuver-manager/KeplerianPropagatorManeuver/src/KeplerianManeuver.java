@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
+import java.util.List;
 import java.util.Locale;
 import org.hipparchus.util.FastMath;
 import org.hipparchus.geometry.euclidean.threed.Vector3D;
@@ -35,11 +36,36 @@ import org.orekit.utils.Constants;
 import org.orekit.utils.PVCoordinates;
 
 public class KeplerianManeuver {
+    private static final double TIME_TOLERANCE_SECONDS = 1e-3;
+    static String APSIDE_DATE;
+    // 1 millisecond tolerance
     public KeplerianManeuver() {
     }
 
     public static void main(String[] args) throws NullPointerException, ClassCastException, IOException, ParseException {
         double start = (double)System.currentTimeMillis();
+        List<String> allLines = Files.readAllLines(Paths.get("LastManeuverDate.txt"));
+
+        // Initialize APSIDE_DATE to null or empty
+        String extractedApsideDate = null;
+
+        // Iterate over the lines in reverse order
+        for (int i = allLines.size() - 1; i >= 0; i--) {
+            String line = allLines.get(i).trim();
+            // Skip empty lines and lines starting with the prefix
+            if (!line.isEmpty() && !line.startsWith("Apside reached at:")) {
+                extractedApsideDate = line;
+                break;
+            }
+        }
+
+        // Validate that a date was found
+        if (extractedApsideDate == null) {
+            throw new IOException("No valid apside date found in file.");
+        }
+
+        // Assign the extracted date to APSIDE_DATE
+        APSIDE_DATE = extractedApsideDate;
 
         try {
             int num = 1;
@@ -117,7 +143,15 @@ public class KeplerianManeuver {
                     SpacecraftState initialState = new SpacecraftState(iniOrbit, initMass);
                     System.out.println("iniOrbit:" + iniOrbit);
                     System.out.println("initMass :" + initMass);
+                    AbsoluteDate apsideDateObj = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
                     AbsoluteDate manoeuverStartDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+                    System.out.println("manoeuverStartDate :" + manoeuverStartDate);
+                    System.out.println("apsideDateObj :" + apsideDateObj);
+                    if (!isEqualOrAfterWithTolerance(manoeuverStartDate, apsideDateObj, TIME_TOLERANCE_SECONDS)) {
+                        throw new IllegalArgumentException("Initial date must be equal to or later than the apside date within the allowed tolerance.");
+                    } else {
+                        System.out.println("Initial date is equal to or after the apside date within tolerance.");
+                    }
                     AbsoluteDate manoeuverEndDate = manoeuverStartDate.shiftedBy(durationOfManoeuver);
                     OrbitType orbitType = OrbitType.CIRCULAR;
                     if (ecc > 0.01) {
@@ -131,6 +165,10 @@ public class KeplerianManeuver {
                     System.out.println("Date:" + ((Orbit)iniOrbit).getDate());
                     System.out.println("SMA:" + ((Orbit)iniOrbit).getA() / 1000.0 + " km");
                     System.out.println("MASS:" + initialState.getMass() + " kg");
+                    double mass_limite = Math.pow(10, -3);
+                    if (initialState.getMass()<mass_limite) {
+                        throw new IllegalArgumentException("La masse initiale ne peut pas être négligeable.");
+                    }
                     System.out.println("Mean:" + FastMath.toDegrees((new KeplerianOrbit(iniOrbit)).getMeanAnomaly()) + " °");
                     System.out.println("RAAN:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)iniOrbit).getRightAscensionOfAscendingNode(), Math.PI)));
                     System.out.println("ECC:" + ((Orbit)iniOrbit).getE());
@@ -391,9 +429,11 @@ finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
                         System.out.println("PV:" + finalState.getOrbit().getPVCoordinates());
                         System.out.println("Kep:" + finalState.getOrbit());
                         System.out.println("Quaternion: at" + finalState.getDate() + " " + finalState.getAttitude().getOrientation().getRotation().getQ0() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ1() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ2() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ3());
-                        if ((finalState.getMass() - dryMass) < 0) {
+                        double carburant_limite = Math.pow(10, -3);
+                        if ((finalState.getMass() - dryMass) < carburant_limite || ERGOL<carburant_limite) {
                             throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
                        }
+
                         FileWriter writer = new FileWriter("Result.txt", true);
                         BufferedWriter bufferedWriter = new BufferedWriter(writer);
                         bufferedWriter.newLine();
@@ -426,6 +466,14 @@ finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
                         bufferedWriter.write(String.format("%.6f", finalState.getKeplerianPeriod()));
                         bufferedWriter.newLine();
                         bufferedWriter.close();
+                    writer = new FileWriter("LastManeuverDate.txt", true);
+                    bufferedWriter = new BufferedWriter(writer);
+                    bufferedWriter.newLine();
+                    bufferedWriter.write("Date post - maneuvre");
+                    bufferedWriter.newLine();
+                    bufferedWriter.write(String.valueOf(manoeuverEndDate));
+                    bufferedWriter.newLine();
+                    bufferedWriter.close();
                         double end = (double)System.currentTimeMillis();
                         double duration = (end - start) / 1000.0;
                         System.out.println("Execution time:" + duration);
@@ -444,5 +492,12 @@ finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
             IOException e = var94;
             e.printStackTrace();
         }
+    }
+    private static boolean isEqualOrAfterWithTolerance(AbsoluteDate dateToCheck, AbsoluteDate referenceDate, double toleranceSeconds) {
+        // Calculate the difference: positive if dateToCheck is after referenceDate
+        double difference = dateToCheck.durationFrom(referenceDate);
+
+        // If difference is greater than or within the negative tolerance, consider it as valid
+        return difference >= -toleranceSeconds;
     }
 }

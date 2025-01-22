@@ -1,7 +1,7 @@
 import os
 
 # Define the list of prefixes and suffixes
-PREFIXES = ['BLUE1', 'BLUE2', 'RED1', 'RED2', 'Sat']
+PREFIXES = ['Sat']
 SUFFIXES = [
     'AEM_ATTITUDE.TXT',
     'COLOR.TXT',

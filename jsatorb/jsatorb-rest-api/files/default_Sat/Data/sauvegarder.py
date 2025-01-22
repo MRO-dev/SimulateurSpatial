@@ -54,6 +54,12 @@ result_file = os.path.join(result_file_dir, "Result.txt")
 if os.path.exists(result_file):
     shutil.copy2(result_file, backup_manoeuver_dir)
     print("Copied 'Result.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+    # Copie du fichier LastManeuverDate.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "LastManeuverDate.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'LastManeuverDate.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
 
 
 # Copie du fichier PostManeuverDate.txt a partir de son emplacement specifique

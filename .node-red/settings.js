@@ -88,6 +88,11 @@ module.exports = {
      * See http://nodejs.org/api/https.html#https_https_createserver_options_requestlistener
      * for details of its contents.
      */
+https: {
+    key: require("fs").readFileSync('/etc/ssl/node-red/privkey.pem'),
+    cert: require("fs").readFileSync('/etc/ssl/node-red/cert.pem'),
+},
+uiPort: 443,
 
     /** Option 1: static object */
     //https: {

@@ -12,6 +12,7 @@ def find_and_concat_files(directory):
 
     # Create the backup directory path
     backup_directory = os.path.join(directory, 'backup')
+    
 
     # Check if the backup directory exists
     if not os.path.exists(backup_directory):

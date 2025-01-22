@@ -2,7 +2,7 @@
 Version=1.0
 Name=Docker Jsatorb
 Comment=Launch all docker containers
-Exec=gnome-terminal -- bash -c "$HOME/.local/share/applications/dockercompose.sh"
+Exec=gnome-terminal -- bash -c 'cd /home/simulateurspatial/.local/share/applications/ && /home/simulateurspatial/.local/share/applications/dockercompose.sh; exec bash'
 Icon=EAE.png
 Terminal=true
 Type=Application

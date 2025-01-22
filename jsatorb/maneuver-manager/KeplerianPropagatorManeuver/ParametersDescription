@@ -1,0 +1,66 @@
+Examinons ces paramètres un par un, afin de comprendre à quoi ils correspondent physiquement et quelles devraient être leurs valeurs dans le cadre d'une simulation d'une manœuvre orbitale.
+1. finalState.getMass() - dryMass :
+
+    Description : Cela calcule la masse de carburant consommée par le satellite après la manœuvre. La masse initiale du satellite (finalState.getMass()) diminuée de la masse à vide (dryMass).
+    Valeur attendue : Si la manœuvre consomme une certaine quantité de carburant, cette valeur sera positive, reflétant la masse de carburant consommée. Le résultat dépend du Delta-V appliqué et des caractéristiques du moteur (ISP, poussée, etc.).
+    Exemple : Si 2 kg de carburant sont utilisés, la valeur serait 2 kg.
+
+2. ((Orbit)finalOrbit).getDate().toString() :
+
+    Description : La date finale après la simulation ou la manœuvre, exprimée sous forme de chaîne de caractères.
+    Valeur attendue : Cela correspond à la date à laquelle le satellite atteint son nouvel état orbital après la manœuvre. Ce sera la date initiale plus la durée de la simulation (Simu duration stop).
+    Exemple : Si la manœuvre commence le 2024-09-12 à 18:42:41.999Z et la durée de simulation est de 1 jour, la date finale pourrait être 2024-09-13 18:42:41.999Z.
+
+3. (finalState.getPVCoordinates().getPosition().getNorm() - 6378137.0) / 1000.0 :
+
+    Description : Cela représente l'altitude finale du satellite au-dessus du rayon terrestre (rayon moyen = 6378.137 km). Le calcul soustrait le rayon terrestre à la norme (magnitude) du vecteur position du satellite, puis convertit en kilomètres.
+    Valeur attendue : L'altitude dépendra de la nouvelle orbite après la manœuvre. Pour une orbite basse (LEO), l'altitude est généralement comprise entre 200 et 1000 km.
+    Exemple : Si l'altitude finale est de 600 km, la valeur serait proche de 600 km.
+
+4. finalState.getA() / 1000.0 :
+
+    Description : C'est le demi-grand axe de l'orbite finale, divisé par 1000 pour l'exprimer en kilomètres.
+    Valeur attendue : Cette valeur représente la taille de l'orbite. Pour une orbite basse, typiquement autour de 7000 km (rayon terrestre + altitude).
+    Exemple : Si l'orbite finale a un demi-grand axe de 7000.4 km, la valeur serait proche de 7000.4 km.
+
+5. finalState.getE() :
+
+    Description : C'est l'excentricité de l'orbite finale, qui mesure la forme de l'orbite (circulaire, elliptique, etc.).
+    Valeur attendue : Pour une orbite quasi circulaire, l'excentricité serait proche de 0. Si une légère excentricité est présente (comme dans tes paramètres initiaux, ECC = 0.001), l'excentricité finale sera proche de cette valeur, sauf si la manœuvre la modifie.
+    Exemple : Si l'orbite finale reste quasi circulaire, la valeur serait autour de 0.001.
+
+6. FastMath.toDegrees(finalState.getI()) :
+
+    Description : Cela représente l'inclinaison orbitale finale, convertie en degrés.
+    Valeur attendue : L'inclinaison initiale est de 98°, donc à moins d'une manœuvre spécifique pour la modifier, l'inclinaison finale devrait être proche de cette valeur.
+    Exemple : Si l'inclinaison est inchangée, elle serait de 98°.
+
+7. FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getRightAscensionOfAscendingNode(), Math.PI)) :
+
+    Description : C'est la droite ascensionnelle du nœud ascendant (RAAN) finale, normalisée et convertie en degrés.
+    Valeur attendue : La RAAN est l'angle entre le méridien de référence et le nœud ascendant de l'orbite. Elle change lentement à cause de la précession orbitale. La valeur finale dépend de la durée de la simulation.
+    Exemple : Si la RAAN initiale était de 250°, elle pourrait légèrement changer en fonction de la précession.
+
+8. FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getPerigeeArgument(), Math.PI)) :
+
+    Description : L'argument du périgée final, exprimé en degrés.
+    Valeur attendue : L'argument du périgée est l'angle entre le nœud ascendant et le point le plus proche de la Terre (périapside). Cette valeur dépendra de la manœuvre, mais si tu as une orbite quasi circulaire, elle ne change généralement pas beaucoup.
+    Exemple : Si initialement à 90°, elle pourrait rester autour de 90°.
+
+9. FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getMeanAnomaly(), Math.PI)) :
+
+    Description : C'est l'anomalie moyenne finale, en degrés.
+    Valeur attendue : L'anomalie moyenne indique la position du satellite sur son orbite à un instant donné. Elle varie avec le temps, donc sa valeur finale sera différente de la valeur initiale (0°), en fonction de la durée de la simulation.
+    Exemple : Une valeur réaliste pourrait être entre 0° et 360°, en fonction de la position du satellite.
+
+10. 86400.0 * finalState.getOrbit().getKeplerianMeanMotion() / 6.283185307179586 :
+
+    Description : C'est la période orbitale en secondes, calculée à partir du mouvement moyen képlérien (la vitesse angulaire moyenne de l'orbite).
+    Valeur attendue : Pour une orbite basse, la période est généralement d'environ 90 minutes (5400 s).
+    Exemple : Une période de ~5400 s (90 minutes) serait réaliste pour une orbite basse.
+
+11. finalState.getKeplerianPeriod() :
+
+    Description : Cette méthode donne directement la période orbitale du satellite en secondes, calculée à partir du demi-grand axe et de la gravité terrestre.
+    Valeur attendue : La période orbitale devrait être très proche de celle calculée dans le point précédent. Pour une orbite basse, autour de 5400 s.
+    Exemple : Valeur attendue autour de ~5400 s.

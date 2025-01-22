@@ -304,7 +304,7 @@ public class TempsIntermediairePredefini {
             );
 
             // Log results with the date of the second maneuver
-            logResults("Result.txt", finalState, finalState.getOrbit(), initialMass, DRYMASS);
+            //logResults("Result.txt", finalState, finalState.getOrbit(), initialMass, DRYMASS);
             logApsideDate("ApsideDates.txt", secondManeuverDate); // Log the exact maneuver date as final orbit apogee/perigee
 
         } catch (Exception e) {
@@ -455,7 +455,7 @@ public class TempsIntermediairePredefini {
         finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterThirdManeuver);
 
         // Enregistrement des résultats finaux
-        logResults("Result.txt", finalState, finalState.getOrbit(), m0, DRYMASS);
+        //logResults("Result.txt", finalState, finalState.getOrbit(), m0, DRYMASS);
 
     }
 

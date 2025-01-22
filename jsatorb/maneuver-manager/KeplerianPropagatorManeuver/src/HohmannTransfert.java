@@ -32,7 +32,8 @@ import java.util.List;
 
 public class HohmannTransfert {
 
-    private static final double MU = 3.986004418E14;  // Earth's gravitational parameter (m^3/s^2)
+    private static final double MU = 3.986004418E14;
+    private static final double TIME_TOLERANCE_SECONDS = 1e-3; // 1 millisecond tolerance// Earth's gravitational parameter (m^3/s^2)
     // Load Orekit data
     static File orekitData = new File("orekit-data");
     static DataProvidersManager manager = DataContext.getDefault().getDataProvidersManager();
@@ -54,17 +55,29 @@ public class HohmannTransfert {
     static {
         try {
             DATE = Files.readAllLines(Paths.get("Data.txt")).get(1);
-            try {
-                List<String> lines = Files.readAllLines(Paths.get("LastManeuverDate.txt"));
-                if (!lines.isEmpty()) {
-                    APSIDE_DATE= lines.get(lines.size() - 1);
-                    System.out.println("Last line: " + APSIDE_DATE);
-                } else {
-                    System.out.println("File is empty.");
+            // Read all lines from ApsideDates.txt
+            List<String> allLines = Files.readAllLines(Paths.get("LastManeuverDate.txt"));
+
+            // Initialize APSIDE_DATE to null or empty
+            String extractedApsideDate = null;
+
+            // Iterate over the lines in reverse order
+            for (int i = allLines.size() - 1; i >= 0; i--) {
+                String line = allLines.get(i).trim();
+                // Skip empty lines and lines starting with the prefix
+                if (!line.isEmpty() && !line.startsWith("Apside reached at:")) {
+                    extractedApsideDate = line;
+                    break;
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+
+            // Validate that a date was found
+            if (extractedApsideDate == null) {
+                throw new IOException("No valid apside date found in file.");
+            }
+
+            // Assign the extracted date to APSIDE_DATE
+            APSIDE_DATE = extractedApsideDate;
             SMA = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(2)) * 1000.0;
             ECC = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(3));
             INC = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(4)));
@@ -219,12 +232,14 @@ public class HohmannTransfert {
         System.out.println("Ergols " + ERGOL);
         System.out.println("ISP" + ISP);
         System.out.println("Masse finale" + masseFinale);
-        if (initialDate.isBefore(apsideDate)) {
-            System.out.println("initialDate is before apsideDate.");
-        } else if (initialDate.isAfter(apsideDate)) {
-            throw new IllegalArgumentException("La date initiale est posterieure à la date de l'apside.");
+        // Example integration in computeHohmann method:
+        AbsoluteDate apsideDateObj = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+
+// Check if initialDate is equal or after apsideDate considering tolerance
+        if (!isEqualOrAfterWithTolerance(initialDate, apsideDateObj, TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException("Initial date must be equal to or later than the apside date within the allowed tolerance.");
         } else {
-            System.out.println("initialDate is equal to apsideDate.");
+            System.out.println("Initial date is equal to or after the apside date within tolerance.");
         }
 
         double carburant_limite = Math.pow(10, -3);
@@ -520,5 +535,16 @@ public class HohmannTransfert {
     public static double calculateFinalMass(double initialMass, double deltaV, double ISP, double g0) {
         return initialMass * FastMath.exp(-Math.abs(deltaV)/ (ISP * g0));
     }
+
+    // Example method to compare two AbsoluteDate objects within a tolerance
+    private static boolean isEqualOrAfterWithTolerance(AbsoluteDate dateToCheck, AbsoluteDate referenceDate, double toleranceSeconds) {
+        // Calculate the difference: positive if dateToCheck is after referenceDate
+        double difference = dateToCheck.durationFrom(referenceDate);
+
+        // If difference is greater than or within the negative tolerance, consider it as valid
+        return difference >= -toleranceSeconds;
+    }
+
+
 
 }
