@@ -1,9 +1,11 @@
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.hipparchus.geometry.euclidean.threed.Vector3D;
 import org.hipparchus.util.FastMath;
 import org.hipparchus.util.MathUtils;
+import org.json.JSONObject;
 import org.orekit.data.DataContext;
 import org.orekit.data.DataProvidersManager;
 import org.orekit.data.DirectoryCrawler;
@@ -27,8 +29,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.text.ParseException;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 public class HohmannTransfert {
 
@@ -52,6 +59,7 @@ public class HohmannTransfert {
     static String MANEUV_TYPE;
     static double SMA_int = 15000;
     static double SMA_2; // Final semi-major axis (in meters)
+    static String endDateString;
     static {
         try {
             DATE = Files.readAllLines(Paths.get("Data.txt")).get(1);
@@ -65,7 +73,7 @@ public class HohmannTransfert {
             for (int i = allLines.size() - 1; i >= 0; i--) {
                 String line = allLines.get(i).trim();
                 // Skip empty lines and lines starting with the prefix
-                if (!line.isEmpty() && !line.startsWith("Apside reached at:")) {
+                if (!line.isEmpty() && !line.startsWith("Date post - maneuvre")) {
                     extractedApsideDate = line;
                     break;
                 }
@@ -78,15 +86,28 @@ public class HohmannTransfert {
 
             // Assign the extracted date to APSIDE_DATE
             APSIDE_DATE = extractedApsideDate;
+            String fileContent = new String(Files.readAllBytes(Paths.get("time-persistence.json")));
+
+            // Step 2: Parse it using org.json
+            JSONObject jsonObject = new JSONObject(fileContent);
+
+            // Step 3: Retrieve the "enddate" field as a string
+            endDateString = jsonObject.optString("enddate");
+            if (endDateString == null || endDateString.isEmpty()) {
+                throw new IllegalArgumentException("No valid 'enddate' found in time-persistence.json");
+            }
+            System.out.println("End date string: " + endDateString);
+            // Step 4: Convert the endDateString to an AbsoluteDate
+            // (Assuming the date is in a standard ISO-8601 format recognized by Orekit)
             SMA = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(2)) * 1000.0;
             ECC = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(3));
             INC = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(4)));
             RAAN = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(5)));
             PA = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(6)));
             ANO = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(7)));
-            DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(8));
-            ISP = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(11));
-            ERGOL = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(12));
+            DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(1));
+            ISP = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(3));
+            ERGOL = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(2));
             MANEUV_TYPE = Files.readAllLines(Paths.get("Data.txt")).get(13);
             SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get("Data.txt")).get(14)) * 1000.0;
         } catch (IOException e) {
@@ -169,6 +190,75 @@ public class HohmannTransfert {
 
     }
 
+    // ==========================================================
+    // ==========   MQTT SEND + WAIT-FOR-TRIGGER   =============
+    // ==========================================================
+    /**
+     * Publishes the file path (or its content) and then waits for a trigger message
+     * from another MQTT publisher (e.g. Node-RED) on topic "trigger/continuation".
+     */
+    private static void sendFileAndWaitForTrigger(String filePath) {
+        String broker = "tcp://mosquitto:1883";    // The MQTT broker URL
+        String publishTopic = "resultat/fichier";  // Topic for sending results
+        String triggerTopic = "trigger/continuation"; // Topic to receive the "continue" signal
+        String clientId = "JavaMQTTSender_" + System.currentTimeMillis();
+
+        // Latch to block until we receive the "continue" message
+        CountDownLatch latch = new CountDownLatch(1);
+
+        try {
+            System.out.println("Preparing to send file '" + filePath + "' via MQTT...");
+            MqttClient client = new MqttClient(broker, clientId, new MemoryPersistence());
+
+
+            // Set callback to handle incoming messages
+            client.setCallback(new org.eclipse.paho.client.mqttv3.MqttCallback() {
+                @Override
+                public void connectionLost(Throwable cause) {
+                    System.err.println("Connection lost!");
+                }
+
+                @Override
+                public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    System.out.println("Message arrived on topic: " + topic);
+                    System.out.println("Payload: " + new String(message.getPayload()));
+                    // If this is the trigger message, let's unblock
+                    if (topic.equals(triggerTopic)) {
+                        latch.countDown();
+                    }
+                }
+
+                @Override
+                public void deliveryComplete(org.eclipse.paho.client.mqttv3.IMqttDeliveryToken token) {
+                    // Acknowledgement that the message was delivered
+                }
+            });
+
+            // Connect and subscribe to the trigger topic before publishing
+            client.connect();
+            client.subscribe(triggerTopic);
+
+            // Publish the file name or content
+            // (You can read the actual file content if you want)
+            MqttMessage message = new MqttMessage(("Sending info about file: " + filePath).getBytes());
+            message.setQos(2);  // "Exactly once" QoS
+            client.publish(publishTopic, message);
+            System.out.println("File info published. Now waiting for the trigger message on '" + triggerTopic + "'...");
+
+            // Block until we receive the trigger
+            latch.await();
+
+            System.out.println("Trigger message received! Resuming execution...");
+
+            // Disconnect if you want to stop using the client
+            client.disconnect();
+            client.close();
+
+        } catch (MqttException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     // Method to send a file via MQTT
     private static void sendFileViaMQTT(String filePath) {
         String broker = "tcp://mosquitto:1883";  // Adresse du broker MQTT
@@ -177,7 +267,8 @@ public class HohmannTransfert {
 
         try {
             // Connexion au broker MQTT
-            MqttClient client = new MqttClient(broker, clientId);
+            MqttClient client = new MqttClient(broker, clientId, new MemoryPersistence());
+
 
             client.connect();
 
@@ -197,16 +288,21 @@ public class HohmannTransfert {
     }
 
     public static void computeHohmann() throws IOException {
-        // if eccentriciy > 5E-3 :
-        //Hohmann --> Bielliptic
+        // if eccentricity > 5E-3 :
+        // Hohmann --> Bielliptic
         // Define frame and initial orbit
         Frame eme2000 = FramesFactory.getEME2000();
         AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
         AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+        System.out.println("Aosude Date: " + APSIDE_DATE);
         AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+        // Print it out for demonstration
+        System.out.println("Parsed endDate: " + endHorizonDate);
 
         // Define the initial Keplerian orbit
-        KeplerianOrbit initialOrbit = new KeplerianOrbit(SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN, eme2000, initialDate, MU);
+        KeplerianOrbit initialOrbit = new KeplerianOrbit(SMA, ECC, INC, PA, RAAN, ANO,
+                PositionAngle.MEAN, eme2000, initialDate, MU);
         double initialMass = DRYMASS + ERGOL;
         SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
 
@@ -218,59 +314,45 @@ public class HohmannTransfert {
         System.out.println("Initial Date: " + initialDate);
         System.out.println("Apside Date: " + apsideDate);
 
-        // Calculate the Delta-Vs for the Hohmann transfer and log them
+        // Calculate the Delta-Vs for the Hohmann transfer
         double[] deltaVs = calculateDeltaVs(SMA, SMA_2);
         double DV1 = deltaVs[0];
         double DV2 = deltaVs[1];
 
         System.out.println("Delta-V1 (First maneuver): " + DV1 + " m/s");
         System.out.println("Delta-V2 (Second maneuver): " + DV2 + " m/s");
-        double massIntermediaire =  calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
-        double masseFinale = calculateFinalMass(massIntermediaire ,DV2 ,ISP ,g0);
-        //Veerifier si masseFinale >= DRYMASS sinon erreur !
-        System.out.println("Initial masse" + initialMass);
-        System.out.println("Ergols " + ERGOL);
-        System.out.println("ISP" + ISP);
-        System.out.println("Masse finale" + masseFinale);
-        // Example integration in computeHohmann method:
-        AbsoluteDate apsideDateObj = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        double massIntermediaire = calculateFinalMass(initialState.getMass(), DV1, ISP, g0);
+        double masseFinale = calculateFinalMass(massIntermediaire, DV2, ISP, g0);
+        // Check final mass > DRYMASS
+        System.out.println("Initial mass: " + initialMass);
+        System.out.println("Ergols: " + ERGOL);
+        System.out.println("ISP: " + ISP);
+        System.out.println("Final mass: " + masseFinale);
 
-// Check if initialDate is equal or after apsideDate considering tolerance
-        if (!isEqualOrAfterWithTolerance(initialDate, apsideDateObj, TIME_TOLERANCE_SECONDS)) {
-            throw new IllegalArgumentException("Initial date must be equal to or later than the apside date within the allowed tolerance.");
+        // Check date tolerance
+        if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException(
+                    "Initial date must be equal to or later than the apside date within the allowed tolerance.");
         } else {
             System.out.println("Initial date is equal to or after the apside date within tolerance.");
         }
 
+        // Check propellant and mass constraints
         double carburant_limite = Math.pow(10, -3);
-        if (masseFinale<DRYMASS || ERGOL<carburant_limite) {
+        if (masseFinale < DRYMASS || ERGOL < carburant_limite) {
             throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
         }
-        if (ECC>0.05) {
-            throw new IllegalArgumentException("Eccentricity trop importante");
+        if (ECC > 0.05) {
+            throw new IllegalArgumentException("Eccentricité trop importante.");
         }
-        // Calculate the time to apogee (or perigee) after the first maneuver
+
+        // Calculate the time to apogee (or perigee) for the Hohmann transfer
         double deltaT = calculateTimeToApogee(SMA, SMA_2);
         System.out.println("Time to Apogee/Perigee (Delta T): " + deltaT + " s");
 
-        // First maneuver (DV1)
-        // Appliquer le premier manoeuvre (DV1)
+        // --------------------------- First Maneuver (DV1) -------------------------
         Vector3D velocityBeforeManeuver = initialState.getPVCoordinates().getVelocity();
         Vector3D directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-        Vector3D positionBeforeManeuver = initialState.getPVCoordinates().getPosition();
-
-
-//        // Use new method to check if we are near apogee or perigee and decide the impulse direction
-//        if (isNearApogeeOrPerigee(positionBeforeManeuver, initialOrbit)) {
-//            System.out.println("Applying impulse without reversing direction.");
-//            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-//        } else {
-//            System.out.println("Reversing impulse direction.");
-//            directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1).negate();
-//        }
-
-        directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-
 
         DateDetector maneuverTrigger = new DateDetector(initialDate.shiftedBy(0.001));
         ImpulseManeuver firstManeuver = new ImpulseManeuver(maneuverTrigger, directionImpulse1, ISP);
@@ -278,91 +360,113 @@ public class HohmannTransfert {
         // Propagate the orbit with first maneuver
         KeplerianPropagator propagator = new KeplerianPropagator(initialOrbit);
         propagator.addEventDetector(firstManeuver);
-        double finalMassAfterFirstManeuver =  calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
+        double finalMassAfterFirstManeuver = calculateFinalMass(initialState.getMass(), DV1, ISP, g0);
         System.out.println("Final mass after first maneuver: " + finalMassAfterFirstManeuver + " kg");
-//        if ((finalMassAfterFirstManeuver - DRYMASS) < 0) {
-//            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
-//        }
 
         SpacecraftState finalState = propagator.propagate(initialDate.shiftedBy(0.001));
-
-        // Second maneuver (DV2) at the correct moment (apogee)
-        finalState = propagator.propagate(finalState.getDate().shiftedBy(deltaT));
-        //Mettre Apside Detector et update la masse
-        //finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterFirstManeuver);
-        AbsoluteDate manoeuverEndDate = finalState.getDate();
+        // Date when the first maneuver finishes + half orbit to next apsis
+        AbsoluteDate manoeuverEndDate = finalState.getDate().shiftedBy(deltaT);
+        AbsoluteDate firstManeuverEndDate = manoeuverEndDate;
+        if (!isEqualOrAfterWithTolerance(endHorizonDate, firstManeuverEndDate, TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException(
+                    "Initial date must be before than the end of horizon end time !");
+        } else {
+            System.out.println("Initial date is equal to or after the apside date within tolerance.");
+        }
+        Map<String, String> firstPayload = createDatePayload(initialDate.shiftedBy(40), firstManeuverEndDate.shiftedBy(-90));
+        System.out.println("First Maneuver JSON Payload: " + firstPayload);
+        // Write to file
+        writeJsonPayload(firstPayload);
 
         Orbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+        finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterFirstManeuver);
 
-        // Log first maneuver results to Result.txt
         logResults("Result.txt", finalState, finalOrbit, m0, DRYMASS);
 
-        // Send file after first maneuver (intermédiaire)
-        AbsoluteDate epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC()); // Unix epoch in AbsoluteDate format
+        // Create a timestamp for the completed first maneuver
+        AbsoluteDate epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC());
+        double durationInSeconds = manoeuverEndDate.durationFrom(epoch);
+        long timestampMillis = Math.round(durationInSeconds * 1000);
+        System.out.println("Time Stamp post-maneuver (first): " + manoeuverEndDate);
+        System.out.println("Manoeuver end date as timestamp in milliseconds (first): " + timestampMillis);
 
-        double durationInSeconds = manoeuverEndDate.durationFrom(epoch);  // Duration from 1st Jan 1970
-        long timestampMillis = Math.round(durationInSeconds * 1000);  // Convert seconds to milliseconds
-        System.out.println("Time Stamp post-maneuvre :" + manoeuverEndDate);
-        System.out.println("Manoeuver end date as timestamp in milliseconds: " + timestampMillis);
+        // Write that date to a text file
+        try (FileWriter writer = new FileWriter("PostManeuverDate.txt", true);
+             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+            bufferedWriter.newLine();
+            bufferedWriter.write("Date post - maneuver");
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(timestampMillis));
+            bufferedWriter.newLine();
+        }
 
-        FileWriter writer = new FileWriter("PostManeuverDate.txt", true);
-        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-        bufferedWriter.newLine();
-        bufferedWriter.write("Date post - maneuvre");
-        bufferedWriter.newLine();
-        bufferedWriter.write(String.valueOf(timestampMillis));
-        bufferedWriter.newLine();
-        bufferedWriter.close();
+        // -------------------- WAIT HERE AFTER FIRST MANEUVER --------------------
+        // We wait for an MQTT trigger so the next step can start
+        sendFileAndWaitForTrigger("Result.txt");
 
-        sendFileViaMQTT("Result.txt");
+        // ----------------------- Propagate to the second maneuver ----------------
+        finalState = propagator.propagate(finalState.getDate().shiftedBy(deltaT));
+        manoeuverEndDate = finalState.getDate();
+        finalOrbit = new KeplerianOrbit(finalState.getOrbit());
 
-        // Now calculate the second maneuver
+        // --------------------------- Second Maneuver (DV2) ------------------------
         Vector3D velocityBeforeSecondManeuver = finalState.getPVCoordinates().getVelocity();
         Vector3D directionImpulse2 = velocityBeforeSecondManeuver.normalize().scalarMultiply(DV2);
-        manoeuverEndDate = finalState.getDate().shiftedBy(0.001);
 
         DateDetector secondManeuverTrigger = new DateDetector(finalState.getDate().shiftedBy(0.001));
         ImpulseManeuver secondManeuver = new ImpulseManeuver(secondManeuverTrigger, directionImpulse2, ISP);
 
-        // Propagate the orbit after the second maneuver
+        // Propagate the orbit with second maneuver
         propagator = new KeplerianPropagator(finalState.getOrbit());
         propagator.addEventDetector(secondManeuver);
-        double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver ,DV2 ,ISP ,g0);
+        double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver, DV2, ISP, g0);
 
         System.out.println("Final mass after second maneuver: " + finalMassAfterSecondManeuver + " kg");
         finalState = propagator.propagate(secondManeuverTrigger.getDate());
         finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterSecondManeuver);
         manoeuverEndDate = finalState.getDate();
         finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+        AbsoluteDate secondManeuverEndDate = manoeuverEndDate;
+
+        Map<String, String> secondPayload = createDatePayload(firstManeuverEndDate.shiftedBy(30), endHorizonDate.shiftedBy(30));
+        System.out.println("Second Maneuver JSON Payload: " + secondPayload);
+        writeJsonPayload(secondPayload);
+
+        // Log final orbit after second maneuver
         logResults("Result.txt", finalState, finalOrbit, m0, DRYMASS);
-        epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC()); // Unix epoch in AbsoluteDate format
-        durationInSeconds = manoeuverEndDate.durationFrom(epoch);  // Duration from 1st Jan 1970
-        timestampMillis = Math.round(durationInSeconds * 1000);  // Convert seconds to milliseconds
-        System.out.println("Time Stamp post-maneuvre :" + manoeuverEndDate);
-        System.out.println("Manoeuver end date as timestamp in milliseconds: " + timestampMillis);
-        writer = new FileWriter("PostManeuverDate.txt", true);
-        bufferedWriter = new BufferedWriter(writer);
-        bufferedWriter.newLine();
-        bufferedWriter.write("Date post - maneuvre");
-        bufferedWriter.newLine();
-        bufferedWriter.write(String.valueOf(timestampMillis));
-        bufferedWriter.newLine();
-        bufferedWriter.close();
-        writer = new FileWriter("LastManeuverDate.txt", true);
-        bufferedWriter = new BufferedWriter(writer);
-        bufferedWriter.newLine();
-        bufferedWriter.write("Date post - maneuvre");
-        bufferedWriter.newLine();
-        bufferedWriter.write(String.valueOf(manoeuverEndDate));
-        bufferedWriter.newLine();
-        bufferedWriter.close();
-        // Log final maneuver results to Result.txt
 
+        epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC());
+        durationInSeconds = manoeuverEndDate.durationFrom(epoch);
+        timestampMillis = Math.round(durationInSeconds * 1000);
+        System.out.println("Time Stamp post-maneuver (second): " + manoeuverEndDate);
+        System.out.println("Manoeuver end date as timestamp in milliseconds (second): " + timestampMillis);
 
-        // Send file after second maneuver (final)
+        try (FileWriter writer = new FileWriter("PostManeuverDate.txt", true);
+             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+            bufferedWriter.newLine();
+            bufferedWriter.write("Date post - maneuver");
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(timestampMillis));
+            bufferedWriter.newLine();
+        }
+
+        try (FileWriter writer = new FileWriter("LastManeuverDate.txt", true);
+             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+            bufferedWriter.newLine();
+            bufferedWriter.write("Date post - maneuver");
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(manoeuverEndDate));
+            bufferedWriter.newLine();
+        }
+
+        // -------------------- DO NOT WAIT HERE: simply send via MQTT -------------
+        // Instead of waiting for an MQTT trigger, we only publish the result and end
         sendFileViaMQTT("Result.txt");
 
+        System.out.println("Hohmann transfer complete.");
     }
+
+
 
     public static void computeBiElliptic() throws IOException {
         // Charger l'orbite initiale
@@ -543,6 +647,45 @@ public class HohmannTransfert {
 
         // If difference is greater than or within the negative tolerance, consider it as valid
         return difference >= -toleranceSeconds;
+    }
+
+    /**
+     * Create a JSON-like payload with start and end dates (ISO format).
+     */
+    private static Map<String, String> createDatePayload(AbsoluteDate startDate, AbsoluteDate endDate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_INSTANT;
+        String startIso = formatter.format(startDate.toDate(TimeScalesFactory.getUTC()).toInstant());
+        String endIso = formatter.format(endDate.toDate(TimeScalesFactory.getUTC()).toInstant());
+
+        Map<String, String> payload = new HashMap<>();
+        payload.put("startdate", startIso);
+        payload.put("enddate", endIso);
+        return payload;
+    }
+
+    private static void writeJsonPayload(Map<String, String> payload) throws IOException {
+        // Construct a JSON string from the payload map
+        StringBuilder jsonBuilder = new StringBuilder();
+        jsonBuilder.append("{\n");
+        for (Map.Entry<String, String> entry : payload.entrySet()) {
+            jsonBuilder.append("  \"")
+                    .append(entry.getKey())
+                    .append("\": \"")
+                    .append(entry.getValue())
+                    .append("\",\n");
+        }
+        // Remove the last comma and newline, then close the JSON object
+        if (!payload.isEmpty()) {
+            jsonBuilder.setLength(jsonBuilder.length() - 2);
+            jsonBuilder.append("\n");
+        }
+        jsonBuilder.append("}");
+
+        // Convert to bytes using UTF-8 encoding
+        byte[] jsonBytes = jsonBuilder.toString().getBytes(java.nio.charset.StandardCharsets.UTF_8);
+        // Write to file, overwriting existing content
+        Files.write(Paths.get("time-persistence-intermediate.json"), jsonBytes,
+                StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
 

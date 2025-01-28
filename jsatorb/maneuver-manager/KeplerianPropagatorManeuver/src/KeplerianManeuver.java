@@ -15,6 +15,7 @@ import java.util.Locale;
 import org.hipparchus.util.FastMath;
 import org.hipparchus.geometry.euclidean.threed.Vector3D;
 import org.hipparchus.util.MathUtils;
+import org.json.JSONObject;
 import org.orekit.data.DataContext;
 import org.orekit.data.DataProvidersManager;
 import org.orekit.data.DirectoryCrawler;
@@ -38,6 +39,7 @@ import org.orekit.utils.PVCoordinates;
 public class KeplerianManeuver {
     private static final double TIME_TOLERANCE_SECONDS = 1e-3;
     static String APSIDE_DATE;
+    static String endDateString;
     // 1 millisecond tolerance
     public KeplerianManeuver() {
     }
@@ -66,6 +68,17 @@ public class KeplerianManeuver {
 
         // Assign the extracted date to APSIDE_DATE
         APSIDE_DATE = extractedApsideDate;
+        String fileContent = new String(Files.readAllBytes(Paths.get("time-persistence.json")));
+
+        // Step 2: Parse it using org.json
+        JSONObject jsonObject = new JSONObject(fileContent);
+
+        // Step 3: Retrieve the "enddate" field as a string
+        endDateString = jsonObject.optString("enddate");
+        if (endDateString == null || endDateString.isEmpty()) {
+            throw new IllegalArgumentException("No valid 'enddate' found in time-persistence.json");
+        }
+        System.out.println("End date string: " + endDateString);
 
         try {
             int num = 1;
@@ -152,6 +165,7 @@ public class KeplerianManeuver {
                     } else {
                         System.out.println("Initial date is equal to or after the apside date within tolerance.");
                     }
+                    AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
                     AbsoluteDate manoeuverEndDate = manoeuverStartDate.shiftedBy(durationOfManoeuver);
                     OrbitType orbitType = OrbitType.CIRCULAR;
                     if (ecc > 0.01) {

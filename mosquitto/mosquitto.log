@@ -15181,3 +15181,2415 @@
 1737589491: Error: No such file or directory.
 1737589870: New connection from 172.17.0.5:38932 on port 1883.
 1737589870: New client connected from 172.17.0.5:38932 as nodered_06eb86205af73f19 (p2, c1, k60).
+1737590403: mosquitto version 2.0.20 terminating
+1737590403: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737590403: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737590403: Error: No such file or directory.
+1737623314: mosquitto version 2.0.20 starting
+1737623314: Config loaded from /mosquitto/config/mosquitto.conf.
+1737623314: Opening ipv4 listen socket on port 1883.
+1737623314: mosquitto version 2.0.20 running
+1737623333: New connection from 172.17.0.5:51186 on port 1883.
+1737623333: New client connected from 172.17.0.5:51186 as nodered_396d6b48e701d1c1 (p2, c1, k60).
+1737625115: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737625115: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737625115: Error: No such file or directory.
+1737625487: New connection from 172.17.0.5:52876 on port 1883.
+1737625487: New client connected from 172.17.0.5:52876 as JavaMQTTSender (p2, c1, k60).
+1737625487: Client JavaMQTTSender disconnected.
+1737625487: New connection from 172.17.0.5:52884 on port 1883.
+1737625487: New client connected from 172.17.0.5:52884 as JavaMQTTSender (p2, c1, k60).
+1737625487: Client JavaMQTTSender disconnected.
+1737625918: mosquitto version 2.0.20 terminating
+1737625918: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737625918: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737625918: Error: No such file or directory.
+1737628432: mosquitto version 2.0.20 starting
+1737628432: Config loaded from /mosquitto/config/mosquitto.conf.
+1737628432: Opening ipv4 listen socket on port 1883.
+1737628432: mosquitto version 2.0.20 running
+1737628438: New connection from 172.17.0.5:41458 on port 1883.
+1737628438: New client connected from 172.17.0.5:41458 as nodered_70d535b611da1aee (p2, c1, k60).
+1737630233: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737630233: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737630233: Error: No such file or directory.
+1737632034: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737632034: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737632034: Error: No such file or directory.
+1737633835: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737633835: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737633835: Error: No such file or directory.
+1737635636: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737635636: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737635636: Error: No such file or directory.
+1737637437: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737637437: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737637437: Error: No such file or directory.
+1737639238: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737639238: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737639238: Error: No such file or directory.
+1737641039: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737641039: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737641039: Error: No such file or directory.
+1737642840: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737642840: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737642840: Error: No such file or directory.
+1737643105: New connection from 172.17.0.5:39706 on port 1883.
+1737643105: New client connected from 172.17.0.5:39706 as nodered_b4ce3cdc6ba73643 (p2, c1, k60).
+1737643113: mosquitto version 2.0.20 terminating
+1737643113: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737643113: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737643113: Error: No such file or directory.
+1737643286: mosquitto version 2.0.20 starting
+1737643286: Config loaded from /mosquitto/config/mosquitto.conf.
+1737643286: Opening ipv4 listen socket on port 1883.
+1737643286: mosquitto version 2.0.20 running
+1737643305: New connection from 172.17.0.5:53834 on port 1883.
+1737643305: New client connected from 172.17.0.5:53834 as nodered_c59e4e52df05bf2b (p2, c1, k60).
+1737644849: New connection from 172.17.0.5:60410 on port 1883.
+1737644849: New client connected from 172.17.0.5:60410 as nodered_461beb78d34923b9 (p2, c1, k60).
+1737645054: New connection from 172.17.0.5:57110 on port 1883.
+1737645054: New client connected from 172.17.0.5:57110 as nodered_a472c2d346870ecf (p2, c1, k60).
+1737645087: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737645087: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737645087: Error: No such file or directory.
+1737645131: New connection from 172.17.0.5:54784 on port 1883.
+1737645131: New client connected from 172.17.0.5:54784 as nodered_7d4f481b87268abd (p2, c1, k60).
+1737645288: New connection from 172.17.0.5:49048 on port 1883.
+1737645288: New client connected from 172.17.0.5:49048 as nodered_5d7715aa8b2c7146 (p2, c1, k60).
+1737645407: New connection from 172.17.0.5:60076 on port 1883.
+1737645407: New client connected from 172.17.0.5:60076 as nodered_4d7be7e8e116f74f (p2, c1, k60).
+1737645459: New connection from 172.17.0.5:38618 on port 1883.
+1737645460: New client connected from 172.17.0.5:38618 as nodered_3b2f0d71441867e1 (p2, c1, k60).
+1737645495: New connection from 172.17.0.5:38728 on port 1883.
+1737645495: New client connected from 172.17.0.5:38728 as nodered_cdc6269bb7f7e07a (p2, c1, k60).
+1737645549: New connection from 172.17.0.5:44988 on port 1883.
+1737645549: New client connected from 172.17.0.5:44988 as nodered_8f0f1dcae93bbdae (p2, c1, k60).
+1737645593: New connection from 172.17.0.5:49794 on port 1883.
+1737645593: New client connected from 172.17.0.5:49794 as nodered_6950174720cc6c96 (p2, c1, k60).
+1737645750: New connection from 172.17.0.5:41590 on port 1883.
+1737645750: New client connected from 172.17.0.5:41590 as nodered_4b4971406b0f6ebf (p2, c1, k60).
+1737646482: New connection from 172.17.0.5:49422 on port 1883.
+1737646482: New client connected from 172.17.0.5:49422 as nodered_67d19e20a50d51d9 (p2, c1, k60).
+1737646657: New connection from 172.17.0.5:37660 on port 1883.
+1737646657: New client connected from 172.17.0.5:37660 as nodered_3935a2264ed7f920 (p2, c1, k60).
+1737646888: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737646888: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737646888: Error: No such file or directory.
+1737647181: New connection from 172.17.0.5:38514 on port 1883.
+1737647181: New client connected from 172.17.0.5:38514 as nodered_16a9fbca8bec9574 (p2, c1, k60).
+1737648689: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737648689: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737648689: Error: No such file or directory.
+1737650490: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737650490: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737650490: Error: No such file or directory.
+1737652291: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737652291: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737652291: Error: No such file or directory.
+1737654092: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737654092: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737654092: Error: No such file or directory.
+1737655893: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737655893: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737655893: Error: No such file or directory.
+1737657694: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737657694: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737657694: Error: No such file or directory.
+1737659495: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737659495: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737659495: Error: No such file or directory.
+1737661296: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737661296: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737661296: Error: No such file or directory.
+1737663097: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737663097: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737663097: Error: No such file or directory.
+1737664898: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737664898: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737664898: Error: No such file or directory.
+1737666699: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737666699: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737666699: Error: No such file or directory.
+1737667791: Client nodered_461beb78d34923b9 closed its connection.
+1737667791: Client nodered_3935a2264ed7f920 closed its connection.
+1737667791: Client nodered_4b4971406b0f6ebf closed its connection.
+1737667791: Client nodered_6950174720cc6c96 closed its connection.
+1737667791: Client nodered_8f0f1dcae93bbdae closed its connection.
+1737667791: Client nodered_cdc6269bb7f7e07a closed its connection.
+1737667791: Client nodered_3b2f0d71441867e1 closed its connection.
+1737667791: Client nodered_4d7be7e8e116f74f closed its connection.
+1737667791: Client nodered_5d7715aa8b2c7146 closed its connection.
+1737667791: Client nodered_7d4f481b87268abd closed its connection.
+1737667791: Client nodered_a472c2d346870ecf closed its connection.
+1737667791: Client nodered_67d19e20a50d51d9 closed its connection.
+1737667791: Client nodered_c59e4e52df05bf2b closed its connection.
+1737667791: Client nodered_16a9fbca8bec9574 closed its connection.
+1737667801: mosquitto version 2.0.20 starting
+1737667801: Config loaded from /mosquitto/config/mosquitto.conf.
+1737667801: Opening ipv4 listen socket on port 1883.
+1737667801: mosquitto version 2.0.20 running
+1737667805: New connection from 172.17.0.5:42042 on port 1883.
+1737667805: New client connected from 172.17.0.5:42042 as nodered_532d4353d8a7f6f1 (p2, c1, k60).
+1737668187: New connection from 172.17.0.5:43008 on port 1883.
+1737668187: New client connected from 172.17.0.5:43008 as nodered_76928649bafcb34a (p2, c1, k60).
+1737668620: New connection from 172.17.0.5:39364 on port 1883.
+1737668620: New client connected from 172.17.0.5:39364 as nodered_817718df816cbfdb (p2, c1, k60).
+1737669128: New connection from 172.17.0.5:39118 on port 1883.
+1737669128: New client connected from 172.17.0.5:39118 as nodered_01fd9f5392198691 (p2, c1, k60).
+1737669383: New connection from 172.17.0.5:57422 on port 1883.
+1737669383: New client connected from 172.17.0.5:57422 as nodered_70be348b49cc078a (p2, c1, k60).
+1737669602: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737669602: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737669602: Error: No such file or directory.
+1737669805: New connection from 172.17.0.5:45418 on port 1883.
+1737669805: New client connected from 172.17.0.5:45418 as nodered_414f73f57bfc09e3 (p2, c1, k60).
+1737669883: New connection from 172.17.0.5:39474 on port 1883.
+1737669883: New client connected from 172.17.0.5:39474 as nodered_3fb587e2084ff7ca (p2, c1, k60).
+1737670055: New connection from 172.17.0.5:48402 on port 1883.
+1737670056: New client connected from 172.17.0.5:48402 as nodered_5eabd3b22b24f3c1 (p2, c1, k60).
+1737670154: New connection from 172.17.0.5:36562 on port 1883.
+1737670154: New client connected from 172.17.0.5:36562 as nodered_d339258334676633 (p2, c1, k60).
+1737670506: New connection from 172.17.0.5:40016 on port 1883.
+1737670506: New client connected from 172.17.0.5:40016 as nodered_785b4b207411b8e5 (p2, c1, k60).
+1737670851: New connection from 172.17.0.5:46518 on port 1883.
+1737670851: New client connected from 172.17.0.5:46518 as nodered_cc2e4776954fe470 (p2, c1, k60).
+1737671280: New connection from 172.17.0.5:36840 on port 1883.
+1737671280: New client connected from 172.17.0.5:36840 as nodered_8fd84cfae88e0b46 (p2, c1, k60).
+1737671403: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737671403: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737671403: Error: No such file or directory.
+1737671778: New connection from 172.17.0.5:42448 on port 1883.
+1737671778: New client connected from 172.17.0.5:42448 as nodered_00f8ac82394675d1 (p2, c1, k60).
+1737671985: New connection from 172.17.0.5:49384 on port 1883.
+1737671985: New client connected from 172.17.0.5:49384 as nodered_ac41dab51bd70410 (p2, c1, k60).
+1737672242: New connection from 172.17.0.5:39922 on port 1883.
+1737672242: New client connected from 172.17.0.5:39922 as nodered_f8a7f29ccddbcb00 (p2, c1, k60).
+1737672459: New connection from 172.17.0.5:51826 on port 1883.
+1737672459: New client connected from 172.17.0.5:51826 as nodered_cc1a987eb5f839b3 (p2, c1, k60).
+1737672823: New connection from 172.17.0.5:60520 on port 1883.
+1737672823: New client connected from 172.17.0.5:60520 as nodered_cec207ef2051e2d3 (p2, c1, k60).
+1737673003: New connection from 172.17.0.5:54240 on port 1883.
+1737673003: New client connected from 172.17.0.5:54240 as nodered_5a1bbe8d6587febf (p2, c1, k60).
+1737673204: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737673204: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737673204: Error: No such file or directory.
+1737673232: New connection from 172.17.0.5:36280 on port 1883.
+1737673232: New client connected from 172.17.0.5:36280 as nodered_30d7ee94bdab1905 (p2, c1, k60).
+1737675005: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737675005: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737675005: Error: No such file or directory.
+1737676806: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737676806: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737676806: Error: No such file or directory.
+1737678607: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737678607: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737678607: Error: No such file or directory.
+1737680408: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737680408: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737680408: Error: No such file or directory.
+1737682209: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737682209: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737682209: Error: No such file or directory.
+1737684010: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737684010: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737684010: Error: No such file or directory.
+1737685811: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737685811: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737685811: Error: No such file or directory.
+1737687612: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737687612: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737687612: Error: No such file or directory.
+1737689413: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737689413: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737689413: Error: No such file or directory.
+1737691214: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737691214: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737691214: Error: No such file or directory.
+1737693015: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737693015: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737693015: Error: No such file or directory.
+1737694816: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737694816: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737694816: Error: No such file or directory.
+1737696617: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737696617: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737696617: Error: No such file or directory.
+1737698418: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737698418: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737698418: Error: No such file or directory.
+1737700219: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737700219: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737700219: Error: No such file or directory.
+1737702020: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737702020: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737702020: Error: No such file or directory.
+1737703821: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737703821: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737703821: Error: No such file or directory.
+1737705622: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737705622: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737705622: Error: No such file or directory.
+1737707423: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737707423: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737707423: Error: No such file or directory.
+1737709224: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737709224: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737709224: Error: No such file or directory.
+1737711025: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737711025: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737711025: Error: No such file or directory.
+1737712826: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737712826: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737712826: Error: No such file or directory.
+1737714627: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737714627: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737714627: Error: No such file or directory.
+1737716428: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737716428: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737716428: Error: No such file or directory.
+1737718229: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737718229: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737718229: Error: No such file or directory.
+1737720030: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737720030: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737720030: Error: No such file or directory.
+1737721831: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737721831: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737721831: Error: No such file or directory.
+1737723632: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737723632: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737723632: Error: No such file or directory.
+1737724850: New connection from 172.17.0.5:48628 on port 1883.
+1737724850: New client connected from 172.17.0.5:48628 as nodered_80de7d4a4996a618 (p2, c1, k60).
+1737724916: New connection from 172.17.0.5:60354 on port 1883.
+1737724917: New client connected from 172.17.0.5:60354 as JavaMQTTSender (p2, c1, k60).
+1737724917: Client JavaMQTTSender disconnected.
+1737724917: New connection from 172.17.0.5:60364 on port 1883.
+1737724917: New client connected from 172.17.0.5:60364 as JavaMQTTSender (p2, c1, k60).
+1737724917: Client JavaMQTTSender disconnected.
+1737725433: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737725433: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737725433: Error: No such file or directory.
+1737725550: New connection from 172.17.0.5:60014 on port 1883.
+1737725550: New client connected from 172.17.0.5:60014 as nodered_54e34091ff7eda89 (p2, c1, k60).
+1737725711: mosquitto version 2.0.20 starting
+1737725711: Config loaded from /mosquitto/config/mosquitto.conf.
+1737725711: Opening ipv4 listen socket on port 1883.
+1737725711: mosquitto version 2.0.20 running
+1737725742: mosquitto version 2.0.20 starting
+1737725742: Config loaded from /mosquitto/config/mosquitto.conf.
+1737725742: Opening ipv4 listen socket on port 1883.
+1737725742: mosquitto version 2.0.20 running
+1737725861: mosquitto version 2.0.20 starting
+1737725861: Config loaded from /mosquitto/config/mosquitto.conf.
+1737725861: Opening ipv4 listen socket on port 1883.
+1737725861: mosquitto version 2.0.20 running
+1737726002: mosquitto version 2.0.20 starting
+1737726002: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726002: Opening ipv4 listen socket on port 1883.
+1737726002: mosquitto version 2.0.20 running
+1737726036: mosquitto version 2.0.20 starting
+1737726036: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726036: Opening ipv4 listen socket on port 1883.
+1737726036: mosquitto version 2.0.20 running
+1737726182: mosquitto version 2.0.20 starting
+1737726182: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726182: Opening ipv4 listen socket on port 1883.
+1737726182: mosquitto version 2.0.20 running
+1737726470: mosquitto version 2.0.20 starting
+1737726470: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726470: Opening ipv4 listen socket on port 1883.
+1737726470: mosquitto version 2.0.20 running
+1737726535: mosquitto version 2.0.20 starting
+1737726535: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726535: Opening ipv4 listen socket on port 1883.
+1737726535: mosquitto version 2.0.20 running
+1737726704: mosquitto version 2.0.20 starting
+1737726704: Config loaded from /mosquitto/config/mosquitto.conf.
+1737726704: Opening ipv4 listen socket on port 1883.
+1737726704: mosquitto version 2.0.20 running
+1737728505: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737728505: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737728505: Error: No such file or directory.
+1737728883: mosquitto version 2.0.20 starting
+1737728883: Config loaded from /mosquitto/config/mosquitto.conf.
+1737728883: Opening ipv4 listen socket on port 1883.
+1737728883: mosquitto version 2.0.20 running
+1737728887: New connection from 172.17.0.5:49634 on port 1883.
+1737728887: New client connected from 172.17.0.5:49634 as nodered_eddbe8b9e467be52 (p2, c1, k60).
+1737730684: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737730684: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737730684: Error: No such file or directory.
+1737732485: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737732485: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737732485: Error: No such file or directory.
+1737734286: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737734286: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737734286: Error: No such file or directory.
+1737736087: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737736087: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737736087: Error: No such file or directory.
+1737737888: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737737888: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737737888: Error: No such file or directory.
+1737739689: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737739689: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737739689: Error: No such file or directory.
+1737741490: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737741490: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737741490: Error: No such file or directory.
+1737743291: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737743291: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737743291: Error: No such file or directory.
+1737745092: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737745092: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737745092: Error: No such file or directory.
+1737746893: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737746893: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737746893: Error: No such file or directory.
+1737746966: Client nodered_eddbe8b9e467be52 closed its connection.
+1737746966: mosquitto version 2.0.20 terminating
+1737746966: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737746966: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737746966: Error: No such file or directory.
+1737747112: mosquitto version 2.0.20 starting
+1737747112: Config loaded from /mosquitto/config/mosquitto.conf.
+1737747112: Opening ipv4 listen socket on port 1883.
+1737747112: mosquitto version 2.0.20 running
+1737747116: New connection from 172.17.0.5:42678 on port 1883.
+1737747116: New client connected from 172.17.0.5:42678 as nodered_fb99b65bce1f2b44 (p2, c1, k60).
+1737747208: New connection from 172.17.0.5:34802 on port 1883.
+1737747208: New client connected from 172.17.0.5:34802 as JavaMQTTSender (p2, c1, k60).
+1737747208: Client JavaMQTTSender disconnected.
+1737747208: New connection from 172.17.0.5:34818 on port 1883.
+1737747208: New client connected from 172.17.0.5:34818 as JavaMQTTSender (p2, c1, k60).
+1737747208: Client JavaMQTTSender disconnected.
+1737747686: New connection from 172.17.0.1:45188 on port 1883.
+1737747686: New client connected from 172.17.0.1:45188 as JavaMQTTSender_1737747686357 (p2, c1, k60).
+1737747804: Client JavaMQTTSender_1737747686357 closed its connection.
+1737747807: New connection from 172.17.0.1:47586 on port 1883.
+1737747807: New client connected from 172.17.0.1:47586 as JavaMQTTSender_1737747807032 (p2, c1, k60).
+1737747878: Client JavaMQTTSender_1737747807032 closed its connection.
+1737747881: New connection from 172.17.0.1:35474 on port 1883.
+1737747881: New client connected from 172.17.0.1:35474 as JavaMQTTSender_1737747881006 (p2, c1, k60).
+1737747896: Client JavaMQTTSender_1737747881006 closed its connection.
+1737748096: New connection from 172.17.0.1:36556 on port 1883.
+1737748096: New client connected from 172.17.0.1:36556 as JavaMQTTSender_1737748096232 (p2, c1, k60).
+1737748121: Client JavaMQTTSender_1737748096232 closed its connection.
+1737748434: New connection from 172.17.0.5:42680 on port 1883.
+1737748434: New client connected from 172.17.0.5:42680 as nodered_77e536cd7b163bcb (p2, c1, k60).
+1737748796: New connection from 172.17.0.5:51754 on port 1883.
+1737748796: New client connected from 172.17.0.5:51754 as nodered_a175a30fbae3d19a (p2, c1, k60).
+1737748840: New connection from 172.17.0.5:57082 on port 1883.
+1737748840: New client connected from 172.17.0.5:57082 as JavaMQTTSender_1737748840065 (p2, c1, k60).
+1737748840: Client JavaMQTTSender_1737748840065 disconnected.
+1737748913: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737748913: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737748913: Error: No such file or directory.
+1737749005: New connection from 172.17.0.5:44496 on port 1883.
+1737749005: New client connected from 172.17.0.5:44496 as nodered_7560324e2892d215 (p2, c1, k60).
+1737749051: New connection from 172.17.0.5:53298 on port 1883.
+1737749051: New client connected from 172.17.0.5:53298 as JavaMQTTSender_1737749051591 (p2, c1, k60).
+1737749216: Client JavaMQTTSender_1737749051591 closed its connection.
+1737749217: New connection from 172.17.0.5:43870 on port 1883.
+1737749217: New client connected from 172.17.0.5:43870 as nodered_1bdf1243d170d9b4 (p2, c1, k60).
+1737749271: New connection from 172.17.0.5:42664 on port 1883.
+1737749271: New client connected from 172.17.0.5:42664 as JavaMQTTSender_1737749271223 (p2, c1, k60).
+1737749271: Client JavaMQTTSender_1737749271223 disconnected.
+1737749490: mosquitto version 2.0.20 starting
+1737749490: Config loaded from /mosquitto/config/mosquitto.conf.
+1737749490: Opening ipv4 listen socket on port 1883.
+1737749490: mosquitto version 2.0.20 running
+1737749494: New connection from 172.17.0.5:33214 on port 1883.
+1737749495: New client connected from 172.17.0.5:33214 as nodered_4b917aa1aca73e9b (p2, c1, k60).
+1737749610: New connection from 172.17.0.5:58444 on port 1883.
+1737749611: New client connected from 172.17.0.5:58444 as JavaMQTTSender_1737749610845 (p2, c1, k60).
+1737749611: Client JavaMQTTSender_1737749610845 disconnected.
+1737749854: New connection from 172.17.0.5:54626 on port 1883.
+1737749854: New client connected from 172.17.0.5:54626 as JavaMQTTSender_1737749854521 (p2, c1, k60).
+1737749854: Client JavaMQTTSender_1737749854521 disconnected.
+1737750373: New connection from 172.17.0.1:43046 on port 1883.
+1737750373: New client connected from 172.17.0.1:43046 as JavaMQTTSender (p2, c1, k60).
+1737750373: Client JavaMQTTSender disconnected.
+1737750618: mosquitto version 2.0.20 starting
+1737750618: Config loaded from /mosquitto/config/mosquitto.conf.
+1737750618: Opening ipv4 listen socket on port 1883.
+1737750618: mosquitto version 2.0.20 running
+1737750623: New connection from 172.17.0.5:51556 on port 1883.
+1737750623: New client connected from 172.17.0.5:51556 as nodered_96d38617427a0e58 (p2, c1, k60).
+1737750701: New connection from 172.17.0.5:41128 on port 1883.
+1737750701: New client connected from 172.17.0.5:41128 as JavaMQTTSender_1737750701033 (p2, c1, k60).
+1737750701: Client JavaMQTTSender_1737750701033 disconnected.
+1737750701: New connection from 172.17.0.5:41140 on port 1883.
+1737750701: New client connected from 172.17.0.5:41140 as JavaMQTTSender (p2, c1, k60).
+1737750701: Client JavaMQTTSender disconnected.
+1737750957: New connection from 172.17.0.5:40312 on port 1883.
+1737750958: New client connected from 172.17.0.5:40312 as JavaMQTTSender_1737750957667 (p2, c1, k60).
+1737750958: Client JavaMQTTSender_1737750957667 disconnected.
+1737750958: New connection from 172.17.0.5:40324 on port 1883.
+1737750958: New client connected from 172.17.0.5:40324 as JavaMQTTSender (p2, c1, k60).
+1737750958: Client JavaMQTTSender disconnected.
+1737751035: New connection from 172.17.0.5:57048 on port 1883.
+1737751035: New client connected from 172.17.0.5:57048 as nodered_4a17a7eb50ded8d6 (p2, c1, k60).
+1737751076: New connection from 172.17.0.5:39346 on port 1883.
+1737751076: New client connected from 172.17.0.5:39346 as JavaMQTTSender_1737751076126 (p2, c1, k60).
+1737751076: Client JavaMQTTSender_1737751076126 disconnected.
+1737751076: New connection from 172.17.0.5:39348 on port 1883.
+1737751076: New client connected from 172.17.0.5:39348 as JavaMQTTSender (p2, c1, k60).
+1737751076: Client JavaMQTTSender disconnected.
+1737751423: New connection from 172.17.0.5:57704 on port 1883.
+1737751423: New client connected from 172.17.0.5:57704 as JavaMQTTSender_1737751423649 (p2, c1, k60).
+1737751424: Client JavaMQTTSender_1737751423649 disconnected.
+1737751424: New connection from 172.17.0.5:57706 on port 1883.
+1737751424: New client connected from 172.17.0.5:57706 as JavaMQTTSender (p2, c1, k60).
+1737751424: Client JavaMQTTSender disconnected.
+1737751632: New connection from 172.17.0.5:48750 on port 1883.
+1737751632: New client connected from 172.17.0.5:48750 as nodered_96e7232e8d16c2a4 (p2, c1, k60).
+1737751668: New connection from 172.17.0.5:46812 on port 1883.
+1737751669: New client connected from 172.17.0.5:46812 as JavaMQTTSender_1737751668841 (p2, c1, k60).
+1737751759: New connection from 172.17.0.5:60446 on port 1883.
+1737751759: New client connected from 172.17.0.5:60446 as JavaMQTTSender_1737751759332 (p2, c1, k60).
+1737751920: mosquitto version 2.0.20 starting
+1737751920: Config loaded from /mosquitto/config/mosquitto.conf.
+1737751920: Opening ipv4 listen socket on port 1883.
+1737751920: mosquitto version 2.0.20 running
+1737751924: New connection from 172.17.0.5:41070 on port 1883.
+1737751924: New client connected from 172.17.0.5:41070 as nodered_97b93d483e35dc49 (p2, c1, k60).
+1737751972: New connection from 172.17.0.5:60216 on port 1883.
+1737751973: New client connected from 172.17.0.5:60216 as JavaMQTTSender_1737751972903 (p2, c1, k60).
+1737752129: Client JavaMQTTSender_1737751972903 closed its connection.
+1737752130: New connection from 172.17.0.5:55110 on port 1883.
+1737752130: New client connected from 172.17.0.5:55110 as nodered_d6ba4944b778aa3a (p2, c1, k60).
+1737752248: New connection from 172.17.0.5:45930 on port 1883.
+1737752248: New client connected from 172.17.0.5:45930 as JavaMQTTSender_1737752247966 (p2, c1, k60).
+1737752284: Client JavaMQTTSender_1737752247966 closed its connection.
+1737752285: New connection from 172.17.0.5:45338 on port 1883.
+1737752285: New client connected from 172.17.0.5:45338 as nodered_b24639270303f4f4 (p2, c1, k60).
+1737752324: New connection from 172.17.0.5:55482 on port 1883.
+1737752324: New client connected from 172.17.0.5:55482 as JavaMQTTSender_1737752324582 (p2, c1, k60).
+1737752325: Client JavaMQTTSender_1737752324582 disconnected.
+1737752325: New connection from 172.17.0.5:55496 on port 1883.
+1737752325: New client connected from 172.17.0.5:55496 as JavaMQTTSender (p2, c1, k60).
+1737752325: Client JavaMQTTSender disconnected.
+1737752500: New connection from 172.17.0.5:33610 on port 1883.
+1737752500: New client connected from 172.17.0.5:33610 as nodered_3dcfac13fc95146a (p2, c1, k60).
+1737752541: New connection from 172.17.0.5:55014 on port 1883.
+1737752542: New client connected from 172.17.0.5:55014 as JavaMQTTSender_1737752541670 (p2, c1, k60).
+1737752611: New connection from 172.17.0.5:41010 on port 1883.
+1737752612: New client connected from 172.17.0.5:41010 as JavaMQTTSender_1737752611808 (p2, c1, k60).
+1737752687: New connection from 172.17.0.5:40450 on port 1883.
+1737752687: New client connected from 172.17.0.5:40450 as JavaMQTTSender_1737752687172 (p2, c1, k60).
+1737753013: New connection from 172.17.0.5:40540 on port 1883.
+1737753013: New client connected from 172.17.0.5:40540 as JavaMQTTSender_1737753013408 (p2, c1, k60).
+1737753130: New connection from 172.17.0.5:43008 on port 1883.
+1737753130: New client connected from 172.17.0.5:43008 as JavaMQTTSender_1737753130183 (p2, c1, k60).
+1737753354: New connection from 172.17.0.5:49986 on port 1883.
+1737753354: New client connected from 172.17.0.5:49986 as JavaMQTTSender_1737753354317 (p2, c1, k60).
+1737753380: Client JavaMQTTSender_1737752541670 closed its connection.
+1737753380: Client JavaMQTTSender_1737752611808 closed its connection.
+1737753380: Client JavaMQTTSender_1737753013408 closed its connection.
+1737753380: Client JavaMQTTSender_1737753354317 closed its connection.
+1737753380: Client JavaMQTTSender_1737752687172 closed its connection.
+1737753380: Client JavaMQTTSender_1737753130183 closed its connection.
+1737753380: New connection from 172.17.0.5:57474 on port 1883.
+1737753380: New client connected from 172.17.0.5:57474 as nodered_e734ed19c202f150 (p2, c1, k60).
+1737753430: New connection from 172.17.0.5:46402 on port 1883.
+1737753430: New client connected from 172.17.0.5:46402 as JavaMQTTSender_1737753430217 (p2, c1, k60).
+1737753430: Client JavaMQTTSender_1737753430217 disconnected.
+1737753430: New connection from 172.17.0.5:46412 on port 1883.
+1737753431: New client connected from 172.17.0.5:46412 as JavaMQTTSender (p2, c1, k60).
+1737753431: Client JavaMQTTSender disconnected.
+1737753644: New connection from 172.17.0.5:58942 on port 1883.
+1737753644: New client connected from 172.17.0.5:58942 as nodered_9a6b28da6e8b025e (p2, c1, k60).
+1737753675: New connection from 172.17.0.5:51484 on port 1883.
+1737753676: New client connected from 172.17.0.5:51484 as JavaMQTTSender_1737753675813 (p2, c1, k60).
+1737753676: Client JavaMQTTSender_1737753675813 disconnected.
+1737753676: New connection from 172.17.0.5:51490 on port 1883.
+1737753676: New client connected from 172.17.0.5:51490 as JavaMQTTSender (p2, c1, k60).
+1737753676: Client JavaMQTTSender disconnected.
+1737753721: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737753721: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737753721: Error: No such file or directory.
+1737753804: New connection from 172.17.0.5:46600 on port 1883.
+1737753804: New client connected from 172.17.0.5:46600 as nodered_4fa371942efa5e67 (p2, c1, k60).
+1737753893: New connection from 172.17.0.5:37938 on port 1883.
+1737753894: New client connected from 172.17.0.5:37938 as nodered_6d84d39a6d690bec (p2, c1, k60).
+1737753943: New connection from 172.17.0.5:33668 on port 1883.
+1737753943: New client connected from 172.17.0.5:33668 as JavaMQTTSender_1737753943007 (p2, c1, k60).
+1737753943: Client JavaMQTTSender_1737753943007 disconnected.
+1737753943: New connection from 172.17.0.5:33680 on port 1883.
+1737753943: New client connected from 172.17.0.5:33680 as JavaMQTTSender (p2, c1, k60).
+1737753943: Client JavaMQTTSender disconnected.
+1737754199: New connection from 172.17.0.5:55280 on port 1883.
+1737754199: New client connected from 172.17.0.5:55280 as nodered_fd44dfe10e2dfefd (p2, c1, k60).
+1737754330: New connection from 172.17.0.5:53624 on port 1883.
+1737754330: New client connected from 172.17.0.5:53624 as JavaMQTTSender_1737754330138 (p2, c1, k60).
+1737754330: Client JavaMQTTSender_1737754330138 disconnected.
+1737754330: New connection from 172.17.0.5:53632 on port 1883.
+1737754330: New client connected from 172.17.0.5:53632 as JavaMQTTSender (p2, c1, k60).
+1737754330: Client JavaMQTTSender disconnected.
+1737754436: New connection from 172.17.0.5:51570 on port 1883.
+1737754436: New client connected from 172.17.0.5:51570 as nodered_c356077f623bd953 (p2, c1, k60).
+1737754544: New connection from 172.17.0.5:33066 on port 1883.
+1737754545: New client connected from 172.17.0.5:33066 as JavaMQTTSender_1737754544934 (p2, c1, k60).
+1737754545: Client JavaMQTTSender_1737754544934 disconnected.
+1737754545: New connection from 172.17.0.5:33072 on port 1883.
+1737754545: New client connected from 172.17.0.5:33072 as JavaMQTTSender (p2, c1, k60).
+1737754545: Client JavaMQTTSender disconnected.
+1737754691: New connection from 172.17.0.5:47038 on port 1883.
+1737754691: New client connected from 172.17.0.5:47038 as JavaMQTTSender_1737754691293 (p2, c1, k60).
+1737754691: Client JavaMQTTSender_1737754691293 disconnected.
+1737754691: New connection from 172.17.0.5:47048 on port 1883.
+1737754692: New client connected from 172.17.0.5:47048 as JavaMQTTSender (p2, c1, k60).
+1737754692: Client JavaMQTTSender disconnected.
+1737754874: New connection from 172.17.0.5:47978 on port 1883.
+1737754874: New client connected from 172.17.0.5:47978 as nodered_bcd7cc0706d08afc (p2, c1, k60).
+1737754925: New connection from 172.17.0.5:56620 on port 1883.
+1737754925: New client connected from 172.17.0.5:56620 as JavaMQTTSender_1737754925378 (p2, c1, k60).
+1737754925: Client JavaMQTTSender_1737754925378 disconnected.
+1737754925: New connection from 172.17.0.5:56636 on port 1883.
+1737754926: New client connected from 172.17.0.5:56636 as JavaMQTTSender (p2, c1, k60).
+1737754926: Client JavaMQTTSender disconnected.
+1737755147: New connection from 172.17.0.5:45406 on port 1883.
+1737755147: New client connected from 172.17.0.5:45406 as nodered_fb768cead808319b (p2, c1, k60).
+1737755221: New connection from 172.17.0.5:55200 on port 1883.
+1737755221: New client connected from 172.17.0.5:55200 as JavaMQTTSender_1737755221434 (p2, c1, k60).
+1737755221: Client JavaMQTTSender_1737755221434 disconnected.
+1737755221: New connection from 172.17.0.5:55206 on port 1883.
+1737755222: New client connected from 172.17.0.5:55206 as JavaMQTTSender (p2, c1, k60).
+1737755222: Client JavaMQTTSender disconnected.
+1737755451: New connection from 172.17.0.5:57662 on port 1883.
+1737755451: New client connected from 172.17.0.5:57662 as nodered_c6359b56406df76a (p2, c1, k60).
+1737755522: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737755522: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737755522: Error: No such file or directory.
+1737755553: New connection from 172.17.0.5:54500 on port 1883.
+1737755553: New client connected from 172.17.0.5:54500 as JavaMQTTSender_1737755553592 (p2, c1, k60).
+1737755554: Client JavaMQTTSender_1737755553592 disconnected.
+1737755554: New connection from 172.17.0.5:54510 on port 1883.
+1737755554: New client connected from 172.17.0.5:54510 as JavaMQTTSender (p2, c1, k60).
+1737755554: Client JavaMQTTSender disconnected.
+1737755647: New connection from 172.17.0.5:40350 on port 1883.
+1737755647: New client connected from 172.17.0.5:40350 as nodered_4b6bb0c72c0bfcb1 (p2, c1, k60).
+1737755693: New connection from 172.17.0.5:59914 on port 1883.
+1737755693: New client connected from 172.17.0.5:59914 as JavaMQTTSender_1737755693380 (p2, c1, k60).
+1737755841: Client JavaMQTTSender_1737755693380 closed its connection.
+1737755842: New connection from 172.17.0.5:36168 on port 1883.
+1737755842: New client connected from 172.17.0.5:36168 as nodered_28fe4c1629f53cb0 (p2, c1, k60).
+1737755920: New connection from 172.17.0.5:51624 on port 1883.
+1737755920: New client connected from 172.17.0.5:51624 as JavaMQTTSender_1737755920367 (p2, c1, k60).
+1737755940: Client JavaMQTTSender_1737755920367 closed its connection.
+1737755941: New connection from 172.17.0.5:45614 on port 1883.
+1737755941: New client connected from 172.17.0.5:45614 as nodered_05077aebae352c43 (p2, c1, k60).
+1737755980: New connection from 172.17.0.5:51240 on port 1883.
+1737755980: New client connected from 172.17.0.5:51240 as JavaMQTTSender_1737755980452 (p2, c1, k60).
+1737755980: Client JavaMQTTSender_1737755980452 disconnected.
+1737755980: New connection from 172.17.0.5:52038 on port 1883.
+1737755981: New client connected from 172.17.0.5:52038 as JavaMQTTSender (p2, c1, k60).
+1737755981: Client JavaMQTTSender disconnected.
+1737756280: New connection from 172.17.0.5:43338 on port 1883.
+1737756281: New client connected from 172.17.0.5:43338 as nodered_8849a4b1368d5fb0 (p2, c1, k60).
+1737756337: New connection from 172.17.0.5:60096 on port 1883.
+1737756337: New client connected from 172.17.0.5:60096 as nodered_3fe15316e4a60ae4 (p2, c1, k60).
+1737756501: New connection from 172.17.0.5:34764 on port 1883.
+1737756502: New client connected from 172.17.0.5:34764 as JavaMQTTSender_1737756501950 (p2, c1, k60).
+1737756992: Client JavaMQTTSender_1737756501950 closed its connection.
+1737756992: New connection from 172.17.0.5:53236 on port 1883.
+1737756992: New client connected from 172.17.0.5:53236 as nodered_537b5060311977ed (p2, c1, k60).
+1737757066: New connection from 172.17.0.5:39264 on port 1883.
+1737757066: New client connected from 172.17.0.5:39264 as JavaMQTTSender_1737757066479 (p2, c1, k60).
+1737757066: Client JavaMQTTSender_1737757066479 disconnected.
+1737757066: New connection from 172.17.0.5:39280 on port 1883.
+1737757067: New client connected from 172.17.0.5:39280 as JavaMQTTSender (p2, c1, k60).
+1737757067: Client JavaMQTTSender disconnected.
+1737757158: New connection from 172.17.0.5:60706 on port 1883.
+1737757158: New client connected from 172.17.0.5:60706 as nodered_283b9b3f0c5dbdb9 (p2, c1, k60).
+1737757246: New connection from 172.17.0.5:45182 on port 1883.
+1737757246: New client connected from 172.17.0.5:45182 as JavaMQTTSender_1737757246486 (p2, c1, k60).
+1737757246: Client JavaMQTTSender_1737757246486 disconnected.
+1737757246: New connection from 172.17.0.5:45186 on port 1883.
+1737757247: New client connected from 172.17.0.5:45186 as JavaMQTTSender (p2, c1, k60).
+1737757247: Client JavaMQTTSender disconnected.
+1737757299: New connection from 172.17.0.5:37626 on port 1883.
+1737757299: New client connected from 172.17.0.5:37626 as nodered_da8fd2a9ac9d675e (p2, c1, k60).
+1737757323: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737757323: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737757323: Error: No such file or directory.
+1737757522: New connection from 172.17.0.5:36240 on port 1883.
+1737757522: New client connected from 172.17.0.5:36240 as JavaMQTTSender_1737757522282 (p2, c1, k60).
+1737757522: Client JavaMQTTSender_1737757522282 disconnected.
+1737757522: New connection from 172.17.0.5:36256 on port 1883.
+1737757523: New client connected from 172.17.0.5:36256 as JavaMQTTSender (p2, c1, k60).
+1737757523: Client JavaMQTTSender disconnected.
+1737757762: New connection from 172.17.0.5:60276 on port 1883.
+1737757762: New client connected from 172.17.0.5:60276 as JavaMQTTSender_1737757762223 (p2, c1, k60).
+1737757762: Client JavaMQTTSender_1737757762223 disconnected.
+1737757762: New connection from 172.17.0.5:60278 on port 1883.
+1737757762: New client connected from 172.17.0.5:60278 as JavaMQTTSender (p2, c1, k60).
+1737757762: Client JavaMQTTSender disconnected.
+1737758571: New connection from 172.17.0.5:46638 on port 1883.
+1737758571: New client connected from 172.17.0.5:46638 as nodered_a54a1d3f7c36da9e (p2, c1, k60).
+1737759124: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737759124: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737759124: Error: No such file or directory.
+1737760096: New connection from 172.17.0.5:45090 on port 1883.
+1737760096: New client connected from 172.17.0.5:45090 as nodered_0083df7d59f93e83 (p2, c1, k60).
+1737760224: New connection from 172.17.0.5:38386 on port 1883.
+1737760224: New client connected from 172.17.0.5:38386 as JavaMQTTSender_1737760224213 (p2, c1, k60).
+1737760224: Client JavaMQTTSender_1737760224213 disconnected.
+1737760224: New connection from 172.17.0.5:38388 on port 1883.
+1737760225: New client connected from 172.17.0.5:38388 as JavaMQTTSender (p2, c1, k60).
+1737760225: Client JavaMQTTSender disconnected.
+1737760334: New connection from 172.17.0.5:57702 on port 1883.
+1737760334: New client connected from 172.17.0.5:57702 as nodered_f372f01666bb2582 (p2, c1, k60).
+1737760364: New connection from 172.17.0.5:49668 on port 1883.
+1737760365: New client connected from 172.17.0.5:49668 as JavaMQTTSender_1737760364873 (p2, c1, k60).
+1737760365: Client JavaMQTTSender_1737760364873 disconnected.
+1737760365: New connection from 172.17.0.5:49682 on port 1883.
+1737760365: New client connected from 172.17.0.5:49682 as JavaMQTTSender (p2, c1, k60).
+1737760365: Client JavaMQTTSender disconnected.
+1737760411: New connection from 172.17.0.5:54978 on port 1883.
+1737760412: New client connected from 172.17.0.5:54978 as nodered_32d85833fc6c95b6 (p2, c1, k60).
+1737760468: New connection from 172.17.0.5:49822 on port 1883.
+1737760468: New client connected from 172.17.0.5:49822 as nodered_3dd2b3874a0bd592 (p2, c1, k60).
+1737760572: New connection from 172.17.0.5:36272 on port 1883.
+1737760572: New client connected from 172.17.0.5:36272 as nodered_5f10500bb0605c95 (p2, c1, k60).
+1737760743: New connection from 172.17.0.5:39796 on port 1883.
+1737760744: New client connected from 172.17.0.5:39796 as JavaMQTTSender_1737760743670 (p2, c1, k60).
+1737760744: Client JavaMQTTSender_1737760743670 disconnected.
+1737760744: New connection from 172.17.0.5:39812 on port 1883.
+1737760744: New client connected from 172.17.0.5:39812 as JavaMQTTSender (p2, c1, k60).
+1737760744: Client JavaMQTTSender disconnected.
+1737760892: New connection from 172.17.0.5:45602 on port 1883.
+1737760892: New client connected from 172.17.0.5:45602 as nodered_9f330788ebc74014 (p2, c1, k60).
+1737760925: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737760925: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737760925: Error: No such file or directory.
+1737760949: New connection from 172.17.0.5:35386 on port 1883.
+1737760949: New client connected from 172.17.0.5:35386 as JavaMQTTSender_1737760949369 (p2, c1, k60).
+1737760949: Client JavaMQTTSender_1737760949369 disconnected.
+1737760949: New connection from 172.17.0.5:35398 on port 1883.
+1737760950: New client connected from 172.17.0.5:35398 as JavaMQTTSender (p2, c1, k60).
+1737760950: Client JavaMQTTSender disconnected.
+1737761023: New connection from 172.17.0.5:46806 on port 1883.
+1737761023: New client connected from 172.17.0.5:46806 as nodered_c7d780a6ed7c3aba (p2, c1, k60).
+1737761075: New connection from 172.17.0.5:45408 on port 1883.
+1737761075: New client connected from 172.17.0.5:45408 as JavaMQTTSender_1737761075285 (p2, c1, k60).
+1737761075: Client JavaMQTTSender_1737761075285 disconnected.
+1737761075: New connection from 172.17.0.5:45414 on port 1883.
+1737761076: New client connected from 172.17.0.5:45414 as JavaMQTTSender (p2, c1, k60).
+1737761076: Client JavaMQTTSender disconnected.
+1737761285: New connection from 172.17.0.5:34450 on port 1883.
+1737761285: New client connected from 172.17.0.5:34450 as nodered_1404570c7265b38c (p2, c1, k60).
+1737761354: New connection from 172.17.0.5:46636 on port 1883.
+1737761354: New client connected from 172.17.0.5:46636 as nodered_e94686c8ef63e149 (p2, c1, k60).
+1737761388: New connection from 172.17.0.5:54610 on port 1883.
+1737761389: New client connected from 172.17.0.5:54610 as JavaMQTTSender_1737761388859 (p2, c1, k60).
+1737761389: Client JavaMQTTSender_1737761388859 disconnected.
+1737761389: New connection from 172.17.0.5:54622 on port 1883.
+1737761389: New client connected from 172.17.0.5:54622 as JavaMQTTSender (p2, c1, k60).
+1737761389: Client JavaMQTTSender disconnected.
+1737761410: New connection from 172.17.0.5:46130 on port 1883.
+1737761411: New client connected from 172.17.0.5:46130 as JavaMQTTSender_1737761410834 (p2, c1, k60).
+1737761411: Client JavaMQTTSender_1737761410834 disconnected.
+1737761411: New connection from 172.17.0.5:46132 on port 1883.
+1737761411: New client connected from 172.17.0.5:46132 as JavaMQTTSender (p2, c1, k60).
+1737761411: Client JavaMQTTSender disconnected.
+1737761654: New connection from 172.17.0.5:56952 on port 1883.
+1737761654: New client connected from 172.17.0.5:56952 as nodered_db18af3c824d2d7b (p2, c1, k60).
+1737761727: New connection from 172.17.0.5:34130 on port 1883.
+1737761727: New client connected from 172.17.0.5:34130 as nodered_fb45757656fb1daa (p2, c1, k60).
+1737762726: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737762726: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737762726: Error: No such file or directory.
+1737763154: New connection from 172.17.0.5:38994 on port 1883.
+1737763154: New client connected from 172.17.0.5:38994 as nodered_dc69b82856301d19 (p2, c1, k60).
+1737763561: New connection from 172.17.0.5:43074 on port 1883.
+1737763561: New client connected from 172.17.0.5:43074 as nodered_08ca1e36fb78f868 (p2, c1, k60).
+1737763789: New connection from 172.17.0.5:50638 on port 1883.
+1737763789: New client connected from 172.17.0.5:50638 as nodered_b2f56b7c18fcf940 (p2, c1, k60).
+1737764007: New connection from 172.17.0.5:49130 on port 1883.
+1737764007: New client connected from 172.17.0.5:49130 as nodered_7537b12bcd05b84a (p2, c1, k60).
+1737764043: New connection from 172.17.0.5:37362 on port 1883.
+1737764044: New client connected from 172.17.0.5:37362 as nodered_23caee0359edf6c6 (p2, c1, k60).
+1737764122: New connection from 172.17.0.5:49616 on port 1883.
+1737764122: New client connected from 172.17.0.5:49616 as nodered_7a1f6774bb8b2a12 (p2, c1, k60).
+1737764227: New connection from 172.17.0.5:37622 on port 1883.
+1737764227: New client connected from 172.17.0.5:37622 as nodered_71f0e4ec3101ce7b (p2, c1, k60).
+1737764251: New connection from 172.17.0.5:58264 on port 1883.
+1737764251: New client connected from 172.17.0.5:58264 as nodered_35c38e55c80ee381 (p2, c1, k60).
+1737764385: New connection from 172.17.0.5:49090 on port 1883.
+1737764385: New client connected from 172.17.0.5:49090 as nodered_b11e6a34a3997383 (p2, c1, k60).
+1737764441: New connection from 172.17.0.5:40686 on port 1883.
+1737764441: New client connected from 172.17.0.5:40686 as nodered_5321aa0380c2ba90 (p2, c1, k60).
+1737764459: New connection from 172.17.0.5:59252 on port 1883.
+1737764459: New client connected from 172.17.0.5:59252 as nodered_cb57e89320627cb1 (p2, c1, k60).
+1737764527: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737764527: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737764527: Error: No such file or directory.
+1737764572: New connection from 172.17.0.5:59278 on port 1883.
+1737764572: New client connected from 172.17.0.5:59278 as nodered_adbdd26eb6236a84 (p2, c1, k60).
+1737764613: New connection from 172.17.0.5:42646 on port 1883.
+1737764613: New client connected from 172.17.0.5:42646 as nodered_045892ab14369b57 (p2, c1, k60).
+1737764866: New connection from 172.17.0.5:48708 on port 1883.
+1737764866: New client connected from 172.17.0.5:48708 as nodered_0dfa32e0c97a39ab (p2, c1, k60).
+1737764922: New connection from 172.17.0.5:52164 on port 1883.
+1737764922: New client connected from 172.17.0.5:52164 as nodered_f61eba326ca9817e (p2, c1, k60).
+1737765324: New connection from 172.17.0.5:46682 on port 1883.
+1737765324: New client connected from 172.17.0.5:46682 as nodered_4cf251edf3931db2 (p2, c1, k60).
+1737766161: New connection from 172.17.0.5:34572 on port 1883.
+1737766161: New client connected from 172.17.0.5:34572 as nodered_220e90e30f244e3a (p2, c1, k60).
+1737766287: New connection from 172.17.0.5:41876 on port 1883.
+1737766287: New client connected from 172.17.0.5:41876 as nodered_36b1ffbf5ba614ca (p2, c1, k60).
+1737766328: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737766328: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737766328: Error: No such file or directory.
+1737766441: New connection from 172.17.0.5:40294 on port 1883.
+1737766441: New client connected from 172.17.0.5:40294 as nodered_3e0830e5018ce957 (p2, c1, k60).
+1737766481: mosquitto version 2.0.20 starting
+1737766481: Config loaded from /mosquitto/config/mosquitto.conf.
+1737766481: Opening ipv4 listen socket on port 1883.
+1737766481: mosquitto version 2.0.20 running
+1737766491: New connection from 172.17.0.5:55502 on port 1883.
+1737766491: New client connected from 172.17.0.5:55502 as nodered_f39ac0b02f5238f9 (p2, c1, k60).
+1737766578: mosquitto version 2.0.20 terminating
+1737766578: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737766578: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737766578: Error: No such file or directory.
+1737767145: mosquitto version 2.0.20 starting
+1737767145: Config loaded from /mosquitto/config/mosquitto.conf.
+1737767145: Opening ipv4 listen socket on port 1883.
+1737767145: mosquitto version 2.0.20 running
+1737767153: New connection from 172.17.0.5:44776 on port 1883.
+1737767153: New client connected from 172.17.0.5:44776 as nodered_13b40fa8f8491119 (p2, c1, k60).
+1737767346: Client nodered_13b40fa8f8491119 closed its connection.
+1737801208: mosquitto version 2.0.20 starting
+1737801208: Config loaded from /mosquitto/config/mosquitto.conf.
+1737801208: Opening ipv4 listen socket on port 1883.
+1737801208: mosquitto version 2.0.20 running
+1737801217: New connection from 172.17.0.5:33188 on port 1883.
+1737801217: New client connected from 172.17.0.5:33188 as nodered_87bb1eb7351f0e9b (p2, c1, k60).
+1737801425: New connection from 172.17.0.5:54982 on port 1883.
+1737801425: New client connected from 172.17.0.5:54982 as JavaMQTTSender_1737801425035 (p2, c1, k60).
+1737801425: Client JavaMQTTSender_1737801425035 disconnected.
+1737801425: New connection from 172.17.0.5:54994 on port 1883.
+1737801425: New client connected from 172.17.0.5:54994 as JavaMQTTSender (p2, c1, k60).
+1737801425: Client JavaMQTTSender disconnected.
+1737801599: New connection from 172.17.0.5:60210 on port 1883.
+1737801600: New client connected from 172.17.0.5:60210 as JavaMQTTSender_1737801599892 (p2, c1, k60).
+1737801600: Client JavaMQTTSender_1737801599892 disconnected.
+1737801600: New connection from 172.17.0.5:60212 on port 1883.
+1737801600: New client connected from 172.17.0.5:60212 as JavaMQTTSender (p2, c1, k60).
+1737801600: Client JavaMQTTSender disconnected.
+1737802116: New connection from 172.17.0.5:57854 on port 1883.
+1737802117: New client connected from 172.17.0.5:57854 as JavaMQTTSender_1737802116838 (p2, c1, k60).
+1737802117: Client JavaMQTTSender_1737802116838 disconnected.
+1737802117: New connection from 172.17.0.5:57868 on port 1883.
+1737802117: New client connected from 172.17.0.5:57868 as JavaMQTTSender (p2, c1, k60).
+1737802117: Client JavaMQTTSender disconnected.
+1737802187: New connection from 172.17.0.5:49782 on port 1883.
+1737802187: New client connected from 172.17.0.5:49782 as JavaMQTTSender_1737802187326 (p2, c1, k60).
+1737802187: Client JavaMQTTSender_1737802187326 disconnected.
+1737802187: New connection from 172.17.0.5:49788 on port 1883.
+1737802188: New client connected from 172.17.0.5:49788 as JavaMQTTSender (p2, c1, k60).
+1737802188: Client JavaMQTTSender disconnected.
+1737802699: New connection from 172.17.0.5:52720 on port 1883.
+1737802700: New client connected from 172.17.0.5:52720 as JavaMQTTSender_1737802699768 (p2, c1, k60).
+1737802700: Client JavaMQTTSender_1737802699768 disconnected.
+1737802700: New connection from 172.17.0.5:52734 on port 1883.
+1737802700: New client connected from 172.17.0.5:52734 as JavaMQTTSender (p2, c1, k60).
+1737802700: Client JavaMQTTSender disconnected.
+1737802783: New connection from 172.17.0.5:33614 on port 1883.
+1737802783: New client connected from 172.17.0.5:33614 as JavaMQTTSender_1737802783308 (p2, c1, k60).
+1737802783: Client JavaMQTTSender_1737802783308 disconnected.
+1737802783: New connection from 172.17.0.5:33620 on port 1883.
+1737802784: New client connected from 172.17.0.5:33620 as JavaMQTTSender (p2, c1, k60).
+1737802784: Client JavaMQTTSender disconnected.
+1737802880: New connection from 172.17.0.5:54436 on port 1883.
+1737802880: New client connected from 172.17.0.5:54436 as nodered_614e98cac9c71a7d (p2, c1, k60).
+1737803009: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737803009: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737803009: Error: No such file or directory.
+1737803009: New connection from 172.17.0.5:47636 on port 1883.
+1737803010: New client connected from 172.17.0.5:47636 as JavaMQTTSender_1737803009749 (p2, c1, k60).
+1737803010: Client JavaMQTTSender_1737803009749 disconnected.
+1737803010: New connection from 172.17.0.5:47652 on port 1883.
+1737803010: New client connected from 172.17.0.5:47652 as JavaMQTTSender (p2, c1, k60).
+1737803010: Client JavaMQTTSender disconnected.
+1737803241: New connection from 172.17.0.5:33240 on port 1883.
+1737803242: New client connected from 172.17.0.5:33240 as JavaMQTTSender_1737803241790 (p2, c1, k60).
+1737803242: Client JavaMQTTSender_1737803241790 disconnected.
+1737803242: New connection from 172.17.0.5:33254 on port 1883.
+1737803242: New client connected from 172.17.0.5:33254 as JavaMQTTSender (p2, c1, k60).
+1737803242: Client JavaMQTTSender disconnected.
+1737803422: New connection from 172.17.0.5:45358 on port 1883.
+1737803423: New client connected from 172.17.0.5:45358 as JavaMQTTSender_1737803422925 (p2, c1, k60).
+1737803423: Client JavaMQTTSender_1737803422925 disconnected.
+1737803423: New connection from 172.17.0.5:45368 on port 1883.
+1737803423: New client connected from 172.17.0.5:45368 as JavaMQTTSender (p2, c1, k60).
+1737803423: Client JavaMQTTSender disconnected.
+1737804086: New connection from 172.17.0.5:47350 on port 1883.
+1737804086: New client connected from 172.17.0.5:47350 as JavaMQTTSender_1737804086014 (p2, c1, k60).
+1737804086: Client JavaMQTTSender_1737804086014 disconnected.
+1737804086: New connection from 172.17.0.5:47352 on port 1883.
+1737804086: New client connected from 172.17.0.5:47352 as JavaMQTTSender (p2, c1, k60).
+1737804086: Client JavaMQTTSender disconnected.
+1737804127: New connection from 172.17.0.5:52170 on port 1883.
+1737804127: New client connected from 172.17.0.5:52170 as JavaMQTTSender_1737804127441 (p2, c1, k60).
+1737804127: Client JavaMQTTSender_1737804127441 disconnected.
+1737804127: New connection from 172.17.0.5:52178 on port 1883.
+1737804128: New client connected from 172.17.0.5:52178 as JavaMQTTSender (p2, c1, k60).
+1737804128: Client JavaMQTTSender disconnected.
+1737804810: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737804810: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737804810: Error: No such file or directory.
+1737804939: New connection from 172.17.0.5:33526 on port 1883.
+1737804939: New client connected from 172.17.0.5:33526 as JavaMQTTSender_1737804939532 (p2, c1, k60).
+1737804939: Client JavaMQTTSender_1737804939532 disconnected.
+1737804939: New connection from 172.17.0.5:33542 on port 1883.
+1737804940: New client connected from 172.17.0.5:33542 as JavaMQTTSender (p2, c1, k60).
+1737804940: Client JavaMQTTSender disconnected.
+1737805430: New connection from 172.17.0.5:35038 on port 1883.
+1737805430: New client connected from 172.17.0.5:35038 as JavaMQTTSender_1737805430609 (p2, c1, k60).
+1737805431: Client JavaMQTTSender_1737805430609 disconnected.
+1737805431: New connection from 172.17.0.5:35050 on port 1883.
+1737805431: New client connected from 172.17.0.5:35050 as JavaMQTTSender (p2, c1, k60).
+1737805431: Client JavaMQTTSender disconnected.
+1737806297: New connection from 172.17.0.5:38940 on port 1883.
+1737806297: New client connected from 172.17.0.5:38940 as JavaMQTTSender_1737806297347 (p2, c1, k60).
+1737806297: Client JavaMQTTSender_1737806297347 disconnected.
+1737806297: New connection from 172.17.0.5:38954 on port 1883.
+1737806298: New client connected from 172.17.0.5:38954 as JavaMQTTSender (p2, c1, k60).
+1737806298: Client JavaMQTTSender disconnected.
+1737806611: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737806611: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737806611: Error: No such file or directory.
+1737806623: New connection from 172.17.0.5:37340 on port 1883.
+1737806624: New client connected from 172.17.0.5:37340 as JavaMQTTSender_1737806623734 (p2, c1, k60).
+1737806624: Client JavaMQTTSender_1737806623734 disconnected.
+1737806624: New connection from 172.17.0.5:37350 on port 1883.
+1737806624: New client connected from 172.17.0.5:37350 as JavaMQTTSender (p2, c1, k60).
+1737806624: Client JavaMQTTSender disconnected.
+1737806720: New connection from 172.17.0.5:36228 on port 1883.
+1737806721: New client connected from 172.17.0.5:36228 as JavaMQTTSender_1737806720719 (p2, c1, k60).
+1737806721: Client JavaMQTTSender_1737806720719 disconnected.
+1737806721: New connection from 172.17.0.5:36236 on port 1883.
+1737806721: New client connected from 172.17.0.5:36236 as JavaMQTTSender (p2, c1, k60).
+1737806721: Client JavaMQTTSender disconnected.
+1737806957: New connection from 172.17.0.5:41148 on port 1883.
+1737806957: New client connected from 172.17.0.5:41148 as nodered_4da38470b8b83672 (p2, c1, k60).
+1737807087: New connection from 172.17.0.5:42712 on port 1883.
+1737807087: New client connected from 172.17.0.5:42712 as JavaMQTTSender_1737807087517 (p2, c1, k60).
+1737807088: Client JavaMQTTSender_1737807087517 disconnected.
+1737807088: New connection from 172.17.0.5:42716 on port 1883.
+1737807088: New client connected from 172.17.0.5:42716 as JavaMQTTSender (p2, c1, k60).
+1737807088: Client JavaMQTTSender disconnected.
+1737807303: New connection from 172.17.0.5:37356 on port 1883.
+1737807303: New client connected from 172.17.0.5:37356 as JavaMQTTSender_1737807302977 (p2, c1, k60).
+1737807303: Client JavaMQTTSender_1737807302977 disconnected.
+1737807303: New connection from 172.17.0.5:37358 on port 1883.
+1737807303: New client connected from 172.17.0.5:37358 as JavaMQTTSender (p2, c1, k60).
+1737807303: Client JavaMQTTSender disconnected.
+1737807341: New connection from 172.17.0.5:60032 on port 1883.
+1737807341: New client connected from 172.17.0.5:60032 as JavaMQTTSender_1737807341223 (p2, c1, k60).
+1737807341: Client JavaMQTTSender_1737807341223 disconnected.
+1737807341: New connection from 172.17.0.5:60046 on port 1883.
+1737807342: New client connected from 172.17.0.5:60046 as JavaMQTTSender (p2, c1, k60).
+1737807342: Client JavaMQTTSender disconnected.
+1737807476: New connection from 172.17.0.5:36576 on port 1883.
+1737807477: New client connected from 172.17.0.5:36576 as JavaMQTTSender_1737807476955 (p2, c1, k60).
+1737807477: Client JavaMQTTSender_1737807476955 disconnected.
+1737807477: New connection from 172.17.0.5:36590 on port 1883.
+1737807477: New client connected from 172.17.0.5:36590 as JavaMQTTSender (p2, c1, k60).
+1737807477: Client JavaMQTTSender disconnected.
+1737807637: New connection from 172.17.0.5:37396 on port 1883.
+1737807638: New client connected from 172.17.0.5:37396 as JavaMQTTSender_1737807637696 (p2, c1, k60).
+1737807638: Client JavaMQTTSender_1737807637696 disconnected.
+1737807638: New connection from 172.17.0.5:37408 on port 1883.
+1737807638: New client connected from 172.17.0.5:37408 as JavaMQTTSender (p2, c1, k60).
+1737807638: Client JavaMQTTSender disconnected.
+1737808397: New connection from 172.17.0.5:56890 on port 1883.
+1737808397: New client connected from 172.17.0.5:56890 as nodered_914babd8364a557e (p2, c1, k60).
+1737808412: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737808412: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737808412: Error: No such file or directory.
+1737808464: New connection from 172.17.0.5:57036 on port 1883.
+1737808465: New client connected from 172.17.0.5:57036 as JavaMQTTSender_1737808464853 (p2, c1, k60).
+1737808465: Client JavaMQTTSender_1737808464853 disconnected.
+1737808465: New connection from 172.17.0.5:57038 on port 1883.
+1737808465: New client connected from 172.17.0.5:57038 as JavaMQTTSender (p2, c1, k60).
+1737808465: Client JavaMQTTSender disconnected.
+1737808621: New connection from 172.17.0.5:53014 on port 1883.
+1737808621: New client connected from 172.17.0.5:53014 as JavaMQTTSender_1737808621076 (p2, c1, k60).
+1737808621: Client JavaMQTTSender_1737808621076 disconnected.
+1737808621: New connection from 172.17.0.5:53026 on port 1883.
+1737808621: New client connected from 172.17.0.5:53026 as JavaMQTTSender (p2, c1, k60).
+1737808621: Client JavaMQTTSender disconnected.
+1737808669: New connection from 172.17.0.5:41446 on port 1883.
+1737808669: New client connected from 172.17.0.5:41446 as JavaMQTTSender_1737808669029 (p2, c1, k60).
+1737808669: Client JavaMQTTSender_1737808669029 disconnected.
+1737808669: New connection from 172.17.0.5:41456 on port 1883.
+1737808669: New client connected from 172.17.0.5:41456 as JavaMQTTSender (p2, c1, k60).
+1737808669: Client JavaMQTTSender disconnected.
+1737808931: New connection from 172.17.0.5:52550 on port 1883.
+1737808932: New client connected from 172.17.0.5:52550 as JavaMQTTSender_1737808931695 (p2, c1, k60).
+1737808932: Client JavaMQTTSender_1737808931695 disconnected.
+1737808932: New connection from 172.17.0.5:52562 on port 1883.
+1737808932: New client connected from 172.17.0.5:52562 as JavaMQTTSender (p2, c1, k60).
+1737808932: Client JavaMQTTSender disconnected.
+1737809000: New connection from 172.17.0.5:55586 on port 1883.
+1737809001: New client connected from 172.17.0.5:55586 as JavaMQTTSender_1737809000690 (p2, c1, k60).
+1737809001: Client JavaMQTTSender_1737809000690 disconnected.
+1737809001: New connection from 172.17.0.5:55598 on port 1883.
+1737809001: New client connected from 172.17.0.5:55598 as JavaMQTTSender (p2, c1, k60).
+1737809001: Client JavaMQTTSender disconnected.
+1737809112: New connection from 172.17.0.5:59176 on port 1883.
+1737809113: New client connected from 172.17.0.5:59176 as JavaMQTTSender_1737809112837 (p2, c1, k60).
+1737809113: Client JavaMQTTSender_1737809112837 disconnected.
+1737809113: New connection from 172.17.0.5:59184 on port 1883.
+1737809113: New client connected from 172.17.0.5:59184 as JavaMQTTSender (p2, c1, k60).
+1737809113: Client JavaMQTTSender disconnected.
+1737809148: New connection from 172.17.0.5:51992 on port 1883.
+1737809148: New client connected from 172.17.0.5:51992 as JavaMQTTSender_1737809148127 (p2, c1, k60).
+1737809148: Client JavaMQTTSender_1737809148127 disconnected.
+1737809148: New connection from 172.17.0.5:52008 on port 1883.
+1737809148: New client connected from 172.17.0.5:52008 as JavaMQTTSender (p2, c1, k60).
+1737809148: Client JavaMQTTSender disconnected.
+1737809545: New connection from 172.17.0.5:49934 on port 1883.
+1737809546: New client connected from 172.17.0.5:49934 as JavaMQTTSender_1737809545695 (p2, c1, k60).
+1737809546: Client JavaMQTTSender_1737809545695 disconnected.
+1737809546: New connection from 172.17.0.5:49938 on port 1883.
+1737809546: New client connected from 172.17.0.5:49938 as JavaMQTTSender (p2, c1, k60).
+1737809546: Client JavaMQTTSender disconnected.
+1737809782: New connection from 172.17.0.5:54814 on port 1883.
+1737809782: New client connected from 172.17.0.5:54814 as JavaMQTTSender_1737809781977 (p2, c1, k60).
+1737809782: Client JavaMQTTSender_1737809781977 disconnected.
+1737809782: New connection from 172.17.0.5:54822 on port 1883.
+1737809782: New client connected from 172.17.0.5:54822 as JavaMQTTSender (p2, c1, k60).
+1737809782: Client JavaMQTTSender disconnected.
+1737809920: New connection from 172.17.0.5:46232 on port 1883.
+1737809920: New client connected from 172.17.0.5:46232 as JavaMQTTSender_1737809920052 (p2, c1, k60).
+1737809920: Client JavaMQTTSender_1737809920052 disconnected.
+1737809920: New connection from 172.17.0.5:46246 on port 1883.
+1737809920: New client connected from 172.17.0.5:46246 as JavaMQTTSender (p2, c1, k60).
+1737809920: Client JavaMQTTSender disconnected.
+1737810042: New connection from 172.17.0.5:35074 on port 1883.
+1737810042: New client connected from 172.17.0.5:35074 as JavaMQTTSender_1737810042564 (p2, c1, k60).
+1737810043: Client JavaMQTTSender_1737810042564 disconnected.
+1737810043: New connection from 172.17.0.5:35088 on port 1883.
+1737810043: New client connected from 172.17.0.5:35088 as JavaMQTTSender (p2, c1, k60).
+1737810043: Client JavaMQTTSender disconnected.
+1737810213: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737810213: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737810213: Error: No such file or directory.
+1737810267: New connection from 172.17.0.5:45330 on port 1883.
+1737810268: New client connected from 172.17.0.5:45330 as JavaMQTTSender_1737810267751 (p2, c1, k60).
+1737810268: Client JavaMQTTSender_1737810267751 disconnected.
+1737810268: New connection from 172.17.0.5:45336 on port 1883.
+1737810268: New client connected from 172.17.0.5:45336 as JavaMQTTSender (p2, c1, k60).
+1737810268: Client JavaMQTTSender disconnected.
+1737810343: New connection from 172.17.0.5:48428 on port 1883.
+1737810343: New client connected from 172.17.0.5:48428 as JavaMQTTSender_1737810343548 (p2, c1, k60).
+1737810343: Client JavaMQTTSender_1737810343548 disconnected.
+1737810343: New connection from 172.17.0.5:48444 on port 1883.
+1737810344: New client connected from 172.17.0.5:48444 as JavaMQTTSender (p2, c1, k60).
+1737810344: Client JavaMQTTSender disconnected.
+1737810475: New connection from 172.17.0.5:43398 on port 1883.
+1737810476: New client connected from 172.17.0.5:43398 as JavaMQTTSender_1737810475778 (p2, c1, k60).
+1737810476: Client JavaMQTTSender_1737810475778 disconnected.
+1737810476: New connection from 172.17.0.5:43400 on port 1883.
+1737810476: New client connected from 172.17.0.5:43400 as JavaMQTTSender (p2, c1, k60).
+1737810476: Client JavaMQTTSender disconnected.
+1737810621: New connection from 172.17.0.5:36228 on port 1883.
+1737810622: New client connected from 172.17.0.5:36228 as JavaMQTTSender_1737810621681 (p2, c1, k60).
+1737810622: Client JavaMQTTSender_1737810621681 disconnected.
+1737810622: New connection from 172.17.0.5:36230 on port 1883.
+1737810622: New client connected from 172.17.0.5:36230 as JavaMQTTSender (p2, c1, k60).
+1737810622: Client JavaMQTTSender disconnected.
+1737810824: New connection from 172.17.0.5:32880 on port 1883.
+1737810825: New client connected from 172.17.0.5:32880 as JavaMQTTSender_1737810824743 (p2, c1, k60).
+1737810825: Client JavaMQTTSender_1737810824743 disconnected.
+1737810825: New connection from 172.17.0.5:32882 on port 1883.
+1737810825: New client connected from 172.17.0.5:32882 as JavaMQTTSender (p2, c1, k60).
+1737810825: Client JavaMQTTSender disconnected.
+1737811036: New connection from 172.17.0.5:59204 on port 1883.
+1737811036: New client connected from 172.17.0.5:59204 as nodered_9b4d2712164cbf34 (p2, c1, k60).
+1737811139: New connection from 172.17.0.5:45838 on port 1883.
+1737811139: New client connected from 172.17.0.5:45838 as JavaMQTTSender_1737811139570 (p2, c1, k60).
+1737811140: Client JavaMQTTSender_1737811139570 disconnected.
+1737811140: New connection from 172.17.0.5:45852 on port 1883.
+1737811140: New client connected from 172.17.0.5:45852 as JavaMQTTSender (p2, c1, k60).
+1737811140: Client JavaMQTTSender disconnected.
+1737811169: New connection from 172.17.0.5:42428 on port 1883.
+1737811169: New client connected from 172.17.0.5:42428 as JavaMQTTSender_1737811169442 (p2, c1, k60).
+1737811169: Client JavaMQTTSender_1737811169442 disconnected.
+1737811169: New connection from 172.17.0.5:42430 on port 1883.
+1737811170: New client connected from 172.17.0.5:42430 as JavaMQTTSender (p2, c1, k60).
+1737811170: Client JavaMQTTSender disconnected.
+1737811297: New connection from 172.17.0.5:60406 on port 1883.
+1737811298: New client connected from 172.17.0.5:60406 as JavaMQTTSender_1737811297882 (p2, c1, k60).
+1737811298: Client JavaMQTTSender_1737811297882 disconnected.
+1737811298: New connection from 172.17.0.5:60418 on port 1883.
+1737811298: New client connected from 172.17.0.5:60418 as JavaMQTTSender (p2, c1, k60).
+1737811298: Client JavaMQTTSender disconnected.
+1737811336: New connection from 172.17.0.5:38666 on port 1883.
+1737811337: New client connected from 172.17.0.5:38666 as JavaMQTTSender_1737811336865 (p2, c1, k60).
+1737811337: Client JavaMQTTSender_1737811336865 disconnected.
+1737811337: New connection from 172.17.0.5:38668 on port 1883.
+1737811337: New client connected from 172.17.0.5:38668 as JavaMQTTSender (p2, c1, k60).
+1737811337: Client JavaMQTTSender disconnected.
+1737811739: New connection from 172.17.0.5:50362 on port 1883.
+1737811739: New client connected from 172.17.0.5:50362 as nodered_a373fed732630533 (p2, c1, k60).
+1737811822: New connection from 172.17.0.5:43854 on port 1883.
+1737811822: New client connected from 172.17.0.5:43854 as JavaMQTTSender_1737811822402 (p2, c1, k60).
+1737811822: Client JavaMQTTSender_1737811822402 disconnected.
+1737811822: New connection from 172.17.0.5:43860 on port 1883.
+1737811823: New client connected from 172.17.0.5:43860 as JavaMQTTSender (p2, c1, k60).
+1737811823: Client JavaMQTTSender disconnected.
+1737811878: New connection from 172.17.0.5:52664 on port 1883.
+1737811879: New client connected from 172.17.0.5:52664 as JavaMQTTSender_1737811878921 (p2, c1, k60).
+1737811879: Client JavaMQTTSender_1737811878921 disconnected.
+1737811879: New connection from 172.17.0.5:52672 on port 1883.
+1737811879: New client connected from 172.17.0.5:52672 as JavaMQTTSender (p2, c1, k60).
+1737811879: Client JavaMQTTSender disconnected.
+1737812014: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737812014: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737812014: Error: No such file or directory.
+1737812180: New connection from 172.17.0.5:37106 on port 1883.
+1737812180: New client connected from 172.17.0.5:37106 as nodered_e5b2dea4c2b29cde (p2, c1, k60).
+1737812257: New connection from 172.17.0.5:50354 on port 1883.
+1737812257: New client connected from 172.17.0.5:50354 as JavaMQTTSender_1737812257316 (p2, c1, k60).
+1737812257: Client JavaMQTTSender_1737812257316 disconnected.
+1737812257: New connection from 172.17.0.5:50364 on port 1883.
+1737812258: New client connected from 172.17.0.5:50364 as JavaMQTTSender (p2, c1, k60).
+1737812258: Client JavaMQTTSender disconnected.
+1737812363: New connection from 172.17.0.5:54504 on port 1883.
+1737812363: New client connected from 172.17.0.5:54504 as JavaMQTTSender_1737812363210 (p2, c1, k60).
+1737812363: Client JavaMQTTSender_1737812363210 disconnected.
+1737812363: New connection from 172.17.0.5:54516 on port 1883.
+1737812364: New client connected from 172.17.0.5:54516 as JavaMQTTSender (p2, c1, k60).
+1737812364: Client JavaMQTTSender disconnected.
+1737812405: New connection from 172.17.0.5:46460 on port 1883.
+1737812405: New client connected from 172.17.0.5:46460 as JavaMQTTSender_1737812405346 (p2, c1, k60).
+1737812405: Client JavaMQTTSender_1737812405346 disconnected.
+1737812405: New connection from 172.17.0.5:46474 on port 1883.
+1737812406: New client connected from 172.17.0.5:46474 as JavaMQTTSender (p2, c1, k60).
+1737812406: Client JavaMQTTSender disconnected.
+1737812463: New connection from 172.17.0.5:50054 on port 1883.
+1737812464: New client connected from 172.17.0.5:50054 as JavaMQTTSender_1737812463903 (p2, c1, k60).
+1737812464: Client JavaMQTTSender_1737812463903 disconnected.
+1737812464: New connection from 172.17.0.5:49008 on port 1883.
+1737812464: New client connected from 172.17.0.5:49008 as JavaMQTTSender (p2, c1, k60).
+1737812464: Client JavaMQTTSender disconnected.
+1737812697: New connection from 172.17.0.5:57590 on port 1883.
+1737812697: New client connected from 172.17.0.5:57590 as JavaMQTTSender_1737812697110 (p2, c1, k60).
+1737812697: Client JavaMQTTSender_1737812697110 disconnected.
+1737812697: New connection from 172.17.0.5:57600 on port 1883.
+1737812697: New client connected from 172.17.0.5:57600 as JavaMQTTSender (p2, c1, k60).
+1737812697: Client JavaMQTTSender disconnected.
+1737812848: New connection from 172.17.0.5:44370 on port 1883.
+1737812848: New client connected from 172.17.0.5:44370 as nodered_55612311465e3aa2 (p2, c1, k60).
+1737813014: New connection from 172.17.0.5:37248 on port 1883.
+1737813014: New client connected from 172.17.0.5:37248 as nodered_73460646e10259ee (p2, c1, k60).
+1737813159: New connection from 172.17.0.5:54020 on port 1883.
+1737813159: New client connected from 172.17.0.5:54020 as nodered_6693a89248f0cc70 (p2, c1, k60).
+1737813260: New connection from 172.17.0.5:35562 on port 1883.
+1737813260: New client connected from 172.17.0.5:35562 as nodered_5a901e4e36403b98 (p2, c1, k60).
+1737813385: New connection from 172.17.0.5:46104 on port 1883.
+1737813385: New client connected from 172.17.0.5:46104 as JavaMQTTSender_1737813385292 (p2, c1, k60).
+1737813385: Client JavaMQTTSender_1737813385292 disconnected.
+1737813385: New connection from 172.17.0.5:46118 on port 1883.
+1737813386: New client connected from 172.17.0.5:46118 as JavaMQTTSender (p2, c1, k60).
+1737813386: Client JavaMQTTSender disconnected.
+1737813498: New connection from 172.17.0.5:44632 on port 1883.
+1737813498: New client connected from 172.17.0.5:44632 as JavaMQTTSender_1737813498245 (p2, c1, k60).
+1737813498: Client JavaMQTTSender_1737813498245 disconnected.
+1737813498: New connection from 172.17.0.5:44640 on port 1883.
+1737813499: New client connected from 172.17.0.5:44640 as JavaMQTTSender (p2, c1, k60).
+1737813499: Client JavaMQTTSender disconnected.
+1737813815: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737813815: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737813815: Error: No such file or directory.
+1737814055: New connection from 172.17.0.5:34796 on port 1883.
+1737814056: New client connected from 172.17.0.5:34796 as JavaMQTTSender_1737814055953 (p2, c1, k60).
+1737814056: Client JavaMQTTSender_1737814055953 disconnected.
+1737814056: New connection from 172.17.0.5:34800 on port 1883.
+1737814056: New client connected from 172.17.0.5:34800 as JavaMQTTSender (p2, c1, k60).
+1737814056: Client JavaMQTTSender disconnected.
+1737814096: New connection from 172.17.0.5:56466 on port 1883.
+1737814097: New client connected from 172.17.0.5:56466 as JavaMQTTSender_1737814096712 (p2, c1, k60).
+1737814097: Client JavaMQTTSender_1737814096712 disconnected.
+1737814097: New connection from 172.17.0.5:56472 on port 1883.
+1737814097: New client connected from 172.17.0.5:56472 as JavaMQTTSender (p2, c1, k60).
+1737814097: Client JavaMQTTSender disconnected.
+1737814174: New connection from 172.17.0.5:56506 on port 1883.
+1737814174: New client connected from 172.17.0.5:56506 as JavaMQTTSender_1737814174373 (p2, c1, k60).
+1737814174: Client JavaMQTTSender_1737814174373 disconnected.
+1737814174: New connection from 172.17.0.5:56522 on port 1883.
+1737814175: New client connected from 172.17.0.5:56522 as JavaMQTTSender (p2, c1, k60).
+1737814175: Client JavaMQTTSender disconnected.
+1737814516: New connection from 172.17.0.5:45178 on port 1883.
+1737814516: New client connected from 172.17.0.5:45178 as nodered_664cc9baabed8ad6 (p2, c1, k60).
+1737814561: New connection from 172.17.0.5:59648 on port 1883.
+1737814561: New client connected from 172.17.0.5:59648 as JavaMQTTSender_1737814561537 (p2, c1, k60).
+1737814562: Client JavaMQTTSender_1737814561537 disconnected.
+1737814562: New connection from 172.17.0.5:59654 on port 1883.
+1737814562: New client connected from 172.17.0.5:59654 as JavaMQTTSender (p2, c1, k60).
+1737814562: Client JavaMQTTSender disconnected.
+1737814684: New connection from 172.17.0.5:51600 on port 1883.
+1737814684: New client connected from 172.17.0.5:51600 as nodered_ec2d09512b28ce23 (p2, c1, k60).
+1737814717: New connection from 172.17.0.5:47516 on port 1883.
+1737814717: New client connected from 172.17.0.5:47516 as JavaMQTTSender_1737814717433 (p2, c1, k60).
+1737814717: Client JavaMQTTSender_1737814717433 disconnected.
+1737814717: New connection from 172.17.0.5:47518 on port 1883.
+1737814718: New client connected from 172.17.0.5:47518 as JavaMQTTSender (p2, c1, k60).
+1737814718: Client JavaMQTTSender disconnected.
+1737814759: New connection from 172.17.0.5:47448 on port 1883.
+1737814759: New client connected from 172.17.0.5:47448 as nodered_aed5856216371027 (p2, c1, k60).
+1737815088: New connection from 172.17.0.5:48666 on port 1883.
+1737815088: New client connected from 172.17.0.5:48666 as nodered_d957480570dd1b78 (p2, c1, k60).
+1737815425: New connection from 172.17.0.5:35592 on port 1883.
+1737815425: New client connected from 172.17.0.5:35592 as nodered_aa5aa4ac1f5b9636 (p2, c1, k60).
+1737815592: New connection from 172.17.0.5:52234 on port 1883.
+1737815592: New client connected from 172.17.0.5:52234 as nodered_2f56c1fb9ff61ecb (p2, c1, k60).
+1737815616: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737815616: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737815616: Error: No such file or directory.
+1737815653: New connection from 172.17.0.5:34512 on port 1883.
+1737815653: New client connected from 172.17.0.5:34512 as nodered_d64253b405077d34 (p2, c1, k60).
+1737815758: New connection from 172.17.0.5:58906 on port 1883.
+1737815758: New client connected from 172.17.0.5:58906 as nodered_69aa66e9185e8182 (p2, c1, k60).
+1737815887: New connection from 172.17.0.5:55452 on port 1883.
+1737815887: New client connected from 172.17.0.5:55452 as nodered_9c2be639571f1fd9 (p2, c1, k60).
+1737815981: New connection from 172.17.0.5:33088 on port 1883.
+1737815981: New client connected from 172.17.0.5:33088 as nodered_c92847bf3005d7bf (p2, c1, k60).
+1737816216: New connection from 172.17.0.5:58730 on port 1883.
+1737816216: New client connected from 172.17.0.5:58730 as nodered_77b2d2f89f126915 (p2, c1, k60).
+1737816436: New connection from 172.17.0.5:42414 on port 1883.
+1737816436: New client connected from 172.17.0.5:42414 as nodered_b0c9f7f38b29187e (p2, c1, k60).
+1737816544: New connection from 172.17.0.5:44974 on port 1883.
+1737816544: New client connected from 172.17.0.5:44974 as nodered_93527f9ad5a77bc1 (p2, c1, k60).
+1737817028: New connection from 172.17.0.5:38036 on port 1883.
+1737817028: New client connected from 172.17.0.5:38036 as nodered_b588beb94f75b546 (p2, c1, k60).
+1737817119: New connection from 172.17.0.5:54972 on port 1883.
+1737817119: New client connected from 172.17.0.5:54972 as nodered_9016b33f373958f9 (p2, c1, k60).
+1737817193: New connection from 172.17.0.5:37958 on port 1883.
+1737817193: New client connected from 172.17.0.5:37958 as nodered_eaa6ab54ede49094 (p2, c1, k60).
+1737817336: New connection from 172.17.0.5:58192 on port 1883.
+1737817336: New client connected from 172.17.0.5:58192 as nodered_747811ea83febfd9 (p2, c1, k60).
+1737817417: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737817417: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737817417: Error: No such file or directory.
+1737817467: New connection from 172.17.0.5:34770 on port 1883.
+1737817467: New client connected from 172.17.0.5:34770 as nodered_0ab284a6935b0815 (p2, c1, k60).
+1737817568: New connection from 172.17.0.5:54000 on port 1883.
+1737817568: New client connected from 172.17.0.5:54000 as nodered_01440651af193d13 (p2, c1, k60).
+1737817755: New connection from 172.17.0.5:51394 on port 1883.
+1737817755: New client connected from 172.17.0.5:51394 as nodered_6db792751955878a (p2, c1, k60).
+1737817819: New connection from 172.17.0.5:38258 on port 1883.
+1737817819: New client connected from 172.17.0.5:38258 as nodered_4cac016df826a228 (p2, c1, k60).
+1737817899: New connection from 172.17.0.5:40934 on port 1883.
+1737817899: New client connected from 172.17.0.5:40934 as JavaMQTTSender_1737817899173 (p2, c1, k60).
+1737817899: Client JavaMQTTSender_1737817899173 disconnected.
+1737817899: New connection from 172.17.0.5:40940 on port 1883.
+1737817899: New client connected from 172.17.0.5:40940 as JavaMQTTSender (p2, c1, k60).
+1737817899: Client JavaMQTTSender disconnected.
+1737818019: New connection from 172.17.0.5:45488 on port 1883.
+1737818019: New client connected from 172.17.0.5:45488 as JavaMQTTSender_1737818019334 (p2, c1, k60).
+1737818019: Client JavaMQTTSender_1737818019334 disconnected.
+1737818019: New connection from 172.17.0.5:45498 on port 1883.
+1737818020: New client connected from 172.17.0.5:45498 as JavaMQTTSender (p2, c1, k60).
+1737818020: Client JavaMQTTSender disconnected.
+1737818098: New connection from 172.17.0.5:57280 on port 1883.
+1737818098: New client connected from 172.17.0.5:57280 as JavaMQTTSender_1737818098501 (p2, c1, k60).
+1737818099: Client JavaMQTTSender_1737818098501 disconnected.
+1737818099: New connection from 172.17.0.5:57282 on port 1883.
+1737818099: New client connected from 172.17.0.5:57282 as JavaMQTTSender (p2, c1, k60).
+1737818099: Client JavaMQTTSender disconnected.
+1737818160: New connection from 172.17.0.5:52872 on port 1883.
+1737818160: New client connected from 172.17.0.5:52872 as JavaMQTTSender_1737818160549 (p2, c1, k60).
+1737818161: Client JavaMQTTSender_1737818160549 disconnected.
+1737818161: New connection from 172.17.0.5:52886 on port 1883.
+1737818161: New client connected from 172.17.0.5:52886 as JavaMQTTSender (p2, c1, k60).
+1737818161: Client JavaMQTTSender disconnected.
+1737818219: New connection from 172.17.0.5:42716 on port 1883.
+1737818220: New client connected from 172.17.0.5:42716 as JavaMQTTSender_1737818219952 (p2, c1, k60).
+1737818220: Client JavaMQTTSender_1737818219952 disconnected.
+1737818220: New connection from 172.17.0.5:42720 on port 1883.
+1737818220: New client connected from 172.17.0.5:42720 as JavaMQTTSender (p2, c1, k60).
+1737818220: Client JavaMQTTSender disconnected.
+1737818370: New connection from 172.17.0.5:40820 on port 1883.
+1737818370: New client connected from 172.17.0.5:40820 as JavaMQTTSender_1737818370585 (p2, c1, k60).
+1737818371: Client JavaMQTTSender_1737818370585 disconnected.
+1737818371: New connection from 172.17.0.5:40826 on port 1883.
+1737818371: New client connected from 172.17.0.5:40826 as JavaMQTTSender (p2, c1, k60).
+1737818371: Client JavaMQTTSender disconnected.
+1737818450: New connection from 172.17.0.5:36626 on port 1883.
+1737818451: New client connected from 172.17.0.5:36626 as JavaMQTTSender_1737818450815 (p2, c1, k60).
+1737818451: Client JavaMQTTSender_1737818450815 disconnected.
+1737818451: New connection from 172.17.0.5:36638 on port 1883.
+1737818451: New client connected from 172.17.0.5:36638 as JavaMQTTSender (p2, c1, k60).
+1737818451: Client JavaMQTTSender disconnected.
+1737818874: New connection from 172.17.0.5:47554 on port 1883.
+1737818875: New client connected from 172.17.0.5:47554 as JavaMQTTSender_1737818874679 (p2, c1, k60).
+1737818875: Client JavaMQTTSender_1737818874679 disconnected.
+1737818875: New connection from 172.17.0.5:47560 on port 1883.
+1737818875: New client connected from 172.17.0.5:47560 as JavaMQTTSender (p2, c1, k60).
+1737818875: Client JavaMQTTSender disconnected.
+1737818910: New connection from 172.17.0.5:43880 on port 1883.
+1737818910: New client connected from 172.17.0.5:43880 as JavaMQTTSender_1737818910110 (p2, c1, k60).
+1737818910: Client JavaMQTTSender_1737818910110 disconnected.
+1737818910: New connection from 172.17.0.5:43894 on port 1883.
+1737818910: New client connected from 172.17.0.5:43894 as JavaMQTTSender (p2, c1, k60).
+1737818910: Client JavaMQTTSender disconnected.
+1737818944: New connection from 172.17.0.5:43892 on port 1883.
+1737818944: New client connected from 172.17.0.5:43892 as nodered_d449703c76235898 (p2, c1, k60).
+1737818981: New connection from 172.17.0.5:45014 on port 1883.
+1737818982: New client connected from 172.17.0.5:45014 as JavaMQTTSender_1737818981747 (p2, c1, k60).
+1737818982: Client JavaMQTTSender_1737818981747 disconnected.
+1737818982: New connection from 172.17.0.5:45030 on port 1883.
+1737818982: New client connected from 172.17.0.5:45030 as JavaMQTTSender (p2, c1, k60).
+1737818982: Client JavaMQTTSender disconnected.
+1737819144: New connection from 172.17.0.5:57420 on port 1883.
+1737819144: New client connected from 172.17.0.5:57420 as JavaMQTTSender_1737819144449 (p2, c1, k60).
+1737819145: Client JavaMQTTSender_1737819144449 disconnected.
+1737819145: New connection from 172.17.0.5:57430 on port 1883.
+1737819145: New client connected from 172.17.0.5:57430 as JavaMQTTSender (p2, c1, k60).
+1737819145: Client JavaMQTTSender disconnected.
+1737819218: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737819218: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737819218: Error: No such file or directory.
+1737819261: Client nodered_d449703c76235898 closed its connection.
+1737819261: Client nodered_4cac016df826a228 closed its connection.
+1737819261: Client nodered_6db792751955878a closed its connection.
+1737819261: Client nodered_01440651af193d13 closed its connection.
+1737819261: Client nodered_0ab284a6935b0815 closed its connection.
+1737819261: Client nodered_747811ea83febfd9 closed its connection.
+1737819261: Client nodered_eaa6ab54ede49094 closed its connection.
+1737819261: Client nodered_9016b33f373958f9 closed its connection.
+1737819261: Client nodered_b588beb94f75b546 closed its connection.
+1737819261: Client nodered_93527f9ad5a77bc1 closed its connection.
+1737819261: Client nodered_b0c9f7f38b29187e closed its connection.
+1737819261: Client nodered_77b2d2f89f126915 closed its connection.
+1737819261: Client nodered_c92847bf3005d7bf closed its connection.
+1737819261: Client nodered_9c2be639571f1fd9 closed its connection.
+1737819261: Client nodered_69aa66e9185e8182 closed its connection.
+1737819261: Client nodered_d64253b405077d34 closed its connection.
+1737819261: Client nodered_2f56c1fb9ff61ecb closed its connection.
+1737819261: Client nodered_aa5aa4ac1f5b9636 closed its connection.
+1737819261: Client nodered_d957480570dd1b78 closed its connection.
+1737819261: Client nodered_aed5856216371027 closed its connection.
+1737819261: Client nodered_ec2d09512b28ce23 closed its connection.
+1737819261: Client nodered_664cc9baabed8ad6 closed its connection.
+1737819261: Client nodered_5a901e4e36403b98 closed its connection.
+1737819261: Client nodered_6693a89248f0cc70 closed its connection.
+1737819261: Client nodered_73460646e10259ee closed its connection.
+1737819261: Client nodered_55612311465e3aa2 closed its connection.
+1737819261: Client nodered_e5b2dea4c2b29cde closed its connection.
+1737819261: Client nodered_a373fed732630533 closed its connection.
+1737819261: Client nodered_9b4d2712164cbf34 closed its connection.
+1737819261: Client nodered_914babd8364a557e closed its connection.
+1737819261: Client nodered_4da38470b8b83672 closed its connection.
+1737819261: Client nodered_614e98cac9c71a7d closed its connection.
+1737819261: Client nodered_87bb1eb7351f0e9b closed its connection.
+1737819262: mosquitto version 2.0.20 terminating
+1737819262: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737819262: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737819262: Error: No such file or directory.
+1737819281: mosquitto version 2.0.20 starting
+1737819281: Config loaded from /mosquitto/config/mosquitto.conf.
+1737819281: Opening ipv4 listen socket on port 1883.
+1737819281: mosquitto version 2.0.20 running
+1737819285: New connection from 172.17.0.5:50450 on port 1883.
+1737819285: New client connected from 172.17.0.5:50450 as nodered_b772873ca8da55db (p2, c1, k60).
+1737819386: New connection from 172.17.0.5:57394 on port 1883.
+1737819387: New client connected from 172.17.0.5:57394 as JavaMQTTSender_1737819386883 (p2, c1, k60).
+1737819387: Client JavaMQTTSender_1737819386883 disconnected.
+1737819387: New connection from 172.17.0.5:57408 on port 1883.
+1737819387: New client connected from 172.17.0.5:57408 as JavaMQTTSender (p2, c1, k60).
+1737819387: Client JavaMQTTSender disconnected.
+1737819573: New connection from 172.17.0.5:37562 on port 1883.
+1737819573: New client connected from 172.17.0.5:37562 as JavaMQTTSender_1737819573011 (p2, c1, k60).
+1737819573: Client JavaMQTTSender_1737819573011 disconnected.
+1737819573: New connection from 172.17.0.5:37566 on port 1883.
+1737819573: New client connected from 172.17.0.5:37566 as JavaMQTTSender (p2, c1, k60).
+1737819573: Client JavaMQTTSender disconnected.
+1737819639: New connection from 172.17.0.5:54780 on port 1883.
+1737819640: New client connected from 172.17.0.5:54780 as JavaMQTTSender_1737819639910 (p2, c1, k60).
+1737819640: Client JavaMQTTSender_1737819639910 disconnected.
+1737819640: New connection from 172.17.0.5:54796 on port 1883.
+1737819640: New client connected from 172.17.0.5:54796 as JavaMQTTSender (p2, c1, k60).
+1737819640: Client JavaMQTTSender disconnected.
+1737819851: New connection from 172.17.0.5:54900 on port 1883.
+1737819851: New client connected from 172.17.0.5:54900 as JavaMQTTSender_1737819851106 (p2, c1, k60).
+1737819851: Client JavaMQTTSender_1737819851106 disconnected.
+1737819851: New connection from 172.17.0.5:54904 on port 1883.
+1737819851: New client connected from 172.17.0.5:54904 as JavaMQTTSender (p2, c1, k60).
+1737819851: Client JavaMQTTSender disconnected.
+1737819970: New connection from 172.17.0.5:60608 on port 1883.
+1737819971: New client connected from 172.17.0.5:60608 as JavaMQTTSender_1737819970840 (p2, c1, k60).
+1737819971: Client JavaMQTTSender_1737819970840 disconnected.
+1737819971: New connection from 172.17.0.5:60610 on port 1883.
+1737819971: New client connected from 172.17.0.5:60610 as JavaMQTTSender (p2, c1, k60).
+1737819971: Client JavaMQTTSender disconnected.
+1737820048: New connection from 172.17.0.5:34230 on port 1883.
+1737820049: New client connected from 172.17.0.5:34230 as JavaMQTTSender_1737820048934 (p2, c1, k60).
+1737820049: Client JavaMQTTSender_1737820048934 disconnected.
+1737820049: New connection from 172.17.0.5:34242 on port 1883.
+1737820049: New client connected from 172.17.0.5:34242 as JavaMQTTSender (p2, c1, k60).
+1737820049: Client JavaMQTTSender disconnected.
+1737820091: New connection from 172.17.0.5:39310 on port 1883.
+1737820092: New client connected from 172.17.0.5:39310 as JavaMQTTSender_1737820091773 (p2, c1, k60).
+1737820092: Client JavaMQTTSender_1737820091773 disconnected.
+1737820092: New connection from 172.17.0.5:39324 on port 1883.
+1737820092: New client connected from 172.17.0.5:39324 as JavaMQTTSender (p2, c1, k60).
+1737820092: Client JavaMQTTSender disconnected.
+1737820144: New connection from 172.17.0.5:59996 on port 1883.
+1737820144: New client connected from 172.17.0.5:59996 as JavaMQTTSender_1737820144162 (p2, c1, k60).
+1737820144: Client JavaMQTTSender_1737820144162 disconnected.
+1737820144: New connection from 172.17.0.5:49452 on port 1883.
+1737820144: New client connected from 172.17.0.5:49452 as JavaMQTTSender (p2, c1, k60).
+1737820144: Client JavaMQTTSender disconnected.
+1737820214: New connection from 172.17.0.5:53154 on port 1883.
+1737820214: New client connected from 172.17.0.5:53154 as JavaMQTTSender_1737820214502 (p2, c1, k60).
+1737820214: Client JavaMQTTSender_1737820214502 disconnected.
+1737820214: New connection from 172.17.0.5:53160 on port 1883.
+1737820215: New client connected from 172.17.0.5:53160 as JavaMQTTSender (p2, c1, k60).
+1737820215: Client JavaMQTTSender disconnected.
+1737820318: New connection from 172.17.0.5:55486 on port 1883.
+1737820319: New client connected from 172.17.0.5:55486 as JavaMQTTSender_1737820318748 (p2, c1, k60).
+1737820319: Client JavaMQTTSender_1737820318748 disconnected.
+1737820319: New connection from 172.17.0.5:55498 on port 1883.
+1737820319: New client connected from 172.17.0.5:55498 as JavaMQTTSender (p2, c1, k60).
+1737820319: Client JavaMQTTSender disconnected.
+1737820436: New connection from 172.17.0.5:40022 on port 1883.
+1737820436: New client connected from 172.17.0.5:40022 as nodered_f5e7bc24f08a23bc (p2, c1, k60).
+1737820638: New connection from 172.17.0.5:47406 on port 1883.
+1737820638: New client connected from 172.17.0.5:47406 as nodered_c512dba5d9db520a (p2, c1, k60).
+1737820696: New connection from 172.17.0.5:34962 on port 1883.
+1737820696: New client connected from 172.17.0.5:34962 as JavaMQTTSender_1737820696018 (p2, c1, k60).
+1737820696: Client JavaMQTTSender_1737820696018 disconnected.
+1737820696: New connection from 172.17.0.5:34978 on port 1883.
+1737820696: New client connected from 172.17.0.5:34978 as JavaMQTTSender (p2, c1, k60).
+1737820696: Client JavaMQTTSender disconnected.
+1737820731: New connection from 172.17.0.5:41214 on port 1883.
+1737820731: New client connected from 172.17.0.5:41214 as JavaMQTTSender_1737820731334 (p2, c1, k60).
+1737820731: Client JavaMQTTSender_1737820731334 disconnected.
+1737820731: New connection from 172.17.0.5:41218 on port 1883.
+1737820732: New client connected from 172.17.0.5:41218 as JavaMQTTSender (p2, c1, k60).
+1737820732: Client JavaMQTTSender disconnected.
+1737820769: New connection from 172.17.0.5:40416 on port 1883.
+1737820770: New client connected from 172.17.0.5:40416 as JavaMQTTSender_1737820769682 (p2, c1, k60).
+1737820770: Client JavaMQTTSender_1737820769682 disconnected.
+1737820770: New connection from 172.17.0.5:40420 on port 1883.
+1737820770: New client connected from 172.17.0.5:40420 as JavaMQTTSender (p2, c1, k60).
+1737820770: Client JavaMQTTSender disconnected.
+1737820812: New connection from 172.17.0.5:35796 on port 1883.
+1737820812: New client connected from 172.17.0.5:35796 as JavaMQTTSender_1737820812634 (p2, c1, k60).
+1737820813: Client JavaMQTTSender_1737820812634 disconnected.
+1737820813: New connection from 172.17.0.5:35800 on port 1883.
+1737820813: New client connected from 172.17.0.5:35800 as JavaMQTTSender (p2, c1, k60).
+1737820813: Client JavaMQTTSender disconnected.
+1737820859: New connection from 172.17.0.5:34602 on port 1883.
+1737820859: New client connected from 172.17.0.5:34602 as JavaMQTTSender_1737820859282 (p2, c1, k60).
+1737820859: Client JavaMQTTSender_1737820859282 disconnected.
+1737820859: New connection from 172.17.0.5:34608 on port 1883.
+1737820860: New client connected from 172.17.0.5:34608 as JavaMQTTSender (p2, c1, k60).
+1737820860: Client JavaMQTTSender disconnected.
+1737820903: New connection from 172.17.0.5:44916 on port 1883.
+1737820903: New client connected from 172.17.0.5:44916 as JavaMQTTSender_1737820903128 (p2, c1, k60).
+1737820903: Client JavaMQTTSender_1737820903128 disconnected.
+1737820903: New connection from 172.17.0.5:44924 on port 1883.
+1737820903: New client connected from 172.17.0.5:44924 as JavaMQTTSender (p2, c1, k60).
+1737820903: Client JavaMQTTSender disconnected.
+1737821082: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737821082: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737821082: Error: No such file or directory.
+1737821137: New connection from 172.17.0.5:60056 on port 1883.
+1737821138: New client connected from 172.17.0.5:60056 as JavaMQTTSender_1737821137748 (p2, c1, k60).
+1737821138: Client JavaMQTTSender_1737821137748 disconnected.
+1737821138: New connection from 172.17.0.5:60072 on port 1883.
+1737821138: New client connected from 172.17.0.5:60072 as JavaMQTTSender (p2, c1, k60).
+1737821138: Client JavaMQTTSender disconnected.
+1737821249: New connection from 172.17.0.5:40038 on port 1883.
+1737821249: New client connected from 172.17.0.5:40038 as JavaMQTTSender_1737821249322 (p2, c1, k60).
+1737821249: Client JavaMQTTSender_1737821249322 disconnected.
+1737821249: New connection from 172.17.0.5:40048 on port 1883.
+1737821250: New client connected from 172.17.0.5:40048 as JavaMQTTSender (p2, c1, k60).
+1737821250: Client JavaMQTTSender disconnected.
+1737821324: New connection from 172.17.0.5:55378 on port 1883.
+1737821324: New client connected from 172.17.0.5:55378 as nodered_514011183d61b9a4 (p2, c1, k60).
+1737821379: New connection from 172.17.0.5:43852 on port 1883.
+1737821379: New client connected from 172.17.0.5:43852 as JavaMQTTSender_1737821379601 (p2, c1, k60).
+1737821380: Client JavaMQTTSender_1737821379601 disconnected.
+1737821380: New connection from 172.17.0.5:43854 on port 1883.
+1737821380: New client connected from 172.17.0.5:43854 as JavaMQTTSender (p2, c1, k60).
+1737821380: Client JavaMQTTSender disconnected.
+1737821406: New connection from 172.17.0.5:37550 on port 1883.
+1737821406: New client connected from 172.17.0.5:37550 as JavaMQTTSender_1737821406271 (p2, c1, k60).
+1737821406: Client JavaMQTTSender_1737821406271 disconnected.
+1737821406: New connection from 172.17.0.5:37554 on port 1883.
+1737821407: New client connected from 172.17.0.5:37554 as JavaMQTTSender (p2, c1, k60).
+1737821407: Client JavaMQTTSender disconnected.
+1737821452: New connection from 172.17.0.5:46364 on port 1883.
+1737821452: New client connected from 172.17.0.5:46364 as JavaMQTTSender_1737821452003 (p2, c1, k60).
+1737821452: Client JavaMQTTSender_1737821452003 disconnected.
+1737821452: New connection from 172.17.0.5:46368 on port 1883.
+1737821452: New client connected from 172.17.0.5:46368 as JavaMQTTSender (p2, c1, k60).
+1737821452: Client JavaMQTTSender disconnected.
+1737821606: New connection from 172.17.0.5:45556 on port 1883.
+1737821606: New client connected from 172.17.0.5:45556 as JavaMQTTSender_1737821606273 (p2, c1, k60).
+1737821606: Client JavaMQTTSender_1737821606273 disconnected.
+1737821606: New connection from 172.17.0.5:45564 on port 1883.
+1737821607: New client connected from 172.17.0.5:45564 as JavaMQTTSender (p2, c1, k60).
+1737821607: Client JavaMQTTSender disconnected.
+1737821660: New connection from 172.17.0.5:41564 on port 1883.
+1737821661: New client connected from 172.17.0.5:41564 as JavaMQTTSender_1737821660673 (p2, c1, k60).
+1737821661: Client JavaMQTTSender_1737821660673 disconnected.
+1737821661: New connection from 172.17.0.5:41578 on port 1883.
+1737821661: New client connected from 172.17.0.5:41578 as JavaMQTTSender (p2, c1, k60).
+1737821661: Client JavaMQTTSender disconnected.
+1737821713: New connection from 172.17.0.5:37990 on port 1883.
+1737821714: New client connected from 172.17.0.5:37990 as JavaMQTTSender_1737821713758 (p2, c1, k60).
+1737821714: Client JavaMQTTSender_1737821713758 disconnected.
+1737821714: New connection from 172.17.0.5:38002 on port 1883.
+1737821714: New client connected from 172.17.0.5:38002 as JavaMQTTSender (p2, c1, k60).
+1737821714: Client JavaMQTTSender disconnected.
+1737821780: New connection from 172.17.0.5:52714 on port 1883.
+1737821780: New client connected from 172.17.0.5:52714 as JavaMQTTSender_1737821780326 (p2, c1, k60).
+1737821780: Client JavaMQTTSender_1737821780326 disconnected.
+1737821780: New connection from 172.17.0.5:52718 on port 1883.
+1737821781: New client connected from 172.17.0.5:52718 as JavaMQTTSender (p2, c1, k60).
+1737821781: Client JavaMQTTSender disconnected.
+1737821884: New connection from 172.17.0.5:57404 on port 1883.
+1737821885: New client connected from 172.17.0.5:57404 as JavaMQTTSender_1737821884791 (p2, c1, k60).
+1737821885: Client JavaMQTTSender_1737821884791 disconnected.
+1737821885: New connection from 172.17.0.5:57414 on port 1883.
+1737821885: New client connected from 172.17.0.5:57414 as JavaMQTTSender (p2, c1, k60).
+1737821885: Client JavaMQTTSender disconnected.
+1737822254: New connection from 172.17.0.5:45920 on port 1883.
+1737822254: New client connected from 172.17.0.5:45920 as JavaMQTTSender_1737822254243 (p2, c1, k60).
+1737822254: Client JavaMQTTSender_1737822254243 disconnected.
+1737822254: New connection from 172.17.0.5:47316 on port 1883.
+1737822254: New client connected from 172.17.0.5:47316 as JavaMQTTSender (p2, c1, k60).
+1737822255: Client JavaMQTTSender disconnected.
+1737822368: New connection from 172.17.0.5:58076 on port 1883.
+1737822368: New client connected from 172.17.0.5:58076 as JavaMQTTSender_1737822368541 (p2, c1, k60).
+1737822369: Client JavaMQTTSender_1737822368541 disconnected.
+1737822369: New connection from 172.17.0.5:58080 on port 1883.
+1737822369: New client connected from 172.17.0.5:58080 as JavaMQTTSender (p2, c1, k60).
+1737822369: Client JavaMQTTSender disconnected.
+1737822791: New connection from 172.17.0.5:53686 on port 1883.
+1737822792: New client connected from 172.17.0.5:53686 as JavaMQTTSender_1737822791783 (p2, c1, k60).
+1737822792: Client JavaMQTTSender_1737822791783 disconnected.
+1737822792: New connection from 172.17.0.5:53702 on port 1883.
+1737822792: New client connected from 172.17.0.5:53702 as JavaMQTTSender (p2, c1, k60).
+1737822792: Client JavaMQTTSender disconnected.
+1737822883: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737822883: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737822883: Error: No such file or directory.
+1737823028: New connection from 172.17.0.5:37940 on port 1883.
+1737823028: New client connected from 172.17.0.5:37940 as JavaMQTTSender_1737823028413 (p2, c1, k60).
+1737823028: Client JavaMQTTSender_1737823028413 disconnected.
+1737823028: New connection from 172.17.0.5:37952 on port 1883.
+1737823029: New client connected from 172.17.0.5:37952 as JavaMQTTSender (p2, c1, k60).
+1737823029: Client JavaMQTTSender disconnected.
+1737823451: New connection from 172.17.0.5:40376 on port 1883.
+1737823451: New client connected from 172.17.0.5:40376 as JavaMQTTSender_1737823451009 (p2, c1, k60).
+1737823451: Client JavaMQTTSender_1737823451009 disconnected.
+1737823451: New connection from 172.17.0.5:40386 on port 1883.
+1737823451: New client connected from 172.17.0.5:40386 as JavaMQTTSender (p2, c1, k60).
+1737823451: Client JavaMQTTSender disconnected.
+1737823551: New connection from 172.17.0.5:52866 on port 1883.
+1737823551: New client connected from 172.17.0.5:52866 as JavaMQTTSender_1737823551555 (p2, c1, k60).
+1737823552: Client JavaMQTTSender_1737823551555 disconnected.
+1737823552: New connection from 172.17.0.5:52880 on port 1883.
+1737823552: New client connected from 172.17.0.5:52880 as JavaMQTTSender (p2, c1, k60).
+1737823552: Client JavaMQTTSender disconnected.
+1737823886: New connection from 172.17.0.5:35590 on port 1883.
+1737823886: New client connected from 172.17.0.5:35590 as JavaMQTTSender_1737823886579 (p2, c1, k60).
+1737823887: Client JavaMQTTSender_1737823886579 disconnected.
+1737823887: New connection from 172.17.0.5:35606 on port 1883.
+1737823887: New client connected from 172.17.0.5:35606 as JavaMQTTSender (p2, c1, k60).
+1737823887: Client JavaMQTTSender disconnected.
+1737823978: New connection from 172.17.0.5:60586 on port 1883.
+1737823978: New client connected from 172.17.0.5:60586 as JavaMQTTSender_1737823978609 (p2, c1, k60).
+1737823979: Client JavaMQTTSender_1737823978609 disconnected.
+1737823979: New connection from 172.17.0.5:60590 on port 1883.
+1737823979: New client connected from 172.17.0.5:60590 as JavaMQTTSender (p2, c1, k60).
+1737823979: Client JavaMQTTSender disconnected.
+1737824055: New connection from 172.17.0.5:50702 on port 1883.
+1737824056: New client connected from 172.17.0.5:50702 as JavaMQTTSender_1737824055827 (p2, c1, k60).
+1737824056: Client JavaMQTTSender_1737824055827 disconnected.
+1737824056: New connection from 172.17.0.5:50706 on port 1883.
+1737824056: New client connected from 172.17.0.5:50706 as JavaMQTTSender (p2, c1, k60).
+1737824056: Client JavaMQTTSender disconnected.
+1737824131: New connection from 172.17.0.5:53544 on port 1883.
+1737824131: New client connected from 172.17.0.5:53544 as JavaMQTTSender_1737824131646 (p2, c1, k60).
+1737824132: Client JavaMQTTSender_1737824131646 disconnected.
+1737824132: New connection from 172.17.0.5:53556 on port 1883.
+1737824132: New client connected from 172.17.0.5:53556 as JavaMQTTSender (p2, c1, k60).
+1737824132: Client JavaMQTTSender disconnected.
+1737824409: New connection from 172.17.0.5:53276 on port 1883.
+1737824409: New client connected from 172.17.0.5:53276 as JavaMQTTSender_1737824409204 (p2, c1, k60).
+1737824409: Client JavaMQTTSender_1737824409204 disconnected.
+1737824409: New connection from 172.17.0.5:53290 on port 1883.
+1737824410: New client connected from 172.17.0.5:53290 as JavaMQTTSender (p2, c1, k60).
+1737824410: Client JavaMQTTSender disconnected.
+1737824684: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737824684: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737824684: Error: No such file or directory.
+1737824781: New connection from 172.17.0.5:51672 on port 1883.
+1737824781: New client connected from 172.17.0.5:51672 as nodered_bb85fc710fac242c (p2, c1, k60).
+1737824850: New connection from 172.17.0.5:42812 on port 1883.
+1737824850: New client connected from 172.17.0.5:42812 as JavaMQTTSender_1737824850249 (p2, c1, k60).
+1737824850: Client JavaMQTTSender_1737824850249 disconnected.
+1737824850: New connection from 172.17.0.5:42814 on port 1883.
+1737824851: New client connected from 172.17.0.5:42814 as JavaMQTTSender (p2, c1, k60).
+1737824851: Client JavaMQTTSender disconnected.
+1737824919: New connection from 172.17.0.5:44136 on port 1883.
+1737824920: New client connected from 172.17.0.5:44136 as JavaMQTTSender_1737824919804 (p2, c1, k60).
+1737824920: Client JavaMQTTSender_1737824919804 disconnected.
+1737824920: New connection from 172.17.0.5:44146 on port 1883.
+1737824920: New client connected from 172.17.0.5:44146 as JavaMQTTSender (p2, c1, k60).
+1737824920: Client JavaMQTTSender disconnected.
+1737825055: New connection from 172.17.0.5:44894 on port 1883.
+1737825055: New client connected from 172.17.0.5:44894 as nodered_7aee0da592043f96 (p2, c1, k60).
+1737825096: New connection from 172.17.0.5:57732 on port 1883.
+1737825097: New client connected from 172.17.0.5:57732 as JavaMQTTSender_1737825096865 (p2, c1, k60).
+1737825097: Client JavaMQTTSender_1737825096865 disconnected.
+1737825097: New connection from 172.17.0.5:57746 on port 1883.
+1737825097: New client connected from 172.17.0.5:57746 as JavaMQTTSender (p2, c1, k60).
+1737825097: Client JavaMQTTSender disconnected.
+1737825236: New connection from 172.17.0.5:49556 on port 1883.
+1737825236: New client connected from 172.17.0.5:49556 as nodered_707d3e5adc68198d (p2, c1, k60).
+1737825334: New connection from 172.17.0.5:36168 on port 1883.
+1737825334: New client connected from 172.17.0.5:36168 as JavaMQTTSender_1737825334560 (p2, c1, k60).
+1737825334: Client JavaMQTTSender_1737825334560 disconnected.
+1737825334: New connection from 172.17.0.5:36174 on port 1883.
+1737825335: New client connected from 172.17.0.5:36174 as JavaMQTTSender (p2, c1, k60).
+1737825335: Client JavaMQTTSender disconnected.
+1737825431: New connection from 172.17.0.5:34520 on port 1883.
+1737825431: New client connected from 172.17.0.5:34520 as nodered_f133032ef80e24d6 (p2, c1, k60).
+1737825546: New connection from 172.17.0.5:51400 on port 1883.
+1737825546: New client connected from 172.17.0.5:51400 as JavaMQTTSender_1737825546492 (p2, c1, k60).
+1737825546: Client JavaMQTTSender_1737825546492 disconnected.
+1737825546: New connection from 172.17.0.5:51412 on port 1883.
+1737825547: New client connected from 172.17.0.5:51412 as JavaMQTTSender (p2, c1, k60).
+1737825547: Client JavaMQTTSender disconnected.
+1737825760: New connection from 172.17.0.5:47856 on port 1883.
+1737825760: New client connected from 172.17.0.5:47856 as JavaMQTTSender_1737825760296 (p2, c1, k60).
+1737825760: Client JavaMQTTSender_1737825760296 disconnected.
+1737825760: New connection from 172.17.0.5:47870 on port 1883.
+1737825761: New client connected from 172.17.0.5:47870 as JavaMQTTSender (p2, c1, k60).
+1737825761: Client JavaMQTTSender disconnected.
+1737825888: New connection from 172.17.0.5:49408 on port 1883.
+1737825888: New client connected from 172.17.0.5:49408 as JavaMQTTSender_1737825888421 (p2, c1, k60).
+1737825888: Client JavaMQTTSender_1737825888421 disconnected.
+1737825888: New connection from 172.17.0.5:49418 on port 1883.
+1737825889: New client connected from 172.17.0.5:49418 as JavaMQTTSender (p2, c1, k60).
+1737825889: Client JavaMQTTSender disconnected.
+1737825971: New connection from 172.17.0.5:57980 on port 1883.
+1737825972: New client connected from 172.17.0.5:57980 as JavaMQTTSender_1737825971700 (p2, c1, k60).
+1737825972: Client JavaMQTTSender_1737825971700 disconnected.
+1737825972: New connection from 172.17.0.5:57984 on port 1883.
+1737825972: New client connected from 172.17.0.5:57984 as JavaMQTTSender (p2, c1, k60).
+1737825972: Client JavaMQTTSender disconnected.
+1737826156: New connection from 172.17.0.5:60494 on port 1883.
+1737826156: New client connected from 172.17.0.5:60494 as nodered_105e2a2489565007 (p2, c1, k60).
+1737826263: New connection from 172.17.0.5:60216 on port 1883.
+1737826263: New client connected from 172.17.0.5:60216 as nodered_1450e3731ea1d403 (p2, c1, k60).
+1737826402: New connection from 172.17.0.5:39190 on port 1883.
+1737826402: New client connected from 172.17.0.5:39190 as nodered_94a89baec9846b8f (p2, c1, k60).
+1737826485: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737826485: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737826485: Error: No such file or directory.
+1737826830: New connection from 172.17.0.5:34992 on port 1883.
+1737826830: New client connected from 172.17.0.5:34992 as nodered_fd43653361908d82 (p2, c1, k60).
+1737826902: New connection from 172.17.0.5:59254 on port 1883.
+1737826902: New client connected from 172.17.0.5:59254 as nodered_c47e6c380e97e65d (p2, c1, k60).
+1737827517: New connection from 172.17.0.5:43734 on port 1883.
+1737827517: New client connected from 172.17.0.5:43734 as nodered_72d3f7e9814bc8d3 (p2, c1, k60).
+1737827732: New connection from 172.17.0.5:48022 on port 1883.
+1737827732: New client connected from 172.17.0.5:48022 as nodered_12ce23ee15bf9f68 (p2, c1, k60).
+1737827793: New connection from 172.17.0.5:52636 on port 1883.
+1737827793: New client connected from 172.17.0.5:52636 as nodered_4c43b57af28b1c58 (p2, c1, k60).
+1737827835: New connection from 172.17.0.5:55096 on port 1883.
+1737827835: New client connected from 172.17.0.5:55096 as nodered_e26615b901f96d8f (p2, c1, k60).
+1737828286: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737828286: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737828286: Error: No such file or directory.
+1737830087: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737830087: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737830087: Error: No such file or directory.
+1737831888: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737831888: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737831888: Error: No such file or directory.
+1737833689: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737833689: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737833689: Error: No such file or directory.
+1737835490: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737835490: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737835490: Error: No such file or directory.
+1737837291: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737837291: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737837291: Error: No such file or directory.
+1737839092: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737839092: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737839092: Error: No such file or directory.
+1737840893: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737840893: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737840893: Error: No such file or directory.
+1737842694: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737842694: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737842694: Error: No such file or directory.
+1737844495: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737844495: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737844495: Error: No such file or directory.
+1737846296: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737846296: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737846296: Error: No such file or directory.
+1737848097: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737848097: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737848097: Error: No such file or directory.
+1737849898: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737849898: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737849898: Error: No such file or directory.
+1737851699: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737851699: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737851699: Error: No such file or directory.
+1737853500: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737853500: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737853500: Error: No such file or directory.
+1737855301: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737855301: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737855301: Error: No such file or directory.
+1737857102: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737857102: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737857102: Error: No such file or directory.
+1737858903: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737858903: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737858903: Error: No such file or directory.
+1737860704: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737860704: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737860704: Error: No such file or directory.
+1737862505: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737862505: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737862505: Error: No such file or directory.
+1737864306: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737864306: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737864306: Error: No such file or directory.
+1737866107: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737866107: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737866107: Error: No such file or directory.
+1737867908: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737867908: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737867908: Error: No such file or directory.
+1737869709: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737869709: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737869709: Error: No such file or directory.
+1737871510: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737871510: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737871510: Error: No such file or directory.
+1737873311: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737873311: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737873311: Error: No such file or directory.
+1737875112: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737875112: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737875112: Error: No such file or directory.
+1737876913: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737876913: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737876913: Error: No such file or directory.
+1737878714: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737878714: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737878714: Error: No such file or directory.
+1737880515: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737880515: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737880515: Error: No such file or directory.
+1737882316: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737882316: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737882316: Error: No such file or directory.
+1737884117: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737884117: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737884117: Error: No such file or directory.
+1737885918: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737885918: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737885918: Error: No such file or directory.
+1737887719: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737887719: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737887719: Error: No such file or directory.
+1737889520: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737889520: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737889520: Error: No such file or directory.
+1737891321: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737891321: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737891321: Error: No such file or directory.
+1737893122: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737893122: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737893122: Error: No such file or directory.
+1737894923: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737894923: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737894923: Error: No such file or directory.
+1737896724: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737896724: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737896724: Error: No such file or directory.
+1737898525: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737898525: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737898525: Error: No such file or directory.
+1737900326: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737900326: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737900326: Error: No such file or directory.
+1737902127: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737902127: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737902127: Error: No such file or directory.
+1737903928: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737903928: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737903928: Error: No such file or directory.
+1737905729: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737905729: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737905729: Error: No such file or directory.
+1737907530: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737907530: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737907530: Error: No such file or directory.
+1737909331: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737909331: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737909331: Error: No such file or directory.
+1737911132: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737911132: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737911132: Error: No such file or directory.
+1737912933: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737912933: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737912933: Error: No such file or directory.
+1737914734: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737914734: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737914734: Error: No such file or directory.
+1737916535: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737916535: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737916535: Error: No such file or directory.
+1737918336: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737918336: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737918336: Error: No such file or directory.
+1737920137: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737920137: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737920137: Error: No such file or directory.
+1737921938: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737921938: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737921938: Error: No such file or directory.
+1737923739: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737923739: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737923739: Error: No such file or directory.
+1737925540: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737925540: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737925540: Error: No such file or directory.
+1737926294: mosquitto version 2.0.20 terminating
+1737926294: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737926294: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737926294: Error: No such file or directory.
+1737973771: mosquitto version 2.0.20 starting
+1737973771: Config loaded from /mosquitto/config/mosquitto.conf.
+1737973771: Opening ipv4 listen socket on port 1883.
+1737973771: mosquitto version 2.0.20 running
+1737973783: New connection from 172.17.0.5:34978 on port 1883.
+1737973783: New client connected from 172.17.0.5:34978 as nodered_556ceff36802510d (p2, c1, k60).
+1737974137: New connection from 172.17.0.5:41058 on port 1883.
+1737974137: New client connected from 172.17.0.5:41058 as nodered_111fb779f5acad36 (p2, c1, k60).
+1737974203: New connection from 172.17.0.5:35774 on port 1883.
+1737974203: New client connected from 172.17.0.5:35774 as nodered_f9d3ea5879dce323 (p2, c1, k60).
+1737974239: New connection from 172.17.0.5:46166 on port 1883.
+1737974239: New client connected from 172.17.0.5:46166 as nodered_828a2e35eb374912 (p2, c1, k60).
+1737974592: New connection from 172.17.0.5:35180 on port 1883.
+1737974592: New client connected from 172.17.0.5:35180 as nodered_a319e546f02660a5 (p2, c1, k60).
+1737974660: New connection from 172.17.0.5:37668 on port 1883.
+1737974660: New client connected from 172.17.0.5:37668 as nodered_d92ea6c07a773fa2 (p2, c1, k60).
+1737974676: New connection from 172.17.0.5:53740 on port 1883.
+1737974676: New client connected from 172.17.0.5:53740 as nodered_1a53526853591a3f (p2, c1, k60).
+1737971393: New connection from 172.17.0.5:42304 on port 1883.
+1737971393: New client connected from 172.17.0.5:42304 as nodered_7bf9beb4a7a6c71a (p2, c1, k60).
+1737975572: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737975572: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737975572: Error: No such file or directory.
+1737977373: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737977373: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737977373: Error: No such file or directory.
+1737979174: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737979174: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737979174: Error: No such file or directory.
+1737980975: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737980975: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737980975: Error: No such file or directory.
+1737982776: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737982776: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737982776: Error: No such file or directory.
+1737984577: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737984577: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737984577: Error: No such file or directory.
+1737986378: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737986378: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737986378: Error: No such file or directory.
+1737988179: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737988179: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737988179: Error: No such file or directory.
+1737989980: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737989980: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737989980: Error: No such file or directory.
+1737991781: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737991781: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737991781: Error: No such file or directory.
+1737993582: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737993582: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737993582: Error: No such file or directory.
+1737995383: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737995383: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737995383: Error: No such file or directory.
+1737995392: New connection from 172.17.0.5:54054 on port 1883.
+1737995392: New client connected from 172.17.0.5:54054 as nodered_7750829e298bf67e (p2, c1, k60).
+1737995469: New connection from 172.17.0.5:37460 on port 1883.
+1737995469: New client connected from 172.17.0.5:37460 as JavaMQTTSender_1737995468959 (p2, c1, k60).
+1737995469: Client JavaMQTTSender_1737995468959 disconnected.
+1737995469: New connection from 172.17.0.5:37464 on port 1883.
+1737995469: New client connected from 172.17.0.5:37464 as JavaMQTTSender (p2, c1, k60).
+1737995469: Client JavaMQTTSender disconnected.
+1737995549: New connection from 172.17.0.5:49654 on port 1883.
+1737995549: New client connected from 172.17.0.5:49654 as JavaMQTTSender_1737995549412 (p2, c1, k60).
+1737995549: Client JavaMQTTSender_1737995549412 disconnected.
+1737995549: New connection from 172.17.0.5:49656 on port 1883.
+1737995550: New client connected from 172.17.0.5:49656 as JavaMQTTSender (p2, c1, k60).
+1737995550: Client JavaMQTTSender disconnected.
+1737995604: New connection from 172.17.0.5:45774 on port 1883.
+1737995604: New client connected from 172.17.0.5:45774 as JavaMQTTSender_1737995604153 (p2, c1, k60).
+1737995604: Client JavaMQTTSender_1737995604153 disconnected.
+1737995604: New connection from 172.17.0.5:45784 on port 1883.
+1737995604: New client connected from 172.17.0.5:45784 as JavaMQTTSender (p2, c1, k60).
+1737995604: Client JavaMQTTSender disconnected.
+1737995723: New connection from 172.17.0.5:56944 on port 1883.
+1737995723: New client connected from 172.17.0.5:56944 as JavaMQTTSender_1737995723333 (p2, c1, k60).
+1737995723: Client JavaMQTTSender_1737995723333 disconnected.
+1737995723: New connection from 172.17.0.5:56952 on port 1883.
+1737995724: New client connected from 172.17.0.5:56952 as JavaMQTTSender (p2, c1, k60).
+1737995724: Client JavaMQTTSender disconnected.
+1737997184: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737997184: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737997184: Error: No such file or directory.
+1737998985: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1737998985: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1737998985: Error: No such file or directory.
+1738000786: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738000786: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738000786: Error: No such file or directory.
+1738002587: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738002587: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738002587: Error: No such file or directory.
+1738004388: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738004388: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738004388: Error: No such file or directory.
+1738006189: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738006189: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738006189: Error: No such file or directory.
+1738007990: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738007990: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738007990: Error: No such file or directory.
+1738009791: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738009791: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738009791: Error: No such file or directory.
+1738011592: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738011592: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738011592: Error: No such file or directory.
+1738013393: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738013393: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738013393: Error: No such file or directory.
+1738015194: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738015194: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738015194: Error: No such file or directory.
+1738016995: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738016995: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738016995: Error: No such file or directory.
+1738018796: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738018796: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738018796: Error: No such file or directory.
+1738020597: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738020597: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738020597: Error: No such file or directory.
+1738022398: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738022398: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738022398: Error: No such file or directory.
+1738024199: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738024199: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738024199: Error: No such file or directory.
+1738026000: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738026000: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738026000: Error: No such file or directory.
+1738027801: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738027801: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738027801: Error: No such file or directory.
+1738029602: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738029602: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738029602: Error: No such file or directory.
+1738031403: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738031403: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738031403: Error: No such file or directory.
+1738033204: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738033204: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738033204: Error: No such file or directory.
+1738035005: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738035005: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738035005: Error: No such file or directory.
+1738036806: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738036806: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738036806: Error: No such file or directory.
+1738038607: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738038607: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738038607: Error: No such file or directory.
+1738040408: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738040408: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738040408: Error: No such file or directory.
+1738042209: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738042209: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738042209: Error: No such file or directory.
+1738044010: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738044010: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738044010: Error: No such file or directory.
+1738045811: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738045811: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738045811: Error: No such file or directory.
+1738047612: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738047612: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738047612: Error: No such file or directory.
+1738049413: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738049413: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738049413: Error: No such file or directory.
+1738051214: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738051214: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738051214: Error: No such file or directory.
+1738052422: New connection from 172.17.0.5:49764 on port 1883.
+1738052422: New client connected from 172.17.0.5:49764 as nodered_cc193998aee06937 (p2, c1, k60).
+1738052449: New connection from 172.17.0.5:47354 on port 1883.
+1738052449: New client connected from 172.17.0.5:47354 as nodered_61a42af31c2ae809 (p2, c1, k60).
+1738052501: New connection from 172.17.0.5:55118 on port 1883.
+1738052501: New client connected from 172.17.0.5:55118 as JavaMQTTSender_1738052501258 (p2, c1, k60).
+1738052501: Client JavaMQTTSender_1738052501258 disconnected.
+1738052501: New connection from 172.17.0.5:55134 on port 1883.
+1738052501: New client connected from 172.17.0.5:55134 as JavaMQTTSender (p2, c1, k60).
+1738052502: Client JavaMQTTSender disconnected.
+1738052741: New connection from 172.17.0.5:50954 on port 1883.
+1738052741: New client connected from 172.17.0.5:50954 as nodered_2a3ed270097b24ef (p2, c1, k60).
+1738052901: New connection from 172.17.0.5:58588 on port 1883.
+1738052901: New client connected from 172.17.0.5:58588 as JavaMQTTSender_1738052901364 (p2, c1, k60).
+1738052901: Client JavaMQTTSender_1738052901364 disconnected.
+1738052901: New connection from 172.17.0.5:58604 on port 1883.
+1738052902: New client connected from 172.17.0.5:58604 as JavaMQTTSender (p2, c1, k60).
+1738052902: Client JavaMQTTSender disconnected.
+1738053015: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738053015: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738053015: Error: No such file or directory.
+1738053194: New connection from 172.17.0.5:43670 on port 1883.
+1738053194: New client connected from 172.17.0.5:43670 as nodered_3289182d509b4f3d (p2, c1, k60).
+1738053720: New connection from 172.17.0.5:36844 on port 1883.
+1738053720: New client connected from 172.17.0.5:36844 as nodered_1285ae8eb5558be6 (p2, c1, k60).
+1738053793: New connection from 172.17.0.5:38628 on port 1883.
+1738053793: New client connected from 172.17.0.5:38628 as nodered_add3b58b4b281ae5 (p2, c1, k60).
+1738053850: New connection from 172.17.0.5:42568 on port 1883.
+1738053850: New client connected from 172.17.0.5:42568 as nodered_a05de222bd992a6f (p2, c1, k60).
+1738054616: New connection from 172.17.0.5:45138 on port 1883.
+1738054616: New client connected from 172.17.0.5:45138 as nodered_e476a5b86255c253 (p2, c1, k60).
+1738054657: New connection from 172.17.0.5:44376 on port 1883.
+1738054657: New client connected from 172.17.0.5:44376 as nodered_4f081946d2c311ad (p2, c1, k60).
+1738054816: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738054816: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738054816: Error: No such file or directory.
+1738055057: New connection from 172.17.0.5:55694 on port 1883.
+1738055057: New client connected from 172.17.0.5:55694 as nodered_0f43707699f2bd5f (p2, c1, k60).
+1738055094: New connection from 172.17.0.5:53034 on port 1883.
+1738055094: New client connected from 172.17.0.5:53034 as JavaMQTTSender_1738055094411 (p2, c1, k60).
+1738055094: Client JavaMQTTSender_1738055094411 disconnected.
+1738055094: New connection from 172.17.0.5:53050 on port 1883.
+1738055095: New client connected from 172.17.0.5:53050 as JavaMQTTSender (p2, c1, k60).
+1738055095: Client JavaMQTTSender disconnected.
+1738055266: New connection from 172.17.0.5:41694 on port 1883.
+1738055266: New client connected from 172.17.0.5:41694 as nodered_1e726c8ffee44cee (p2, c1, k60).
+1738055296: New connection from 172.17.0.5:40340 on port 1883.
+1738055297: New client connected from 172.17.0.5:40340 as JavaMQTTSender_1738055296851 (p2, c1, k60).
+1738055297: Client JavaMQTTSender_1738055296851 disconnected.
+1738055297: New connection from 172.17.0.5:40354 on port 1883.
+1738055297: New client connected from 172.17.0.5:40354 as JavaMQTTSender (p2, c1, k60).
+1738055297: Client JavaMQTTSender disconnected.
+1738055333: New connection from 172.17.0.5:46952 on port 1883.
+1738055333: New client connected from 172.17.0.5:46952 as nodered_d1cf034b5a45548f (p2, c1, k60).
+1738055362: New connection from 172.17.0.5:43128 on port 1883.
+1738055362: New client connected from 172.17.0.5:43128 as JavaMQTTSender_1738055362430 (p2, c1, k60).
+1738055362: Client JavaMQTTSender_1738055362430 disconnected.
+1738055362: New connection from 172.17.0.5:42840 on port 1883.
+1738055363: New client connected from 172.17.0.5:42840 as JavaMQTTSender (p2, c1, k60).
+1738055363: Client JavaMQTTSender disconnected.
+1738055481: New connection from 172.17.0.5:46890 on port 1883.
+1738055481: New client connected from 172.17.0.5:46890 as nodered_8761b7675aa18983 (p2, c1, k60).
+1738055510: New connection from 172.17.0.5:60802 on port 1883.
+1738055511: New client connected from 172.17.0.5:60802 as JavaMQTTSender_1738055510820 (p2, c1, k60).
+1738055511: Client JavaMQTTSender_1738055510820 disconnected.
+1738055511: New connection from 172.17.0.5:60812 on port 1883.
+1738055511: New client connected from 172.17.0.5:60812 as JavaMQTTSender (p2, c1, k60).
+1738055511: Client JavaMQTTSender disconnected.
+1738055537: New connection from 172.17.0.5:37194 on port 1883.
+1738055537: New client connected from 172.17.0.5:37194 as nodered_b4831de8c2a7a37a (p2, c1, k60).
+1738055700: New connection from 172.17.0.5:33408 on port 1883.
+1738055700: New client connected from 172.17.0.5:33408 as JavaMQTTSender_1738055700014 (p2, c1, k60).
+1738055700: Client JavaMQTTSender_1738055700014 disconnected.
+1738055700: New connection from 172.17.0.5:33412 on port 1883.
+1738055700: New client connected from 172.17.0.5:33412 as JavaMQTTSender (p2, c1, k60).
+1738055700: Client JavaMQTTSender disconnected.
+1738055779: New connection from 172.17.0.5:55678 on port 1883.
+1738055779: New client connected from 172.17.0.5:55678 as nodered_93e41ae6d876802a (p2, c1, k60).
+1738055810: New connection from 172.17.0.5:57284 on port 1883.
+1738055810: New client connected from 172.17.0.5:57284 as JavaMQTTSender_1738055810130 (p2, c1, k60).
+1738055811: Client JavaMQTTSender_1738055810130 disconnected.
+1738055811: New connection from 172.17.0.5:57288 on port 1883.
+1738055811: New client connected from 172.17.0.5:57288 as JavaMQTTSender (p2, c1, k60).
+1738055811: Client JavaMQTTSender disconnected.
+1738055845: New connection from 172.17.0.5:51354 on port 1883.
+1738055845: New client connected from 172.17.0.5:51354 as nodered_2780929f23384d7a (p2, c1, k60).
+1738055875: New connection from 172.17.0.5:50328 on port 1883.
+1738055876: New client connected from 172.17.0.5:50328 as JavaMQTTSender_1738055875694 (p2, c1, k60).
+1738055876: Client JavaMQTTSender_1738055875694 disconnected.
+1738055876: New connection from 172.17.0.5:50336 on port 1883.
+1738055876: New client connected from 172.17.0.5:50336 as JavaMQTTSender (p2, c1, k60).
+1738055876: Client JavaMQTTSender disconnected.
+1738055993: New connection from 172.17.0.5:34196 on port 1883.
+1738055993: New client connected from 172.17.0.5:34196 as nodered_59b61d33becc0782 (p2, c1, k60).
+1738056027: New connection from 172.17.0.5:39752 on port 1883.
+1738056027: New client connected from 172.17.0.5:39752 as JavaMQTTSender_1738056027452 (p2, c1, k60).
+1738056027: Client JavaMQTTSender_1738056027452 disconnected.
+1738056027: New connection from 172.17.0.5:39766 on port 1883.
+1738056028: New client connected from 172.17.0.5:39766 as JavaMQTTSender (p2, c1, k60).
+1738056028: Client JavaMQTTSender disconnected.
+1738056225: New connection from 172.17.0.5:35678 on port 1883.
+1738056225: New client connected from 172.17.0.5:35678 as nodered_742bf85375253af3 (p2, c1, k60).
+1738056254: New connection from 172.17.0.5:49638 on port 1883.
+1738056254: New client connected from 172.17.0.5:49638 as JavaMQTTSender_1738056254133 (p2, c1, k60).
+1738056254: Client JavaMQTTSender_1738056254133 disconnected.
+1738056254: New connection from 172.17.0.5:49650 on port 1883.
+1738056254: New client connected from 172.17.0.5:49650 as JavaMQTTSender (p2, c1, k60).
+1738056255: Client JavaMQTTSender disconnected.
+1738056483: New connection from 172.17.0.5:49850 on port 1883.
+1738056483: New client connected from 172.17.0.5:49850 as nodered_5fa37cc9a84da87b (p2, c1, k60).
+1738056617: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738056617: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738056617: Error: No such file or directory.
+1738057572: New connection from 172.17.0.5:49678 on port 1883.
+1738057572: New client connected from 172.17.0.5:49678 as nodered_948d1b97dd87466e (p2, c1, k60).
+1738057840: New connection from 172.17.0.5:52768 on port 1883.
+1738057840: New client connected from 172.17.0.5:52768 as JavaMQTTSender_1738057840613 (p2, c1, k60).
+1738057841: Client JavaMQTTSender_1738057840613 disconnected.
+1738057841: New connection from 172.17.0.5:52778 on port 1883.
+1738057841: New client connected from 172.17.0.5:52778 as JavaMQTTSender (p2, c1, k60).
+1738057841: Client JavaMQTTSender disconnected.
+1738058100: New connection from 172.17.0.5:33548 on port 1883.
+1738058100: New client connected from 172.17.0.5:33548 as nodered_b963ee09a11a6b9b (p2, c1, k60).
+1738058418: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738058418: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738058418: Error: No such file or directory.
+1738058743: New connection from 172.17.0.5:34736 on port 1883.
+1738058743: New client connected from 172.17.0.5:34736 as nodered_739d984fe3ec8a0a (p2, c1, k60).
+1738058813: New connection from 172.17.0.5:39806 on port 1883.
+1738058813: New client connected from 172.17.0.5:39806 as JavaMQTTSender_1738058813169 (p2, c1, k60).
+1738058813: Client JavaMQTTSender_1738058813169 disconnected.
+1738058813: New connection from 172.17.0.5:39814 on port 1883.
+1738058813: New client connected from 172.17.0.5:39814 as JavaMQTTSender (p2, c1, k60).
+1738058814: Client JavaMQTTSender disconnected.
+1738059525: New connection from 172.17.0.5:51392 on port 1883.
+1738059525: New client connected from 172.17.0.5:51392 as nodered_e00293a478f64610 (p2, c1, k60).
+1738059562: New connection from 172.17.0.5:47066 on port 1883.
+1738059562: New client connected from 172.17.0.5:47066 as JavaMQTTSender_1738059562355 (p2, c1, k60).
+1738059562: Client JavaMQTTSender_1738059562355 disconnected.
+1738059562: New connection from 172.17.0.5:41526 on port 1883.
+1738059563: New client connected from 172.17.0.5:41526 as JavaMQTTSender (p2, c1, k60).
+1738059563: Client JavaMQTTSender disconnected.
+1738059876: New connection from 172.17.0.5:33312 on port 1883.
+1738059877: New client connected from 172.17.0.5:33312 as nodered_ff6fdd5a3d538bf7 (p2, c1, k60).
+1738059911: New connection from 172.17.0.5:41508 on port 1883.
+1738059911: New client connected from 172.17.0.5:41508 as JavaMQTTSender_1738059911565 (p2, c1, k60).
+1738059912: Client JavaMQTTSender_1738059911565 disconnected.
+1738059912: New connection from 172.17.0.5:41510 on port 1883.
+1738059912: New client connected from 172.17.0.5:41510 as JavaMQTTSender (p2, c1, k60).
+1738059912: Client JavaMQTTSender disconnected.
+1738060063: New connection from 172.17.0.5:55042 on port 1883.
+1738060063: New client connected from 172.17.0.5:55042 as JavaMQTTSender_1738060063089 (p2, c1, k60).
+1738060063: Client JavaMQTTSender_1738060063089 disconnected.
+1738060063: New connection from 172.17.0.5:55044 on port 1883.
+1738060063: New client connected from 172.17.0.5:55044 as JavaMQTTSender (p2, c1, k60).
+1738060063: Client JavaMQTTSender disconnected.
+1738060144: New connection from 172.17.0.5:52628 on port 1883.
+1738060145: New client connected from 172.17.0.5:52628 as nodered_3a903048da398a47 (p2, c1, k60).
+1738060219: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738060219: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738060219: Error: No such file or directory.
+1738060253: New connection from 172.17.0.5:46672 on port 1883.
+1738060253: New client connected from 172.17.0.5:46672 as nodered_187b52e051bb189a (p2, c1, k60).
+1738060286: New connection from 172.17.0.5:48336 on port 1883.
+1738060286: New client connected from 172.17.0.5:48336 as JavaMQTTSender_1738060286456 (p2, c1, k60).
+1738060286: Client JavaMQTTSender_1738060286456 disconnected.
+1738060286: New connection from 172.17.0.5:48340 on port 1883.
+1738060287: New client connected from 172.17.0.5:48340 as JavaMQTTSender (p2, c1, k60).
+1738060287: Client JavaMQTTSender disconnected.
+1738060406: New connection from 172.17.0.5:40248 on port 1883.
+1738060406: New client connected from 172.17.0.5:40248 as nodered_4f197916b0dc91f2 (p2, c1, k60).
+1738062020: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738062020: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738062020: Error: No such file or directory.
+1738063821: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738063821: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738063821: Error: No such file or directory.
+1738065622: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738065622: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738065622: Error: No such file or directory.
+1738066158: New connection from 172.17.0.5:48076 on port 1883.
+1738066158: New client connected from 172.17.0.5:48076 as JavaMQTTSender_1738066158397 (p2, c1, k60).
+1738066213: Client JavaMQTTSender_1738066158397 closed its connection.
+1738066214: New connection from 172.17.0.5:40650 on port 1883.
+1738066214: New client connected from 172.17.0.5:40650 as nodered_8f763c2c64e12c8f (p2, c1, k60).
+1738066248: New connection from 172.17.0.5:47670 on port 1883.
+1738066249: New client connected from 172.17.0.5:47670 as JavaMQTTSender_1738066248930 (p2, c1, k60).
+1738066249: Client JavaMQTTSender_1738066248930 disconnected.
+1738066249: New connection from 172.17.0.5:47682 on port 1883.
+1738066249: New client connected from 172.17.0.5:47682 as JavaMQTTSender (p2, c1, k60).
+1738066249: Client JavaMQTTSender disconnected.
+1738066434: New connection from 172.17.0.5:58012 on port 1883.
+1738066434: New client connected from 172.17.0.5:58012 as nodered_bd78023d83f451e6 (p2, c1, k60).
+1738066468: New connection from 172.17.0.5:34868 on port 1883.
+1738066468: New client connected from 172.17.0.5:34868 as JavaMQTTSender_1738066467973 (p2, c1, k60).
+1738066468: Client JavaMQTTSender_1738066467973 disconnected.
+1738066468: New connection from 172.17.0.5:34872 on port 1883.
+1738066468: New client connected from 172.17.0.5:34872 as JavaMQTTSender (p2, c1, k60).
+1738066468: Client JavaMQTTSender disconnected.
+1738066570: New connection from 172.17.0.5:38630 on port 1883.
+1738066570: New client connected from 172.17.0.5:38630 as nodered_626941ef0666110b (p2, c1, k60).
+1738066612: New connection from 172.17.0.5:42706 on port 1883.
+1738066612: New client connected from 172.17.0.5:42706 as JavaMQTTSender_1738066612479 (p2, c1, k60).
+1738066612: Client JavaMQTTSender_1738066612479 disconnected.
+1738066613: New connection from 172.17.0.5:54572 on port 1883.
+1738066613: New client connected from 172.17.0.5:54572 as JavaMQTTSender (p2, c1, k60).
+1738066613: Client JavaMQTTSender disconnected.
+1738066661: New connection from 172.17.0.5:58546 on port 1883.
+1738066661: New client connected from 172.17.0.5:58546 as nodered_8de63f67b5ff54f1 (p2, c1, k60).
+1738066695: New connection from 172.17.0.5:36886 on port 1883.
+1738066695: New client connected from 172.17.0.5:36886 as JavaMQTTSender_1738066695517 (p2, c1, k60).
+1738066696: Client JavaMQTTSender_1738066695517 disconnected.
+1738066696: New connection from 172.17.0.5:36902 on port 1883.
+1738066696: New client connected from 172.17.0.5:36902 as JavaMQTTSender (p2, c1, k60).
+1738066696: Client JavaMQTTSender disconnected.
+1738066832: New connection from 172.17.0.5:55486 on port 1883.
+1738066832: New client connected from 172.17.0.5:55486 as nodered_554010d951d8aabb (p2, c1, k60).
+1738066872: New connection from 172.17.0.5:58722 on port 1883.
+1738066872: New client connected from 172.17.0.5:58722 as JavaMQTTSender_1738066872480 (p2, c1, k60).
+1738066987: Client JavaMQTTSender_1738066872480 closed its connection.
+1738066987: New connection from 172.17.0.5:41506 on port 1883.
+1738066987: New client connected from 172.17.0.5:41506 as nodered_5b7a82f24c405f39 (p2, c1, k60).
+1738067019: New connection from 172.17.0.5:36432 on port 1883.
+1738067020: New client connected from 172.17.0.5:36432 as JavaMQTTSender_1738067019710 (p2, c1, k60).
+1738067076: Client JavaMQTTSender_1738067019710 closed its connection.
+1738067076: New connection from 172.17.0.5:49206 on port 1883.
+1738067076: New client connected from 172.17.0.5:49206 as nodered_931b708f2841ce6d (p2, c1, k60).
+1738067112: New connection from 172.17.0.5:49698 on port 1883.
+1738067112: New client connected from 172.17.0.5:49698 as JavaMQTTSender_1738067112399 (p2, c1, k60).
+1738067273: Client JavaMQTTSender_1738067112399 closed its connection.
+1738067273: New connection from 172.17.0.5:41338 on port 1883.
+1738067273: New client connected from 172.17.0.5:41338 as nodered_ea68e3c6ee9e3098 (p2, c1, k60).
+1738067302: New connection from 172.17.0.5:45938 on port 1883.
+1738067303: New client connected from 172.17.0.5:45938 as JavaMQTTSender_1738067302924 (p2, c1, k60).
+1738067386: Client JavaMQTTSender_1738067302924 closed its connection.
+1738067387: New connection from 172.17.0.5:41378 on port 1883.
+1738067387: New client connected from 172.17.0.5:41378 as nodered_60f3596ef6da6c7a (p2, c1, k60).
+1738067413: New connection from 172.17.0.5:56370 on port 1883.
+1738067413: New client connected from 172.17.0.5:56370 as JavaMQTTSender_1738067413247 (p2, c1, k60).
+1738067413: Client JavaMQTTSender_1738067413247 disconnected.
+1738067413: New connection from 172.17.0.5:56372 on port 1883.
+1738067414: New client connected from 172.17.0.5:56372 as JavaMQTTSender (p2, c1, k60).
+1738067414: Client JavaMQTTSender disconnected.
+1738067423: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738067423: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738067423: Error: No such file or directory.
+1738067808: New connection from 172.17.0.5:46424 on port 1883.
+1738067808: New client connected from 172.17.0.5:46424 as nodered_7f397f27819b93b9 (p2, c1, k60).
+1738067846: New connection from 172.17.0.5:36994 on port 1883.
+1738067846: New client connected from 172.17.0.5:36994 as JavaMQTTSender_1738067846344 (p2, c1, k60).
+1738067846: Client JavaMQTTSender_1738067846344 disconnected.
+1738067846: New connection from 172.17.0.5:36996 on port 1883.
+1738067847: New client connected from 172.17.0.5:36996 as JavaMQTTSender (p2, c1, k60).
+1738067847: Client JavaMQTTSender disconnected.
+1738067895: New connection from 172.17.0.5:36914 on port 1883.
+1738067895: New client connected from 172.17.0.5:36914 as nodered_514d6d9a48316a48 (p2, c1, k60).
+1738067920: New connection from 172.17.0.5:37240 on port 1883.
+1738067921: New client connected from 172.17.0.5:37240 as JavaMQTTSender_1738067920709 (p2, c1, k60).
+1738067921: Client JavaMQTTSender_1738067920709 disconnected.
+1738067921: New connection from 172.17.0.5:37252 on port 1883.
+1738067921: New client connected from 172.17.0.5:37252 as JavaMQTTSender (p2, c1, k60).
+1738067921: Client JavaMQTTSender disconnected.
+1738068000: New connection from 172.17.0.5:54776 on port 1883.
+1738068000: New client connected from 172.17.0.5:54776 as JavaMQTTSender_1738068000126 (p2, c1, k60).
+1738068000: Client JavaMQTTSender_1738068000126 disconnected.
+1738068000: New connection from 172.17.0.5:54778 on port 1883.
+1738068001: New client connected from 172.17.0.5:54778 as JavaMQTTSender (p2, c1, k60).
+1738068001: Client JavaMQTTSender disconnected.
+1738068142: New connection from 172.17.0.5:35490 on port 1883.
+1738068142: New client connected from 172.17.0.5:35490 as nodered_52e0cc4c85d599ef (p2, c1, k60).
+1738068169: New connection from 172.17.0.5:55876 on port 1883.
+1738068169: New client connected from 172.17.0.5:55876 as JavaMQTTSender_1738068169434 (p2, c1, k60).
+1738068378: Client JavaMQTTSender_1738068169434 closed its connection.
+1738068379: New connection from 172.17.0.5:39642 on port 1883.
+1738068379: New client connected from 172.17.0.5:39642 as nodered_13aaaf52c48a8aa5 (p2, c1, k60).
+1738068414: New connection from 172.17.0.5:47960 on port 1883.
+1738068414: New client connected from 172.17.0.5:47960 as JavaMQTTSender_1738068414299 (p2, c1, k60).
+1738068424: Client JavaMQTTSender_1738068414299 disconnected.
+1738068424: New connection from 172.17.0.5:55390 on port 1883.
+1738068425: New client connected from 172.17.0.5:55390 as JavaMQTTSender (p2, c1, k60).
+1738068425: Client JavaMQTTSender disconnected.
+1738068627: New connection from 172.17.0.5:49168 on port 1883.
+1738068627: New client connected from 172.17.0.5:49168 as nodered_34aa7fdcda613bb0 (p2, c1, k60).
+1738068674: New connection from 172.17.0.5:43924 on port 1883.
+1738068674: New client connected from 172.17.0.5:43924 as JavaMQTTSender_1738068674662 (p2, c1, k60).
+1738068675: Client JavaMQTTSender_1738068674662 disconnected.
+1738068675: New connection from 172.17.0.5:43934 on port 1883.
+1738068675: New client connected from 172.17.0.5:43934 as JavaMQTTSender (p2, c1, k60).
+1738068675: Client JavaMQTTSender disconnected.
+1738068805: New connection from 172.17.0.5:42618 on port 1883.
+1738068805: New client connected from 172.17.0.5:42618 as nodered_a083182a03ae995e (p2, c1, k60).
+1738068829: New connection from 172.17.0.5:46366 on port 1883.
+1738068829: New client connected from 172.17.0.5:46366 as JavaMQTTSender_1738068829506 (p2, c1, k60).
+1738068835: Client JavaMQTTSender_1738068829506 disconnected.
+1738068835: New connection from 172.17.0.5:37300 on port 1883.
+1738068835: New client connected from 172.17.0.5:37300 as JavaMQTTSender (p2, c1, k60).
+1738068835: Client JavaMQTTSender disconnected.
+1738068909: New connection from 172.17.0.5:39668 on port 1883.
+1738068909: New client connected from 172.17.0.5:39668 as nodered_7e148424b7c73f31 (p2, c1, k60).
+1738068941: New connection from 172.17.0.5:49316 on port 1883.
+1738068942: New client connected from 172.17.0.5:49316 as JavaMQTTSender_1738068941907 (p2, c1, k60).
+1738068942: Client JavaMQTTSender_1738068941907 disconnected.
+1738068942: New connection from 172.17.0.5:49320 on port 1883.
+1738068942: New client connected from 172.17.0.5:49320 as JavaMQTTSender (p2, c1, k60).
+1738068942: Client JavaMQTTSender disconnected.
+1738068977: New connection from 172.17.0.5:34474 on port 1883.
+1738068977: New client connected from 172.17.0.5:34474 as nodered_bf7f1bde82b8350e (p2, c1, k60).
+1738069044: New connection from 172.17.0.5:39754 on port 1883.
+1738069044: New client connected from 172.17.0.5:39754 as JavaMQTTSender_1738069044101 (p2, c1, k60).
+1738069044: Client JavaMQTTSender_1738069044101 disconnected.
+1738069044: New connection from 172.17.0.5:39758 on port 1883.
+1738069044: New client connected from 172.17.0.5:39758 as JavaMQTTSender (p2, c1, k60).
+1738069044: Client JavaMQTTSender disconnected.
+1738069188: New connection from 172.17.0.5:40164 on port 1883.
+1738069188: New client connected from 172.17.0.5:40164 as nodered_6ae3ef3a1b0712c7 (p2, c1, k60).
+1738069224: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738069224: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738069224: Error: No such file or directory.
+1738069260: New connection from 172.17.0.5:59256 on port 1883.
+1738069260: New client connected from 172.17.0.5:59256 as JavaMQTTSender_1738069260200 (p2, c1, k60).
+1738069260: Client JavaMQTTSender_1738069260200 disconnected.
+1738069260: New connection from 172.17.0.5:59268 on port 1883.
+1738069261: New client connected from 172.17.0.5:59268 as JavaMQTTSender (p2, c1, k60).
+1738069261: Client JavaMQTTSender disconnected.
+1738069310: New connection from 172.17.0.5:34360 on port 1883.
+1738069310: New client connected from 172.17.0.5:34360 as JavaMQTTSender_1738069310392 (p2, c1, k60).
+1738069311: Client JavaMQTTSender_1738069310392 disconnected.
+1738069311: New connection from 172.17.0.5:34366 on port 1883.
+1738069311: New client connected from 172.17.0.5:34366 as JavaMQTTSender (p2, c1, k60).
+1738069311: Client JavaMQTTSender disconnected.
+1738069653: New connection from 172.17.0.5:38626 on port 1883.
+1738069653: New client connected from 172.17.0.5:38626 as JavaMQTTSender_1738069653322 (p2, c1, k60).
+1738069654: Client JavaMQTTSender_1738069653322 disconnected.
+1738069654: New connection from 172.17.0.5:38632 on port 1883.
+1738069654: New client connected from 172.17.0.5:38632 as JavaMQTTSender (p2, c1, k60).
+1738069654: Client JavaMQTTSender disconnected.
+                                                                                                                                                                                                                                                                                                          1738069783: mosquitto version 2.0.20 starting
+1738069783: Config loaded from /mosquitto/config/mosquitto.conf.
+1738069783: Opening ipv4 listen socket on port 1883.
+1738069783: mosquitto version 2.0.20 running
+1738069792: New connection from 172.17.0.5:48722 on port 1883.
+1738069792: New client connected from 172.17.0.5:48722 as nodered_f77dc089333ae947 (p2, c1, k60).
+1738069881: New connection from 172.17.0.5:51048 on port 1883.
+1738069882: New client connected from 172.17.0.5:51048 as JavaMQTTSender_1738069881863 (p2, c1, k60).
+1738069882: Client JavaMQTTSender_1738069881863 disconnected.
+1738069882: New connection from 172.17.0.5:51050 on port 1883.
+1738069882: New client connected from 172.17.0.5:51050 as JavaMQTTSender (p2, c1, k60).
+1738069882: Client JavaMQTTSender disconnected.
+1738069943: New connection from 172.17.0.5:42210 on port 1883.
+1738069943: New client connected from 172.17.0.5:42210 as JavaMQTTSender_1738069943127 (p2, c1, k60).
+1738069943: Client JavaMQTTSender_1738069943127 disconnected.
+1738069943: New connection from 172.17.0.5:42214 on port 1883.
+1738069944: New client connected from 172.17.0.5:42214 as JavaMQTTSender (p2, c1, k60).
+1738069944: Client JavaMQTTSender disconnected.
+1738071199: New connection from 172.17.0.5:55380 on port 1883.
+1738071199: New client connected from 172.17.0.5:55380 as nodered_589e392283940b9c (p2, c1, k60).
+1738071584: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738071584: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738071584: Error: No such file or directory.
+1738071698: New connection from 172.17.0.5:47740 on port 1883.
+1738071698: New client connected from 172.17.0.5:47740 as nodered_34b48be0730153a8 (p2, c1, k60).
+1738071814: New connection from 172.17.0.5:44628 on port 1883.
+1738071814: New client connected from 172.17.0.5:44628 as nodered_16f7253ff8aab632 (p2, c1, k60).
+1738071943: New connection from 172.17.0.5:42184 on port 1883.
+1738071944: New client connected from 172.17.0.5:42184 as JavaMQTTSender_1738071943931 (p2, c1, k60).
+1738071944: Client JavaMQTTSender_1738071943931 disconnected.
+1738071944: New connection from 172.17.0.5:42194 on port 1883.
+1738071944: New client connected from 172.17.0.5:42194 as JavaMQTTSender (p2, c1, k60).
+1738071944: Client JavaMQTTSender disconnected.
+1738072103: New connection from 172.17.0.5:41162 on port 1883.
+1738072103: New client connected from 172.17.0.5:41162 as JavaMQTTSender_1738072103550 (p2, c1, k60).
+1738072104: Client JavaMQTTSender_1738072103550 disconnected.
+1738072104: New connection from 172.17.0.5:41172 on port 1883.
+1738072104: New client connected from 172.17.0.5:41172 as JavaMQTTSender (p2, c1, k60).
+1738072104: Client JavaMQTTSender disconnected.
+1738072562: New connection from 172.17.0.5:52812 on port 1883.
+1738072562: New client connected from 172.17.0.5:52812 as nodered_74e5f8e5f06e38b9 (p2, c1, k60).
+1738072660: New connection from 172.17.0.5:34786 on port 1883.
+1738072660: New client connected from 172.17.0.5:34786 as JavaMQTTSender_1738072660644 (p2, c1, k60).
+1738072661: Client JavaMQTTSender_1738072660644 disconnected.
+1738072661: New connection from 172.17.0.5:34790 on port 1883.
+1738072661: New client connected from 172.17.0.5:34790 as JavaMQTTSender (p2, c1, k60).
+1738072661: Client JavaMQTTSender disconnected.
+1738072943: New connection from 172.17.0.5:45042 on port 1883.
+1738072943: New client connected from 172.17.0.5:45042 as nodered_bb19312f1bbb5b0f (p2, c1, k60).
+1738073007: New connection from 172.17.0.5:59862 on port 1883.
+1738073007: New client connected from 172.17.0.5:59862 as JavaMQTTSender_1738073007461 (p2, c1, k60).
+1738073008: Client JavaMQTTSender_1738073007461 disconnected.
+1738073008: New connection from 172.17.0.5:59870 on port 1883.
+1738073008: New client connected from 172.17.0.5:59870 as JavaMQTTSender (p2, c1, k60).
+1738073008: Client JavaMQTTSender disconnected.
+1738073123: New connection from 172.17.0.5:55912 on port 1883.
+1738073123: New client connected from 172.17.0.5:55912 as JavaMQTTSender_1738073123257 (p2, c1, k60).
+1738073123: Client JavaMQTTSender_1738073123257 disconnected.
+1738073124: New connection from 172.17.0.5:55926 on port 1883.
+1738073124: New client connected from 172.17.0.5:55926 as JavaMQTTSender (p2, c1, k60).
+1738073124: Client JavaMQTTSender disconnected.
+1738073291: New connection from 172.17.0.5:45214 on port 1883.
+1738073291: New client connected from 172.17.0.5:45214 as nodered_5a0cae09433a3934 (p2, c1, k60).
+1738073327: New connection from 172.17.0.5:44776 on port 1883.
+1738073327: New client connected from 172.17.0.5:44776 as JavaMQTTSender_1738073327048 (p2, c1, k60).
+1738073327: Client JavaMQTTSender_1738073327048 disconnected.
+1738073327: New connection from 172.17.0.5:44788 on port 1883.
+1738073328: New client connected from 172.17.0.5:44788 as JavaMQTTSender (p2, c1, k60).
+1738073328: Client JavaMQTTSender disconnected.
+1738073385: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738073385: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738073385: Error: No such file or directory.
+1738073429: New connection from 172.17.0.5:37360 on port 1883.
+1738073430: New client connected from 172.17.0.5:37360 as JavaMQTTSender_1738073429963 (p2, c1, k60).
+1738073430: Client JavaMQTTSender_1738073429963 disconnected.
+1738073430: New connection from 172.17.0.5:37372 on port 1883.
+1738073430: New client connected from 172.17.0.5:37372 as JavaMQTTSender (p2, c1, k60).
+1738073430: Client JavaMQTTSender disconnected.
+1738073713: New connection from 172.17.0.5:42738 on port 1883.
+1738073713: New client connected from 172.17.0.5:42738 as nodered_b3304f45893ede7d (p2, c1, k60).
+1738073773: New connection from 172.17.0.5:46742 on port 1883.
+1738073774: New client connected from 172.17.0.5:46742 as nodered_c0c723ed36c4e961 (p2, c1, k60).
+1738074138: New connection from 172.17.0.5:40758 on port 1883.
+1738074138: New client connected from 172.17.0.5:40758 as nodered_a1892cd5fb266e05 (p2, c1, k60).
+1738074176: New connection from 172.17.0.5:33904 on port 1883.
+1738074176: New client connected from 172.17.0.5:33904 as JavaMQTTSender_1738074176332 (p2, c1, k60).
+1738074177: Client JavaMQTTSender_1738074176332 disconnected.
+1738074177: New connection from 172.17.0.5:33918 on port 1883.
+1738074177: New client connected from 172.17.0.5:33918 as JavaMQTTSender (p2, c1, k60).
+1738074177: Client JavaMQTTSender disconnected.
+1738074318: New connection from 172.17.0.5:38188 on port 1883.
+1738074318: New client connected from 172.17.0.5:38188 as JavaMQTTSender_1738074318135 (p2, c1, k60).
+1738074318: Client JavaMQTTSender_1738074318135 disconnected.
+1738074318: New connection from 172.17.0.5:38190 on port 1883.
+1738074319: New client connected from 172.17.0.5:38190 as JavaMQTTSender (p2, c1, k60).
+1738074319: Client JavaMQTTSender disconnected.

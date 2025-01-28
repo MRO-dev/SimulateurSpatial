@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.5.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.5-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

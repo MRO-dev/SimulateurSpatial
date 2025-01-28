@@ -15,6 +15,7 @@
     <orderEntry type="library" name="hipparchus.stat" level="application" />
     <orderEntry type="library" name="orekit" level="project" />
     <orderEntry type="library" name="org.eclipse.paho.client.mqttv3-1.2.5" level="application" />
+    <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" name="eclipse.paho.client.mqttv3" level="project" />
   </component>
 </module>
