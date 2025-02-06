@@ -1,8 +1,6 @@
-DryMass, ErgolMass, ISP, ManeuverType, SMA_1, SMA_2
-1000
-12.833384
-15000
-Hohmann
-12000.003757318518
-25000
-
+DryMass, ErgolMass, DV, ManeuverType, ISP
+500
+4000
+638
+Impulse
+300

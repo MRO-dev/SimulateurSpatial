@@ -36,7 +36,57 @@ import java.util.List;
 
 public class TempsIntermediairePredefini {
 
-    private static final double MU = 3.986004418E14;  // Earth's gravitational parameter (m^3/s^2)
+    private static final double MU = 3.986004418E14;
+
+    // Default file names for various input files
+    private static String maneuverOrderFile = "ManeuverOrder.txt";
+    private static String commandDataFile = "CommandData.txt";
+    private static String ergolsFile = "Ergols.txt";
+    private static String timeIntermediateParametersFile = "TimeIntermediateParameters.txt";
+    private static String maneuvFile = "Maneuv.txt";
+    private static String apsideFile = "ApsideDates.txt";
+
+    // Mode parameter (default is "blue1")
+    private static String modeParameter = "blue1";
+
+    static {
+        maneuverOrderFile = System.getProperty("maneuverOrderFile", maneuverOrderFile);
+        commandDataFile = System.getProperty("commandDataFile", commandDataFile);
+        ergolsFile = System.getProperty("ergolsFile", ergolsFile);
+        timeIntermediateParametersFile = System.getProperty("timeIntermediateParametersFile", timeIntermediateParametersFile);
+        maneuvFile = System.getProperty("maneuvFile", maneuvFile);
+        modeParameter = System.getProperty("modeParameter", modeParameter);
+
+        // If modeParameter is "blue2", override the file names with alternative ones.
+        if ("blue2".equalsIgnoreCase(modeParameter)) {
+            maneuverOrderFile = "ManeuverOrder2.txt";
+            commandDataFile = "CommandData2.txt";
+            ergolsFile = "Ergols2.txt";
+            timeIntermediateParametersFile = "TimeIntermediateParameters2.txt";
+            maneuvFile = "Maneuv2.txt";
+            apsideFile = "ApsideDates2.txt";
+        }
+
+        // If modeParameter is "blue2", override the file names with alternative ones.
+        if ("red1".equalsIgnoreCase(modeParameter)) {
+            maneuverOrderFile = "ManeuverOrder3.txt";
+            commandDataFile = "CommandData3.txt";
+            ergolsFile = "Ergols3.txt";
+            timeIntermediateParametersFile = "TimeIntermediateParameters3.txt";
+            maneuvFile = "Maneuv3.txt";
+            apsideFile = "ApsideDates3.txt";
+        }
+
+        // If modeParameter is "blue2", override the file names with alternative ones.
+        if ("red2".equalsIgnoreCase(modeParameter)) {
+            maneuverOrderFile = "ManeuverOrder4.txt";
+            commandDataFile = "CommandData4.txt";
+            ergolsFile = "Ergols4.txt";
+            timeIntermediateParametersFile = "TimeIntermediateParameters4.txt";
+            maneuvFile = "Maneuv4.txt";
+            apsideFile = "ApsideDates4.txt";
+        }
+    }// Earth's gravitational parameter (m^3/s^2)
     // Load Orekit data
     static File orekitData = new File("orekit-data");
     static DataProvidersManager manager = DataContext.getDefault().getDataProvidersManager();
@@ -59,7 +109,7 @@ public class TempsIntermediairePredefini {
     static List<String> lines;
     static {
         try {
-            lines = Files.readAllLines(Paths.get("Ergols.txt"));
+            lines = Files.readAllLines(Paths.get(ergolsFile));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -67,19 +117,19 @@ public class TempsIntermediairePredefini {
     //static double DV = Double.parseDouble(lines.get(5));  // Delta-V unique
     static {
         try {
-            DATE = Files.readAllLines(Paths.get("ManeuverOrder.txt")).get(1);
-            SMA = Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(2)) * 1000.0;
-            ECC = Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(3));
-            INC = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(4)));
-            RAAN = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(5)));
-            PA = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(6)));
-            ANO = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get("CommandData.txt")).get(7)));
-            DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(1));
+            DATE = Files.readAllLines(Paths.get(maneuverOrderFile)).get(1);
+            SMA = Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(2)) * 1000.0;
+            ECC = Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(3));
+            INC = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(4)));
+            RAAN = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(5)));
+            PA = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(6)));
+            ANO = FastMath.toRadians(Double.parseDouble(Files.readAllLines(Paths.get(commandDataFile)).get(7)));
+            DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(1));
             ISP = new Double(1.0);
-            ERGOL = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(2));
-            MANEUV_TYPE = Files.readAllLines(Paths.get("TimeIntermediateParameters.txt")).get(1);
+            ERGOL = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(2));
+            MANEUV_TYPE = Files.readAllLines(Paths.get(timeIntermediateParametersFile)).get(1);
             ManeuverType = MANEUV_TYPE;
-            SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get("TimeIntermediateParameters.txt")).get(2)) * 1000.0;
+            SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get(timeIntermediateParametersFile)).get(2)) * 1000.0;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -90,7 +140,7 @@ public class TempsIntermediairePredefini {
 
     static {
         try {
-            manoeuverRelativeDate = Double.parseDouble(Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
+            manoeuverRelativeDate = Double.parseDouble(Files.readAllLines(Paths.get(maneuvFile)).get(item));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -137,7 +187,7 @@ public class TempsIntermediairePredefini {
 
         try {
             System.out.println("\nErgols File Data:");
-            List<String> ergolsLines = Files.readAllLines(Paths.get("Ergols.txt"));
+            List<String> ergolsLines = Files.readAllLines(Paths.get(ergolsFile));
             System.out.println("Maneuver Type from Ergols: " + ManeuverType);
             //System.out.println(String.format("Delta-V from Ergols: %.2f m/s", DV));
         } catch (IOException e) {
@@ -305,7 +355,7 @@ public class TempsIntermediairePredefini {
 
             // Log results with the date of the second maneuver
             //logResults("Result.txt", finalState, finalState.getOrbit(), initialMass, DRYMASS);
-            logApsideDate("ApsideDates.txt", secondManeuverDate); // Log the exact maneuver date as final orbit apogee/perigee
+            logApsideDate(apsideFile, secondManeuverDate); // Log the exact maneuver date as final orbit apogee/perigee
 
         } catch (Exception e) {
             System.err.println("Error in Hohmann transfer computation: " + e.getMessage());

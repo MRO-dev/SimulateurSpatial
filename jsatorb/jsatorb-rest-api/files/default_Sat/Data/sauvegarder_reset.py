@@ -1,71 +1,135 @@
-# Anthony Le Batteux EAE 130723
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 import shutil
-import sys
+import time
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+def ensure_directory_removed(directory):
+    """
+    Ensures a directory is removed, with multiple retries if needed.
+    Returns True if successful, False otherwise.
+    """
+    max_retries = 3
+    retry_delay = 1.0  # seconds
+    
+    for attempt in range(max_retries):
+        try:
+            if os.path.exists(directory):
+                shutil.rmtree(directory)
+            return True
+        except Exception as e:
+            logger.warning("Attempt {} failed to remove {}: {}".format(attempt + 1, directory, e))
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay)
+    return False
+
+def safe_copy(src, dst):
+    """
+    Safely copy a file with error handling and logging.
+    """
+    try:
+        shutil.copy2(src, dst)
+        logger.info("Copied {} => {}".format(src, dst))
+        return True
+    except Exception as e:
+        logger.error("Failed to copy {} to {}: {}".format(src, dst, e))
+        return False
 
 def backup_files(source_dir):
-    print("TEST")
-    # Creer le chemin du repertoire de sauvegarde
+    """
+    Copies .TXT files from `source_dir` into `source_dir/Reset/`,
+    and copies the entire `Manoeuver/` folder (if it exists) inside `source_dir`
+    into `source_dir/Reset/Manoeuver/`.
+    """
     backup_dir = os.path.join(source_dir, "Reset")
     
-    # Verifie si le dossier de sauvegarde existe et le supprime s'il existe deja
-    if os.path.exists(backup_dir):
-        shutil.rmtree(backup_dir)  # Supprime entierement le dossier Backup
+    # 1. Remove existing backup directory with retry mechanism
+    if not ensure_directory_removed(backup_dir):
+        raise RuntimeError("Failed to remove existing backup directory: {}".format(backup_dir))
     
-    # Recreer le dossier Backup apres l'avoir vide
-    os.makedirs(backup_dir)
-    
-    # Liste des fichiers dans le repertoire source
-    files = os.listdir(source_dir)
+    # 2. Create new backup directory
+    try:
+        os.makedirs(backup_dir)
+        logger.info("Created new backup folder: {}".format(backup_dir))
+    except Exception as e:
+        raise RuntimeError("Failed to create backup directory {}: {}".format(backup_dir, e))
 
-    # Copier chaque fichier .TXT dans le repertoire de sauvegarde
-    for file in files:
-        source_path = os.path.join(source_dir, file)
-        backup_path = os.path.join(backup_dir, file)
-        # Verifie si c'est un fichier et s'il se termine par .TXT
-        if os.path.isfile(source_path) and file.endswith(".TXT"):
-            # Copie le fichier (remplace s'il existe deja dans le dossier de backup)
-            shutil.copy2(source_path, backup_path)
-            print("Copied {} to {}".format(source_path, backup_path))
+    # 3. Copy all .TXT files
+    for file_name in os.listdir(source_dir):
+        source_path = os.path.join(source_dir, file_name)
+        if os.path.isfile(source_path) and file_name.endswith(".TXT"):
+            destination_path = os.path.join(backup_dir, file_name)
+            safe_copy(source_path, destination_path)
 
-    # Chemin du dossier "Manoeuver"
+    # 4. Copy Maneuver directory if it exists
     manoeuver_dir = os.path.join(source_dir, "Manoeuver")
-    if os.path.exists(manoeuver_dir) and os.path.isdir(manoeuver_dir):
-        # Chemin de destination du dossier "Manoeuver" dans le dossier "Backup"
+    if os.path.isdir(manoeuver_dir):
         backup_manoeuver_dir = os.path.join(backup_dir, "Manoeuver")
+        try:
+            shutil.copytree(manoeuver_dir, backup_manoeuver_dir)
+            logger.info("Copied entire 'Manoeuver' directory => {}".format(backup_manoeuver_dir))
+        except Exception as e:
+            raise RuntimeError("Failed to copy Manoeuver directory: {}".format(e))
 
-        # Copie tout le contenu du dossier "Manoeuver" vers le dossier "Backup"
-        shutil.copytree(manoeuver_dir, backup_manoeuver_dir)
-        print("Copied entire 'Manoeuver' directory to {}".format(backup_manoeuver_dir))
+def modify_last_maneuver_date(file_path):
+    """
+    Removes the last two lines from the file at the given path, 
+    ensuring no residual newline characters are left.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+        
+        # Remove last two lines if they exist
+        if len(lines) >= 2:
+            modified_lines = lines[:-2]
+        else:
+            modified_lines = lines
+            
+        # Write modified content
+        with open(file_path, 'w') as file:
+            file.write(''.join(modified_lines))
+        logger.info("Removed last two lines from {}".format(file_path))
+    except Exception as e:
+        raise RuntimeError("Error modifying {}: {}".format(file_path, e))
 
-print("TEST2")
-currentWorkingDirectory = os.getcwd()
-backup_files(currentWorkingDirectory)
-backup_dir = os.path.join(currentWorkingDirectory, "Reset")
-backup_manoeuver_dir = os.path.join(backup_dir, "Manoeuver")
+def main():
+    try:
+        current_working_dir = os.getcwd()
+        backup_files(current_working_dir)
 
-# Chemin du repertoire contenant Result.txt
-result_file_dir = "/app/maneuver-manager"
-
-manoeuver_dir = os.path.join(currentWorkingDirectory , "Manoeuver")
-
-# Copie du fichier Result.txt a partir de son emplacement specifique
-result_file = os.path.join(result_file_dir, "Result.txt")
-if os.path.exists(result_file):
-    shutil.copy2(result_file, backup_manoeuver_dir)
-    print("Copied 'Result.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+        # Copy special maneuver-manager files
+        backup_dir = os.path.join(current_working_dir, "Reset")
+        backup_manoeuver_dir = os.path.join(backup_dir, "Manoeuver")
+        result_file_dir = "/app/maneuver-manager"
+        
+        special_files = [
+            "Result.txt",
+            "LastManeuverDate.txt",
+            "PostManeuverDate.txt",
+            "time-persistence.json"
+        ]
+        
+        for special_file in special_files:
+            src_path = os.path.join(result_file_dir, special_file)
+            if os.path.exists(src_path):
+                dst_path = os.path.join(backup_manoeuver_dir, special_file)
+                safe_copy(src_path, dst_path)
+                
+                if special_file == "LastManeuverDate.txt":
+                    modify_last_maneuver_date(dst_path)
     
-    # Copie du fichier LastManeuverDate.txt a partir de son emplacement specifique
-result_file = os.path.join(result_file_dir, "LastManeuverDate.txt")
-if os.path.exists(result_file):
-    shutil.copy2(result_file, backup_manoeuver_dir)
-    print("Copied 'LastManeuverDate.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    except Exception as e:
+        logger.error("Backup process failed: {}".format(e))
+        raise
 
-
-# Copie du fichier PostManeuverDate.txt a partir de son emplacement specifique
-result_file = os.path.join(result_file_dir, "PostManeuverDate.txt")
-if os.path.exists(result_file):
-    shutil.copy2(result_file, backup_manoeuver_dir)
-    print("Copied 'PostManeuverDate.txt' from {} to {}".format(result_file, backup_manoeuver_dir))   
-
-
+if __name__ == "__main__":
+    main()

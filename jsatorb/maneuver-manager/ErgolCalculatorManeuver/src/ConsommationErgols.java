@@ -13,10 +13,50 @@ import java.text.ParseException;
 
 public class ConsommationErgols {
 
-    private static final double MU = 3.986004418E14;  // Paramètre gravitationnel de la Terre (m^3/s^2)
+    private static final double MU = 3.986004418E14;
+    // Default file names for ergols input and consumption output
+    private static String ergolsFile = "Ergols.txt";
+    private static String consommationErgolsFile = "ConsommationErgols.txt";
+
+    // Mode parameter (default is "blue1")
+    private static String modeParameter = "blue1";
+
+    // In a static block, override the defaults using system properties
+    static {
+        ergolsFile = System.getProperty("ergolsFile", ergolsFile);
+        consommationErgolsFile = System.getProperty("consommationErgolsFile", consommationErgolsFile);
+        modeParameter = System.getProperty("modeParameter", modeParameter);
+
+        // If modeParameter is blue2, override file names accordingly
+        if ("blue2".equalsIgnoreCase(modeParameter)) {
+            ergolsFile = "Ergols2.txt";
+            consommationErgolsFile = "ConsommationErgols2.txt";
+        }
+
+        // If modeParameter is red1, override file names accordingly
+        if ("red1".equalsIgnoreCase(modeParameter)) {
+            ergolsFile = "Ergols3.txt";
+            consommationErgolsFile = "ConsommationErgols3.txt";
+        }
+        // If modeParameter is red2, override file names accordingly
+        if ("red2".equalsIgnoreCase(modeParameter)) {
+            ergolsFile = "Ergols4.txt";
+            consommationErgolsFile = "ConsommationErgols4.txt";
+        }
+    }// Paramètre gravitationnel de la Terre (m^3/s^2)
 
     public static void main(String[] args) throws IOException, ParseException {
         try {
+            // Optional: If command-line arguments are provided, override the file names.
+            // Expected order: ergolsFile, consommationErgolsFile
+            if (args.length >= 2) {
+                ergolsFile = args[0];
+                consommationErgolsFile = args[1];
+            }
+
+            System.out.println("Using ergols input file: " + ergolsFile);
+            System.out.println("Using ergols consumption output file: " + consommationErgolsFile);
+            System.out.println("Mode parameter: " + modeParameter);
             double start = (double) System.currentTimeMillis();
             // Chargement des données Orekit
             File orekitData = new File("orekit-data");
@@ -24,15 +64,15 @@ public class ConsommationErgols {
             manager.addProvider(new DirectoryCrawler(orekitData));
 
             // Lecture des données d'entrée depuis le fichier
-            double DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(1));
+            double DRYMASS = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(1));
             System.out.println("Masse à vide : " + DRYMASS + " kg");
-            double ERGOL = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(2));
+            double ERGOL = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(2));
             System.out.println("Masse d'ergols : " + ERGOL + " kg");
-            double ISP = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(3));
+            double ISP = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(3));
             System.out.println("Impulsion spécifique (ISP) : " + ISP + " s");
-            double SMA = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(5)) * 1000.0;
+            double SMA = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(5)) * 1000.0;
             System.out.println("SMA initial : " + SMA / 1000.0 + " km");
-            double SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get("Ergols.txt")).get(6)) * 1000.0; // SMA final en mètres
+            double SMA_2 = Double.parseDouble(Files.readAllLines(Paths.get(ergolsFile)).get(6)) * 1000.0; // SMA final en mètres
             System.out.println("SMA final : " + SMA_2 / 1000.0 + " km");
 
             // Calcul de la masse initiale
@@ -67,7 +107,7 @@ public class ConsommationErgols {
             System.out.println("Consommation totale d'ergols : " + totalErgolConsumed + " kg");
 
             // Enregistrement de la consommation totale dans un fichier
-            FileWriter writer = new FileWriter("ConsommationErgols.txt", true);
+            FileWriter writer = new FileWriter(consommationErgolsFile, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             bufferedWriter.write(String.valueOf(totalErgolConsumed));
             bufferedWriter.close();
@@ -75,7 +115,7 @@ public class ConsommationErgols {
             // Gestion des exceptions
             System.err.println("Une erreur s'est produite : " + e.getMessage());
             e.printStackTrace();
-            try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("ConsommationErgols.txt", true))) {
+            try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(consommationErgolsFile, true))) {
                 bufferedWriter.write(String.valueOf(0.0));
             } catch (IOException ex) {
                 throw new RuntimeException(ex);

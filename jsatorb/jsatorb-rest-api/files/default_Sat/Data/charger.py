@@ -122,5 +122,12 @@ if os.path.exists(result_file):
     backup_result_path = os.path.join(result_file_dir, "PostManeuverDate.txt")
     shutil.copy2(result_file, backup_result_path)
     print("Copied 'PostManeuverDate.txt' from {} to {}".format(result_file, backup_result_path))   
+    
+    # Copie du fichier PostManeuverDate.txt a partir de son emplacement specifique
+result_file = os.path.join(backup_manoeuver_dir, "time-persistence.json")
+if os.path.exists(result_file):
+    backup_result_path = os.path.join(result_file_dir, "time-persistence.json")
+    shutil.copy2(result_file, backup_result_path)
+    print("Copied 'time-persistence.json' from {} to {}".format(result_file, backup_result_path))   
 
 

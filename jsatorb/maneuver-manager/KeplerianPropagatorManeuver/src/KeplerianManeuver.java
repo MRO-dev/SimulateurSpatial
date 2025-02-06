@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -12,15 +7,17 @@ import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Locale;
+
 import org.hipparchus.util.FastMath;
 import org.hipparchus.geometry.euclidean.threed.Vector3D;
 import org.hipparchus.util.MathUtils;
 import org.json.JSONObject;
+import org.orekit.attitudes.AttitudeProvider;
+import org.orekit.attitudes.InertialProvider;
 import org.orekit.data.DataContext;
 import org.orekit.data.DataProvidersManager;
 import org.orekit.data.DirectoryCrawler;
 import org.orekit.errors.OrekitException;
-import org.orekit.forces.maneuvers.ImpulseManeuver;
 import org.orekit.frames.Frame;
 import org.orekit.frames.FramesFactory;
 import org.orekit.orbits.KeplerianOrbit;
@@ -29,72 +26,92 @@ import org.orekit.orbits.OrbitType;
 import org.orekit.orbits.PositionAngle;
 import org.orekit.propagation.SpacecraftState;
 import org.orekit.propagation.analytical.KeplerianPropagator;
-import org.orekit.propagation.events.DateDetector;
-import org.orekit.propagation.events.EventDetector;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.time.TimeScalesFactory;
-import org.orekit.utils.Constants;
 import org.orekit.utils.PVCoordinates;
 
 public class KeplerianManeuver {
-    private static final double TIME_TOLERANCE_SECONDS = 1e-3;
+    // Default file names (these can be overridden via command-line arguments)
+    private static String dataFile = "Data.txt";
+    private static String maneuvFile = "Maneuv.txt";
+    private static String lastManeuverDateFile = "LastManeuverDate.txt";
+    private static String timePersistenceFile = "time-persistence.json";
+    private static final double TIME_TOLERANCE_SECONDS = 0.999e-3; // 1 ms tolerance
     static String APSIDE_DATE;
     static String endDateString;
-    // 1 millisecond tolerance
+
     public KeplerianManeuver() {
     }
 
+    /**
+     * Reads the file names from command-line arguments (if provided)
+     * in the order: dataFile, maneuvFile, lastManeuverDateFile, timePersistenceFile.
+     */
+    private static void initializeConfiguration(String[] args) {
+        if (args.length >= 4) {
+            dataFile = args[0];
+            maneuvFile = args[1];
+            lastManeuverDateFile = args[2];
+            timePersistenceFile = args[3];
+        }
+    }
+
     public static void main(String[] args) throws NullPointerException, ClassCastException, IOException, ParseException {
-        double start = (double)System.currentTimeMillis();
-        List<String> allLines = Files.readAllLines(Paths.get("LastManeuverDate.txt"));
+        initializeConfiguration(args);
+        double start = System.currentTimeMillis();
 
-        // Initialize APSIDE_DATE to null or empty
+        // -------------------------------------------------------------------
+        // 1) Read APSIDE_DATE from the LastManeuverDate file
+        // -------------------------------------------------------------------
+        List<String> allLines = Files.readAllLines(Paths.get(lastManeuverDateFile));
         String extractedApsideDate = null;
-
-        // Iterate over the lines in reverse order
+        // Iterate in reverse to find the last non-empty line that isn’t a header
         for (int i = allLines.size() - 1; i >= 0; i--) {
             String line = allLines.get(i).trim();
-            // Skip empty lines and lines starting with the prefix
             if (!line.isEmpty() && !line.startsWith("Apside reached at:")) {
                 extractedApsideDate = line;
                 break;
             }
         }
-
-        // Validate that a date was found
         if (extractedApsideDate == null) {
-            throw new IOException("No valid apside date found in file.");
+            throw new IOException("No valid apside date found in " + lastManeuverDateFile);
         }
-
-        // Assign the extracted date to APSIDE_DATE
         APSIDE_DATE = extractedApsideDate;
-        String fileContent = new String(Files.readAllBytes(Paths.get("time-persistence.json")));
 
-        // Step 2: Parse it using org.json
+        // -------------------------------------------------------------------
+        // 2) Read endDate from the timePersistence file (JSON)
+        // -------------------------------------------------------------------
+        String fileContent = new String(Files.readAllBytes(Paths.get(timePersistenceFile)));
         JSONObject jsonObject = new JSONObject(fileContent);
-
-        // Step 3: Retrieve the "enddate" field as a string
         endDateString = jsonObject.optString("enddate");
         if (endDateString == null || endDateString.isEmpty()) {
-            throw new IllegalArgumentException("No valid 'enddate' found in time-persistence.json");
+            throw new IllegalArgumentException("No valid 'enddate' found in " + timePersistenceFile);
         }
         System.out.println("End date string: " + endDateString);
 
         try {
+            List<String> dataLines = Files.readAllLines(Paths.get(dataFile));
+            // -------------------------------------------------------------------
+            // 3) Parse Data.txt
+            // -------------------------------------------------------------------
+            // Assuming your file structure (one value per line, starting at index 1)
+            // Adjust the indices as needed based on your file’s format.
             int num = 1;
-            String DATE = (String)Files.readAllLines(Paths.get("Data.txt")).get(num);
+            String DATE = dataLines.get(num);
             num = 2;
-            double SMA = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double SMA = Double.parseDouble(dataLines.get(num));
             num = 3;
-            double ECC = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double ECC = Double.parseDouble(dataLines.get(num));
             num = 4;
-            double INC = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double INC = Double.parseDouble(dataLines.get(num));
             num = 5;
-            double RAAN = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double RAAN = Double.parseDouble(dataLines.get(num));
             num = 6;
-            double PA = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double PA = Double.parseDouble(dataLines.get(num));
             num = 7;
-            double ANO = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double ANO = Double.parseDouble(dataLines.get(num));
+
+            // Convert to SI and radians
             double sma = SMA * 1000.0;
             double ecc = ECC;
             double inc = FastMath.toRadians(INC);
@@ -102,385 +119,376 @@ public class KeplerianManeuver {
             double aop = FastMath.toRadians(PA);
             double ano = FastMath.toRadians(ANO);
             double MU = 3.986004418E14;
+
+            // More Data.txt
             Frame GCRF = FramesFactory.getEME2000();
             num = 8;
-            double DRYMASS = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double DRYMASS = Double.parseDouble(dataLines.get(num));
             double dryMass = DRYMASS;
             num = 10;
-            double THRUST = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double THRUST = Double.parseDouble(dataLines.get(num));
             num = 11;
-            double ISP = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double ISP = Double.parseDouble(dataLines.get(num));
             num = 12;
-            double ERGOL = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double ERGOL = Double.parseDouble(dataLines.get(num));
             num = 13;
-            double DURA = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
+            double DURA = Double.parseDouble(dataLines.get(num));
             num = 14;
-            String maneuverType = (String)Files.readAllLines(Paths.get("Data.txt")).get(num);
+            String maneuverType = dataLines.get(num);
             num = 15;
-            double DV = Double.parseDouble((String)Files.readAllLines(Paths.get("Data.txt")).get(num));
-            System.out.println("maneuverType" + maneuverType);
+            double DV = Double.parseDouble(dataLines.get(num));
+            System.out.println("maneuverType: " + maneuverType);
+
             double m0 = dryMass + ERGOL;
-            //System.out.println("integratorType" + integratorType);
 
             try {
+                // -------------------------------------------------------------------
+                // 4) Parse Maneuv.txt for your maneuver vectors & times
+                // -------------------------------------------------------------------
+                List<String> maneuvLines = Files.readAllLines(Paths.get(maneuvFile));
                 int item = 1;
-                double manoeuverRelativeDate = Double.parseDouble((String)Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
+                double manoeuverRelativeDate = Double.parseDouble(maneuvLines.get(item));
                 item = 2;
-                double DVx = Double.parseDouble((String)Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
+                double DVx = Double.parseDouble(maneuvLines.get(item));
                 item = 3;
-                double DVy = Double.parseDouble((String)Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
+                double DVy = Double.parseDouble(maneuvLines.get(item));
                 item = 4;
-                double DVz = Double.parseDouble((String)Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
+                double DVz = Double.parseDouble(maneuvLines.get(item));
                 item = 5;
-                double durationOfManoeuver = Double.parseDouble((String)Files.readAllLines(Paths.get("Maneuv.txt")).get(item));
-                Vector3D direction = new Vector3D(DVx, DVy, DVz);
-                System.out.println("Vecteur direction X= " + direction.getX() + " Y= " + direction.getY() + " Z= " + direction.getZ());
+                double durationOfManoeuver = Double.parseDouble(maneuvLines.get(item));
+//                Vector3D direction = new Vector3D(DVx, DVy, DVz);
+//                System.out.println("Vecteur direction X= " + direction.getX()
+//                        + " Y= " + direction.getY()
+//                        + " Z= " + direction.getZ());
+                // Normalize the direction vector
+                Vector3D directionNormalized = new Vector3D(DVx, DVy, DVz).normalize();
+                System.out.println("Normalized Vector direction X= " + directionNormalized.getX()
+                        + " Y= " + directionNormalized.getY()
+                        + " Z= " + directionNormalized.getZ());
 
                 try {
+                    // -------------------------------------------------------------------
+                    // 5) Setup Orekit Data
+                    // -------------------------------------------------------------------
                     File home = new File("/app/maneuver-manager/");
                     File orekitData = new File(Paths.get("orekit-data").toString());
                     if (!orekitData.exists()) {
                         System.err.format(Locale.US, "Failed to find %s folder%n", orekitData.getAbsolutePath());
-                        System.err.format(Locale.US, "You need to download %s from %s, unzip it in %s and rename it 'orekit-data' for this tutorial to work%n", "orekit-data-master.zip", "https://gitlab.orekit.org/orekit/orekit-data/-/archive/master/orekit-data-master.zip", home.getAbsolutePath());
+                        System.err.format(Locale.US,
+                                "You need to download %s from %s, unzip it in %s and rename it 'orekit-data' for this tutorial to work%n",
+                                "orekit-data-master.zip",
+                                "https://gitlab.orekit.org/orekit/orekit-data/-/archive/master/orekit-data-master.zip",
+                                home.getAbsolutePath());
                         System.exit(1);
                     }
 
-                    DataProvidersManager manager = DataContext.getDefault().getDataProvidersManager();
-                    manager.addProvider(new DirectoryCrawler(orekitData));
-                    Frame eme2000 = FramesFactory.getEME2000();
+                    DataProvidersManager providersManager = DataContext.getDefault().getDataProvidersManager();
+                    providersManager.addProvider(new DirectoryCrawler(orekitData));
+
+                    // Build the initial absolute date from TLE
                     AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
                     System.out.println("DATE :" + DATE);
                     System.out.println("dateTLE :" + dateTLE);
-                    Orbit iniOrbit = new KeplerianOrbit(sma, ecc, inc, aop, raan, ano, PositionAngle.MEAN, eme2000, dateTLE, 3.986004418E14);
-                    double initMass = ERGOL + dryMass;
-                    SpacecraftState initialState = new SpacecraftState(iniOrbit, initMass);
-                    System.out.println("iniOrbit:" + iniOrbit);
-                    System.out.println("initMass :" + initMass);
+
+                    // -------------------------------------------------------------------
+                    // 6) Build the orbit at APSIDE_DATE
+                    // -------------------------------------------------------------------
                     AbsoluteDate apsideDateObj = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+                    Orbit orbitAtApside = new KeplerianOrbit(
+                            sma, ecc, inc, aop, raan, ano,
+                            PositionAngle.MEAN, GCRF, apsideDateObj, MU
+                    );
+                    System.out.println("\nOrbit at Apside Date:");
+                    System.out.println("  SMA: " + (orbitAtApside.getA() / 1000.0) + " km");
+                    System.out.println("  Mean Anomaly: "
+                            + FastMath.toDegrees(((KeplerianOrbit) orbitAtApside).getMeanAnomaly())
+                            + " deg");
+
+                    // -------------------------------------------------------------------
+                    // 7) Propagate from apsideDateObj to manoeuverStartDate
+                    // -------------------------------------------------------------------
+                    double initMass = m0;
+                    double mass_limite = 1e-3; // 0.001
+
+                    KeplerianPropagator keplerProp = new KeplerianPropagator(orbitAtApside);
+
+                    // The actual start date
                     AbsoluteDate manoeuverStartDate = dateTLE.shiftedBy(manoeuverRelativeDate);
                     System.out.println("manoeuverStartDate :" + manoeuverStartDate);
                     System.out.println("apsideDateObj :" + apsideDateObj);
+
+                    // Tolerance check
                     if (!isEqualOrAfterWithTolerance(manoeuverStartDate, apsideDateObj, TIME_TOLERANCE_SECONDS)) {
-                        throw new IllegalArgumentException("Initial date must be equal to or later than the apside date within the allowed tolerance.");
+                        throw new IllegalArgumentException(
+                                "Initial date must be >= APSIDE_DATE within tolerance."
+                        );
                     } else {
-                        System.out.println("Initial date is equal to or after the apside date within tolerance.");
+                        System.out.println("Initial date is equal or after the apside date within tolerance.");
                     }
+
+                    // Propagate to that date
+                    SpacecraftState stateAtManoeuverStartDate = keplerProp.propagate(manoeuverStartDate);
+
+                    // Rebuild the orbit at that date
+                    Orbit iniOrbit = new KeplerianOrbit(stateAtManoeuverStartDate.getOrbit());
+                    SpacecraftState initialState = new SpacecraftState(iniOrbit, initMass);
+
+                    // Log
+                    System.out.println("\nOrbit at manoeuverStartDate:");
+                    System.out.println("  SMA: " + (iniOrbit.getA() / 1000.0) + " km");
+                    System.out.println("  Mean Anomaly: "
+                            + FastMath.toDegrees(((KeplerianOrbit) iniOrbit).getMeanAnomaly())
+                            + " deg");
+
+                    System.out.println("iniOrbit:" + iniOrbit);
+                    System.out.println("initMass :" + initMass);
+
+                    // End horizon
                     AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
                     AbsoluteDate manoeuverEndDate = manoeuverStartDate.shiftedBy(durationOfManoeuver);
+
+                    // Possibly use the orbitType if needed
                     OrbitType orbitType = OrbitType.CIRCULAR;
                     if (ecc > 0.01) {
                         orbitType = OrbitType.KEPLERIAN;
-                    } else {
-                        orbitType = OrbitType.CIRCULAR;
                     }
-                    KeplerianPropagator propagator = new KeplerianPropagator(iniOrbit);
 
+                    // Log initial orbit
                     System.out.println("Initial orbit:");
-                    System.out.println("Date:" + ((Orbit)iniOrbit).getDate());
-                    System.out.println("SMA:" + ((Orbit)iniOrbit).getA() / 1000.0 + " km");
+                    System.out.println("Date:" + iniOrbit.getDate());
+                    System.out.println("SMA:" + iniOrbit.getA() / 1000.0 + " km");
                     System.out.println("MASS:" + initialState.getMass() + " kg");
-                    double mass_limite = Math.pow(10, -3);
-                    if (initialState.getMass()<mass_limite) {
+                    if (initialState.getMass() < mass_limite) {
                         throw new IllegalArgumentException("La masse initiale ne peut pas être négligeable.");
                     }
-                    System.out.println("Mean:" + FastMath.toDegrees((new KeplerianOrbit(iniOrbit)).getMeanAnomaly()) + " °");
-                    System.out.println("RAAN:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)iniOrbit).getRightAscensionOfAscendingNode(), Math.PI)));
-                    System.out.println("ECC:" + ((Orbit)iniOrbit).getE());
-                    System.out.println("AOP:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)iniOrbit).getPerigeeArgument(), Math.PI)));
-                    System.out.println("Mean Motion :" + 86400.0 * initialState.getOrbit().getKeplerianMeanMotion() / 6.283185307179586);
+                    System.out.println("Mean:" + FastMath.toDegrees(new KeplerianOrbit(iniOrbit).getMeanAnomaly()) + " °");
+                    System.out.println("RAAN:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) iniOrbit).getRightAscensionOfAscendingNode(), Math.PI)));
+                    System.out.println("ECC:" + iniOrbit.getE());
+                    System.out.println("AOP:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) iniOrbit).getPerigeeArgument(), Math.PI)));
+                    System.out.println("Mean Motion :" + (86400.0 * initialState.getOrbit().getKeplerianMeanMotion() / (2 * Math.PI)));
                     System.out.println("Incli :" + FastMath.toDegrees(initialState.getI()));
                     System.out.println("Fram :" + initialState.getFrame());
-                    System.out.println("FramP :" + propagator.getFrame());
                     System.out.println("PV:" + initialState.getOrbit().getPVCoordinates());
                     System.out.println("Kep:" + initialState.getOrbit());
+
+                    // finalState is the post-burn result
                     SpacecraftState finalState = null;
+
+                    // -------------------------------------------------------------------
+                    // 8) The Maneuver
+                    // -------------------------------------------------------------------
+                    SpacecraftState postBurnState = null;
                     if (maneuverType.equals("Impulse")) {
-                        //Vecteur impulsion
-                        Vector3D directionImp = new Vector3D(DVx * DV, DVy * DV, DVz * DV);
-                        //directionImp = new Vector3D(1, 0, 0).normalize().scalarMultiply(DV);
-                        //Trigger date de maneuvre
-                        EventDetector trigger = new DateDetector(manoeuverStartDate);
-                        ImpulseManeuver maneuver = new ImpulseManeuver(trigger, directionImp, ISP);
-                        //PVCoordinates newPV = new PVCoordinates(initialState.getPVCoordinates().getPosition(),
-                                //initialState.getPVCoordinates().getVelocity().add(directionImp));
+                        // 8A) Pre-burn position/velocity
+                        Vector3D posBeforeBurn = initialState.getPVCoordinates().getPosition();
+                        Vector3D velBeforeBurn = initialState.getPVCoordinates().getVelocity();
 
-                        // mfinale avec tsiolkovski
-                        //double g0 = 9.80665;  // g en m/s²
-                        //double finalMass = initialState.getMass() * Math.exp(-DV / (ISP * g0));
-                        double g0 = 9.80665;  // Accélération gravitationnelle (m/s²)
-                        double finalMass = initialState.getMass() * Math.exp(-DV / (ISP * g0));
-                        double DV_m_s = DV ;
-                        finalMass = initialState.getMass() * Math.exp(-DV_m_s / (ISP * g0));
-                        propagator = new KeplerianPropagator(iniOrbit);
-                        propagator.addEventDetector(maneuver);
+                        // 8B) Build the delta-V vector using the normalized direction
+                        Vector3D directionImp = directionNormalized.scalarMultiply(DV);
+                        Vector3D velAfterBurn = velBeforeBurn.add(directionImp);
 
-                        System.out.println("\nAfter the maneuver:");
-                        finalState = propagator.propagate(manoeuverStartDate.shiftedBy(durationOfManoeuver));
-                        finalState = new SpacecraftState(finalState.getOrbit(), finalMass);
-                        // Etat orbital avant 2eme maneuvre
-                        /*System.out.println("\nBefore the second maneuver:");
-                        System.out.println("SMA: " + finalState.getA() / 1000.0 + " km");
-                        System.out.println("Eccentricity: " + finalState.getE());
-                        // 2eme maneuvre
-                        DV = 0.58399 * 1000;  // Appliquer le ∆V pour la deuxième manœuvre à 0.58399 km/s (en m/s)
-
-                    // Nouvelle pos et nouvelle velocity
-                        Vector3D newPosition = finalState.getPVCoordinates().getPosition();  // Position du satellite
-                        Vector3D newVelocity = finalState.getPVCoordinates().getVelocity();  // Vitesse du satellite
-
-                         // Vecteur vitesse et pos
-                        System.out.println("Velocity vector before second maneuver: " + newVelocity);
-                        System.out.println("Position vector before second maneuver: " + newPosition);
-
-                         // Vitesse tangentielle
-                        double Vx = newVelocity.getX();
-                        double Vy = newVelocity.getY();
-                        double Vz = newVelocity.getZ();
-
-                        // Si le prod scalaire est < 0, on adapte le signe
-                        if (Vector3D.dotProduct(newPosition, newVelocity) < 0) {
-                            Vx = -Vx;
-                            Vy = -Vy;
-                            Vz = -Vz;
+                        // 8C) Validate that the resulting orbit will be elliptic
+                        double vAfterBurnMag = velAfterBurn.getNorm();
+                        double specificOrbitalEnergy = vAfterBurnMag * vAfterBurnMag / 2 - MU / posBeforeBurn.getNorm();
+                        if (specificOrbitalEnergy >= 0) {
+                            throw new IllegalArgumentException("Delta-V results in a parabolic or hyperbolic orbit.");
                         }
 
-                        //Vitesse corrigée
-                        Vector3D correctedVelocity = new Vector3D(Vx, Vy, Vz);
+                        // 8D) Build the post-burn orbit
+                        Orbit postBurnOrbit = new KeplerianOrbit(
+                                new PVCoordinates(posBeforeBurn, velAfterBurn),
+                                iniOrbit.getFrame(),
+                                manoeuverStartDate,
+                                MU
+                        );
 
-                        // Direction tangentielle
-                        Vector3D angularMomentum = Vector3D.crossProduct(newPosition, correctedVelocity);  // Moment angulaire (vecteur normal)
-                        Vector3D tangentDirection = Vector3D.crossProduct(angularMomentum, newPosition);   // Tangente à l'orbite
+                        // 8D) Tsiolkovsky for new mass
+                        double g0 = 9.80665;
+                        double actualDV = directionImp.getNorm();
+                        double finalMass = initialState.getMass() * Math.exp(-actualDV / (ISP * g0));
 
-                        // Direction Tangentielle normalisee
-                        tangentDirection = tangentDirection.normalize().scalarMultiply(DV);
+                        // Debug prints
+                        System.out.println("\n--- IMPULSE DEBUG ---");
+                        System.out.printf("actualDV: %.3f m/s\n", actualDV);
+                        System.out.printf("finalMass (Tsiolkovsky): %.3f kg\n", finalMass);
 
-                        // Direction poussée
-                        System.out.println("Corrected direction of impulsion vector (second maneuver): " + tangentDirection);
+                        // 8E) Build a new state
+                        postBurnState = new SpacecraftState(postBurnOrbit, finalMass);
 
-                        // Date déclenchement maneuvre
-                        manoeuverStartDate = finalState.getDate().shiftedBy(3899.66);  // Date après la première manœuvre
+                        // 8F) Construct a new KeplerianPropagator with inertial attitude
+                        AttitudeProvider inertialProvider = new InertialProvider(FramesFactory.getEME2000());
+                        KeplerianPropagator postBurnProp = new KeplerianPropagator(
+                                postBurnState.getOrbit(),
+                                inertialProvider,
+                                postBurnState.getMass()
+                        );
 
-                        // trigger
-                        trigger = new DateDetector(manoeuverStartDate);
-                        maneuver = new ImpulseManeuver(trigger, tangentDirection, ISP);
-
-                        // masse initiale pour la 2eme maneuvre
-                        double initialMassForSecondManeuver = finalState.getMass();
-
-                        // masse finale après tsiolkovski
-                        double finalMassForSecondManeuver = initialMassForSecondManeuver * Math.exp(-DV / (ISP * g0));
-
-                        // propagateur pour la 2eme maneuvre
-                        propagator = new KeplerianPropagator(finalState.getOrbit());
-                        propagator.addEventDetector(maneuver);
-
-                        // état après maneuvre
-                        finalState = propagator.propagate(manoeuverStartDate.shiftedBy(durationOfManoeuver));
-
-                        // maj état final
-                        finalState = new SpacecraftState(finalState.getOrbit(), finalMassForSecondManeuver);*/
-
-                        // paramètres orbitaux après la deuxième manœuvre
-                        System.out.println("\nAfter the last maneuver:");
-                        System.out.println("SMA: " + finalState.getA() / 1000.0 + " km");
-                        System.out.println("Eccentricity: " + finalState.getE());
-                        System.out.println("Final mass (after last maneuver): " + finalState.getMass());
+                        // 8G) Propagate from start to end of the burn
+                        finalState = postBurnProp.propagate(manoeuverEndDate);
+                        System.out.println("postBurnSate Mass:" + postBurnState.getMass() + " kg");
 
 
+// Alternatively, check after constructing the orbit
+                        if (postBurnOrbit.getE() >= 1.0 && postBurnOrbit.getA() > 0.0) {
+                            throw new IllegalArgumentException("Resulting orbit is invalid: e >= 1.0 with a > 0.0");
+                        }
 
 
+                    } else if (maneuverType.equals("Continuous")) {
+                        // (unchanged from your original approach)
+                        double thrustStep = 1.0;
+                        double isp = ISP;
+                        double g0 = 9.80665;
+                        double thrust = THRUST;
 
-                    }else if (maneuverType.equals("Continuous")){
-                        //Idée faire une série de maneubre impulsionnelle par pas de temps
-                        double thrustStep = 1.0;  // Durée de chaque itération (en secondes)
-                        double isp = ISP;  // Impulsion spécifique en secondes
-                        double g0 = 9.80665;  // Accélération gravitationnelle (m/s²)
-                        double thrust = THRUST;  // Poussée en Newtons
-
-                        // Masse initiale et masse à vide
-                        double initialMass = initialState.getMass();  // Masse initiale du satellite (incluant l'ergol)
+                        double initialMass = initialState.getMass();
                         double currentMass = initialMass;
-                        dryMass = DRYMASS;  // Masse à vide (sans ergol)
+                        dryMass = DRYMASS;
 
                         double totalDuration = durationOfManoeuver;
-
-                        // etat courant
                         SpacecraftState currentState = initialState;
 
-                        // petits incréments
                         while (currentState.getDate().compareTo(manoeuverEndDate) < 0) {
-
-                            // Init DV
-                            double DVxPerStep = (DVx * DV) / totalDuration;  // Petit Delta-V en X par pas de temps
-                            double DVyPerStep = (DVy * DV) / totalDuration;  // Petit Delta-V en Y par pas de temps
-                            double DVzPerStep = (DVz * DV) / totalDuration;  // Petit Delta-V en Z par pas de temps
+                            double DVxPerStep = (DVx * DV) / totalDuration;
+                            double DVyPerStep = (DVy * DV) / totalDuration;
+                            double DVzPerStep = (DVz * DV) / totalDuration;
 
                             Vector3D thrustPerStep = new Vector3D(DVxPerStep, DVyPerStep, DVzPerStep);
                             Vector3D updatedVelocity = currentState.getPVCoordinates().getVelocity().add(thrustPerStep);
 
-                            // conso ergol
                             double ergolConsumedByStep = (thrust * thrustStep) / (isp * g0);
                             currentMass -= ergolConsumedByStep;
 
-                            // si total ergol consomme : break
                             if (currentMass < dryMass) {
                                 currentMass = dryMass;
-                                break;  // Arrêter la manœuvre si la masse à vide est atteinte
+                                break;
                             }
 
-                            // maj pos et coord
                             PVCoordinates updatedPV = new PVCoordinates(currentState.getPVCoordinates().getPosition(), updatedVelocity);
                             Orbit updatedOrbit = new KeplerianOrbit(updatedPV, currentState.getFrame(), currentState.getDate(), MU);
-
-                            // nouvel etat
                             currentState = new SpacecraftState(updatedOrbit, currentMass);
 
-                            // propagation
                             KeplerianPropagator updatedPropagator = new KeplerianPropagator(updatedOrbit);
-
-                            // propa avec notre pas de calcul
                             currentState = updatedPropagator.propagate(currentState.getDate().shiftedBy(thrustStep));
 
-                            // verif masse
                             System.out.println("Masse actuelle après mise à jour : " + currentMass + " kg");
-
-                            /*
-
-
-                            // Paramètres pour la manœuvre continue
-double thrustStep = 1.0;  // Durée de chaque itération (en secondes)
-double isp = ISP;  // Impulsion spécifique en secondes
-double g0 = 9.80665;  // Accélération gravitationnelle (m/s²)
-double thrust = THRUST;  // Poussée en Newtons
-
-// Masse initiale et masse à vide
-double initialMass = initialState.getMass();  // Masse initiale du satellite (incluant l'ergol)
-double currentMass = initialMass;
-dryMass = DRYMASS;  // Masse à vide (sans ergol)
-
-double totalDuration = durationOfManoeuver;  // Durée totale de la manœuvre
-
-// État initial du satellite
-SpacecraftState currentState = initialState;
-
-// Date de début et de fin de la manœuvre continue
-AbsoluteDate manoeuverEndDate = manoeuverStartDate.shiftedBy(totalDuration);
-
-// Boucle de propagation avec petits incréments de temps (thrustStep)
-while (currentState.getDate().compareTo(manoeuverEndDate) < 0) {
-
-    // Calcul du petit Delta-V à chaque pas de temps
-    double DVxPerStep = (DVx * DV) / totalDuration;  // Petit Delta-V en X par pas de temps
-    double DVyPerStep = (DVy * DV) / totalDuration;  // Petit Delta-V en Y par pas de temps
-    double DVzPerStep = (DVz * DV) / totalDuration;  // Petit Delta-V en Z par pas de temps
-
-    // Vecteur poussée à chaque pas de temps
-    Vector3D thrustPerStep = new Vector3D(DVxPerStep, DVyPerStep, DVzPerStep);
-
-    // Mettre à jour la vitesse du satellite en ajoutant la poussée
-    Vector3D updatedVelocity = currentState.getPVCoordinates().getVelocity().add(thrustPerStep);
-
-    // Calcul de la consommation d'ergol à chaque pas de temps
-    double ergolConsumedByStep = (thrust * thrustStep) / (isp * g0);
-    currentMass -= ergolConsumedByStep;
-
-    // Si la masse atteint la masse à vide (plus d'ergol), on arrête la manœuvre
-    if (currentMass < dryMass) {
-        currentMass = dryMass;
-        break;  // Arrêter la manœuvre si la masse à vide est atteinte
-    }
-
-    // Mettre à jour les coordonnées de position et de vitesse du satellite
-    PVCoordinates updatedPV = new PVCoordinates(currentState.getPVCoordinates().getPosition(), updatedVelocity);
-    Orbit updatedOrbit = new KeplerianOrbit(updatedPV, currentState.getFrame(), currentState.getDate(), MU);
-
-    // Créer un nouvel état du satellite avec l'orbite mise à jour et la nouvelle masse
-    currentState = new SpacecraftState(updatedOrbit, currentMass);
-
-    // Créer un propagateur Keplerien pour l'état mis à jour
-    KeplerianPropagator updatedPropagator = new KeplerianPropagator(updatedOrbit);
-
-    // Propager l'orbite avec le pas de temps (thrustStep)
-    currentState = updatedPropagator.propagate(currentState.getDate().shiftedBy(thrustStep));
-
-    // Afficher la masse actuelle après mise à jour
-    System.out.println("Masse actuelle après mise à jour : " + currentMass + " kg");
-}
-
-// Masse restante d'ergol
-double ergolRestant = currentMass - dryMass;
-
-// État final après la manœuvre continue
-finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
-
-                             */
                         }
 
-                        // m_ergol restante
                         double ergolRestant = currentMass - dryMass;
-
-                        // etat final
                         finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
 
-
                     } else {
+                        // Maneuver: NONE
                         System.out.println("Maneuver : NONE");
                     }
 
-                        Orbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
-                        System.out.println("Final orbit:");
-                        System.out.println("Date:" + finalState.getDate());
-                        System.out.println("SMA:" + finalState.getA() / 1000.0 + " km");
-                        System.out.println("MeanAnomaly = " + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getMeanAnomaly(), Math.PI)) + " deg");
-                        System.out.println("manoeuverStartDate:" + manoeuverStartDate + " .");
-                        System.out.println("manoeuverEndDate:" + manoeuverEndDate + " .");
-                        System.out.println("RAAN:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getRightAscensionOfAscendingNode(), Math.PI)));
-                        System.out.println("ECC:" + ((Orbit)finalOrbit).getE());
-                        System.out.println("AOP:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getPerigeeArgument(), Math.PI)));
-                        System.out.println("Mean Motion :" + 86400.0 * finalState.getOrbit().getKeplerianMeanMotion() / 6.283185307179586);
-                        System.out.println("Incli :" + FastMath.toDegrees(finalState.getI()));
-                        System.out.println("state :" + propagator.getInitialState().getDate());
-                        System.out.println("PV:" + finalState.getOrbit().getPVCoordinates());
-                        System.out.println("Kep:" + finalState.getOrbit());
-                        System.out.println("Quaternion: at" + finalState.getDate() + " " + finalState.getAttitude().getOrientation().getRotation().getQ0() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ1() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ2() + ", " + finalState.getAttitude().getOrientation().getRotation().getQ3());
-                        double carburant_limite = Math.pow(10, -3);
-                        if ((finalState.getMass() - dryMass) < carburant_limite || ERGOL<carburant_limite) {
-                            throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
-                       }
+                    // If no maneuver took place at all, finalState = initial
+                    if (finalState == null) {
+                        finalState = initialState;
+                    }
 
-                        FileWriter writer = new FileWriter("Result.txt", true);
-                        BufferedWriter bufferedWriter = new BufferedWriter(writer);
-                        bufferedWriter.newLine();
-                        bufferedWriter.write("Orbital parameters post-maneuver :");
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.6f", dryMass));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.6f", m0 - finalState.getMass()));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.6f", finalState.getMass() - dryMass));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(((Orbit)finalOrbit).getDate().toString());
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.6f", (finalState.getPVCoordinates().getPosition().getNorm() - 6378137.0) / 1000.0));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.12f", finalState.getA() / 1000.0));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.7f", finalState.getE()));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.4f", FastMath.toDegrees(finalState.getI())));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.4f", FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getRightAscensionOfAscendingNode(), Math.PI))));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.8f", FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getPerigeeArgument(), Math.PI))));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.8f", FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit)finalOrbit).getMeanAnomaly(), Math.PI))));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.14f", 86400.0 * finalState.getOrbit().getKeplerianMeanMotion() / 6.283185307179586));
-                        bufferedWriter.newLine();
-                        bufferedWriter.write(String.format("%.6f", finalState.getKeplerianPeriod()));
-                        bufferedWriter.newLine();
-                        bufferedWriter.close();
-                    writer = new FileWriter("LastManeuverDate.txt", true);
+                    // -------------------------------------------------------------------
+                    // 9) Analyze final orbit
+                    // -------------------------------------------------------------------
+                    Orbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+                    System.out.println("\nAfter the last maneuver / final orbit:");
+                    System.out.println("Date: " + finalState.getDate());
+                    System.out.println("SMA: " + finalState.getA() / 1000.0 + " km");
+                    System.out.println("MeanAnomaly = "
+                            + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) finalOrbit).getMeanAnomaly(), Math.PI))
+                            + " deg");
+                    System.out.println("manoeuverStartDate:" + manoeuverStartDate + " .");
+                    System.out.println("manoeuverEndDate:" + manoeuverEndDate + " .");
+                    System.out.println("RAAN:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) finalOrbit).getRightAscensionOfAscendingNode(), Math.PI)));
+                    System.out.println("ECC:" + finalOrbit.getE());
+                    System.out.println("AOP:" + FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) finalOrbit).getPerigeeArgument(), Math.PI)));
+                    System.out.println("Mean Motion :" + 86400.0 * finalState.getOrbit().getKeplerianMeanMotion() / (2 * Math.PI));
+                    System.out.println("Incli :" + FastMath.toDegrees(finalState.getI()));
+                    System.out.println("PV:" + finalState.getOrbit().getPVCoordinates());
+                    System.out.println("Kep:" + finalState.getOrbit());
+                    System.out.println("Final mass (after maneuver): " + postBurnState.getMass());
+
+                    // -------------------------------------------------------------------
+                    // 10) Check that final mass is not below dry mass
+                    //     (allow exactly = dryMass, but not below)
+                    // -------------------------------------------------------------------
+                    double carburant_limite = 1e-3;
+                    if (postBurnState.getMass() < (dryMass + carburant_limite)) {
+                        throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
+                    }
+
+                    // Also check we didn't start with near-zero prop
+                    if (ERGOL < carburant_limite) {
+                        throw new IllegalArgumentException("ERGOL initial < 0.001 kg? Not valid.");
+                    }
+
+                    if (finalState.getE() >= 1.0) {
+                        throw new IllegalStateException("hyperbolic orbits cannot be handled");
+                    }
+                    double n = postBurnState.getOrbit().getKeplerianMeanMotion();
+                    System.out.println("n:" + n);
+                    if (n < 1e-9) {
+                        throw new IllegalStateException("hyperbolic orbits cannot be handled");
+                    }
+
+
+
+                    // -------------------------------------------------------------------
+                    // 11) Write results to file
+                    // -------------------------------------------------------------------
+                    FileWriter writer = new FileWriter("Result.txt", true);
+                    BufferedWriter bufferedWriter = new BufferedWriter(writer);
+                    bufferedWriter.newLine();
+                    bufferedWriter.write("Orbital parameters post-maneuver :");
+                    bufferedWriter.newLine();
+                    // 1) Dry mass
+                    bufferedWriter.write(String.format("%.6f", dryMass));
+                    bufferedWriter.newLine();
+                    // 2) (m0 - finalState.mass)
+                    bufferedWriter.write(String.format("%.6f", m0 - postBurnState.getMass()));
+                    bufferedWriter.newLine();
+                    // 3) (final mass - dry mass)
+                    bufferedWriter.write(String.format("%.6f", postBurnState.getMass() - dryMass));
+                    bufferedWriter.newLine();
+                    // 4) finalOrbit date
+                    bufferedWriter.write(postBurnState.getOrbit().getDate().toString());
+                    bufferedWriter.newLine();
+                    // 5) altitude
+                    bufferedWriter.write(String.format("%.6f",
+                            (postBurnState.getPVCoordinates().getPosition().getNorm() - 6378137.0) / 1000.0));
+                    bufferedWriter.newLine();
+                    // 6) SMA
+                    bufferedWriter.write(String.format("%.12f", postBurnState.getA() / 1000.0));
+                    bufferedWriter.newLine();
+                    // 7) E
+                    bufferedWriter.write(String.format("%.7f", postBurnState.getE()));
+                    bufferedWriter.newLine();
+                    // 8) i (deg)
+                    bufferedWriter.write(String.format("%.4f", FastMath.toDegrees(postBurnState.getI())));
+                    bufferedWriter.newLine();
+                    // 9) RAAN
+                    bufferedWriter.write(String.format("%.4f",
+                            FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) postBurnState.getOrbit()).getRightAscensionOfAscendingNode(), Math.PI))));
+                    bufferedWriter.newLine();
+                    // 10) Perigee argument
+                    bufferedWriter.write(String.format("%.8f",
+                            FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) postBurnState.getOrbit()).getPerigeeArgument(), Math.PI))));
+                    bufferedWriter.newLine();
+                    // 11) Mean anomaly
+                    bufferedWriter.write(String.format("%.8f",
+                            FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) postBurnState.getOrbit()).getMeanAnomaly(), Math.PI))));
+                    bufferedWriter.newLine();
+                    // 12) Mean motion (rev/day)
+                    bufferedWriter.write(String.format("%.14f",
+                            86400.0 * postBurnState.getOrbit().getKeplerianMeanMotion() / (2 * Math.PI)));
+                    bufferedWriter.newLine();
+                    // 13) Orbital period (s)
+                    bufferedWriter.write(String.format("%.6f", postBurnState.getKeplerianPeriod()));
+                    bufferedWriter.newLine();
+                    bufferedWriter.close();
+
+                    // Also record the post-maneuver date
+                    writer = new FileWriter(lastManeuverDateFile, true);
                     bufferedWriter = new BufferedWriter(writer);
                     bufferedWriter.newLine();
                     bufferedWriter.write("Date post - maneuvre");
@@ -488,30 +496,29 @@ finalState = new SpacecraftState(currentState.getOrbit(), currentMass);
                     bufferedWriter.write(String.valueOf(manoeuverEndDate));
                     bufferedWriter.newLine();
                     bufferedWriter.close();
-                        double end = (double)System.currentTimeMillis();
-                        double duration = (end - start) / 1000.0;
-                        System.out.println("Execution time:" + duration);
 
+                    double end = System.currentTimeMillis();
+                    double duration = (end - start) / 1000.0;
+                    System.out.println("Execution time:" + duration + " s");
 
                 } catch (OrekitException var92) {
-                    OrekitException e = var92;
-                    System.err.println(e.getLocalizedMessage());
+                    var92.printStackTrace();
                     System.exit(1);
                 }
             } catch (IOException var93) {
-                IOException e = var93;
-                e.printStackTrace();
+                var93.printStackTrace();
             }
         } catch (IOException var94) {
-            IOException e = var94;
-            e.printStackTrace();
+            var94.printStackTrace();
         }
     }
-    private static boolean isEqualOrAfterWithTolerance(AbsoluteDate dateToCheck, AbsoluteDate referenceDate, double toleranceSeconds) {
-        // Calculate the difference: positive if dateToCheck is after referenceDate
-        double difference = dateToCheck.durationFrom(referenceDate);
 
-        // If difference is greater than or within the negative tolerance, consider it as valid
+    /**
+     * Returns true if dateToCheck >= referenceDate (within toleranceSeconds).
+     */
+    private static boolean isEqualOrAfterWithTolerance(AbsoluteDate dateToCheck, AbsoluteDate referenceDate, double toleranceSeconds) {
+        double difference = dateToCheck.durationFrom(referenceDate);
+        System.out.println("difference = " + difference);
         return difference >= -toleranceSeconds;
     }
 }

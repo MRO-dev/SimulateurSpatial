@@ -1,0 +1,8 @@
+DryMass, ErgolMass, ISP, ManeuverType, SMA_1, SMA_2
+500
+24301.60697
+0
+Hohmann
+24999.99
+12000
+

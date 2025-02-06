@@ -1,0 +1,16 @@
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2
+2025-02-06T08:27:43.000Z
+14999.993677051854
+1e-7
+005.0000
+003.0000
+003.0000
+003.0000
+500
+0
+0
+300
+30000
+Hohmann
+25000
+
