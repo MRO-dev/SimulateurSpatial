@@ -19330,3 +19330,2271 @@
 1738855239: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
 1738855239: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
 1738855239: Error: No such file or directory.
+1738855389: mosquitto version 2.0.20 starting
+1738855389: Config loaded from /mosquitto/config/mosquitto.conf.
+1738855389: Opening ipv4 listen socket on port 1883.
+1738855389: mosquitto version 2.0.20 running
+1738855399: New connection from 172.17.0.5:50406 on port 1883.
+1738855399: New client connected from 172.17.0.5:50406 as nodered_bd54bbe899f69eb2 (p2, c1, k60).
+1738857190: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738857190: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738857190: Error: No such file or directory.
+1738858991: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738858991: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738858991: Error: No such file or directory.
+1738859016: New connection from 172.17.0.5:55170 on port 1883.
+1738859016: New client connected from 172.17.0.5:55170 as nodered_ba35583fefe0a6f4 (p2, c1, k60).
+1738859058: New connection from 172.17.0.5:44582 on port 1883.
+1738859058: New client connected from 172.17.0.5:44582 as JavaMQTTSender_1738859058371 (p2, c1, k60).
+1738859059: Client JavaMQTTSender_1738859058371 disconnected.
+1738859059: New connection from 172.17.0.5:44586 on port 1883.
+1738859059: New client connected from 172.17.0.5:44586 as JavaMQTTSender (p2, c1, k60).
+1738859059: Client JavaMQTTSender disconnected.
+1738859228: New connection from 172.17.0.5:40516 on port 1883.
+1738859229: New client connected from 172.17.0.5:40516 as JavaMQTTSender_1738859228803 (p2, c1, k60).
+1738859229: Client JavaMQTTSender_1738859228803 disconnected.
+1738859229: New connection from 172.17.0.5:40530 on port 1883.
+1738859229: New client connected from 172.17.0.5:40530 as JavaMQTTSender (p2, c1, k60).
+1738859229: Client JavaMQTTSender disconnected.
+1738859864: New connection from 172.17.0.5:52662 on port 1883.
+1738859864: New client connected from 172.17.0.5:52662 as nodered_06ea7f79f6398d46 (p2, c1, k60).
+1738860792: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738860792: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738860792: Error: No such file or directory.
+1738861214: mosquitto version 2.0.20 terminating
+1738861214: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738861214: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738861214: Error: No such file or directory.
+1738913096: mosquitto version 2.0.20 starting
+1738913096: Config loaded from /mosquitto/config/mosquitto.conf.
+1738913096: Opening ipv4 listen socket on port 1883.
+1738913096: mosquitto version 2.0.20 running
+1738913116: New connection from 172.17.0.5:37742 on port 1883.
+1738913116: New client connected from 172.17.0.5:37742 as nodered_07854a07361f30ad (p2, c1, k60).
+1738913420: New connection from 172.17.0.5:42906 on port 1883.
+1738913420: New client connected from 172.17.0.5:42906 as nodered_a3c549c9bc211b31 (p2, c1, k60).
+1738913466: New connection from 172.17.0.5:46838 on port 1883.
+1738913466: New client connected from 172.17.0.5:46838 as nodered_eb75f7063f2c34c6 (p2, c1, k60).
+1738913567: New connection from 172.17.0.5:48668 on port 1883.
+1738913567: New client connected from 172.17.0.5:48668 as nodered_cce55e8fba19fa28 (p2, c1, k60).
+1738913611: New connection from 172.17.0.5:36352 on port 1883.
+1738913612: New client connected from 172.17.0.5:36352 as nodered_5c2ba88db338b04d (p2, c1, k60).
+1738914017: New connection from 172.17.0.5:52792 on port 1883.
+1738914017: New client connected from 172.17.0.5:52792 as nodered_7dd3fe6e5c091935 (p2, c1, k60).
+1738914066: New connection from 172.17.0.5:36144 on port 1883.
+1738914067: New client connected from 172.17.0.5:36144 as JavaMQTTSender_1738914066823 (p2, c1, k60).
+1738914067: Client JavaMQTTSender_1738914066823 disconnected.
+1738914067: New connection from 172.17.0.5:36148 on port 1883.
+1738914068: New client connected from 172.17.0.5:36148 as JavaMQTTSender (p2, c1, k60).
+1738914068: Client JavaMQTTSender disconnected.
+1738914195: New connection from 172.17.0.5:41094 on port 1883.
+1738914195: New client connected from 172.17.0.5:41094 as JavaMQTTSender_1738914195311 (p2, c1, k60).
+1738914196: Client JavaMQTTSender_1738914195311 disconnected.
+1738914196: New connection from 172.17.0.5:41098 on port 1883.
+1738914196: New client connected from 172.17.0.5:41098 as JavaMQTTSender (p2, c1, k60).
+1738914196: Client JavaMQTTSender disconnected.
+1738914897: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738914897: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738914897: Error: No such file or directory.
+1738916698: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738916698: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738916698: Error: No such file or directory.
+1738918499: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738918499: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738918499: Error: No such file or directory.
+1738918770: New connection from 172.17.0.5:34486 on port 1883.
+1738918770: New client connected from 172.17.0.5:34486 as nodered_0b3c3b066af271af (p2, c1, k60).
+1738920300: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738920300: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738920300: Error: No such file or directory.
+1738921747: New connection from 172.17.0.5:43772 on port 1883.
+1738921747: New client connected from 172.17.0.5:43772 as nodered_0bcaf80541632014 (p2, c1, k60).
+1738921865: New connection from 172.17.0.5:46284 on port 1883.
+1738921865: New client connected from 172.17.0.5:46284 as nodered_a70b619c93fa38fd (p2, c1, k60).
+1738922101: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738922101: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738922101: Error: No such file or directory.
+1738922974: New connection from 172.17.0.5:57600 on port 1883.
+1738922974: New client connected from 172.17.0.5:57600 as nodered_2bc377adfb75851c (p2, c1, k60).
+1738923453: New connection from 172.17.0.5:59978 on port 1883.
+1738923453: New client connected from 172.17.0.5:59978 as nodered_eda5dd9177ee425d (p2, c1, k60).
+1738923746: New connection from 172.17.0.5:38224 on port 1883.
+1738923746: New client connected from 172.17.0.5:38224 as nodered_23884bd85ebb5baf (p2, c1, k60).
+1738923902: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738923902: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738923902: Error: No such file or directory.
+1738925703: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738925703: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738925703: Error: No such file or directory.
+1738926527: New connection from 172.17.0.5:43156 on port 1883.
+1738926527: New client connected from 172.17.0.5:43156 as nodered_5d4c813bcd0ca90c (p2, c1, k60).
+1738927504: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738927504: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738927504: Error: No such file or directory.
+1738929305: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738929305: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738929305: Error: No such file or directory.
+1738931106: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738931106: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738931106: Error: No such file or directory.
+1738932907: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738932907: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738932907: Error: No such file or directory.
+1738934708: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738934708: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738934708: Error: No such file or directory.
+1738936509: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738936509: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738936509: Error: No such file or directory.
+1738938310: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738938310: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738938310: Error: No such file or directory.
+1738940111: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738940111: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738940111: Error: No such file or directory.
+1738941912: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738941912: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738941912: Error: No such file or directory.
+1738943713: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738943713: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738943713: Error: No such file or directory.
+1738945514: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738945514: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738945514: Error: No such file or directory.
+1738947315: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738947315: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738947315: Error: No such file or directory.
+1738949116: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738949116: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738949116: Error: No such file or directory.
+1738950917: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738950917: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738950917: Error: No such file or directory.
+1738952718: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738952718: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738952718: Error: No such file or directory.
+1738954519: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738954519: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738954519: Error: No such file or directory.
+1738956320: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738956320: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738956320: Error: No such file or directory.
+1738958121: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738958121: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738958121: Error: No such file or directory.
+1738959922: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738959922: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738959922: Error: No such file or directory.
+1738961723: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738961723: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738961723: Error: No such file or directory.
+1738963524: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738963524: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738963524: Error: No such file or directory.
+1738965325: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738965325: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738965325: Error: No such file or directory.
+1738967126: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738967126: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738967126: Error: No such file or directory.
+1738968927: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738968927: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738968927: Error: No such file or directory.
+1738970728: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738970728: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738970728: Error: No such file or directory.
+1738972529: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738972529: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738972529: Error: No such file or directory.
+1738974330: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738974330: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738974330: Error: No such file or directory.
+1738976131: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738976131: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738976131: Error: No such file or directory.
+1738977932: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738977932: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738977932: Error: No such file or directory.
+1738979733: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738979733: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738979733: Error: No such file or directory.
+1738981534: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738981534: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738981534: Error: No such file or directory.
+1738983335: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738983335: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738983335: Error: No such file or directory.
+1738985136: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738985136: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738985136: Error: No such file or directory.
+1738986937: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738986937: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738986937: Error: No such file or directory.
+1738988738: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738988738: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738988738: Error: No such file or directory.
+1738990539: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738990539: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738990539: Error: No such file or directory.
+1738992340: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738992340: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738992340: Error: No such file or directory.
+1738994141: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738994141: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738994141: Error: No such file or directory.
+1738995942: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738995942: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738995942: Error: No such file or directory.
+1738997743: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738997743: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738997743: Error: No such file or directory.
+1738999544: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1738999544: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1738999544: Error: No such file or directory.
+1739001345: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739001345: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739001345: Error: No such file or directory.
+1739003146: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739003146: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739003146: Error: No such file or directory.
+1739004947: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739004947: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739004947: Error: No such file or directory.
+1739006748: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739006748: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739006748: Error: No such file or directory.
+1739008549: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739008549: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739008549: Error: No such file or directory.
+1739010350: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739010350: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739010350: Error: No such file or directory.
+1739012151: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739012151: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739012151: Error: No such file or directory.
+1739013952: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739013952: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739013952: Error: No such file or directory.
+1739015753: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739015753: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739015753: Error: No such file or directory.
+1739017554: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739017554: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739017554: Error: No such file or directory.
+1739019355: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739019355: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739019355: Error: No such file or directory.
+1739021156: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739021156: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739021156: Error: No such file or directory.
+1739022957: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739022957: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739022957: Error: No such file or directory.
+1739024758: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739024758: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739024758: Error: No such file or directory.
+1739026452: mosquitto version 2.0.20 starting
+1739026452: Config loaded from /mosquitto/config/mosquitto.conf.
+1739026452: Opening ipv4 listen socket on port 1883.
+1739026452: mosquitto version 2.0.20 running
+1739026457: New connection from 172.17.0.5:45466 on port 1883.
+1739026457: New client connected from 172.17.0.5:45466 as nodered_417c2a53f0d0821d (p2, c1, k60).
+1739028253: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739028253: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739028253: Error: No such file or directory.
+1739028712: mosquitto version 2.0.20 terminating
+1739028712: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739028712: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739028712: Error: No such file or directory.
+1739032115: mosquitto version 2.0.20 starting
+1739032115: Config loaded from /mosquitto/config/mosquitto.conf.
+1739032115: Opening ipv4 listen socket on port 1883.
+1739032115: mosquitto version 2.0.20 running
+1739032133: New connection from 172.17.0.5:47350 on port 1883.
+1739032133: New client connected from 172.17.0.5:47350 as nodered_3da8e969f7f935ed (p2, c1, k60).
+1739033916: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739033916: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739033916: Error: No such file or directory.
+1739035005: mosquitto version 2.0.20 terminating
+1739035005: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739035005: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739035005: Error: No such file or directory.
+1739108957: mosquitto version 2.0.20 starting
+1739108957: Config loaded from /mosquitto/config/mosquitto.conf.
+1739108957: Opening ipv4 listen socket on port 1883.
+1739108957: mosquitto version 2.0.20 running
+1739108977: New connection from 172.17.0.5:45348 on port 1883.
+1739108977: New client connected from 172.17.0.5:45348 as nodered_5091189e64fc57c3 (p2, c1, k60).
+1739110758: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739110758: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739110758: Error: No such file or directory.
+1739112074: New connection from 172.17.0.5:45438 on port 1883.
+1739112074: New client connected from 172.17.0.5:45438 as nodered_50b2b3ce79ca0faf (p2, c1, k60).
+1739112559: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739112559: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739112559: Error: No such file or directory.
+1739113191: New connection from 172.17.0.5:48098 on port 1883.
+1739113191: New client connected from 172.17.0.5:48098 as nodered_2cea7ae45e907701 (p2, c1, k60).
+1739113518: New connection from 172.17.0.5:53724 on port 1883.
+1739113518: New client connected from 172.17.0.5:53724 as nodered_31a37209fe642215 (p2, c1, k60).
+1739114165: New connection from 172.17.0.5:47286 on port 1883.
+1739114165: New client connected from 172.17.0.5:47286 as nodered_1d2c6f5baba11193 (p2, c1, k60).
+1739114360: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739114360: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739114360: Error: No such file or directory.
+1739114401: New connection from 172.17.0.5:32970 on port 1883.
+1739114401: New client connected from 172.17.0.5:32970 as nodered_7483381578057704 (p2, c1, k60).
+1739114518: New connection from 172.17.0.5:50336 on port 1883.
+1739114518: New client connected from 172.17.0.5:50336 as nodered_3a72e24cc263d7e6 (p2, c1, k60).
+1739114832: New connection from 172.17.0.5:51342 on port 1883.
+1739114832: New client connected from 172.17.0.5:51342 as nodered_f3a0ea32d1dd028c (p2, c1, k60).
+1739115066: New connection from 172.17.0.5:35334 on port 1883.
+1739115066: New client connected from 172.17.0.5:35334 as nodered_010480720f64c69c (p2, c1, k60).
+1739115421: New connection from 172.17.0.5:54428 on port 1883.
+1739115421: New client connected from 172.17.0.5:54428 as nodered_b4b46a0f8b3b94c4 (p2, c1, k60).
+1739115509: New connection from 172.17.0.5:48776 on port 1883.
+1739115509: New client connected from 172.17.0.5:48776 as nodered_ed649c9f27ac300e (p2, c1, k60).
+1739115947: New connection from 172.17.0.5:33530 on port 1883.
+1739115948: New client connected from 172.17.0.5:33530 as JavaMQTTSender_1739115947946 (p2, c1, k60).
+1739115948: Client JavaMQTTSender_1739115947946 disconnected.
+1739115948: New connection from 172.17.0.5:33538 on port 1883.
+1739115949: New client connected from 172.17.0.5:33538 as JavaMQTTSender (p2, c1, k60).
+1739115949: Client JavaMQTTSender disconnected.
+1739116161: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739116161: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739116161: Error: No such file or directory.
+1739116303: New connection from 172.17.0.5:49322 on port 1883.
+1739116303: New client connected from 172.17.0.5:49322 as nodered_9ac5003a81f0e9bc (p2, c1, k60).
+1739116819: mosquitto version 2.0.20 terminating
+1739116819: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739116819: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739116819: Error: No such file or directory.
+1739122989: mosquitto version 2.0.20 starting
+1739122989: Config loaded from /mosquitto/config/mosquitto.conf.
+1739122989: Opening ipv4 listen socket on port 1883.
+1739122989: mosquitto version 2.0.20 running
+1739123007: New connection from 172.17.0.5:33030 on port 1883.
+1739123008: New client connected from 172.17.0.5:33030 as nodered_fb8bb2bb94b0a2da (p2, c1, k60).
+1739124790: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739124790: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739124790: Error: No such file or directory.
+1739126591: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739126591: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739126591: Error: No such file or directory.
+1739128392: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739128392: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739128392: Error: No such file or directory.
+1739130193: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739130193: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739130193: Error: No such file or directory.
+1739131994: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739131994: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739131994: Error: No such file or directory.
+1739133795: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739133795: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739133795: Error: No such file or directory.
+1739135596: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739135596: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739135596: Error: No such file or directory.
+1739137397: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739137397: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739137397: Error: No such file or directory.
+1739139198: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739139198: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739139198: Error: No such file or directory.
+1739140999: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739140999: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739140999: Error: No such file or directory.
+1739142800: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739142800: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739142800: Error: No such file or directory.
+1739144601: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739144601: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739144601: Error: No such file or directory.
+1739146402: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739146402: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739146402: Error: No such file or directory.
+1739148203: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739148203: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739148203: Error: No such file or directory.
+1739150004: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739150004: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739150004: Error: No such file or directory.
+1739151805: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739151805: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739151805: Error: No such file or directory.
+1739153606: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739153606: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739153606: Error: No such file or directory.
+1739155407: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739155407: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739155407: Error: No such file or directory.
+1739157208: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739157208: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739157208: Error: No such file or directory.
+1739159009: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739159009: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739159009: Error: No such file or directory.
+1739160810: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739160810: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739160810: Error: No such file or directory.
+1739162611: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739162611: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739162611: Error: No such file or directory.
+1739164412: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739164412: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739164412: Error: No such file or directory.
+1739166213: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739166213: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739166213: Error: No such file or directory.
+1739168014: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739168014: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739168014: Error: No such file or directory.
+1739169815: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739169815: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739169815: Error: No such file or directory.
+1739171616: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739171616: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739171616: Error: No such file or directory.
+1739173417: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739173417: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739173417: Error: No such file or directory.
+1739175218: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739175218: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739175218: Error: No such file or directory.
+1739176988: mosquitto version 2.0.20 starting
+1739176988: Config loaded from /mosquitto/config/mosquitto.conf.
+1739176988: Opening ipv4 listen socket on port 1883.
+1739176988: mosquitto version 2.0.20 running
+1739176992: New connection from 172.17.0.5:48392 on port 1883.
+1739176993: New client connected from 172.17.0.5:48392 as nodered_a9556973009936f7 (p2, c1, k60).
+1739177240: mosquitto version 2.0.20 terminating
+1739177240: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739177240: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739177240: Error: No such file or directory.
+1739177320: mosquitto version 2.0.20 starting
+1739177320: Config loaded from /mosquitto/config/mosquitto.conf.
+1739177320: Opening ipv4 listen socket on port 1883.
+1739177320: mosquitto version 2.0.20 running
+1739177339: New connection from 172.17.0.5:50696 on port 1883.
+1739177339: New client connected from 172.17.0.5:50696 as nodered_17321f72eee73f2f (p2, c1, k60).
+1739179121: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739179121: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739179121: Error: No such file or directory.
+1739180922: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739180922: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739180922: Error: No such file or directory.
+1739182723: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739182723: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739182723: Error: No such file or directory.
+1739184524: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739184524: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739184524: Error: No such file or directory.
+1739185258: mosquitto version 2.0.20 terminating
+1739185258: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739185258: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739185258: Error: No such file or directory.
+1739287438: mosquitto version 2.0.20 starting
+1739287438: Config loaded from /mosquitto/config/mosquitto.conf.
+1739287438: Opening ipv4 listen socket on port 1883.
+1739287438: mosquitto version 2.0.20 running
+1739287459: New connection from 172.17.0.5:34390 on port 1883.
+1739287459: New client connected from 172.17.0.5:34390 as nodered_5ab5f8980dbfe001 (p2, c1, k60).
+1739287863: mosquitto version 2.0.20 starting
+1739287863: Config loaded from /mosquitto/config/mosquitto.conf.
+1739287863: Opening ipv4 listen socket on port 1883.
+1739287863: mosquitto version 2.0.20 running
+1739287868: New connection from 172.17.0.5:49990 on port 1883.
+1739287869: New client connected from 172.17.0.5:49990 as nodered_0c1e41f643646ca6 (p2, c1, k60).
+1739289664: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739289664: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739289664: Error: No such file or directory.
+1739291465: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739291465: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739291465: Error: No such file or directory.
+1739292410: Client nodered_0c1e41f643646ca6 closed its connection.
+1739292410: mosquitto version 2.0.20 terminating
+1739292410: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739292410: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739292410: Error: No such file or directory.
+1739348399: mosquitto version 2.0.20 starting
+1739348399: Config loaded from /mosquitto/config/mosquitto.conf.
+1739348399: Opening ipv4 listen socket on port 1883.
+1739348399: mosquitto version 2.0.20 running
+1739348404: New connection from 172.17.0.5:41162 on port 1883.
+1739348404: New client connected from 172.17.0.5:41162 as nodered_6e507444de9dda63 (p2, c1, k60).
+1739349460: New connection from 172.17.0.5:38538 on port 1883.
+1739349460: New client connected from 172.17.0.5:38538 as nodered_5205ce1b7d5a35a9 (p2, c1, k60).
+1739350053: New connection from 172.17.0.5:33142 on port 1883.
+1739350053: New client connected from 172.17.0.5:33142 as nodered_51ce037c5fcfd2e3 (p2, c1, k60).
+1739350200: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739350200: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739350200: Error: No such file or directory.
+1739350648: New connection from 172.17.0.5:35134 on port 1883.
+1739350648: New client connected from 172.17.0.5:35134 as JavaMQTTSender_1739350648364 (p2, c1, k60).
+1739350649: Client JavaMQTTSender_1739350648364 disconnected.
+1739350649: New connection from 172.17.0.5:52000 on port 1883.
+1739350649: New client connected from 172.17.0.5:52000 as JavaMQTTSender (p2, c1, k60).
+1739350649: Client JavaMQTTSender disconnected.
+1739350879: New connection from 172.17.0.5:58072 on port 1883.
+1739350879: New client connected from 172.17.0.5:58072 as nodered_ac1fc69f6b0ed948 (p2, c1, k60).
+1739351534: New connection from 172.17.0.5:57374 on port 1883.
+1739351534: New client connected from 172.17.0.5:57374 as JavaMQTTSender_1739351534629 (p2, c1, k60).
+1739351535: Client JavaMQTTSender_1739351534629 disconnected.
+1739351535: New connection from 172.17.0.5:57390 on port 1883.
+1739351535: New client connected from 172.17.0.5:57390 as JavaMQTTSender (p2, c1, k60).
+1739351535: Client JavaMQTTSender disconnected.
+1739352001: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739352001: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739352001: Error: No such file or directory.
+1739353802: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739353802: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739353802: Error: No such file or directory.
+1739355603: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739355603: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739355603: Error: No such file or directory.
+1739357404: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739357404: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739357404: Error: No such file or directory.
+1739359205: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739359205: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739359205: Error: No such file or directory.
+1739361006: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739361006: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739361006: Error: No such file or directory.
+1739362807: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739362807: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739362807: Error: No such file or directory.
+1739364608: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739364608: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739364608: Error: No such file or directory.
+1739366409: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739366409: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739366409: Error: No such file or directory.
+1739368210: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739368210: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739368210: Error: No such file or directory.
+1739370011: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739370011: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739370011: Error: No such file or directory.
+1739371812: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739371812: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739371812: Error: No such file or directory.
+1739373613: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739373613: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739373613: Error: No such file or directory.
+1739375414: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739375414: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739375414: Error: No such file or directory.
+1739377215: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739377215: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739377215: Error: No such file or directory.
+1739379016: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739379016: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739379016: Error: No such file or directory.
+1739380817: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739380817: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739380817: Error: No such file or directory.
+1739382618: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739382618: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739382618: Error: No such file or directory.
+1739384419: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739384419: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739384419: Error: No such file or directory.
+1739386220: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739386220: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739386220: Error: No such file or directory.
+1739388021: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739388021: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739388021: Error: No such file or directory.
+1739389822: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739389822: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739389822: Error: No such file or directory.
+1739391623: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739391623: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739391623: Error: No such file or directory.
+1739393424: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739393424: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739393424: Error: No such file or directory.
+1739395225: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739395225: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739395225: Error: No such file or directory.
+1739397026: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739397026: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739397026: Error: No such file or directory.
+1739398827: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739398827: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739398827: Error: No such file or directory.
+1739400628: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739400628: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739400628: Error: No such file or directory.
+1739402429: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739402429: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739402429: Error: No such file or directory.
+1739404230: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739404230: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739404230: Error: No such file or directory.
+1739406031: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739406031: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739406031: Error: No such file or directory.
+1739407832: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739407832: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739407832: Error: No such file or directory.
+1739409633: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739409633: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739409633: Error: No such file or directory.
+1739411434: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739411434: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739411434: Error: No such file or directory.
+1739413235: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739413235: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739413235: Error: No such file or directory.
+1739415036: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739415036: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739415036: Error: No such file or directory.
+1739416837: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739416837: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739416837: Error: No such file or directory.
+1739418638: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739418638: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739418638: Error: No such file or directory.
+1739420439: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739420439: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739420439: Error: No such file or directory.
+1739422240: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739422240: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739422240: Error: No such file or directory.
+1739424041: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739424041: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739424041: Error: No such file or directory.
+1739425842: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739425842: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739425842: Error: No such file or directory.
+1739427643: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739427643: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739427643: Error: No such file or directory.
+1739429444: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739429444: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739429444: Error: No such file or directory.
+1739431245: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739431245: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739431245: Error: No such file or directory.
+1739433046: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739433046: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739433046: Error: No such file or directory.
+1739434847: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739434847: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739434847: Error: No such file or directory.
+1739436648: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739436648: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739436648: Error: No such file or directory.
+1739438449: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739438449: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739438449: Error: No such file or directory.
+1739440250: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739440250: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739440250: Error: No such file or directory.
+1739442051: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739442051: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739442051: Error: No such file or directory.
+1739443852: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739443852: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739443852: Error: No such file or directory.
+1739445653: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739445653: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739445653: Error: No such file or directory.
+1739447454: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739447454: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739447454: Error: No such file or directory.
+1739449255: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739449255: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739449255: Error: No such file or directory.
+1739451056: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739451056: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739451056: Error: No such file or directory.
+1739452857: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739452857: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739452857: Error: No such file or directory.
+1739454658: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739454658: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739454658: Error: No such file or directory.
+1739456459: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739456459: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739456459: Error: No such file or directory.
+1739458260: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739458260: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739458260: Error: No such file or directory.
+1739460061: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739460061: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739460061: Error: No such file or directory.
+1739461862: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739461862: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739461862: Error: No such file or directory.
+1739463663: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739463663: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739463663: Error: No such file or directory.
+1739465464: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739465464: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739465464: Error: No such file or directory.
+1739467265: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739467265: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739467265: Error: No such file or directory.
+1739469066: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739469066: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739469066: Error: No such file or directory.
+1739470867: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739470867: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739470867: Error: No such file or directory.
+1739472668: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739472668: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739472668: Error: No such file or directory.
+1739474469: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739474469: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739474469: Error: No such file or directory.
+1739476270: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739476270: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739476270: Error: No such file or directory.
+1739478071: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739478071: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739478071: Error: No such file or directory.
+1739479872: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739479872: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739479872: Error: No such file or directory.
+1739481673: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739481673: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739481673: Error: No such file or directory.
+1739483474: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739483474: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739483474: Error: No such file or directory.
+1739485275: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739485275: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739485275: Error: No such file or directory.
+1739487076: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739487076: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739487076: Error: No such file or directory.
+1739488877: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739488877: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739488877: Error: No such file or directory.
+1739490678: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739490678: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739490678: Error: No such file or directory.
+1739492479: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739492479: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739492479: Error: No such file or directory.
+1739494280: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739494280: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739494280: Error: No such file or directory.
+1739496081: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739496081: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739496081: Error: No such file or directory.
+1739497882: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739497882: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739497882: Error: No such file or directory.
+1739499683: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739499683: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739499683: Error: No such file or directory.
+1739501484: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739501484: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739501484: Error: No such file or directory.
+1739503285: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739503285: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739503285: Error: No such file or directory.
+1739505086: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739505086: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739505086: Error: No such file or directory.
+1739506887: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739506887: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739506887: Error: No such file or directory.
+1739508688: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739508688: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739508688: Error: No such file or directory.
+1739510489: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739510489: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739510489: Error: No such file or directory.
+1739512290: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739512290: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739512290: Error: No such file or directory.
+1739514091: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739514091: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739514091: Error: No such file or directory.
+1739515892: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739515892: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739515892: Error: No such file or directory.
+1739517693: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739517693: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739517693: Error: No such file or directory.
+1739519494: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739519494: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739519494: Error: No such file or directory.
+1739521295: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739521295: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739521295: Error: No such file or directory.
+1739523096: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739523096: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739523096: Error: No such file or directory.
+1739524897: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739524897: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739524897: Error: No such file or directory.
+1739526698: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739526698: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739526698: Error: No such file or directory.
+1739528499: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739528499: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739528499: Error: No such file or directory.
+1739530300: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739530300: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739530300: Error: No such file or directory.
+1739532101: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739532101: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739532101: Error: No such file or directory.
+1739533902: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739533902: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739533902: Error: No such file or directory.
+1739535703: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739535703: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739535703: Error: No such file or directory.
+1739537504: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739537504: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739537504: Error: No such file or directory.
+1739539305: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739539305: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739539305: Error: No such file or directory.
+1739541106: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739541106: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739541106: Error: No such file or directory.
+1739542907: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739542907: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739542907: Error: No such file or directory.
+1739544708: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739544708: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739544708: Error: No such file or directory.
+1739546509: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739546509: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739546509: Error: No such file or directory.
+1739548310: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739548310: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739548310: Error: No such file or directory.
+1739550111: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739550111: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739550111: Error: No such file or directory.
+1739551912: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739551912: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739551912: Error: No such file or directory.
+1739553713: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739553713: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739553713: Error: No such file or directory.
+1739555514: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739555514: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739555514: Error: No such file or directory.
+1739557315: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739557315: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739557315: Error: No such file or directory.
+1739559116: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739559116: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739559116: Error: No such file or directory.
+1739560917: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739560917: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739560917: Error: No such file or directory.
+1739562718: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739562718: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739562718: Error: No such file or directory.
+1739564519: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739564519: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739564519: Error: No such file or directory.
+1739566320: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739566320: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739566320: Error: No such file or directory.
+1739568121: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739568121: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739568121: Error: No such file or directory.
+1739569922: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739569922: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739569922: Error: No such file or directory.
+1739571723: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739571723: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739571723: Error: No such file or directory.
+1739573524: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739573524: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739573524: Error: No such file or directory.
+1739575325: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739575325: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739575325: Error: No such file or directory.
+1739577126: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739577126: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739577126: Error: No such file or directory.
+1739578927: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739578927: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739578927: Error: No such file or directory.
+1739580728: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739580728: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739580728: Error: No such file or directory.
+1739582529: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739582529: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739582529: Error: No such file or directory.
+1739584330: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739584330: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739584330: Error: No such file or directory.
+1739586131: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739586131: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739586131: Error: No such file or directory.
+1739587932: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739587932: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739587932: Error: No such file or directory.
+1739589733: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739589733: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739589733: Error: No such file or directory.
+1739591534: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739591534: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739591534: Error: No such file or directory.
+1739593335: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739593335: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739593335: Error: No such file or directory.
+1739595136: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739595136: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739595136: Error: No such file or directory.
+1739596937: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739596937: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739596937: Error: No such file or directory.
+1739598738: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739598738: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739598738: Error: No such file or directory.
+1739600539: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739600539: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739600539: Error: No such file or directory.
+1739602340: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739602340: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739602340: Error: No such file or directory.
+1739604141: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739604141: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739604141: Error: No such file or directory.
+1739605942: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739605942: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739605942: Error: No such file or directory.
+1739607743: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739607743: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739607743: Error: No such file or directory.
+1739609544: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739609544: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739609544: Error: No such file or directory.
+1739611345: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739611345: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739611345: Error: No such file or directory.
+1739613146: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739613146: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739613146: Error: No such file or directory.
+1739614947: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739614947: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739614947: Error: No such file or directory.
+1739616748: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739616748: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739616748: Error: No such file or directory.
+1739618549: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739618549: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739618549: Error: No such file or directory.
+1739620350: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739620350: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739620350: Error: No such file or directory.
+1739622151: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739622151: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739622151: Error: No such file or directory.
+1739623952: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739623952: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739623952: Error: No such file or directory.
+1739625753: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739625753: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739625753: Error: No such file or directory.
+1739627554: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739627554: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739627554: Error: No such file or directory.
+1739629355: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739629355: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739629355: Error: No such file or directory.
+1739631156: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739631156: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739631156: Error: No such file or directory.
+1739632957: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739632957: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739632957: Error: No such file or directory.
+1739634758: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739634758: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739634758: Error: No such file or directory.
+1739636559: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739636559: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739636559: Error: No such file or directory.
+1739638360: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739638360: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739638360: Error: No such file or directory.
+1739640161: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739640161: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739640161: Error: No such file or directory.
+1739641962: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739641962: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739641962: Error: No such file or directory.
+1739643763: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739643763: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739643763: Error: No such file or directory.
+1739645564: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739645564: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739645564: Error: No such file or directory.
+1739647365: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739647365: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739647365: Error: No such file or directory.
+1739649166: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739649166: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739649166: Error: No such file or directory.
+1739650967: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739650967: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739650967: Error: No such file or directory.
+1739652768: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739652768: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739652768: Error: No such file or directory.
+1739654569: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739654569: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739654569: Error: No such file or directory.
+1739656370: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739656370: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739656370: Error: No such file or directory.
+1739658171: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739658171: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739658171: Error: No such file or directory.
+1739659972: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739659972: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739659972: Error: No such file or directory.
+1739661773: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739661773: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739661773: Error: No such file or directory.
+1739663574: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739663574: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739663574: Error: No such file or directory.
+1739665375: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739665375: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739665375: Error: No such file or directory.
+1739667176: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739667176: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739667176: Error: No such file or directory.
+1739668977: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739668977: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739668977: Error: No such file or directory.
+1739670778: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739670778: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739670778: Error: No such file or directory.
+1739672579: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739672579: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739672579: Error: No such file or directory.
+1739674380: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739674380: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739674380: Error: No such file or directory.
+1739676181: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739676181: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739676181: Error: No such file or directory.
+1739677982: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739677982: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739677982: Error: No such file or directory.
+1739679783: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739679783: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739679783: Error: No such file or directory.
+1739681584: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739681584: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739681584: Error: No such file or directory.
+1739683385: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739683385: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739683385: Error: No such file or directory.
+1739685186: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739685186: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739685186: Error: No such file or directory.
+1739686987: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739686987: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739686987: Error: No such file or directory.
+1739688788: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739688788: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739688788: Error: No such file or directory.
+1739690589: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739690589: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739690589: Error: No such file or directory.
+1739692390: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739692390: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739692390: Error: No such file or directory.
+1739694191: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739694191: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739694191: Error: No such file or directory.
+1739695992: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739695992: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739695992: Error: No such file or directory.
+1739697793: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739697793: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739697793: Error: No such file or directory.
+1739699594: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739699594: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739699594: Error: No such file or directory.
+1739701395: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739701395: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739701395: Error: No such file or directory.
+1739703196: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739703196: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739703196: Error: No such file or directory.
+1739704997: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739704997: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739704997: Error: No such file or directory.
+1739706798: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739706798: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739706798: Error: No such file or directory.
+1739708599: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739708599: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739708599: Error: No such file or directory.
+1739710400: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739710400: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739710400: Error: No such file or directory.
+1739712201: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739712201: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739712201: Error: No such file or directory.
+1739714002: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739714002: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739714002: Error: No such file or directory.
+1739715803: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739715803: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739715803: Error: No such file or directory.
+1739717604: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739717604: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739717604: Error: No such file or directory.
+1739719405: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739719405: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739719405: Error: No such file or directory.
+1739721206: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739721206: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739721206: Error: No such file or directory.
+1739723007: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739723007: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739723007: Error: No such file or directory.
+1739724808: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739724808: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739724808: Error: No such file or directory.
+1739726609: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739726609: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739726609: Error: No such file or directory.
+1739728410: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739728410: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739728410: Error: No such file or directory.
+1739730211: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739730211: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739730211: Error: No such file or directory.
+1739732012: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739732012: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739732012: Error: No such file or directory.
+1739733813: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739733813: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739733813: Error: No such file or directory.
+1739735614: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739735614: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739735614: Error: No such file or directory.
+1739737415: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739737415: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739737415: Error: No such file or directory.
+1739739216: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739739216: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739739216: Error: No such file or directory.
+1739741017: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739741017: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739741017: Error: No such file or directory.
+1739742818: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739742818: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739742818: Error: No such file or directory.
+1739744619: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739744619: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739744619: Error: No such file or directory.
+1739746420: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739746420: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739746420: Error: No such file or directory.
+1739748221: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739748221: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739748221: Error: No such file or directory.
+1739750022: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739750022: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739750022: Error: No such file or directory.
+1739751823: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739751823: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739751823: Error: No such file or directory.
+1739753624: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739753624: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739753624: Error: No such file or directory.
+1739755425: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739755425: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739755425: Error: No such file or directory.
+1739757226: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739757226: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739757226: Error: No such file or directory.
+1739759027: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739759027: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739759027: Error: No such file or directory.
+1739760828: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739760828: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739760828: Error: No such file or directory.
+1739762629: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739762629: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739762629: Error: No such file or directory.
+1739764430: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739764430: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739764430: Error: No such file or directory.
+1739766231: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739766231: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739766231: Error: No such file or directory.
+1739768032: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739768032: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739768032: Error: No such file or directory.
+1739769833: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739769833: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739769833: Error: No such file or directory.
+1739771634: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739771634: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739771634: Error: No such file or directory.
+1739773435: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739773435: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739773435: Error: No such file or directory.
+1739775236: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739775236: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739775236: Error: No such file or directory.
+1739777037: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739777037: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739777037: Error: No such file or directory.
+1739778838: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739778838: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739778838: Error: No such file or directory.
+1739780639: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739780639: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739780639: Error: No such file or directory.
+1739782440: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739782440: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739782440: Error: No such file or directory.
+1739784241: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739784241: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739784241: Error: No such file or directory.
+1739786042: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739786042: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739786042: Error: No such file or directory.
+1739787843: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739787843: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739787843: Error: No such file or directory.
+1739789644: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739789644: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739789644: Error: No such file or directory.
+1739791445: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739791445: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739791445: Error: No such file or directory.
+1739793246: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739793246: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739793246: Error: No such file or directory.
+1739795047: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739795047: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739795047: Error: No such file or directory.
+1739796848: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739796848: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739796848: Error: No such file or directory.
+1739798649: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739798649: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739798649: Error: No such file or directory.
+1739800450: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739800450: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739800450: Error: No such file or directory.
+1739802251: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739802251: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739802251: Error: No such file or directory.
+1739804052: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739804052: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739804052: Error: No such file or directory.
+1739805853: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739805853: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739805853: Error: No such file or directory.
+1739807654: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739807654: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739807654: Error: No such file or directory.
+1739809455: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739809455: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739809455: Error: No such file or directory.
+1739811256: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739811256: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739811256: Error: No such file or directory.
+1739813057: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739813057: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739813057: Error: No such file or directory.
+1739814858: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739814858: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739814858: Error: No such file or directory.
+1739816659: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739816659: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739816659: Error: No such file or directory.
+1739818460: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739818460: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739818460: Error: No such file or directory.
+1739820261: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739820261: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739820261: Error: No such file or directory.
+1739822062: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739822062: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739822062: Error: No such file or directory.
+1739823863: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739823863: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739823863: Error: No such file or directory.
+1739825664: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739825664: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739825664: Error: No such file or directory.
+1739827465: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739827465: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739827465: Error: No such file or directory.
+1739829266: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739829266: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739829266: Error: No such file or directory.
+1739831067: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739831067: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739831067: Error: No such file or directory.
+1739832868: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739832868: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739832868: Error: No such file or directory.
+1739834669: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739834669: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739834669: Error: No such file or directory.
+1739836470: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739836470: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739836470: Error: No such file or directory.
+1739838271: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739838271: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739838271: Error: No such file or directory.
+1739840072: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739840072: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739840072: Error: No such file or directory.
+1739841873: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739841873: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739841873: Error: No such file or directory.
+1739843674: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739843674: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739843674: Error: No such file or directory.
+1739845475: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739845475: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739845475: Error: No such file or directory.
+1739847276: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739847276: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739847276: Error: No such file or directory.
+1739849077: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739849077: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739849077: Error: No such file or directory.
+1739850878: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739850878: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739850878: Error: No such file or directory.
+1739852679: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739852679: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739852679: Error: No such file or directory.
+1739854480: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739854480: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739854480: Error: No such file or directory.
+1739856281: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739856281: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739856281: Error: No such file or directory.
+1739858082: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739858082: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739858082: Error: No such file or directory.
+1739859883: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739859883: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739859883: Error: No such file or directory.
+1739861684: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739861684: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739861684: Error: No such file or directory.
+1739863485: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739863485: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739863485: Error: No such file or directory.
+1739865286: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739865286: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739865286: Error: No such file or directory.
+1739867087: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739867087: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739867087: Error: No such file or directory.
+1739868888: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739868888: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739868888: Error: No such file or directory.
+1739870689: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739870689: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739870689: Error: No such file or directory.
+1739872490: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739872490: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739872490: Error: No such file or directory.
+1739874291: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739874291: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739874291: Error: No such file or directory.
+1739876092: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739876092: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739876092: Error: No such file or directory.
+1739877893: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739877893: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739877893: Error: No such file or directory.
+1739879694: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739879694: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739879694: Error: No such file or directory.
+1739881495: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739881495: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739881495: Error: No such file or directory.
+1739883296: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739883296: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739883296: Error: No such file or directory.
+1739885097: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739885097: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739885097: Error: No such file or directory.
+1739886898: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739886898: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739886898: Error: No such file or directory.
+1739888699: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739888699: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739888699: Error: No such file or directory.
+1739890500: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739890500: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739890500: Error: No such file or directory.
+1739892301: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739892301: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739892301: Error: No such file or directory.
+1739894102: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739894102: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739894102: Error: No such file or directory.
+1739895903: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739895903: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739895903: Error: No such file or directory.
+1739897704: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739897704: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739897704: Error: No such file or directory.
+1739899505: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739899505: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739899505: Error: No such file or directory.
+1739901306: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739901306: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739901306: Error: No such file or directory.
+1739903107: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739903107: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739903107: Error: No such file or directory.
+1739904908: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739904908: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739904908: Error: No such file or directory.
+1739906709: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739906709: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739906709: Error: No such file or directory.
+1739908510: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739908510: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739908510: Error: No such file or directory.
+1739910311: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739910311: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739910311: Error: No such file or directory.
+1739912112: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739912112: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739912112: Error: No such file or directory.
+1739913913: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739913913: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739913913: Error: No such file or directory.
+1739915714: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739915714: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739915714: Error: No such file or directory.
+1739917515: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739917515: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739917515: Error: No such file or directory.
+1739919316: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739919316: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739919316: Error: No such file or directory.
+1739921117: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739921117: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739921117: Error: No such file or directory.
+1739922918: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739922918: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739922918: Error: No such file or directory.
+1739924719: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739924719: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739924719: Error: No such file or directory.
+1739926520: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739926520: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739926520: Error: No such file or directory.
+1739928321: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739928321: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739928321: Error: No such file or directory.
+1739930122: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739930122: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739930122: Error: No such file or directory.
+1739931923: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739931923: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739931923: Error: No such file or directory.
+1739933724: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739933724: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739933724: Error: No such file or directory.
+1739935525: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739935525: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739935525: Error: No such file or directory.
+1739937326: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739937326: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739937326: Error: No such file or directory.
+1739939127: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739939127: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739939127: Error: No such file or directory.
+1739940928: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739940928: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739940928: Error: No such file or directory.
+1739942729: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739942729: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739942729: Error: No such file or directory.
+1739944530: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739944530: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739944530: Error: No such file or directory.
+1739946331: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739946331: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739946331: Error: No such file or directory.
+1739948132: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739948132: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739948132: Error: No such file or directory.
+1739949933: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739949933: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739949933: Error: No such file or directory.
+1739951734: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739951734: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739951734: Error: No such file or directory.
+1739953535: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739953535: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739953535: Error: No such file or directory.
+1739955336: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739955336: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739955336: Error: No such file or directory.
+1739957137: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739957137: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739957137: Error: No such file or directory.
+1739958938: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739958938: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739958938: Error: No such file or directory.
+1739960739: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739960739: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739960739: Error: No such file or directory.
+1739962540: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739962540: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739962540: Error: No such file or directory.
+1739964341: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739964341: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739964341: Error: No such file or directory.
+1739966142: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739966142: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739966142: Error: No such file or directory.
+1739967943: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739967943: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739967943: Error: No such file or directory.
+1739969744: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739969744: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739969744: Error: No such file or directory.
+1739971545: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739971545: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739971545: Error: No such file or directory.
+1739973346: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739973346: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739973346: Error: No such file or directory.
+1739975147: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739975147: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739975147: Error: No such file or directory.
+1739976948: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739976948: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739976948: Error: No such file or directory.
+1739978749: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739978749: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739978749: Error: No such file or directory.
+1739980550: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739980550: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739980550: Error: No such file or directory.
+1739982351: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739982351: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739982351: Error: No such file or directory.
+1739984152: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739984152: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739984152: Error: No such file or directory.
+1739985953: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739985953: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739985953: Error: No such file or directory.
+1739987754: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739987754: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739987754: Error: No such file or directory.
+1739989555: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739989555: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739989555: Error: No such file or directory.
+1739991356: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739991356: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739991356: Error: No such file or directory.
+1739993157: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739993157: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739993157: Error: No such file or directory.
+1739994958: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739994958: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739994958: Error: No such file or directory.
+1739996759: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739996759: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739996759: Error: No such file or directory.
+1739998560: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1739998560: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1739998560: Error: No such file or directory.
+1740000361: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740000361: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740000361: Error: No such file or directory.
+1740002162: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740002162: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740002162: Error: No such file or directory.
+1740003963: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740003963: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740003963: Error: No such file or directory.
+1740005764: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740005764: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740005764: Error: No such file or directory.
+1740007565: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740007565: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740007565: Error: No such file or directory.
+1740009366: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740009366: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740009366: Error: No such file or directory.
+1740011167: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740011167: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740011167: Error: No such file or directory.
+1740012968: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740012968: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740012968: Error: No such file or directory.
+1740014769: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740014769: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740014769: Error: No such file or directory.
+1740016570: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740016570: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740016570: Error: No such file or directory.
+1740018371: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740018371: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740018371: Error: No such file or directory.
+1740020172: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740020172: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740020172: Error: No such file or directory.
+1740021973: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740021973: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740021973: Error: No such file or directory.
+1740023774: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740023774: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740023774: Error: No such file or directory.
+1740025575: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740025575: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740025575: Error: No such file or directory.
+1740027376: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740027376: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740027376: Error: No such file or directory.
+1740029177: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740029177: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740029177: Error: No such file or directory.
+1740030978: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740030978: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740030978: Error: No such file or directory.
+1740032779: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740032779: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740032779: Error: No such file or directory.
+1740034580: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740034580: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740034580: Error: No such file or directory.
+1740036381: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740036381: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740036381: Error: No such file or directory.
+1740038182: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740038182: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740038182: Error: No such file or directory.
+1740039983: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740039983: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740039983: Error: No such file or directory.
+1740041784: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740041784: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740041784: Error: No such file or directory.
+1740043585: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740043585: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740043585: Error: No such file or directory.
+1740045386: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740045386: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740045386: Error: No such file or directory.
+1740047187: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740047187: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740047187: Error: No such file or directory.
+1740048988: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740048988: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740048988: Error: No such file or directory.
+1740050789: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740050789: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740050789: Error: No such file or directory.
+1740052590: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740052590: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740052590: Error: No such file or directory.
+1740054391: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740054391: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740054391: Error: No such file or directory.
+1740056192: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740056192: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740056192: Error: No such file or directory.
+1740057993: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740057993: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740057993: Error: No such file or directory.
+1740059794: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740059794: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740059794: Error: No such file or directory.
+1740061595: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740061595: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740061595: Error: No such file or directory.
+1740063396: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740063396: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740063396: Error: No such file or directory.
+1740065197: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740065197: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740065197: Error: No such file or directory.
+1740066998: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740066998: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740066998: Error: No such file or directory.
+1740068799: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740068799: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740068799: Error: No such file or directory.
+1740070600: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740070600: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740070600: Error: No such file or directory.
+1740072401: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740072401: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740072401: Error: No such file or directory.
+1740074202: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740074202: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740074202: Error: No such file or directory.
+1740076003: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740076003: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740076003: Error: No such file or directory.
+1740077804: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740077804: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740077804: Error: No such file or directory.
+1740079605: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740079605: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740079605: Error: No such file or directory.
+1740081406: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740081406: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740081406: Error: No such file or directory.
+1740083207: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740083207: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740083207: Error: No such file or directory.
+1740085008: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740085008: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740085008: Error: No such file or directory.
+1740086809: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740086809: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740086809: Error: No such file or directory.
+1740088610: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740088610: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740088610: Error: No such file or directory.
+1740090411: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740090411: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740090411: Error: No such file or directory.
+1740092212: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740092212: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740092212: Error: No such file or directory.
+1740094013: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740094013: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740094013: Error: No such file or directory.
+1740095814: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740095814: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740095814: Error: No such file or directory.
+1740097615: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740097615: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740097615: Error: No such file or directory.
+1740099416: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740099416: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740099416: Error: No such file or directory.
+1740101217: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740101217: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740101217: Error: No such file or directory.
+1740103018: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740103018: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740103018: Error: No such file or directory.
+1740104819: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740104819: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740104819: Error: No such file or directory.
+1740106620: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740106620: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740106620: Error: No such file or directory.
+1740108421: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740108421: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740108421: Error: No such file or directory.
+1740110222: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740110222: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740110222: Error: No such file or directory.
+1740112023: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740112023: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740112023: Error: No such file or directory.
+1740113824: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740113824: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740113824: Error: No such file or directory.
+1740115625: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740115625: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740115625: Error: No such file or directory.
+1740117426: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740117426: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740117426: Error: No such file or directory.
+1740119227: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740119227: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740119227: Error: No such file or directory.
+1740121028: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740121028: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740121028: Error: No such file or directory.
+1740122829: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740122829: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740122829: Error: No such file or directory.
+1740124630: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740124630: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740124630: Error: No such file or directory.
+1740126431: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740126431: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740126431: Error: No such file or directory.
+1740128232: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740128232: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740128232: Error: No such file or directory.
+1740130033: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740130033: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740130033: Error: No such file or directory.
+1740131834: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740131834: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740131834: Error: No such file or directory.
+1740133635: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740133635: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740133635: Error: No such file or directory.
+1740135436: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740135436: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740135436: Error: No such file or directory.
+1740137237: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740137237: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740137237: Error: No such file or directory.
+1740139038: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740139038: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740139038: Error: No such file or directory.
+1740140839: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740140839: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740140839: Error: No such file or directory.
+1740142640: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740142640: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740142640: Error: No such file or directory.
+1740144441: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740144441: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740144441: Error: No such file or directory.
+1740146242: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740146242: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740146242: Error: No such file or directory.
+1740148043: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740148043: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740148043: Error: No such file or directory.
+1740149844: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740149844: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740149844: Error: No such file or directory.
+1740151645: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740151645: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740151645: Error: No such file or directory.
+1740153446: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740153446: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740153446: Error: No such file or directory.
+1740155247: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740155247: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740155247: Error: No such file or directory.
+1740157048: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740157048: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740157048: Error: No such file or directory.
+1740158849: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740158849: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740158849: Error: No such file or directory.
+1740160650: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740160650: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740160650: Error: No such file or directory.
+1740162451: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740162451: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740162451: Error: No such file or directory.
+1740164252: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740164252: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740164252: Error: No such file or directory.
+1740166053: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740166053: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740166053: Error: No such file or directory.
+1740167854: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740167854: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740167854: Error: No such file or directory.
+1740169655: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740169655: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740169655: Error: No such file or directory.
+1740171456: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740171456: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740171456: Error: No such file or directory.
+1740173257: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740173257: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740173257: Error: No such file or directory.
+1740175058: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740175058: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740175058: Error: No such file or directory.
+1740176859: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740176859: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740176859: Error: No such file or directory.
+1740178660: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740178660: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740178660: Error: No such file or directory.
+1740180461: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740180461: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740180461: Error: No such file or directory.
+1740182262: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740182262: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740182262: Error: No such file or directory.
+1740184063: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740184063: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740184063: Error: No such file or directory.
+1740185864: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740185864: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740185864: Error: No such file or directory.
+1740187665: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740187665: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740187665: Error: No such file or directory.
+1740189466: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740189466: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740189466: Error: No such file or directory.
+1740191267: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740191267: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740191267: Error: No such file or directory.
+1740193068: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740193068: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740193068: Error: No such file or directory.
+1740194869: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740194869: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740194869: Error: No such file or directory.
+1740196670: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740196670: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740196670: Error: No such file or directory.
+1740198471: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740198471: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740198471: Error: No such file or directory.
+1740200272: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740200272: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740200272: Error: No such file or directory.
+1740202073: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740202073: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740202073: Error: No such file or directory.
+1740203874: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740203874: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740203874: Error: No such file or directory.
+1740205675: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740205675: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740205675: Error: No such file or directory.
+1740207476: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740207476: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740207476: Error: No such file or directory.
+1740209277: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740209277: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740209277: Error: No such file or directory.
+1740211078: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740211078: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740211078: Error: No such file or directory.
+1740212879: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740212879: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740212879: Error: No such file or directory.
+1740214680: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740214680: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740214680: Error: No such file or directory.
+1740216481: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740216481: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740216481: Error: No such file or directory.
+1740218282: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740218282: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740218282: Error: No such file or directory.
+1740220083: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740220083: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740220083: Error: No such file or directory.
+1740221884: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740221884: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740221884: Error: No such file or directory.
+1740223685: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740223685: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740223685: Error: No such file or directory.
+1740225486: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740225486: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740225486: Error: No such file or directory.
+1740227287: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740227287: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740227287: Error: No such file or directory.
+1740229088: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740229088: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740229088: Error: No such file or directory.
+1740230889: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740230889: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740230889: Error: No such file or directory.
+1740232690: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740232690: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740232690: Error: No such file or directory.
+1740234491: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740234491: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740234491: Error: No such file or directory.
+1740236292: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740236292: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740236292: Error: No such file or directory.
+1740238093: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740238093: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740238093: Error: No such file or directory.
+1740239894: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740239894: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740239894: Error: No such file or directory.
+1740241695: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740241695: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740241695: Error: No such file or directory.
+1740243496: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740243496: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740243496: Error: No such file or directory.
+1740245297: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740245297: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740245297: Error: No such file or directory.
+1740247098: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740247098: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740247098: Error: No such file or directory.
+1740248899: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740248899: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740248899: Error: No such file or directory.
+1740250700: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740250700: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740250700: Error: No such file or directory.
+1740252501: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740252501: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740252501: Error: No such file or directory.
+1740254302: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740254302: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740254302: Error: No such file or directory.
+1740256103: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740256103: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740256103: Error: No such file or directory.
+1740257904: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740257904: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740257904: Error: No such file or directory.
+1740259705: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740259705: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740259705: Error: No such file or directory.
+1740261506: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740261506: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740261506: Error: No such file or directory.
+1740263307: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740263307: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740263307: Error: No such file or directory.
+1740265108: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740265108: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740265108: Error: No such file or directory.
+1740266909: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740266909: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740266909: Error: No such file or directory.
+1740268710: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740268710: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740268710: Error: No such file or directory.
+1740270511: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740270511: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740270511: Error: No such file or directory.
+1740272312: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740272312: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740272312: Error: No such file or directory.
+1740274113: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740274113: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740274113: Error: No such file or directory.
+1740275914: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740275914: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740275914: Error: No such file or directory.
+1740277715: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740277715: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740277715: Error: No such file or directory.
+1740279516: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740279516: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740279516: Error: No such file or directory.
+1740281317: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740281317: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740281317: Error: No such file or directory.
+1740283118: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740283118: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740283118: Error: No such file or directory.
+1740284919: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740284919: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740284919: Error: No such file or directory.
+1740286720: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740286720: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740286720: Error: No such file or directory.
+1740288521: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740288521: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740288521: Error: No such file or directory.
+1740290322: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740290322: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740290322: Error: No such file or directory.
+1740292123: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740292123: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740292123: Error: No such file or directory.
+1740293924: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740293924: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740293924: Error: No such file or directory.
+1740295725: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740295725: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740295725: Error: No such file or directory.
+1740297526: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740297526: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740297526: Error: No such file or directory.
+1740299327: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740299327: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740299327: Error: No such file or directory.
+1740301128: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740301128: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740301128: Error: No such file or directory.
+1740302929: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740302929: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740302929: Error: No such file or directory.
+1740304730: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740304730: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740304730: Error: No such file or directory.
+1740306531: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740306531: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740306531: Error: No such file or directory.
+1740308332: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740308332: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740308332: Error: No such file or directory.
+1740310133: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740310133: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740310133: Error: No such file or directory.
+1740311934: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740311934: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740311934: Error: No such file or directory.
+1740313735: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740313735: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740313735: Error: No such file or directory.
+1740315536: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740315536: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740315536: Error: No such file or directory.
+1740317337: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740317337: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740317337: Error: No such file or directory.
+1740319138: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740319138: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740319138: Error: No such file or directory.
+1740320939: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740320939: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740320939: Error: No such file or directory.
+1740322740: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740322740: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740322740: Error: No such file or directory.
+1740324541: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740324541: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740324541: Error: No such file or directory.
+1740326342: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740326342: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740326342: Error: No such file or directory.
+1740328143: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740328143: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740328143: Error: No such file or directory.
+1740329944: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740329944: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740329944: Error: No such file or directory.
+1740331745: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740331745: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740331745: Error: No such file or directory.
+1740333546: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740333546: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740333546: Error: No such file or directory.
+1740335347: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740335347: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740335347: Error: No such file or directory.
+1740337148: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740337148: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740337148: Error: No such file or directory.
+1740338949: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740338949: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740338949: Error: No such file or directory.
+1740340750: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740340750: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740340750: Error: No such file or directory.
+1740342551: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740342551: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740342551: Error: No such file or directory.
+1740344352: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740344352: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740344352: Error: No such file or directory.
+1740346153: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740346153: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740346153: Error: No such file or directory.
+1740347954: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740347954: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740347954: Error: No such file or directory.
+1740349755: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740349755: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740349755: Error: No such file or directory.
+1740351556: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740351556: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740351556: Error: No such file or directory.
+1740353357: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740353357: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740353357: Error: No such file or directory.
+1740355158: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740355158: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740355158: Error: No such file or directory.
+1740356959: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740356959: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740356959: Error: No such file or directory.
+1740358760: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740358760: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740358760: Error: No such file or directory.
+1740360561: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740360561: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740360561: Error: No such file or directory.
+1740362362: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740362362: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740362362: Error: No such file or directory.
+1740364163: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740364163: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740364163: Error: No such file or directory.
+1740365964: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740365964: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740365964: Error: No such file or directory.
+1740367765: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740367765: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740367765: Error: No such file or directory.
+1740369566: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740369566: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740369566: Error: No such file or directory.
+1740371367: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740371367: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740371367: Error: No such file or directory.
+1740373168: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740373168: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740373168: Error: No such file or directory.
+1740374969: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740374969: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740374969: Error: No such file or directory.
+1740376770: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740376770: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740376770: Error: No such file or directory.
+1740378571: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740378571: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740378571: Error: No such file or directory.
+1740380372: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740380372: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740380372: Error: No such file or directory.
+1740382173: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740382173: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740382173: Error: No such file or directory.
+1740383974: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740383974: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740383974: Error: No such file or directory.
+1740385775: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740385775: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740385775: Error: No such file or directory.
+1740387576: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740387576: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740387576: Error: No such file or directory.
+1740389377: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740389377: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740389377: Error: No such file or directory.
+1740391178: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740391178: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740391178: Error: No such file or directory.
+1740392979: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740392979: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740392979: Error: No such file or directory.
+1740393317: mosquitto version 2.0.20 starting
+1740393317: Config loaded from /mosquitto/config/mosquitto.conf.
+1740393317: Opening ipv4 listen socket on port 1883.
+1740393317: mosquitto version 2.0.20 running
+1740393327: New connection from 172.17.0.5:56456 on port 1883.
+1740393327: New client connected from 172.17.0.5:56456 as nodered_219c6dc60d31f811 (p2, c1, k60).
+1740395118: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740395118: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740395118: Error: No such file or directory.
+1740396919: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740396919: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740396919: Error: No such file or directory.
+1740398720: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1740398720: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1740398720: Error: No such file or directory.
+1740399386: New connection from 172.17.0.5:45634 on port 1883.
+1740399386: New client connected from 172.17.0.5:45634 as nodered_585e9ddb1c442f14 (p2, c1, k60).

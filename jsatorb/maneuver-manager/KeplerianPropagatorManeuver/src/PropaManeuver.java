@@ -46,6 +46,13 @@ import org.orekit.propagation.numerical.NumericalPropagator;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.time.TimeScalesFactory;
 
+/*
+ * @author: Anthony LEBATTEUX
+ * @date: 06/06/2023
+ * CLASSE MODELE POUR MANOEUVRE IMPULSIONNELLES ET CONTINUES
+ * CLASSE NON UTILISEE A CE STADE !
+ */
+
 public class PropaManeuver {
     public PropaManeuver() {
     }

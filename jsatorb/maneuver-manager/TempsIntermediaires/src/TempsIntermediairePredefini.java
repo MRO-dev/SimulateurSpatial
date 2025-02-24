@@ -428,86 +428,86 @@ public class TempsIntermediairePredefini {
     }
 
 
-    public static void computeBiElliptic() throws IOException {
-        // Charger l'orbite initiale
-        Frame eme2000 = FramesFactory.getEME2000();
-        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
-        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
-
-        // Définir l'orbite képlérienne initiale
-        KeplerianOrbit initialOrbit = new KeplerianOrbit(SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN, eme2000, initialDate, MU);
-        double initialMass = DRYMASS + ERGOL;
-        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
-
-        // Afficher les paramètres de l'orbite initiale
-        System.out.println("Paramètres de l'orbite initiale :");
-        System.out.println("SMA (Axe semi-majeur initial) : " + initialOrbit.getA() / 1000.0 + " km");
-        System.out.println("ECC (Excentricité initiale) : " + initialOrbit.getE());
-        System.out.println("Masse initiale : " + initialState.getMass() + " kg");
-        System.out.println("Date initiale : " + initialDate);
-
-        // Calculer les Delta-V pour le transfert bi-elliptique
-        double SMA_intermediate = SMA_int; // Valeur du SMA intermédiaire (à définir ou à calculer)
-        double[] deltaVs = calculateBiEllipticDeltaVs(SMA, SMA_2, SMA_intermediate);
-        double DV1 = deltaVs[0];
-        double DV2 = deltaVs[1];
-        double DV3 = deltaVs[2];
-
-        System.out.println("Delta-V1 (Premier manoeuvre) : " + DV1 + " m/s");
-        System.out.println("Delta-V2 (Deuxième manoeuvre) : " + DV2 + " m/s");
-        System.out.println("Delta-V3 (Troisième manoeuvre) : " + DV3 + " m/s");
-
-        // Appliquer le premier manoeuvre (DV1)
-        Vector3D velocityBeforeManeuver = initialState.getPVCoordinates().getVelocity();
-        Vector3D directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
-        ImpulseManeuver firstManeuver = new ImpulseManeuver(new DateDetector(initialDate.shiftedBy(0.001)), directionImpulse1, ISP);
-
-        // Propager l'orbite après le premier manoeuvre
-        KeplerianPropagator propagator = new KeplerianPropagator(initialOrbit);
-        propagator.addEventDetector(firstManeuver);
-        double finalMassAfterFirstManeuver = calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
-        System.out.println("Masse après premier manoeuvre : " + finalMassAfterFirstManeuver + " kg");
-
-        SpacecraftState stateAfterFirstManeuver = propagator.propagate(initialDate.shiftedBy(0.001));
-        stateAfterFirstManeuver = new SpacecraftState(stateAfterFirstManeuver.getOrbit(), finalMassAfterFirstManeuver);
-
-        // Appliquer le deuxième manoeuvre (DV2) à l'apogée de l'orbite intermédiaire
-        double timeToApogee = calculatePropagationTime(SMA_intermediate);  // Temps pour atteindre l'apogée
-        SpacecraftState stateAtApogee = propagator.propagate(stateAfterFirstManeuver.getDate().shiftedBy(timeToApogee));
-
-
-        Vector3D velocityBeforeSecondManeuver = stateAtApogee.getPVCoordinates().getVelocity();
-        Vector3D directionImpulse2 = velocityBeforeSecondManeuver.normalize().scalarMultiply(DV2);
-        ImpulseManeuver secondManeuver = new ImpulseManeuver(new DateDetector(stateAtApogee.getDate().shiftedBy(0.001)), directionImpulse2, ISP);
-
-        // Propager l'orbite après le deuxième manoeuvre
-        propagator.addEventDetector(secondManeuver);
-        double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver ,DV2 ,ISP ,g0);
-        System.out.println("Masse après deuxième manoeuvre : " + finalMassAfterSecondManeuver + " kg");
-
-        SpacecraftState stateAfterSecondManeuver = propagator.propagate(stateAtApogee.getDate().shiftedBy(0.001));
-        stateAfterSecondManeuver = new SpacecraftState(stateAfterSecondManeuver.getOrbit(), finalMassAfterSecondManeuver);
-
-        // Appliquer le troisième manoeuvre (DV3) pour circulariser l'orbite finale
-        double timeToPerigee = calculatePropagationTime(SMA_2);  // Temps pour atteindre le périgée
-        SpacecraftState stateAtPerigee = propagator.propagate(stateAfterSecondManeuver.getDate().shiftedBy(timeToPerigee));
-
-        Vector3D velocityBeforeThirdManeuver = stateAtPerigee.getPVCoordinates().getVelocity();
-        Vector3D directionImpulse3 = velocityBeforeThirdManeuver.normalize().scalarMultiply(DV3);
-        ImpulseManeuver thirdManeuver = new ImpulseManeuver(new DateDetector(stateAtPerigee.getDate().shiftedBy(0.001)), directionImpulse3, ISP);
-
-        // Propager l'orbite finale après le troisième manoeuvre
-        propagator.addEventDetector(thirdManeuver);
-        double finalMassAfterThirdManeuver = finalMassAfterSecondManeuver * FastMath.exp(-DV3 / (ISP * g0));
-        System.out.println("Masse finale après troisième manoeuvre : " + finalMassAfterThirdManeuver + " kg");
-
-        SpacecraftState finalState = propagator.propagate(stateAtPerigee.getDate().shiftedBy(0.001));
-        finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterThirdManeuver);
-
-        // Enregistrement des résultats finaux
-        //logResults("Result.txt", finalState, finalState.getOrbit(), m0, DRYMASS);
-
-    }
+//    public static void computeBiElliptic() throws IOException {
+//        // Charger l'orbite initiale
+//        Frame eme2000 = FramesFactory.getEME2000();
+//        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+//        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+//
+//        // Définir l'orbite képlérienne initiale
+//        KeplerianOrbit initialOrbit = new KeplerianOrbit(SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN, eme2000, initialDate, MU);
+//        double initialMass = DRYMASS + ERGOL;
+//        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
+//
+//        // Afficher les paramètres de l'orbite initiale
+//        System.out.println("Paramètres de l'orbite initiale :");
+//        System.out.println("SMA (Axe semi-majeur initial) : " + initialOrbit.getA() / 1000.0 + " km");
+//        System.out.println("ECC (Excentricité initiale) : " + initialOrbit.getE());
+//        System.out.println("Masse initiale : " + initialState.getMass() + " kg");
+//        System.out.println("Date initiale : " + initialDate);
+//
+//        // Calculer les Delta-V pour le transfert bi-elliptique
+//        double SMA_intermediate = SMA_int; // Valeur du SMA intermédiaire (à définir ou à calculer)
+//        double[] deltaVs = calculateBiEllipticDeltaVs(SMA, SMA_2, SMA_intermediate);
+//        double DV1 = deltaVs[0];
+//        double DV2 = deltaVs[1];
+//        double DV3 = deltaVs[2];
+//
+//        System.out.println("Delta-V1 (Premier manoeuvre) : " + DV1 + " m/s");
+//        System.out.println("Delta-V2 (Deuxième manoeuvre) : " + DV2 + " m/s");
+//        System.out.println("Delta-V3 (Troisième manoeuvre) : " + DV3 + " m/s");
+//
+//        // Appliquer le premier manoeuvre (DV1)
+//        Vector3D velocityBeforeManeuver = initialState.getPVCoordinates().getVelocity();
+//        Vector3D directionImpulse1 = velocityBeforeManeuver.normalize().scalarMultiply(DV1);
+//        ImpulseManeuver firstManeuver = new ImpulseManeuver(new DateDetector(initialDate.shiftedBy(0.001)), directionImpulse1, ISP);
+//
+//        // Propager l'orbite après le premier manoeuvre
+//        KeplerianPropagator propagator = new KeplerianPropagator(initialOrbit);
+//        propagator.addEventDetector(firstManeuver);
+//        double finalMassAfterFirstManeuver = calculateFinalMass(initialState.getMass() ,DV1 ,ISP ,g0);
+//        System.out.println("Masse après premier manoeuvre : " + finalMassAfterFirstManeuver + " kg");
+//
+//        SpacecraftState stateAfterFirstManeuver = propagator.propagate(initialDate.shiftedBy(0.001));
+//        stateAfterFirstManeuver = new SpacecraftState(stateAfterFirstManeuver.getOrbit(), finalMassAfterFirstManeuver);
+//
+//        // Appliquer le deuxième manoeuvre (DV2) à l'apogée de l'orbite intermédiaire
+//        double timeToApogee = calculatePropagationTime(SMA_intermediate);  // Temps pour atteindre l'apogée
+//        SpacecraftState stateAtApogee = propagator.propagate(stateAfterFirstManeuver.getDate().shiftedBy(timeToApogee));
+//
+//
+//        Vector3D velocityBeforeSecondManeuver = stateAtApogee.getPVCoordinates().getVelocity();
+//        Vector3D directionImpulse2 = velocityBeforeSecondManeuver.normalize().scalarMultiply(DV2);
+//        ImpulseManeuver secondManeuver = new ImpulseManeuver(new DateDetector(stateAtApogee.getDate().shiftedBy(0.001)), directionImpulse2, ISP);
+//
+//        // Propager l'orbite après le deuxième manoeuvre
+//        propagator.addEventDetector(secondManeuver);
+//        double finalMassAfterSecondManeuver = calculateFinalMass(finalMassAfterFirstManeuver ,DV2 ,ISP ,g0);
+//        System.out.println("Masse après deuxième manoeuvre : " + finalMassAfterSecondManeuver + " kg");
+//
+//        SpacecraftState stateAfterSecondManeuver = propagator.propagate(stateAtApogee.getDate().shiftedBy(0.001));
+//        stateAfterSecondManeuver = new SpacecraftState(stateAfterSecondManeuver.getOrbit(), finalMassAfterSecondManeuver);
+//
+//        // Appliquer le troisième manoeuvre (DV3) pour circulariser l'orbite finale
+//        double timeToPerigee = calculatePropagationTime(SMA_2);  // Temps pour atteindre le périgée
+//        SpacecraftState stateAtPerigee = propagator.propagate(stateAfterSecondManeuver.getDate().shiftedBy(timeToPerigee));
+//
+//        Vector3D velocityBeforeThirdManeuver = stateAtPerigee.getPVCoordinates().getVelocity();
+//        Vector3D directionImpulse3 = velocityBeforeThirdManeuver.normalize().scalarMultiply(DV3);
+//        ImpulseManeuver thirdManeuver = new ImpulseManeuver(new DateDetector(stateAtPerigee.getDate().shiftedBy(0.001)), directionImpulse3, ISP);
+//
+//        // Propager l'orbite finale après le troisième manoeuvre
+//        propagator.addEventDetector(thirdManeuver);
+//        double finalMassAfterThirdManeuver = finalMassAfterSecondManeuver * FastMath.exp(-DV3 / (ISP * g0));
+//        System.out.println("Masse finale après troisième manoeuvre : " + finalMassAfterThirdManeuver + " kg");
+//
+//        SpacecraftState finalState = propagator.propagate(stateAtPerigee.getDate().shiftedBy(0.001));
+//        finalState = new SpacecraftState(finalState.getOrbit(), finalMassAfterThirdManeuver);
+//
+//        // Enregistrement des résultats finaux
+//        //logResults("Result.txt", finalState, finalState.getOrbit(), m0, DRYMASS);
+//
+//    }
 
 
 

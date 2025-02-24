@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
 500
-4000
+5000
 638
 Impulse
 300

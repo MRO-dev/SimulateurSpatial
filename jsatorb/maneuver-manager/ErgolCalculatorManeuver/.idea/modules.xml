@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ErgolCalculator.iml" filepath="$PROJECT_DIR$/ErgolCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConsommationErgolsManual.iml" filepath="$PROJECT_DIR$/ConsommationErgolsManual.iml" />
     </modules>
   </component>
 </project>

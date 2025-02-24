@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="ErgolCalculator" target="8" />
+      <module name="ConsommationErgolsManual" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

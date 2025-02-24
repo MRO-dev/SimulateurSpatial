@@ -1,0 +1,18 @@
+[ req ]
+default_bits       = 2048
+default_keyfile    = privkey.pem
+distinguished_name = req_distinguished_name
+x509_extensions    = v3_req   # <--- important for x509 certs
+prompt             = no
+
+[ req_distinguished_name ]
+CN = ESS  # e.g. your Common Name
+
+[ v3_req ]
+basicConstraints = CA:TRUE
+subjectAltName   = @alt_names
+
+[ alt_names ]
+DNS.1   = localhost
+IP.1    = 127.0.0.1
+IP.2    = 192.168.1.10

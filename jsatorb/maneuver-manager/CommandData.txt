@@ -1,6 +1,6 @@
 DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2
 
-12000
+14999.99
 0.0000001
 005.0000
 003.0000
@@ -10,7 +10,7 @@ DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol 
 0
 0
 0
-5000
+4000
 Hohmann
 25000
 
