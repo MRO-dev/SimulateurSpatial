@@ -55,20 +55,73 @@ if os.path.exists(result_file):
     shutil.copy2(result_file, backup_manoeuver_dir)
     print("Copied 'Result.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
     
-    # Copie du fichier LastManeuverDate.txt a partir de son emplacement specifique
+# Copie du fichier Result2.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "Result2.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'Result2.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+# Copie du fichier Result3.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "Result3.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'Result3.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+# Copie du fichier Result4.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "Result4.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'Result4.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+# Copie du fichier LastManeuverDate.txt a partir de son emplacement specifique
 result_file = os.path.join(result_file_dir, "LastManeuverDate.txt")
 if os.path.exists(result_file):
     shutil.copy2(result_file, backup_manoeuver_dir)
     print("Copied 'LastManeuverDate.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+# Copie du fichier LastManeuverDate2.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "LastManeuverDate2.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'LastManeuverDate2.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
 
+# Copie du fichier LastManeuverDate3.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "LastManeuverDate3.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'LastManeuverDate3.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
+    
+# Copie du fichier LastManeuverDate4.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "LastManeuverDate4.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'LastManeuverDate4.txt' from {} to {}".format(result_file, backup_manoeuver_dir))
 
 # Copie du fichier PostManeuverDate.txt a partir de son emplacement specifique
 result_file = os.path.join(result_file_dir, "PostManeuverDate.txt")
 if os.path.exists(result_file):
     shutil.copy2(result_file, backup_manoeuver_dir)
     print("Copied 'PostManeuverDate.txt' from {} to {}".format(result_file, backup_manoeuver_dir))   
+    
+# Copie du fichier PostManeuverDate2.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "PostManeuverDate2.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'PostManeuverDate2.txt' from {} to {}".format(result_file, backup_manoeuver_dir))   
+    
+# Copie du fichier PostManeuverDate3.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "PostManeuverDate3.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'PostManeuverDate3.txt' from {} to {}".format(result_file, backup_manoeuver_dir))   
+    
+# Copie du fichier PostManeuverDate4.txt a partir de son emplacement specifique
+result_file = os.path.join(result_file_dir, "PostManeuverDate4.txt")
+if os.path.exists(result_file):
+    shutil.copy2(result_file, backup_manoeuver_dir)
+    print("Copied 'PostManeuverDate4.txt' from {} to {}".format(result_file, backup_manoeuver_dir))   
         
-# Copie du fichier Result.txt a partir de son emplacement specifique
+# Copie du fichier time-persistence.json a partir de son emplacement specifique
 result_file = os.path.join(result_file_dir, "time-persistence.json")
 if os.path.exists(result_file):
     shutil.copy2(result_file, backup_manoeuver_dir)

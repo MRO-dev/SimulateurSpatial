@@ -100,6 +100,27 @@ def modify_last_maneuver_date(file_path):
         logger.info("Removed last two lines from {}".format(file_path))
     except Exception as e:
         raise RuntimeError("Error modifying {}: {}".format(file_path, e))
+        
+def keep_only_last_two_lines(file_path):
+    """
+    Keeps only the last two lines in the given file, removing all other lines.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+
+        # Keep only the last two lines (if the file has at least two)
+        if len(lines) > 2:
+            lines = lines[-2:]
+
+        # Overwrite the file with the reduced content
+        with open(file_path, 'w') as file:
+            file.write(''.join(lines))
+        
+        logger.info("Kept only the last two lines in {}".format(file_path))
+    except Exception as e:
+        raise RuntimeError("Error modifying {}: {}".format(file_path, e))
+
 
 def main():
     try:
@@ -115,18 +136,25 @@ def main():
             "Result.txt",
             "LastManeuverDate.txt",
             "PostManeuverDate.txt",
+            "Result2.txt",
+            "LastManeuverDate2.txt",
+            "PostManeuverDate2.txt",
+            "Result3.txt",
+            "LastManeuverDate3.txt",
+            "PostManeuverDate3.txt",
+            "Result4.txt",
+            "LastManeuverDate4.txt",
+            "PostManeuverDate4.txt",
             "time-persistence.json"
         ]
-        
         for special_file in special_files:
             src_path = os.path.join(result_file_dir, special_file)
             if os.path.exists(src_path):
                 dst_path = os.path.join(backup_manoeuver_dir, special_file)
                 safe_copy(src_path, dst_path)
-                
-                if special_file == "LastManeuverDate.txt":
-                    modify_last_maneuver_date(dst_path)
-    
+                if special_file in ["LastManeuverDate.txt", "LastManeuverDate2.txt", "LastManeuverDate3.txt","LastManeuverDate4.txt"]:
+                    keep_only_last_two_lines(dst_path)
+
     except Exception as e:
         logger.error("Backup process failed: {}".format(e))
         raise
