@@ -101,6 +101,27 @@ def modify_last_maneuver_date(file_path):
     except Exception as e:
         raise RuntimeError("Error modifying {}: {}".format(file_path, e))
         
+def remove_last_couple_of_lines(file_path):
+    """
+    Removes the last 'couple' of lines from the file.
+    In a scenario where each 'couple' is effectively 3 lines
+    (including a blank line), this removes the last 3 lines.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+
+        # Remove the last 3 lines if the file has at least 3 lines
+        if len(lines) >= 3:
+            lines = lines[:-3]
+
+        with open(file_path, 'w') as file:
+            file.write(''.join(lines))
+
+        logger.info("Removed the last couple of lines from {}".format(file_path))
+    except Exception as e:
+        raise RuntimeError("Error modifying {}: {}".format(file_path, e))
+
 def keep_only_last_two_lines(file_path):
     """
     Keeps only the last two lines in the given file, removing all other lines.
@@ -153,6 +174,7 @@ def main():
                 dst_path = os.path.join(backup_manoeuver_dir, special_file)
                 safe_copy(src_path, dst_path)
                 if special_file in ["LastManeuverDate.txt", "LastManeuverDate2.txt", "LastManeuverDate3.txt","LastManeuverDate4.txt"]:
+                    remove_last_couple_of_lines(dst_path)
                     keep_only_last_two_lines(dst_path)
 
     except Exception as e:

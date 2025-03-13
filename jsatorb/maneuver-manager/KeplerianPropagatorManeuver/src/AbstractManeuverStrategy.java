@@ -85,6 +85,7 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
 
     protected Map<String, String> ergolsMap = DataParser.parseDataFile(ergolsFile);
     protected Map<String, String> tipData = DataParser.parseDataFile(timeIntermediateParametersFile);
+    protected Map<String, String> cmdData = DataParser.parseDataFile(commandDataFile);
 
 
     // -------------------------------------------------
@@ -145,7 +146,7 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
      * dataFile or other text files, but this method centralizes
      * reading the usual "Data.txt" (or "DataX.txt").
      */
-    public void loadMassData() throws IOException{
+    public void loadMassData(Boolean isMassCalculation) throws IOException{
         manager.addProvider(new DirectoryCrawler(orekitData));
         System.out.println("Using ergols input file: " + ergolsFile);
         System.out.println("Using ergols consumption output file: " + consommationErgolsFile);
@@ -156,16 +157,22 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
         manager.addProvider(new DirectoryCrawler(orekitData));
         // Parse the ergols file
         ergolsMap = DataParser.parseDataFile(ergolsFile);
+        cmdData = DataParser.parseDataFile(commandDataFile);
 
         // Assign fields
         this.DRYMASS = Double.parseDouble(ergolsMap.get("DryMass"));
         this.ERGOL   = Double.parseDouble(ergolsMap.get("ErgolMass"));
         this.ISP     = Double.parseDouble(ergolsMap.get("ISP"));
+        System.out.println("isMassCalculation: " + isMassCalculation);
+        System.out.println(commandDataFile);
+        System.out.println(cmdData);
         // If you want the maneuver type from this file, you can do:
         // MANEUV_TYPE = ergolsMap.get("ManeuverType");
-
+       if (isMassCalculation) {
+           this.SMA     = Double.parseDouble(cmdData.get("SMA")) * 1000.0;
+       }
         // Convert SMA_1, SMA_2 from km to meters
-        this.SMA     = Double.parseDouble(ergolsMap.get("SMA_1")) * 1000.0;
+
         //this.SMA_2   = Double.parseDouble(ergolsMap.get("SMA_2")) * 1000.0;
 
         // Debug prints
@@ -177,15 +184,18 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
         //System.out.println("SMA final : " + (SMA_2 / 1000.0) + " km");
     };
 
-    public void loadTimeData() throws IOException{
+    public void loadTimeData(Boolean isTimeCalculation) throws IOException{
         // 1) Load Orekit data provider
         manager.addProvider(new DirectoryCrawler(orekitData));
-        this.DATE = Files.readAllLines(Paths.get(maneuverOrderFile)).get(1);
+        if (isTimeCalculation) {
+            this.DATE = Files.readAllLines(Paths.get(maneuverOrderFile)).get(1);
+        }
+        cmdData = DataParser.parseDataFile(commandDataFile);
         // the second line is your date/timestamp
         // 3) Parse the commandDataFile via DataParser (CSV approach)
         //    If the first column is “DATE” but it’s blank (and you don’t want to use it),
         //    just skip it and parse the others as needed:
-        Map<String, String> cmdData = DataParser.parseDataFile(commandDataFile);
+
         // Now read the fields we care about (SMA, ECC, INC, RAAN, AoP, MeanAnom, etc.)
         // Each key must match the header line in commandDataFile
         // e.g. "SMA", "ECC", "INC", "RAAN", "AoP", "MeanAnom", "Dry Mass", ...

@@ -5,8 +5,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import org.hipparchus.util.FastMath;
 import org.hipparchus.geometry.euclidean.threed.Vector3D;
@@ -38,15 +41,18 @@ public class ImpulseManeuver {
     // Default file names (these can be overridden via command-line arguments)
     private static String dataFile               = "Data.txt";
     private static String maneuvFile             = "Maneuv.txt";
+    private static String maneuverOrderManualFile = "ManeuverOrderManual.txt";
     private static String lastManeuverDateFile   = "LastManeuverDate.txt";
     private static String timePersistenceFile    = "time-persistence.json";
     private static String ergolsFile             = "Ergols.txt";
     private static String consommationErgolsFile = "ConsommationErgols.txt";
+    private static String resultFileName = "Result.txt";
     // Additional mode parameter
     private static String modeParameter = "";
     private static String commandParameter = "";
     private static final double TIME_TOLERANCE_SECONDS = 0.999e-3; // 1 ms tolerance
     static String APSIDE_DATE;
+    static String MANEUVER_START_DATE;
     static String endDateString;
 
     public ImpulseManeuver() {
@@ -66,6 +72,8 @@ public class ImpulseManeuver {
             timePersistenceFile    = System.getProperty("timePersistenceFile", timePersistenceFile);
             ergolsFile             = System.getProperty("ergolsFile", ergolsFile);
             consommationErgolsFile = System.getProperty("consommationErgolsFile", consommationErgolsFile);
+            resultFileName = System.getProperty("resultFileName", resultFileName);
+            maneuverOrderManualFile=System.getProperty("maneuverOrderManualFile", maneuverOrderManualFile);
             modeParameter          = System.getProperty("modeParameter", "blue1");
             commandParameter = System.getProperty("commandParameter", commandParameter);
 
@@ -79,6 +87,8 @@ public class ImpulseManeuver {
                 lastManeuverDateFile   = "LastManeuverDate2.txt";
                 ergolsFile             = "Ergols2.txt";
                 consommationErgolsFile = "ConsommationErgols2.txt";
+                resultFileName = "Result2.txt";
+                maneuverOrderManualFile="ManeuverOrderManual2.txt";
             }
             else if ("red1".equalsIgnoreCase(modeParameter)) {
                 dataFile               = "Data3.txt";
@@ -86,6 +96,8 @@ public class ImpulseManeuver {
                 lastManeuverDateFile   = "LastManeuverDate3.txt";
                 ergolsFile             = "Ergols3.txt";
                 consommationErgolsFile = "ConsommationErgols3.txt";
+                resultFileName = "Result3.txt";
+                maneuverOrderManualFile="ManeuverOrderManual3.txt";
             }
             else if ("red2".equalsIgnoreCase(modeParameter)) {
                 dataFile               = "Data4.txt";
@@ -93,6 +105,8 @@ public class ImpulseManeuver {
                 lastManeuverDateFile   = "LastManeuverDate4.txt";
                 ergolsFile             = "Ergols4.txt";
                 consommationErgolsFile = "ConsommationErgols4.txt";
+                resultFileName = "Result4.txt";
+                maneuverOrderManualFile="ManeuverOrderManual4.txt";
             }
         } catch (SecurityException e) {
             System.out.println("SecurityException: " + e.getMessage());
@@ -135,6 +149,8 @@ public class ImpulseManeuver {
             throw new IOException("No valid apside date found in " + lastManeuverDateFile);
         }
         APSIDE_DATE = extractedApsideDate;
+        MANEUVER_START_DATE=Files.readAllLines(Paths.get(maneuverOrderManualFile)).get(0);
+        System.out.println("Maneuver start date: " + MANEUVER_START_DATE);
 
         // -------------------------------------------------------------------
         // 2) Read endDate from the timePersistence file (JSON)
@@ -271,7 +287,13 @@ public class ImpulseManeuver {
                     KeplerianPropagator keplerProp = new KeplerianPropagator(orbitAtApside);
 
                     // The actual start date
-                    AbsoluteDate manoeuverStartDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+                    // If MANEUVER_START_DATE is a timestamp in milliseconds
+                    long timestampMs = Long.parseLong(MANEUVER_START_DATE);
+                    Date date = new Date(timestampMs);
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+                    sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+                    String formattedDate = sdf.format(date);
+                    AbsoluteDate manoeuverStartDate = new AbsoluteDate(formattedDate, TimeScalesFactory.getUTC());
                     System.out.println("manoeuverStartDate :" + manoeuverStartDate);
                     System.out.println("apsideDateObj :" + apsideDateObj);
 
@@ -494,7 +516,7 @@ public class ImpulseManeuver {
                     // -------------------------------------------------------------------
                     // 11) Write results to file
                     // -------------------------------------------------------------------
-                    FileWriter writer = new FileWriter("Result.txt", true);
+                    FileWriter writer = new FileWriter(resultFileName, true);
                     BufferedWriter bufferedWriter = new BufferedWriter(writer);
                     bufferedWriter.newLine();
                     bufferedWriter.write("Orbital parameters post-maneuver :");

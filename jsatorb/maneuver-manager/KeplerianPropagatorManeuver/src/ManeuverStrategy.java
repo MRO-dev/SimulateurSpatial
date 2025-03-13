@@ -13,6 +13,6 @@ public interface ManeuverStrategy {
     void calculateErgolConsumption() throws IOException;
     void processReachOrbitTime() throws IOException;
 
-    void loadMassData() throws IOException;
-    void loadTimeData() throws IOException;
+    void loadMassData(Boolean isMassCalculation) throws IOException;
+    void loadTimeData(Boolean isTimeCalculation) throws IOException;
 }

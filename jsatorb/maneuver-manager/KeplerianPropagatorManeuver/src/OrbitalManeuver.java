@@ -18,11 +18,13 @@ public class OrbitalManeuver {
         String modeParameter    = System.getProperty("modeParameter", "blue1");
         String commandParameter = System.getProperty("commandParameter", "compute");
         String dataFileToParse = getString(modeParameter);
+        String commandDataFileToParse = getCommandDataString(modeParameter);
 
 // Then parse:
         Map<String, String> userData = DataParser.parseDataFile(dataFileToParse);
+        Map<String, String> commandData = DataParser.parseDataFile(commandDataFileToParse);
 
-        String maneuverType      = userData.get("ManeuverType");  // "Hohmann" or "QLaw", etc.
+        String maneuverType      = commandData.get("ManeuverType");  // "Hohmann" or "QLaw", etc.
 
         // Suppose we also read some relevant orbit parameters from userData:
         // (Those were previously in your static fields.)
@@ -44,7 +46,7 @@ public class OrbitalManeuver {
         ManeuverStrategy strategy = null;
 
         if ("Hohmann".equalsIgnoreCase(maneuverType)) {
-            double sma2      = Double.parseDouble(userData.get("SMA_2")) * 1000.0;
+            double sma2      = Double.parseDouble(commandData.get("SMA_2")) * 1000.0;
             System.out.println("Inc "+incDeg);// for Hohmann target
             strategy = new HohmannStrategy(
                     sma,
@@ -79,12 +81,14 @@ public class OrbitalManeuver {
         //      - doing the actual orbit calculations
         // ------------------------------------------------------------------
         if (strategy != null && "compute".equalsIgnoreCase(commandParameter)) {
+            strategy.loadTimeData(Boolean.FALSE);
+            strategy.loadMassData(Boolean.FALSE);
             strategy.computeAndExecute();
         } else if (strategy != null && "calculateMass".equalsIgnoreCase(commandParameter)) {
-            strategy.loadMassData();
+            strategy.loadMassData(Boolean.TRUE);
             strategy.calculateErgolConsumption();
         } else if (strategy != null && "determineOrbitInstant".equalsIgnoreCase(commandParameter)) {
-            strategy.loadTimeData();
+            strategy.loadTimeData(Boolean.TRUE);
             strategy.processReachOrbitTime();
         }else {
             System.out.printf("No valid strategy or commandParameter '%s' => nothing to do.%n", commandParameter);
@@ -105,6 +109,24 @@ public class OrbitalManeuver {
 // If modeParameter is "red2" => Data4.txt
         else if ("red2".equalsIgnoreCase(modeParameter)) {
             dataFileToParse = "Data4.txt";
+        }
+        return dataFileToParse;
+    }
+
+    private static String getCommandDataString(String modeParameter) {
+        String dataFileToParse = "CommandData.txt"; // default is "blue1"
+
+// If modeParameter is "blue2" => Data2.txt
+        if ("blue2".equalsIgnoreCase(modeParameter)) {
+            dataFileToParse = "CommandData2.txt";
+        }
+// If modeParameter is "red1" => Data3.txt
+        else if ("red1".equalsIgnoreCase(modeParameter)) {
+            dataFileToParse = "CommandData3.txt";
+        }
+// If modeParameter is "red2" => Data4.txt
+        else if ("red2".equalsIgnoreCase(modeParameter)) {
+            dataFileToParse = "CommandData4.txt";
         }
         return dataFileToParse;
     }

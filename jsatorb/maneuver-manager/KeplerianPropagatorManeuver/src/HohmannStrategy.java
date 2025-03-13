@@ -111,6 +111,9 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
 
         // Check propellant and mass constraints
         double carburant_limite = Math.pow(10, -3);
+        System.out.println("Ergols : " + ERGOL);
+        System.out.println("DRYLASS : " + DRYMASS);
+        System.out.println("Final MASS"+finalMass);
         if (finalMass < DRYMASS || ERGOL < carburant_limite) {
             throw new IllegalArgumentException("La masse finale ne peut pas être inférieure à la masse à vide.");
         }
@@ -149,15 +152,17 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
     }
 
     @Override
-    public void loadMassData() throws IOException {
-        super.loadMassData();
-        this.SMA_2   = Double.parseDouble(ergolsMap.get("SMA_2")) * 1000.0;
+    public void loadMassData(Boolean isMassCalculation) throws IOException {
+        super.loadMassData(isMassCalculation);
+        if (isMassCalculation){
+            this.SMA_2   = Double.parseDouble(cmdData.get("SMA_2")) * 1000.0;
+        }
         System.out.println("SMA final : " + (SMA_2 / 1000.0) + " km");
     }
 
     @Override
-    public void loadTimeData() throws IOException {
-        super.loadTimeData();
+    public void loadTimeData(Boolean isTimeCalculation) throws IOException {
+        super.loadTimeData(isTimeCalculation);
         this.SMA_2 = Double.parseDouble(tipData.get("SMA_2")) * 1000.0;
         System.out.println(" - timeIntermediateParametersFile => ManeuverType: " + MANEUV_TYPE + ", SMA_2: " + SMA_2 + " m");
     }

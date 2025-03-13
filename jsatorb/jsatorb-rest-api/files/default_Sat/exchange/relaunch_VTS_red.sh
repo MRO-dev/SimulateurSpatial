@@ -9,7 +9,7 @@ CMD SERVICE StopApplication 2
 CMD SERVICE StopApplication broker"
 
 # Send first set of commands
-echo "$COMMANDS" | nc 192.168.1.148 8888
+echo "$COMMANDS" | nc 192.168.1.11 8888
 
-echo "gtk-launch VTS" | timeout 1 nc 192.168.1.148 4444
+echo "gtk-launch VTS" | timeout 1 nc 192.168.1.11 4444
 
