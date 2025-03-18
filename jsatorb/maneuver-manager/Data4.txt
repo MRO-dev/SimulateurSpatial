@@ -1,16 +1,17 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2
-2025-03-12T16:21:02.999Z
-14999.993677051854
-1e-7
-045.0000
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thrust, ISP, Ergol mass, Simu duration stop, ManeuverType, DV
+2025-03-18T22:27:40.999Z
+32486.985408966306
+0.0000001
+074.0000
 000.0000
 000.0000
-200
-500
+150
+158
 0
 0
 300
-8500
-Hohmann
-20000
+21369
+-1311.9996800422668
+Impulse
+578
 

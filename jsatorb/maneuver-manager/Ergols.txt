@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-500
-6818.50613
+4789
+6472
 0
 Unknown
 0

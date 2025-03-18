@@ -1,7 +1,7 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-500
-4500
 0
-Unknown
+0
+0
+Impulse
 0
 

@@ -4,6 +4,7 @@ import os
 import shutil
 import time
 import logging
+import sys
 
 # Configure logging
 logging.basicConfig(
@@ -11,6 +12,8 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+VALID_PARAMS = ["blue1", "blue2", "red1", "red2"]
 
 def ensure_directory_removed(directory):
     """
@@ -144,6 +147,36 @@ def keep_only_last_two_lines(file_path):
 
 
 def main():
+    # 1) Handle the parameter
+    # ------------------------------------------------------
+    if len(sys.argv) < 2:
+        logger.warning("No parameter provided. Valid parameters: {}".format(VALID_PARAMS))
+        param = None
+    else:
+        param = sys.argv[1]
+        if param not in VALID_PARAMS:
+            logger.warning("Invalid parameter: {}. Valid parameters: {}".format(param, VALID_PARAMS))
+            param = None
+        else:
+            logger.info("Parameter provided: {}".format(param))
+
+    # (Optional) Do something special depending on the parameter
+    # Below is just an example if you need different behavior for each param
+    # ------------------------------------------------------
+    if param == "blue1":
+        logger.info("Performing special logic for blue1...")
+        # your special code here
+    elif param == "blue2":
+        logger.info("Performing special logic for blue2...")
+        # your special code here
+    elif param == "red1":
+        logger.info("Performing special logic for red1...")
+        # your special code here
+    elif param == "red2":
+        logger.info("Performing special logic for red2...")
+        # your special code here
+    else:
+        logger.info("No valid parameter specified, proceeding with default backup steps.")
     try:
         current_working_dir = os.getcwd()
         backup_files(current_working_dir)
@@ -174,7 +207,18 @@ def main():
                 dst_path = os.path.join(backup_manoeuver_dir, special_file)
                 safe_copy(src_path, dst_path)
                 if special_file in ["LastManeuverDate.txt", "LastManeuverDate2.txt", "LastManeuverDate3.txt","LastManeuverDate4.txt"]:
-                    remove_last_couple_of_lines(dst_path)
+                    if param == "blue1":
+                        if special_file in ["LastManeuverDate.txt"]:
+                            remove_last_couple_of_lines(dst_path)
+                    if param == "blue2":
+                        if special_file in ["LastManeuverDate2.txt"]:
+                            remove_last_couple_of_lines(dst_path)
+                    if param == "red1":
+                        if special_file in ["LastManeuverDate3.txt"]:
+                            remove_last_couple_of_lines(dst_path)
+                    if param == "red2":
+                        if special_file in ["LastManeuverDate4.txt"]:
+                            remove_last_couple_of_lines(dst_path)
                     keep_only_last_two_lines(dst_path)
 
     except Exception as e:

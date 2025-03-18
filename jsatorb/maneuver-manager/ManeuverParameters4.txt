@@ -1,5 +1,5 @@
 ManeuverType, SMA_1,SMA_2
 Hohmann
-14999.99
-20000
+32486.97
+12698
 

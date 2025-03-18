@@ -1,8 +1,7 @@
-DryMass, ErgolMass, ISP, ManeuverType, SMA_1, SMA_2
-500
-8500
-300
-Hohmann
-19999.99
-25000
+DryMass, ErgolMass, DV, ManeuverType, ISP
+2478
+8547
+0
+Unknown
+0
 
