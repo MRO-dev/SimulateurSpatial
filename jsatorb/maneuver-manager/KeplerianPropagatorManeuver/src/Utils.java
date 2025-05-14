@@ -1,5 +1,6 @@
 import org.hipparchus.util.FastMath;
 import org.hipparchus.util.MathUtils;
+import org.jetbrains.annotations.Nullable;
 import org.orekit.orbits.KeplerianOrbit;
 import org.orekit.orbits.Orbit;
 import org.orekit.propagation.SpacecraftState;
@@ -80,13 +81,21 @@ public class Utils {
      * @param date     The date of the apside event.
      * @throws IOException If an I/O error occurs.
      */
-    static void logApsideDate(String filePath, AbsoluteDate date) throws IOException {
+    static void logApsideDate(String filePath, @Nullable AbsoluteDate date) throws IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath, true))) {
-            bufferedWriter.newLine();
-            bufferedWriter.write("Apside reached at:");
-            bufferedWriter.newLine();
-            bufferedWriter.write(date.toString());
-            bufferedWriter.newLine();
+            if (date == null) {
+                bufferedWriter.newLine();
+                bufferedWriter.write("");
+                bufferedWriter.newLine();
+                bufferedWriter.write("");
+                bufferedWriter.newLine();
+            }else{
+                bufferedWriter.newLine();
+                bufferedWriter.write("Apside reached at:");
+                bufferedWriter.newLine();
+                bufferedWriter.write(date.toString());
+                bufferedWriter.newLine();
+            }
         }
     }
 

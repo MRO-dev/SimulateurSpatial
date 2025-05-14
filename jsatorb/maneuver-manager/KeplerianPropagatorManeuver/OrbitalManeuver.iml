@@ -17,5 +17,14 @@
     <orderEntry type="library" name="org.eclipse.paho.client.mqttv3-1.2.5" level="application" />
     <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" name="eclipse.paho.client.mqttv3" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/annotations-24.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

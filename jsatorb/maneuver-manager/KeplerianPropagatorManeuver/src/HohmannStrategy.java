@@ -91,8 +91,8 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
     }
 
     private void validateOrbitParameters() {
-        if (SMA <= 0 || SMA_2 <= 0) {
-            throw new IllegalArgumentException("Semi-major axis must be positive");
+        if (SMA <= 0 || SMA_2 <= 6600) {
+            throw new IllegalArgumentException("Semi-major axis must be positive or superior to 6600 km");
         }
         if (DRYMASS <= 0 || ERGOL < 0) {
             throw new IllegalArgumentException("Invalid mass parameters");
@@ -506,13 +506,19 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
         // 1) Parse the initial date
         AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
         AbsoluteDate initialDate = Utils.parseDateFromTimestamp(DATE);
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
         System.out.println("Initial date: " + initialDate);
         try {
             // 2) (Optional) Validate. E.g., if you still want to ensure SMA>0, etc.
             validateOrbitParameters();
             if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+                Utils.logApsideDate(apsideFile, null);
                 throw new IllegalArgumentException(
                         "Initial date must be equal to or later than the apside date within the allowed tolerance.");
+            }
+            if (!isEqualOrAfterWithTolerance(endHorizonDate, initialDate, TIME_TOLERANCE_SECONDS)) {
+                Utils.logApsideDate(apsideFile, null);
+                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
             }
 
             // 3) Just compute the time to apogee for Hohmann

@@ -534,6 +534,7 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
         printAttributes();
         validateOrbitParameters();
         double start = System.currentTimeMillis();
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
 
         try {
             // 1) Setup frames & dates
@@ -549,7 +550,15 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
 
             // Validate parameters
             validateOrbitParameters();
-            validateManeuverParameters(initialDate, apsideDate, DRYMASS + ERGOL);
+            if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+                Utils.logApsideDate(apsideFile, null);
+                throw new IllegalArgumentException(
+                        "Initial date must be equal to or later than the apside date within the allowed tolerance.");
+            }
+            if (!isEqualOrAfterWithTolerance(endHorizonDate, initialDate, TIME_TOLERANCE_SECONDS)) {
+                Utils.logApsideDate(apsideFile, null);
+                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+            }
 
             // 3) Calculate phasing time
             double deltaThetaRad = FastMath.toRadians(DELTA_THETA);

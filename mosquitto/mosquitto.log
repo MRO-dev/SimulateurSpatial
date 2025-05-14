@@ -32892,3 +32892,15 @@
 1747230689: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
 1747230689: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
 1747230689: Error: No such file or directory.
+1747231866: mosquitto version 2.0.20 starting
+1747231866: Config loaded from /mosquitto/config/mosquitto.conf.
+1747231866: Opening ipv4 listen socket on port 1883.
+1747231866: mosquitto version 2.0.20 running
+1747231870: New connection from 172.17.0.5:41152 on port 1883.
+1747231871: New client connected from 172.17.0.5:41152 as nodered_024d92840c9d97b8 (p2, c1, k60).
+1747233667: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1747233667: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1747233667: Error: No such file or directory.
+1747235468: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1747235468: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1747235468: Error: No such file or directory.

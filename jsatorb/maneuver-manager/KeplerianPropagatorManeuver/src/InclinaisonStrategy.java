@@ -1266,8 +1266,15 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
 
         double initialMass = DRYMASS + ERGOL;
         this.m0 = initialMass;
-        validateManeuverParameters(initialDate, apsideDate, initialMass);
-
+        if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+            Utils.logApsideDate(apsideFile, null);
+            throw new IllegalArgumentException(
+                    "Initial date must be equal to or later than the apside date within the allowed tolerance.");
+        }
+        if (!isEqualOrAfterWithTolerance(endHorizonDate, initialDate, TIME_TOLERANCE_SECONDS)) {
+            Utils.logApsideDate(apsideFile, null);
+            throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+        }
         // Propagate to initial date
         KeplerianPropagator prop = new KeplerianPropagator(orbitAtApside);
         SpacecraftState stateAtInitial = prop.propagate(initialDate);
@@ -1341,9 +1348,9 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
 
             Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
             // Validate end horizon date
-            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
-                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
-            }
+//            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+//                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+//            }
             Utils.writeJsonPayload(secondPayload);
             if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
                 throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
@@ -1428,9 +1435,9 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
                     + FastMath.toDegrees(finalOrbit.getI()) + "°");
 
             Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
-            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
-                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
-            }
+//            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+//                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+//            }
             Utils.writeJsonPayload(secondPayload);
             if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
                 throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
@@ -1543,9 +1550,9 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
                 this.finalState = new SpacecraftState(finalOrbit, massAfterNode);
                 logState("final", this.finalState);
                 Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
-                if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
-                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
-                }
+//                if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+//                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+//                }
                 Utils.writeJsonPayload(secondPayload);
                 if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
                     throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
@@ -1688,9 +1695,9 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
                 this.finalState = new SpacecraftState(eqOrbitPost, eqMassAfter);
                 logState("final", this.finalState);
                 Map<String, String> secondPayload = Utils.createDatePayload(eqFinalState.getDate(), endHorizonDate);
-                if (!isEqualOrAfterWithTolerance(endHorizonDate, eqFinalState.getDate(), TIME_TOLERANCE_SECONDS)) {
-                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
-                }
+//                if (!isEqualOrAfterWithTolerance(endHorizonDate, eqFinalState.getDate(), TIME_TOLERANCE_SECONDS)) {
+//                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+//                }
                 Utils.writeJsonPayload(secondPayload);
                 System.out.println("second payload: " + secondPayload);
                 if (statePostBurn.getA()<0 || statePostBurn.getE()>1 || Double.isNaN(statePostBurn.getA()) || Double.isNaN(statePostBurn.getE()) ) {

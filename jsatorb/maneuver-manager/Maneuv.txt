@@ -1,5 +1,5 @@
 Relative DATE, Dx, Dy, Dz, contdura
--4835208.000576019
+25806.999743938446
 1
 0
 0
