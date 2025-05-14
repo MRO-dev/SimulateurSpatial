@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ImpulseManeuver.iml" filepath="$PROJECT_DIR$/ImpulseManeuver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrbitalManeuver.iml" filepath="$PROJECT_DIR$/OrbitalManeuver.iml" />
     </modules>
   </component>
 </project>

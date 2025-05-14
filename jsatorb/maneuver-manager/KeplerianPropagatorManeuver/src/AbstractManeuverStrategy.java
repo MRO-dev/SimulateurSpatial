@@ -187,8 +187,11 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
     public void loadTimeData(Boolean isTimeCalculation) throws IOException{
         // 1) Load Orekit data provider
         manager.addProvider(new DirectoryCrawler(orekitData));
+        System.out.println("TEST");
         if (isTimeCalculation) {
             this.DATE = Files.readAllLines(Paths.get(maneuverOrderFile)).get(1);
+            System.out.println("Date from maneuverOrderFile: " + DATE);
+
         }
         cmdData = DataParser.parseDataFile(commandDataFile);
         // the second line is your date/timestamp
@@ -348,6 +351,35 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
     //    processReachOrbitTime().
     // Each child can override them differently.
     // -------------------------------------------------
+
+
+    /**
+     * Writes a timestamp to the specified file in the required format
+     */
+    public void writeManeuverTimestamp(String fileName, AbsoluteDate maneuverDate) throws IOException {
+        // Calculate timestamp
+        AbsoluteDate epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC());
+        double durationInSeconds = maneuverDate.durationFrom(epoch);
+        long timestampMillis = Math.round(durationInSeconds * 1000);
+
+        // Write to file
+        try (FileWriter writer = new FileWriter(fileName, true);
+             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+            bufferedWriter.newLine();
+            bufferedWriter.write("Date post - maneuver");
+            bufferedWriter.newLine();
+
+            // For lastManeuverDateFile, write the AbsoluteDate string
+            if (fileName.equals(lastManeuverDateFile)) {
+                bufferedWriter.write(String.valueOf(maneuverDate));
+            } else {
+                // For other files, write the timestamp in milliseconds
+                bufferedWriter.write(String.valueOf(timestampMillis));
+            }
+
+            bufferedWriter.newLine();
+        }
+    }
 
     @Override
     public abstract void computeAndExecute() throws IOException, java.text.ParseException;

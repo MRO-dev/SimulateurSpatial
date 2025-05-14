@@ -1,16 +1,16 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, INC_2
 
-32486.97
+19999.99
 0.0000001
-074.0000
+045.0000
 000.0000
 000.0000
-150
-158
+200
+895
 0
 0
 0
-21369
-Hohmann
-12698
+8500
+Inclinaison
+88
 

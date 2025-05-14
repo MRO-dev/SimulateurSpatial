@@ -45,8 +45,20 @@ public class Utils {
         System.out.println("SMA (Semi-major axis): " + finalState.getA() / 1000.0 + " km");
         bufferedWriter.newLine();
         bufferedWriter.write(String.format("%.7f", finalState.getE()));
+        // convert to degrees
+        double degI      = FastMath.toDegrees(finalState.getI());
+// define your minimum swing (in degrees)
+        final double MIN_DELTA = 0.001;
+
+// if it’s too small, bump to ±MIN_DELTA preserving the original sign
+        double outI = (FastMath.abs(degI) < MIN_DELTA)
+                ? FastMath.copySign(MIN_DELTA, degI)
+                : degI;
+
+// write it out
         bufferedWriter.newLine();
-        bufferedWriter.write(String.format("%.4f", FastMath.toDegrees(finalState.getI())));
+        bufferedWriter.write(String.format("%.4f", outI));
+
         bufferedWriter.newLine();
         bufferedWriter.write(String.format("%.4f", FastMath.toDegrees(MathUtils.normalizeAngle(((KeplerianOrbit) finalOrbit).getRightAscensionOfAscendingNode(), Math.PI))));
         bufferedWriter.newLine();

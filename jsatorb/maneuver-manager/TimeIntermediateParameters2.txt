@@ -1,4 +1,4 @@
-ManeuverType, SMA_2
-Hohmann
-36000
+ManeuverType, INC_2
+Inclinaison
+169
 

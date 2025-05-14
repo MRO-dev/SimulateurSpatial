@@ -1,0 +1,62 @@
+#!/bin/sh
+
+set -eu
+
+MINIMUM_GLIBC_VERSION=2.17
+
+errorMessage()
+{
+  TITLE="JetBrains Toolbox"
+  if [ -n "$(command -v zenity)" ]; then
+    zenity --error --title="$TITLE" --text="$1" --no-wrap
+  elif [ -n "$(command -v kdialog)" ]; then
+    kdialog --error "$1" --title "$TITLE"
+  elif [ -n "$(command -v notify-send)" ]; then
+    notify-send "ERROR: $TITLE" "$1" -i ./toolbox.svg
+  elif [ -n "$(command -v xmessage)" ]; then
+    xmessage -center "ERROR: $TITLE: $1"
+  fi
+  printf "ERROR: %s\n%s\n" "$TITLE" "$1"
+}
+
+app=jetbrains-toolbox
+
+cd "$APPDIR"
+
+glibcversion="./glibcversion"
+if [ -f $glibcversion ]
+then
+  if [ "$($glibcversion | tr . 0)" -lt "$(echo $MINIMUM_GLIBC_VERSION | tr . 0)" ]
+  then
+    errorMessage "Cannot start JetBrains Toolbox. The minimum supported glibc version is $MINIMUM_GLIBC_VERSION, detected $($glibcversion). Please update your system"
+    exit 2
+  fi
+fi
+
+export JETBRAINS_TOOLBOX_LD_LIBRARY_PATH=${LD_LIBRARY_PATH-toolboxvarunset0a732ef1e2b11070e7ee9dfcb89ee6e34}
+export LD_LIBRARY_PATH=.:${LD_LIBRARY_PATH:-}
+
+toolboxconfig=${XDG_CONFIG_HOME:-$HOME/.config}/JetBrains/Toolbox/toolboxrc
+if [ -f "$toolboxconfig" ]
+then
+    # shellcheck disable=SC1090
+    . "$toolboxconfig"
+fi
+
+unset ARGV0
+# Unsetting environment variables set by AppImage
+# see https://docs.appimage.org/packaging-guide/environment-variables.html
+export JETBRAINS_TOOLBOX_APPIMAGE=toolboxvarunset0a732ef1e2b11070e7ee9dfcb89ee6e34
+export JETBRAINS_TOOLBOX_APPDIR=toolboxvarunset0a732ef1e2b11070e7ee9dfcb89ee6e34
+export JETBRAINS_TOOLBOX_OWD=toolboxvarunset0a732ef1e2b11070e7ee9dfcb89ee6e34
+
+if [ -z "${DBUS_SESSION_BUS_ADDRESS:-}" ]
+then
+    if [ -x "$(command -v dbus-launch)" ]
+    then
+        dbus-launch ./$app "$@" 2>/dev/null
+        exit
+    fi
+fi
+
+exec ./$app "$@" 2>/dev/null

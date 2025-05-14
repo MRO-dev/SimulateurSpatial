@@ -1,0 +1,985 @@
+import org.hipparchus.geometry.Space;
+import org.hipparchus.geometry.euclidean.threed.SubLine;
+import org.hipparchus.geometry.euclidean.threed.Vector3D;
+import org.hipparchus.util.FastMath;
+import org.hipparchus.util.MathUtils;
+import org.orekit.data.DirectoryCrawler;
+import org.orekit.errors.OrekitException;
+import org.orekit.errors.OrekitIllegalStateException;
+import org.orekit.forces.maneuvers.ImpulseManeuver;
+import org.orekit.frames.Frame;
+import org.orekit.frames.FramesFactory;
+import org.orekit.orbits.KeplerianOrbit;
+import org.orekit.orbits.Orbit;
+import org.orekit.orbits.PositionAngle;
+import org.orekit.propagation.SpacecraftState;
+import org.orekit.propagation.analytical.KeplerianPropagator;
+import org.orekit.propagation.events.DateDetector;
+import org.orekit.time.AbsoluteDate;
+import org.orekit.time.TimeScalesFactory;
+import org.orekit.utils.PVCoordinates;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+/**
+ * This class implements a phasing maneuver strategy.
+ * It adjusts the spacecraft's mean anomaly by creating a desired phase angle separation.
+ */
+public class PhasageStrategy extends AbstractManeuverStrategy {
+    private double DELTA_THETA;  // desired final mean anomaly (radians)
+
+
+    // Constructor
+    public PhasageStrategy(
+            double sma, double ecc, double incDeg, double raanDeg, double aopDeg, double meanAnomDeg,
+            double dryMass, double ergol, double isp,
+            double delta_theta,  // not used (no orbit size change)
+            String dateStr, String modeParameter, String commandParameter) throws IOException {
+        super(modeParameter, commandParameter);
+        this.SMA    = sma;
+        this.ECC    = ecc;
+        this.INC    = FastMath.toRadians(incDeg);
+        this.RAAN   = FastMath.toRadians(raanDeg);
+        this.PA     = FastMath.toRadians(aopDeg);
+        this.ANO    = FastMath.toRadians(meanAnomDeg);
+        this.DRYMASS = dryMass;
+        this.ERGOL   = ergol;
+        this.ISP     = isp;
+        this.DELTA_THETA = delta_theta;
+        this.DATE    = dateStr;
+        System.out.println(delta_theta+"test");
+    }
+
+    /** Rocket equation for mass after a ΔV. */
+    public static double calculateFinalMass(double initialMass, double deltaV, double ISP, double g0) {
+        return initialMass * FastMath.exp(-Math.abs(deltaV) / (ISP * g0));
+    }
+
+    /** Validate input orbit parameters and masses. */
+    private void validateOrbitParameters() {
+        if (SMA <= 0) {
+            throw new IllegalArgumentException("Semi-major axis must be positive");
+        }
+        if (DRYMASS <= 0 || ERGOL < 0) {
+            throw new IllegalArgumentException("Invalid mass parameters");
+        }
+    }
+
+    /** Validate maneuver feasibility (time and fuel). */
+    private void validateManeuverParameters(AbsoluteDate initialDate, AbsoluteDate apsideDate, double finalMass) {
+        if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException("Initial date must be >= reference apside date");
+        }
+        if (finalMass < DRYMASS || ERGOL < 1e-3 || DRYMASS <= 0) {
+            throw new IllegalArgumentException("Not enough propellant for phasing maneuver");
+        }
+        if (ECC > 0.05) {
+            throw new IllegalArgumentException("Orbit eccentricity too high for accurate phasing calculation");
+        }
+    }
+
+
+    @Override
+    public void computeAndExecute() throws IOException, ParseException {
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+        double start = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+
+        // 1) Setup frames & dates
+        Frame eme2000 = FramesFactory.getEME2000();
+
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizon = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+
+        // Create initial orbit at reference apside date.
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+        // Propagate from apside to initial date
+        KeplerianPropagator keplerProp = new KeplerianPropagator(orbitAtApside);
+        SpacecraftState stateatapside = new SpacecraftState(orbitAtApside, DRYMASS + ERGOL);
+        logState("State@apside", stateatapside);
+        SpacecraftState stateAtInitialDate = keplerProp.propagate(initialDate);
+        logState("State@initialDate", stateAtInitialDate);
+        KeplerianOrbit circOrbit = new KeplerianOrbit(stateAtInitialDate.getOrbit());
+        double r0 = SMA;
+        double mass0 = DRYMASS + ERGOL;
+        validateManeuverParameters(initialDate, apsideDate, mass0);
+
+
+//        // 2) Build initial circular orbit at apside
+//        KeplerianOrbit circOrbit = new KeplerianOrbit(
+//                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+//                eme2000, apsideDate, MU
+//        );
+
+        SpacecraftState state0 = new SpacecraftState(circOrbit, mass0);
+        logState("state0", state0);
+
+        // Convert DELTA_THETA from degrees to radians
+        double deltathetaRad = FastMath.toRadians(DELTA_THETA);
+        System.out.println("Delta theta in radians: " + deltathetaRad + " rad");
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+
+
+        // 3) Determine if we need to advance or delay phase
+        boolean advancePhase = (deltathetaRad > 0); // Positive angle = advance phase
+        double absDeltaTheta = Math.abs(deltathetaRad); // Use absolute value for calculations
+
+        // Calculate orbital period of the reference orbit
+        double vCirc = FastMath.sqrt(MU/r0);
+        double Tc = 2*Math.PI * FastMath.sqrt(r0*r0*r0/MU);
+
+        // Calculate phasing orbit parameters
+        // For a pure phasing maneuver, we want to return to the same point after one orbit
+        // but with a different phase
+        double Tph;
+        int kint = 1;
+        if (DELTA_THETA > 140 && DELTA_THETA < 360){
+            kint = 2;
+        }
+        System.out.println("Kint: " + kint);
+
+        double deltaThetaRad = FastMath.toRadians(DELTA_THETA);
+        // τ_phase = (k_tgt(2π) + θ)/ω_tgt
+        double omega_tgt = Math.sqrt(MU / (r0*r0*r0)); // angular velocity
+        // For positive phase angle (advance), use negative angle in formula
+        Tph = (kint * 2 * Math.PI - deltaThetaRad) / omega_tgt;
+        // 8) Coast for exactly one phasing orbit period
+        AbsoluteDate phasingEnd = initialDate.shiftedBy(Tph);
+        // 9) Also propagate the reference orbit to this time to see where it would have been
+        // 6) Create a reference propagator to track where the spacecraft would be without maneuvers
+        KeplerianPropagator refProp = new KeplerianPropagator(circOrbit);
+        SpacecraftState refState = refProp.propagate(phasingEnd);
+        refState = new SpacecraftState(refState.getOrbit(),mass0);
+        logState("Reference state (no maneuver)", refState);
+
+
+        // Calculate semi-major axis of the phasing orbit
+        double aPh = Math.cbrt(MU * Math.pow(Tph/(2*Math.PI), 2));
+
+        // Calculate apogee and perigee of the phasing orbit
+        // We want one endpoint of the phasing orbit to be at the original radius r0
+        double rp, ra;
+        if (deltaThetaRad > 0 && aPh < r0) {
+            // Higher kint with positive phase angle creates a larger orbit
+            // We now need to encounter the target from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        } else if (deltaThetaRad > 0) {
+            // Normal case - intercept from ahead (shorter orbit)
+            ra = r0;
+            rp = 2*aPh - r0;
+        } else {
+            // Negative phase angle - intercept from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        }
+        // Ensure ra > rp (physical constraint)
+        if (ra < rp) {
+            double temp = ra;
+            ra = rp;
+            rp = temp;
+            System.out.println("Warning: Swapped ra and rp to maintain physical constraint");
+        }
+
+        // Check for negative/unrealistic periapsis (would be an error)
+        if (rp < 6371000) { // Earth radius ~6371km
+            throw new IllegalArgumentException("Phasing periapsis too low (below Earth's surface): " + (rp/1000) + " km");
+        }
+
+        // Calculate eccentricity
+        double ecc = (ra - rp) / (ra + rp);
+
+        System.out.printf("Original orbit: r=%,.0f km, period=%,.2f min%n",
+                r0/1000, Tc/60);
+        System.out.printf("Phasing orbit: a=%,.0f km, rp=%,.0f km, ra=%,.0f km, period=%,.2f min, e=%.5f%n",
+                aPh/1000, rp/1000, ra/1000, Tph/60, ecc);
+
+        // 4) Calculate delta-Vs for both burns
+        // First burn: change from circular to phasing orbit
+        double vPhasing = FastMath.sqrt(MU * (2/r0 - 1/aPh));
+        double dv1 = vPhasing - vCirc;
+
+        // Second burn: recircularize at r0 after one phasing orbit period
+        // This is the same magnitude but opposite direction as the first burn
+        double dv2 = vCirc - vPhasing;
+
+        double totalDv = Math.abs(dv1) + Math.abs(dv2);
+
+        System.out.printf("Delta-Vs: dv1=%,.2f m/s, dv2=%,.2f m/s, total=%,.2f m/s%n",
+                dv1, dv2, totalDv);
+
+        // 5) Calculate mass changes
+        double massAfterBurn1 = calculateFinalMass(mass0, dv1, ISP, g0);
+        double massAfterBurn2 = calculateFinalMass(massAfterBurn1, dv2, ISP, g0);
+        double fuelUsed = mass0 - massAfterBurn2;
+
+        System.out.printf("Mass: initial=%,.2f kg, after burn 1=%,.2f kg, final=%,.2f kg, fuel used=%,.2f kg%n",
+                mass0, massAfterBurn1, massAfterBurn2, fuelUsed);
+
+
+        // 7) First burn: enter phasing orbit
+        Vector3D dir1 = state0.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv1);
+        ImpulseManeuver burn1 = new ImpulseManeuver(
+                new DateDetector(initialDate.shiftedBy(0.001)), dir1, ISP
+        );
+
+        KeplerianPropagator prop1 = new KeplerianPropagator(circOrbit);
+        prop1.addEventDetector(burn1);
+
+        // Execute burn1
+        SpacecraftState stateAfterBurn1 = prop1.propagate(initialDate.shiftedBy(0.001));
+        // Update mass after burn
+        stateAfterBurn1 = new SpacecraftState(stateAfterBurn1.getOrbit(), massAfterBurn1);
+        logState("State@afterBurn1", stateAfterBurn1);
+
+
+        SpacecraftState stateBeforeBurn2 = prop1.propagate(phasingEnd);
+        // Mass remains the same during coasting
+        stateBeforeBurn2 = new SpacecraftState(stateBeforeBurn2.getOrbit(), massAfterBurn1);
+        logState("State@beforeBurn2", stateBeforeBurn2);
+
+
+
+        // 10) Write/log after first burn and wait for trigger if needed
+        Map<String, String> payload1 = Utils.createDatePayload(initialDate, phasingEnd);
+        System.out.println("Payload for first burn: " + payload1);
+        Utils.writeJsonPayload(payload1);
+        Utils.logResults(resultFileName, stateAfterBurn1,
+                new KeplerianOrbit(stateAfterBurn1.getOrbit()), m0, DRYMASS
+        );
+        logState("State@afterBurn1", stateAfterBurn1);
+        writeManeuverTimestamp(postManeuverDateFileName, phasingEnd);
+
+        // Optional: wait for trigger
+        MqttService mqtt = new MqttService();
+        mqtt.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+
+        // 11) Second burn: recircularize
+        Vector3D dir2 = stateBeforeBurn2.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv2);
+        ImpulseManeuver burn2 = new ImpulseManeuver(
+                new DateDetector(phasingEnd.shiftedBy(0.001)), dir2, ISP
+        );
+
+        KeplerianPropagator prop2 = new KeplerianPropagator(stateBeforeBurn2.getOrbit());
+        prop2.addEventDetector(burn2);
+
+        // Execute burn2
+        SpacecraftState finalState = prop2.propagate(phasingEnd.shiftedBy(0.001));
+        // Update mass after burn
+        finalState = new SpacecraftState(finalState.getOrbit(), massAfterBurn2);
+        logState("State@final", finalState);
+
+        // 12) Calculate actual phase change achieved by comparing to reference orbit
+        KeplerianOrbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+        KeplerianOrbit refOrbit = new KeplerianOrbit(refState.getOrbit());
+
+        double finalMA = normalizeAngle0to2pi(finalOrbit.getMeanAnomaly());
+        double refMA = normalizeAngle0to2pi(refOrbit.getMeanAnomaly());
+
+        // The phase change is the difference between where we are and where we would have been
+        double actualPhaseChange = finalMA - refMA;
+        // Normalize to [0, 2π)
+        if (actualPhaseChange < 0) {
+            actualPhaseChange += 2*Math.PI;
+        }
+
+        // Alternative calculation based on orbital periods
+        double theoreticalPhaseChange;
+        if (advancePhase) {
+            theoreticalPhaseChange = (1.0 - Tph/Tc) * 2 * Math.PI;
+        } else {
+            theoreticalPhaseChange = 2 * Math.PI - ((Tph/Tc - 1.0) * 2 * Math.PI);
+        }
+
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, theoretical=%.2f°%n",
+                DELTA_THETA, FastMath.toDegrees(actualPhaseChange),
+                FastMath.toDegrees(theoreticalPhaseChange));
+
+        // Calculate signed phase difference (keeping it in [-180°, 180°] range)
+        double signedPhaseChange = finalMA - refMA;
+        if (signedPhaseChange > Math.PI) {
+            signedPhaseChange -= 2 * Math.PI;
+        } else if (signedPhaseChange < -Math.PI) {
+            signedPhaseChange += 2 * Math.PI;
+        }
+
+// Now report both the signed and absolute phase change
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, absolute=%.2f°%n",
+                DELTA_THETA,
+                FastMath.toDegrees(signedPhaseChange),
+                FastMath.toDegrees(Math.abs(signedPhaseChange)));
+
+        // Compare initial and final mean anomalies directly for debugging
+        double initialMA = normalizeAngle0to2pi(circOrbit.getMeanAnomaly());
+        System.out.printf("Mean Anomaly: initial=%.2f°, final=%.2f°, reference=%.2f°%n",
+                FastMath.toDegrees(initialMA),
+                FastMath.toDegrees(finalMA),
+                FastMath.toDegrees(refMA));
+
+        // 13) Log final results
+        Map<String, String> payload2 = Utils.createDatePayload(phasingEnd.shiftedBy(0.001), endHorizon);
+        System.out.println("PHASInG END " + phasingEnd);
+        if (!isEqualOrAfterWithTolerance(endHorizon, phasingEnd.shiftedBy(0.001), TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+        }
+        Utils.writeJsonPayload(payload2);
+        System.out.println("Payload for second burn: " + payload2);
+        Utils.logResults(resultFileName, finalState, finalOrbit, m0, DRYMASS);
+        writeManeuverTimestamp(postManeuverDateFileName, finalState.getDate());
+        System.out.println("postManeuverDate " + finalState.getDate());
+        writeManeuverTimestamp(lastManeuverDateFile, finalState.getDate());
+
+        // 14) Send final notification
+        mqtt.sendFileViaMQTT(resultFileName, publishTopic);
+
+        System.out.printf("Phasing maneuver complete. Execution time: %.3f s%n",
+                (System.currentTimeMillis() - start) / 1000.0
+        );
+    }
+
+    // ▶︎ 1.  Put this helper method anywhere inside PhasageStrategy  ◀︎
+// -----------------------------------------------------------------
+    private static void logState(final String label, final SpacecraftState s) {
+        KeplerianOrbit o = new KeplerianOrbit(s.getOrbit());
+
+        // Normalize mean and true anomaly to [0, 2π)
+        double meanAnomaly = normalizeAngle0to2pi(o.getMeanAnomaly());
+        double trueAnomaly = normalizeAngle0to2pi(o.getTrueAnomaly());
+
+        System.out.printf(
+                "\n[%s]\n" +
+                        "  Epoch   : %s\n" +
+                        "  Mass    : %.3f kg\n" +
+                        "  a       : %.3f km\n" +
+                        "  e       : %.8f\n" +
+                        "  i       : %.3f °\n" +
+                        "  RAAN    : %.3f °\n" +
+                        "  ω (PA)  : %.3f °\n" +
+                        "  M       : %.3f °\n" +
+                        "  ν (TA)  : %.3f °\n",
+                label,
+                s.getDate(),
+                s.getMass(),
+                o.getA() / 1000.0,
+                o.getE(),
+                FastMath.toDegrees(o.getI()),
+                FastMath.toDegrees(o.getRightAscensionOfAscendingNode()),
+                FastMath.toDegrees(o.getPerigeeArgument()),
+                FastMath.toDegrees(meanAnomaly),  // Use normalized mean anomaly
+                FastMath.toDegrees(trueAnomaly)   // Use normalized true anomaly
+        );
+    }
+    // Helper to keep angle in [0,2π)
+    private static double normalizeAngle0to2pi(double angle) {
+        angle = angle % (2*Math.PI);
+        if (angle < 0) angle += 2*Math.PI;
+        return angle;
+    }
+    @Override
+    public void loadMassData(Boolean isMassCalculation) throws IOException {
+        super.loadMassData(isMassCalculation);
+        if (isMassCalculation) {
+            if (cmdData.containsKey("DELTA_THETA")) {
+                this.DELTA_THETA = Double.parseDouble(cmdData.get("DELTA_THETA"));
+            }
+        }
+    }
+
+    @Override
+    public void loadTimeData(Boolean isTimeCalculation) throws IOException {
+        super.loadTimeData(isTimeCalculation);
+        if (tipData.containsKey("DELTA_THETA")) {
+            this.DELTA_THETA = Double.parseDouble(cmdData.get("DELTA_THETA"));
+        }
+        System.out.println(" - timeIntermediateParametersFile => ManeuverType: " + MANEUV_TYPE
+                + ", PhaseAngle: " + FastMath.toDegrees(DELTA_THETA) + "°");
+    }//---------------------------------------------------------------------
+
+//    @Override
+//    public void computeAndExecute() throws IOException, ParseException {
+//        double startTime = System.currentTimeMillis();
+//        manager.addProvider(new DirectoryCrawler(orekitData));
+//        validateOrbitParameters();
+//
+//        // Setup frames and dates
+//        Frame eme2000 = FramesFactory.getEME2000();
+//        MqttService mqttService = new MqttService();
+//        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+//        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+//        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+//        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+//
+//        System.out.println("Apside Date: " + apsideDate);
+//        System.out.println("Initial Date: " + initialDate);
+//        System.out.println("End Horizon Date: " + endHorizonDate);
+//        System.out.println("Delta phase angle (DELTA_THETA): " + DELTA_THETA + "°");
+//        // Propagate to initial maneuver time
+//        double initialMass = DRYMASS + ERGOL;
+//        // Initialize orbit at apside
+//        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+//                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN, eme2000, apsideDate, MU
+//        );
+//        SpacecraftState stateAtApside = new SpacecraftState(orbitAtApside,initialMass);
+//        logState("State at apside", stateAtApside);
+//
+//              // Convert DELTA_THETA from degrees to radians
+//        double deltathetaRad = FastMath.toRadians(DELTA_THETA);
+//        System.out.println("Delta theta in radians: " + deltathetaRad + " rad");
+//        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+//
+//
+//        KeplerianPropagator propagator = new KeplerianPropagator(orbitAtApside);
+//        SpacecraftState stateAtInitial = propagator.propagate(initialDate);
+//        KeplerianOrbit initialOrbit = new KeplerianOrbit(stateAtInitial.getOrbit());
+//        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
+//        logState("Initial state at maneuver start time", initialState);
+//
+//        System.out.println("Phasing maneuver complete. Execution time: "
+//                + (System.currentTimeMillis() - startTime) / 1000.0 + " s");
+//    }
+
+
+
+
+
+    private double normalizeTo2Pi(double angle) {
+        angle = angle % (2*Math.PI);
+        return (angle < 0) ? angle + 2*Math.PI : angle;
+    }
+
+
+
+    @Override
+    public void calculateErgolConsumption() throws IOException {
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+        double start = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+
+        // 1) Setup frames & dates
+        Frame eme2000 = FramesFactory.getEME2000();
+
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizon = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+
+        // Create initial orbit at reference apside date.
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+        // Propagate from apside to initial date
+        KeplerianPropagator keplerProp = new KeplerianPropagator(orbitAtApside);
+        SpacecraftState stateatapside = new SpacecraftState(orbitAtApside, DRYMASS + ERGOL);
+        logState("State@apside", stateatapside);
+        SpacecraftState stateAtInitialDate = keplerProp.propagate(initialDate);
+        logState("State@initialDate", stateAtInitialDate);
+        KeplerianOrbit circOrbit = new KeplerianOrbit(stateAtInitialDate.getOrbit());
+        double r0 = SMA;
+        double mass0 = DRYMASS + ERGOL;
+
+
+//        // 2) Build initial circular orbit at apside
+//        KeplerianOrbit circOrbit = new KeplerianOrbit(
+//                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+//                eme2000, apsideDate, MU
+//        );
+
+        SpacecraftState state0 = new SpacecraftState(circOrbit, mass0);
+        logState("state0", state0);
+
+        // Convert DELTA_THETA from degrees to radians
+        double deltathetaRad = FastMath.toRadians(DELTA_THETA);
+        System.out.println("Delta theta in radians: " + deltathetaRad + " rad");
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+
+
+        // 3) Determine if we need to advance or delay phase
+        boolean advancePhase = (deltathetaRad > 0); // Positive angle = advance phase
+        double absDeltaTheta = Math.abs(deltathetaRad); // Use absolute value for calculations
+
+        // Calculate orbital period of the reference orbit
+        double vCirc = FastMath.sqrt(MU/r0);
+        double Tc = 2*Math.PI * FastMath.sqrt(r0*r0*r0/MU);
+
+        // Calculate phasing orbit parameters
+        // For a pure phasing maneuver, we want to return to the same point after one orbit
+        // but with a different phase
+        double Tph;
+        int kint = 1;
+        if (DELTA_THETA > 140 && DELTA_THETA < 360){
+            kint = 2;
+        }
+        System.out.println("Kint: " + kint);
+
+        double deltaThetaRad = FastMath.toRadians(DELTA_THETA);
+        // τ_phase = (k_tgt(2π) + θ)/ω_tgt
+        double omega_tgt = Math.sqrt(MU / (r0*r0*r0)); // angular velocity
+        // For positive phase angle (advance), use negative angle in formula
+        Tph = (kint * 2 * Math.PI - deltaThetaRad) / omega_tgt;
+        // 8) Coast for exactly one phasing orbit period
+        AbsoluteDate phasingEnd = initialDate.shiftedBy(Tph);
+        // 9) Also propagate the reference orbit to this time to see where it would have been
+        // 6) Create a reference propagator to track where the spacecraft would be without maneuvers
+        KeplerianPropagator refProp = new KeplerianPropagator(circOrbit);
+        SpacecraftState refState = refProp.propagate(phasingEnd);
+        refState = new SpacecraftState(refState.getOrbit(),mass0);
+        logState("Reference state (no maneuver)", refState);
+
+
+        // Calculate semi-major axis of the phasing orbit
+        double aPh = Math.cbrt(MU * Math.pow(Tph/(2*Math.PI), 2));
+
+        // Calculate apogee and perigee of the phasing orbit
+        // We want one endpoint of the phasing orbit to be at the original radius r0
+        double rp, ra;
+        if (deltaThetaRad > 0 && aPh < r0) {
+            // Higher kint with positive phase angle creates a larger orbit
+            // We now need to encounter the target from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        } else if (deltaThetaRad > 0) {
+            // Normal case - intercept from ahead (shorter orbit)
+            ra = r0;
+            rp = 2*aPh - r0;
+        } else {
+            // Negative phase angle - intercept from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        }
+        // Ensure ra > rp (physical constraint)
+        if (ra < rp) {
+            double temp = ra;
+            ra = rp;
+            rp = temp;
+            System.out.println("Warning: Swapped ra and rp to maintain physical constraint");
+        }
+
+        // Check for negative/unrealistic periapsis (would be an error)
+        if (rp < 6371000) { // Earth radius ~6371km
+            throw new IllegalArgumentException("Phasing periapsis too low (below Earth's surface): " + (rp/1000) + " km");
+        }
+
+        // Calculate eccentricity
+        double ecc = (ra - rp) / (ra + rp);
+
+        System.out.printf("Original orbit: r=%,.0f km, period=%,.2f min%n",
+                r0/1000, Tc/60);
+        System.out.printf("Phasing orbit: a=%,.0f km, rp=%,.0f km, ra=%,.0f km, period=%,.2f min, e=%.5f%n",
+                aPh/1000, rp/1000, ra/1000, Tph/60, ecc);
+
+        // 4) Calculate delta-Vs for both burns
+        // First burn: change from circular to phasing orbit
+        double vPhasing = FastMath.sqrt(MU * (2/r0 - 1/aPh));
+        double dv1 = vPhasing - vCirc;
+
+        // Second burn: recircularize at r0 after one phasing orbit period
+        // This is the same magnitude but opposite direction as the first burn
+        double dv2 = vCirc - vPhasing;
+
+        double totalDv = Math.abs(dv1) + Math.abs(dv2);
+
+        System.out.printf("Delta-Vs: dv1=%,.2f m/s, dv2=%,.2f m/s, total=%,.2f m/s%n",
+                dv1, dv2, totalDv);
+
+        // 5) Calculate mass changes
+        double massAfterBurn1 = calculateFinalMass(mass0, dv1, ISP, g0);
+        double massAfterBurn2 = calculateFinalMass(massAfterBurn1, dv2, ISP, g0);
+        double fuelUsed = mass0 - massAfterBurn2;
+
+        System.out.printf("Mass: initial=%,.2f kg, after burn 1=%,.2f kg, final=%,.2f kg, fuel used=%,.2f kg%n",
+                mass0, massAfterBurn1, massAfterBurn2, fuelUsed);
+
+
+        // 7) First burn: enter phasing orbit
+        Vector3D dir1 = state0.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv1);
+        ImpulseManeuver burn1 = new ImpulseManeuver(
+                new DateDetector(initialDate.shiftedBy(0.001)), dir1, ISP
+        );
+
+        KeplerianPropagator prop1 = new KeplerianPropagator(circOrbit);
+        prop1.addEventDetector(burn1);
+
+        // Execute burn1
+        SpacecraftState stateAfterBurn1 = prop1.propagate(initialDate.shiftedBy(0.001));
+        // Update mass after burn
+        stateAfterBurn1 = new SpacecraftState(stateAfterBurn1.getOrbit(), massAfterBurn1);
+        logState("State@afterBurn1", stateAfterBurn1);
+
+
+        SpacecraftState stateBeforeBurn2 = prop1.propagate(phasingEnd);
+        // Mass remains the same during coasting
+        stateBeforeBurn2 = new SpacecraftState(stateBeforeBurn2.getOrbit(), massAfterBurn1);
+        logState("State@beforeBurn2", stateBeforeBurn2);
+
+
+
+        // 10) Write/log after first burn and wait for trigger if needed
+//        Map<String, String> payload1 = Utils.createDatePayload(initialDate, phasingEnd);
+//        System.out.println("Payload for first burn: " + payload1);
+//        Utils.writeJsonPayload(payload1);
+//        Utils.logResults(resultFileName, stateAfterBurn1,
+//                new KeplerianOrbit(stateAfterBurn1.getOrbit()), m0, DRYMASS
+//        );
+//        logState("State@afterBurn1", stateAfterBurn1);
+//        writeManeuverTimestamp(postManeuverDateFileName, phasingEnd);
+
+        // Optional: wait for trigger
+//        MqttService mqtt = new MqttService();
+//        mqtt.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+
+        // 11) Second burn: recircularize
+        Vector3D dir2 = stateBeforeBurn2.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv2);
+        ImpulseManeuver burn2 = new ImpulseManeuver(
+                new DateDetector(phasingEnd.shiftedBy(0.001)), dir2, ISP
+        );
+
+        KeplerianPropagator prop2 = new KeplerianPropagator(stateBeforeBurn2.getOrbit());
+        prop2.addEventDetector(burn2);
+
+        // Execute burn2
+        SpacecraftState finalState = prop2.propagate(phasingEnd.shiftedBy(0.001));
+        // Update mass after burn
+        finalState = new SpacecraftState(finalState.getOrbit(), massAfterBurn2);
+        logState("State@final", finalState);
+
+        // 12) Calculate actual phase change achieved by comparing to reference orbit
+        KeplerianOrbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+        KeplerianOrbit refOrbit = new KeplerianOrbit(refState.getOrbit());
+
+        double finalMA = normalizeAngle0to2pi(finalOrbit.getMeanAnomaly());
+        double refMA = normalizeAngle0to2pi(refOrbit.getMeanAnomaly());
+
+        // The phase change is the difference between where we are and where we would have been
+        double actualPhaseChange = finalMA - refMA;
+        // Normalize to [0, 2π)
+        if (actualPhaseChange < 0) {
+            actualPhaseChange += 2*Math.PI;
+        }
+
+        // Alternative calculation based on orbital periods
+        double theoreticalPhaseChange;
+        if (advancePhase) {
+            theoreticalPhaseChange = (1.0 - Tph/Tc) * 2 * Math.PI;
+        } else {
+            theoreticalPhaseChange = 2 * Math.PI - ((Tph/Tc - 1.0) * 2 * Math.PI);
+        }
+
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, theoretical=%.2f°%n",
+                DELTA_THETA, FastMath.toDegrees(actualPhaseChange),
+                FastMath.toDegrees(theoreticalPhaseChange));
+
+        // Calculate signed phase difference (keeping it in [-180°, 180°] range)
+        double signedPhaseChange = finalMA - refMA;
+        if (signedPhaseChange > Math.PI) {
+            signedPhaseChange -= 2 * Math.PI;
+        } else if (signedPhaseChange < -Math.PI) {
+            signedPhaseChange += 2 * Math.PI;
+        }
+
+// Now report both the signed and absolute phase change
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, absolute=%.2f°%n",
+                DELTA_THETA,
+                FastMath.toDegrees(signedPhaseChange),
+                FastMath.toDegrees(Math.abs(signedPhaseChange)));
+
+        // Compare initial and final mean anomalies directly for debugging
+        double initialMA = normalizeAngle0to2pi(circOrbit.getMeanAnomaly());
+        System.out.printf("Mean Anomaly: initial=%.2f°, final=%.2f°, reference=%.2f°%n",
+                FastMath.toDegrees(initialMA),
+                FastMath.toDegrees(finalMA),
+                FastMath.toDegrees(refMA));
+
+        // 13) Log final results
+//        Map<String, String> payload2 = Utils.createDatePayload(phasingEnd.shiftedBy(0.001), endHorizon);
+        System.out.println("PHASInG END " + phasingEnd);
+//        Utils.writeJsonPayload(payload2);
+//        System.out.println("Payload for second burn: " + payload2);
+//        Utils.logResults(resultFileName, finalState, finalOrbit, m0, DRYMASS);
+//        writeManeuverTimestamp(postManeuverDateFileName, finalState.getDate());
+        System.out.println("postManeuverDate " + finalState.getDate());
+//        writeManeuverTimestamp(lastManeuverDateFile, finalState.getDate());
+
+        // 14) Send final notification
+//        mqtt.sendFileViaMQTT(resultFileName, publishTopic);
+        Utils.appendLineToFile(consommationErgolsFile,String.valueOf(fuelUsed));
+        System.out.printf("Phasing maneuver complete. Execution time: %.3f s%n",
+                (System.currentTimeMillis() - start) / 1000.0
+        );
+    }
+
+    @Override
+    public void processReachOrbitTime() throws IOException {
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+        double start = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+
+        // 1) Setup frames & dates
+        Frame eme2000 = FramesFactory.getEME2000();
+
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizon = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+
+        AbsoluteDate initialDate = Utils.parseDateFromTimestamp(DATE);
+
+        // Create initial orbit at reference apside date.
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+        // Propagate from apside to initial date
+        KeplerianPropagator keplerProp = new KeplerianPropagator(orbitAtApside);
+        SpacecraftState stateatapside = new SpacecraftState(orbitAtApside, DRYMASS + ERGOL);
+        logState("State@apside", stateatapside);
+        SpacecraftState stateAtInitialDate = keplerProp.propagate(initialDate);
+        logState("State@initialDate", stateAtInitialDate);
+        KeplerianOrbit circOrbit = new KeplerianOrbit(stateAtInitialDate.getOrbit());
+        double r0 = SMA;
+        double mass0 = DRYMASS + ERGOL;
+        validateManeuverParameters(initialDate, apsideDate, mass0);
+
+
+//        // 2) Build initial circular orbit at apside
+//        KeplerianOrbit circOrbit = new KeplerianOrbit(
+//                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+//                eme2000, apsideDate, MU
+//        );
+
+        SpacecraftState state0 = new SpacecraftState(circOrbit, mass0);
+        logState("state0", state0);
+
+        // Convert DELTA_THETA from degrees to radians
+        double deltathetaRad = FastMath.toRadians(DELTA_THETA);
+        System.out.println("Delta theta in radians: " + deltathetaRad + " rad");
+        System.out.println("Delta theta in degrees: " + DELTA_THETA + " °");
+
+
+        // 3) Determine if we need to advance or delay phase
+        boolean advancePhase = (deltathetaRad > 0); // Positive angle = advance phase
+        double absDeltaTheta = Math.abs(deltathetaRad); // Use absolute value for calculations
+
+        // Calculate orbital period of the reference orbit
+        double vCirc = FastMath.sqrt(MU/r0);
+        double Tc = 2*Math.PI * FastMath.sqrt(r0*r0*r0/MU);
+
+        // Calculate phasing orbit parameters
+        // For a pure phasing maneuver, we want to return to the same point after one orbit
+        // but with a different phase
+        double Tph;
+        int kint = 1;
+        if (DELTA_THETA > 140 && DELTA_THETA < 360){
+            kint = 2;
+        }
+        System.out.println("Kint: " + kint);
+
+        double deltaThetaRad = FastMath.toRadians(DELTA_THETA);
+        // τ_phase = (k_tgt(2π) + θ)/ω_tgt
+        double omega_tgt = Math.sqrt(MU / (r0*r0*r0)); // angular velocity
+        // For positive phase angle (advance), use negative angle in formula
+        Tph = (kint * 2 * Math.PI - deltaThetaRad) / omega_tgt;
+        // 8) Coast for exactly one phasing orbit period
+        AbsoluteDate phasingEnd = initialDate.shiftedBy(Tph);
+        // 9) Also propagate the reference orbit to this time to see where it would have been
+        // 6) Create a reference propagator to track where the spacecraft would be without maneuvers
+        KeplerianPropagator refProp = new KeplerianPropagator(circOrbit);
+        SpacecraftState refState = refProp.propagate(phasingEnd);
+        refState = new SpacecraftState(refState.getOrbit(),mass0);
+        logState("Reference state (no maneuver)", refState);
+
+
+        // Calculate semi-major axis of the phasing orbit
+        double aPh = Math.cbrt(MU * Math.pow(Tph/(2*Math.PI), 2));
+
+        // Calculate apogee and perigee of the phasing orbit
+        // We want one endpoint of the phasing orbit to be at the original radius r0
+        double rp, ra;
+        if (deltaThetaRad > 0 && aPh < r0) {
+            // Higher kint with positive phase angle creates a larger orbit
+            // We now need to encounter the target from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        } else if (deltaThetaRad > 0) {
+            // Normal case - intercept from ahead (shorter orbit)
+            ra = r0;
+            rp = 2*aPh - r0;
+        } else {
+            // Negative phase angle - intercept from behind (longer orbit)
+            rp = r0;
+            ra = 2*aPh - r0;
+        }
+        // Ensure ra > rp (physical constraint)
+        if (ra < rp) {
+            double temp = ra;
+            ra = rp;
+            rp = temp;
+            System.out.println("Warning: Swapped ra and rp to maintain physical constraint");
+        }
+
+        // Check for negative/unrealistic periapsis (would be an error)
+        if (rp < 6371000) { // Earth radius ~6371km
+            throw new IllegalArgumentException("Phasing periapsis too low (below Earth's surface): " + (rp/1000) + " km");
+        }
+
+        // Calculate eccentricity
+        double ecc = (ra - rp) / (ra + rp);
+
+        System.out.printf("Original orbit: r=%,.0f km, period=%,.2f min%n",
+                r0/1000, Tc/60);
+        System.out.printf("Phasing orbit: a=%,.0f km, rp=%,.0f km, ra=%,.0f km, period=%,.2f min, e=%.5f%n",
+                aPh/1000, rp/1000, ra/1000, Tph/60, ecc);
+
+        // 4) Calculate delta-Vs for both burns
+        // First burn: change from circular to phasing orbit
+        double vPhasing = FastMath.sqrt(MU * (2/r0 - 1/aPh));
+        double dv1 = vPhasing - vCirc;
+
+        // Second burn: recircularize at r0 after one phasing orbit period
+        // This is the same magnitude but opposite direction as the first burn
+        double dv2 = vCirc - vPhasing;
+
+        double totalDv = Math.abs(dv1) + Math.abs(dv2);
+
+        System.out.printf("Delta-Vs: dv1=%,.2f m/s, dv2=%,.2f m/s, total=%,.2f m/s%n",
+                dv1, dv2, totalDv);
+
+        // 5) Calculate mass changes
+        double massAfterBurn1 = calculateFinalMass(mass0, dv1, ISP, g0);
+        double massAfterBurn2 = calculateFinalMass(massAfterBurn1, dv2, ISP, g0);
+        double fuelUsed = mass0 - massAfterBurn2;
+
+        System.out.printf("Mass: initial=%,.2f kg, after burn 1=%,.2f kg, final=%,.2f kg, fuel used=%,.2f kg%n",
+                mass0, massAfterBurn1, massAfterBurn2, fuelUsed);
+
+
+        // 7) First burn: enter phasing orbit
+        Vector3D dir1 = state0.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv1);
+        ImpulseManeuver burn1 = new ImpulseManeuver(
+                new DateDetector(initialDate.shiftedBy(0.001)), dir1, ISP
+        );
+
+        KeplerianPropagator prop1 = new KeplerianPropagator(circOrbit);
+        prop1.addEventDetector(burn1);
+
+        // Execute burn1
+        SpacecraftState stateAfterBurn1 = prop1.propagate(initialDate.shiftedBy(0.001));
+        // Update mass after burn
+        stateAfterBurn1 = new SpacecraftState(stateAfterBurn1.getOrbit(), massAfterBurn1);
+        logState("State@afterBurn1", stateAfterBurn1);
+
+
+        SpacecraftState stateBeforeBurn2 = prop1.propagate(phasingEnd);
+        // Mass remains the same during coasting
+        stateBeforeBurn2 = new SpacecraftState(stateBeforeBurn2.getOrbit(), massAfterBurn1);
+        logState("State@beforeBurn2", stateBeforeBurn2);
+
+
+
+        // 10) Write/log after first burn and wait for trigger if needed
+//        Map<String, String> payload1 = Utils.createDatePayload(initialDate, phasingEnd);
+//        System.out.println("Payload for first burn: " + payload1);
+//        Utils.writeJsonPayload(payload1);
+//        Utils.logResults(resultFileName, stateAfterBurn1,
+//                new KeplerianOrbit(stateAfterBurn1.getOrbit()), m0, DRYMASS
+//        );
+//        logState("State@afterBurn1", stateAfterBurn1);
+//        writeManeuverTimestamp(postManeuverDateFileName, phasingEnd);
+
+        // Optional: wait for trigger
+//        MqttService mqtt = new MqttService();
+//        mqtt.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+
+        // 11) Second burn: recircularize
+        Vector3D dir2 = stateBeforeBurn2.getPVCoordinates().getVelocity().normalize().scalarMultiply(dv2);
+        ImpulseManeuver burn2 = new ImpulseManeuver(
+                new DateDetector(phasingEnd.shiftedBy(0.001)), dir2, ISP
+        );
+
+        KeplerianPropagator prop2 = new KeplerianPropagator(stateBeforeBurn2.getOrbit());
+        prop2.addEventDetector(burn2);
+
+        // Execute burn2
+        SpacecraftState finalState = prop2.propagate(phasingEnd.shiftedBy(0.001));
+        // Update mass after burn
+        finalState = new SpacecraftState(finalState.getOrbit(), massAfterBurn2);
+        logState("State@final", finalState);
+
+        // 12) Calculate actual phase change achieved by comparing to reference orbit
+        KeplerianOrbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
+        KeplerianOrbit refOrbit = new KeplerianOrbit(refState.getOrbit());
+
+        double finalMA = normalizeAngle0to2pi(finalOrbit.getMeanAnomaly());
+        double refMA = normalizeAngle0to2pi(refOrbit.getMeanAnomaly());
+
+        // The phase change is the difference between where we are and where we would have been
+        double actualPhaseChange = finalMA - refMA;
+        // Normalize to [0, 2π)
+        if (actualPhaseChange < 0) {
+            actualPhaseChange += 2*Math.PI;
+        }
+
+        // Alternative calculation based on orbital periods
+        double theoreticalPhaseChange;
+        if (advancePhase) {
+            theoreticalPhaseChange = (1.0 - Tph/Tc) * 2 * Math.PI;
+        } else {
+            theoreticalPhaseChange = 2 * Math.PI - ((Tph/Tc - 1.0) * 2 * Math.PI);
+        }
+
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, theoretical=%.2f°%n",
+                DELTA_THETA, FastMath.toDegrees(actualPhaseChange),
+                FastMath.toDegrees(theoreticalPhaseChange));
+
+        // Calculate signed phase difference (keeping it in [-180°, 180°] range)
+        double signedPhaseChange = finalMA - refMA;
+        if (signedPhaseChange > Math.PI) {
+            signedPhaseChange -= 2 * Math.PI;
+        } else if (signedPhaseChange < -Math.PI) {
+            signedPhaseChange += 2 * Math.PI;
+        }
+
+// Now report both the signed and absolute phase change
+        System.out.printf("Phase change: target=%.2f°, achieved=%.2f°, absolute=%.2f°%n",
+                DELTA_THETA,
+                FastMath.toDegrees(signedPhaseChange),
+                FastMath.toDegrees(Math.abs(signedPhaseChange)));
+
+        // Compare initial and final mean anomalies directly for debugging
+        double initialMA = normalizeAngle0to2pi(circOrbit.getMeanAnomaly());
+        System.out.printf("Mean Anomaly: initial=%.2f°, final=%.2f°, reference=%.2f°%n",
+                FastMath.toDegrees(initialMA),
+                FastMath.toDegrees(finalMA),
+                FastMath.toDegrees(refMA));
+
+        // 13) Log final results
+//        Map<String, String> payload2 = Utils.createDatePayload(phasingEnd.shiftedBy(0.001), endHorizon);
+        System.out.println("PHASInG END " + phasingEnd);
+//        Utils.writeJsonPayload(payload2);
+//        System.out.println("Payload for second burn: " + payload2);
+//        Utils.logResults(resultFileName, finalState, finalOrbit, m0, DRYMASS);
+//        writeManeuverTimestamp(postManeuverDateFileName, finalState.getDate());
+        System.out.println("postManeuverDate " + finalState.getDate());
+//        writeManeuverTimestamp(lastManeuverDateFile, finalState.getDate());
+
+        // 14) Send final notification
+//        mqtt.sendFileViaMQTT(resultFileName, publishTopic);
+//        Utils.appendLineToFile(consommationErgolsFile,String.valueOf(fuelUsed));
+        Utils.logApsideDate(apsideFile, phasingEnd);
+        System.out.printf("Phasing maneuver complete. Execution time: %.3f s%n",
+                (System.currentTimeMillis() - start) / 1000.0
+        );
+    }
+
+
+}

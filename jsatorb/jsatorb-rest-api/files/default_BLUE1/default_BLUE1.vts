@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project Revision="8200">
- <General Name="" StartDateTime="60650 0.0" EndDateTime="60651 0.0"/>
+ <General Name="" StartDateTime="60749 82800.0" EndDateTime="60820 79200.0"/>
  <MetaData>
   <Description>JSatOrb</Description>
  </MetaData>
@@ -113,10 +113,205 @@
    </Component>
    <Events/>
   </Satellite>
+  <Satellite Name="BLUE2" ParentPath="Sol/Earth">
+   <CommonProp>
+    <OrbitPath Color="0 0.976471 0.145098" PenStyle="SolidLine" PenWidth="2"/>
+   </CommonProp>
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="0.664668 1 0" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="0 1 0.227329" FillColor="0.499992 1 0.613657" FillOpacity="60"/>
+   <Component Name="BLUE2">
+    <Graphics3d>
+     <File3ds Name="Models/rosetta-orbiterOnly.3ds"/>
+     <Radius Value="2"/>
+     <LightSensitive Value="1"/>
+     <Use3dsCoords Value="1" MeshScale="1"/>
+     <AxesPosition Value="1"/>
+     <RotationCenter X="0" Y="0" Z="0"/>
+    </Graphics3d>
+    <Geometry>
+     <Position>
+      <Value>
+       <File Name="Data/BLUE2_OEM_POSITION.TXT">
+        <ColorFile Name="Data/BLUE2_COLOR.TXT"/>
+       </File>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+   <Value>
+    <File Name="Data/BLUE2_AEM_ATTITUDE.TXT"/>
+   </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+    <SensorSatellite>
+   <Sensor Name="sensor_BLUE2">
+    <SensorProp>
+     <SensorRectangular HalfAngleX="0.348" HalfAngleY="0.174"/>
+     <SensorGraphics Range="10000" VolumeColor="1 0.286275 0.00392157" VolumeOpacity="60" ContourColor="1 0.921569 0.0235294">
+      <SensorTrace Duration="60" Opacity="60"/>
+     </SensorGraphics>
+    </SensorProp>
+    <Geometry>
+     <Position>
+      <Value>
+       <Fixed Data="0 0 0"/>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+       <Value>
+        <Fixed Data="1 0 0 0"/>
+       </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+   </Sensor>
+    </SensorSatellite>
+   </Component>
+   <Events/>
+  </Satellite>
+  <Satellite Name="RED1" ParentPath="Sol/Earth">
+   <CommonProp>
+    <OrbitPath Color="0 0.976471 0.145098" PenStyle="SolidLine" PenWidth="2"/>
+   </CommonProp>
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="0.664668 1 0" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="0 1 0.227329" FillColor="0.499992 1 0.613657" FillOpacity="60"/>
+   <Component Name="RED1">
+    <Graphics3d>
+     <File3ds Name="Models/rosetta-orbiterOnly.3ds"/>
+     <Radius Value="2"/>
+     <LightSensitive Value="1"/>
+     <Use3dsCoords Value="1" MeshScale="1"/>
+     <AxesPosition Value="1"/>
+     <RotationCenter X="0" Y="0" Z="0"/>
+    </Graphics3d>
+    <Geometry>
+     <Position>
+      <Value>
+       <File Name="Data/RED1_OEM_POSITION.TXT">
+        <ColorFile Name="Data/RED1_COLOR.TXT"/>
+       </File>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+   <Value>
+    <File Name="Data/RED1_AEM_ATTITUDE.TXT"/>
+   </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+    <SensorSatellite>
+   <Sensor Name="sensor_RED1">
+    <SensorProp>
+     <SensorRectangular HalfAngleX="0.348" HalfAngleY="0.174"/>
+     <SensorGraphics Range="10000" VolumeColor="1 0.286275 0.00392157" VolumeOpacity="60" ContourColor="1 0.921569 0.0235294">
+      <SensorTrace Duration="60" Opacity="60"/>
+     </SensorGraphics>
+    </SensorProp>
+    <Geometry>
+     <Position>
+      <Value>
+       <Fixed Data="0 0 0"/>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+       <Value>
+        <Fixed Data="1 0 0 0"/>
+       </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+   </Sensor>
+    </SensorSatellite>
+   </Component>
+   <Events/>
+  </Satellite>
+  <Satellite Name="RED2" ParentPath="Sol/Earth">
+   <CommonProp>
+    <OrbitPath Color="0 0.976471 0.145098" PenStyle="SolidLine" PenWidth="2"/>
+   </CommonProp>
+   <Prop2d>
+    <Icon Anchor="CENTER" Size="MEDIUM" Opacity="100">
+     <Font Size="MEDIUM" Color="1 1 1"/>
+     <ImageLayer Type="Default"/>
+    </Icon>
+   </Prop2d>
+   <Track Color="0.664668 1 0" PenStyle="SolidLine" PenWidth="2"/>
+   <VisibilityCircle ContourColor="0 1 0.227329" FillColor="0.499992 1 0.613657" FillOpacity="60"/>
+   <Component Name="RED2">
+    <Graphics3d>
+     <File3ds Name="Models/rosetta-orbiterOnly.3ds"/>
+     <Radius Value="2"/>
+     <LightSensitive Value="1"/>
+     <Use3dsCoords Value="1" MeshScale="1"/>
+     <AxesPosition Value="1"/>
+     <RotationCenter X="0" Y="0" Z="0"/>
+    </Graphics3d>
+    <Geometry>
+     <Position>
+      <Value>
+       <File Name="Data/RED2_OEM_POSITION.TXT">
+        <ColorFile Name="Data/RED2_COLOR.TXT"/>
+       </File>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+   <Value>
+    <File Name="Data/RED2_AEM_ATTITUDE.TXT"/>
+   </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+    <SensorSatellite>
+   <Sensor Name="sensor_RED2">
+    <SensorProp>
+     <SensorRectangular HalfAngleX="0.348" HalfAngleY="0.174"/>
+     <SensorGraphics Range="10000" VolumeColor="1 0.286275 0.00392157" VolumeOpacity="60" ContourColor="1 0.921569 0.0235294">
+      <SensorTrace Duration="60" Opacity="60"/>
+     </SensorGraphics>
+    </SensorProp>
+    <Geometry>
+     <Position>
+      <Value>
+       <Fixed Data="0 0 0"/>
+      </Value>
+     </Position>
+     <Orientation>
+      <Quaternion>
+       <Value>
+        <Fixed Data="1 0 0 0"/>
+       </Value>
+      </Quaternion>
+     </Orientation>
+    </Geometry>
+   </Sensor>
+    </SensorSatellite>
+   </Component>
+   <Events/>
+  </Satellite>
  </Entities>
  <Events/>
  <AdditionalFiles>
  <File Name="Data/BLUE1_MEM_LLA.TXT"/>
+ <File Name="Data/BLUE2_MEM_LLA.TXT"/>
+ <File Name="Data/RED1_MEM_LLA.TXT"/>
+ <File Name="Data/RED2_MEM_LLA.TXT"/>
  </AdditionalFiles>
  <States>
   <Instant Time="0 0" TimeRatio="1" Label="Initial state">
@@ -124,14 +319,32 @@
     <Command Str="CMD PROP WindowGeometry 0 0 800 640"/>
     <Command Str="CMD PROP CameraDesc ecliptic Sol/Earth nil 0.007283254636522 0.001179635528706 0.000231526022466 0.712167126874237 0.198544959469513 -0.667006536346601 0.092196328234123 0.279252678155899"/>
     <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/BLUE1&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/BLUE2&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/RED1&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/RED2&quot; 1 1"/>
     <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/BLUE1/sensor_BLUE1&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/BLUE2/sensor_BLUE2&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/RED1/sensor_RED1&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/RED2/sensor_RED2&quot; false"/>
     <Command Str="CMD STRUCT AimVolumeVisible &quot;Sol/Earth/BLUE1/sensor_BLUE1&quot; false"/>
+    <Command Str="CMD STRUCT AimVolumeVisible &quot;Sol/Earth/BLUE2/sensor_BLUE2&quot; false"/>
+    <Command Str="CMD STRUCT AimVolumeVisible &quot;Sol/Earth/RED1/sensor_RED1&quot; false"/>
+    <Command Str="CMD STRUCT AimVolumeVisible &quot;Sol/Earth/RED2/sensor_RED2&quot; false"/>
    </AppState>
    <AppState Id="1">
     <Command Str="CMD PROP WindowGeometry 800 0 800 640"/>
     <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/BLUE1&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/BLUE2&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/RED1&quot; 1 1"/>
+    <Command Str="CMD STRUCT TrackWindow &quot;Sol/Earth/RED2&quot; 1 1"/>
     <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/BLUE1/sensor_BLUE1&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/BLUE2/sensor_BLUE2&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/RED1/sensor_RED1&quot; false"/>
+    <Command Str="CMD STRUCT AimContourVisible &quot;Sol/Earth/RED2/sensor_RED2&quot; false"/>
     <Command Str="CMD STRUCT AimTraceVisible &quot;Sol/Earth/BLUE1/sensor_BLUE1&quot; false"/>
+    <Command Str="CMD STRUCT AimTraceVisible &quot;Sol/Earth/BLUE2/sensor_BLUE2&quot; false"/>
+    <Command Str="CMD STRUCT AimTraceVisible &quot;Sol/Earth/RED1/sensor_RED1&quot; false"/>
+    <Command Str="CMD STRUCT AimTraceVisible &quot;Sol/Earth/RED2/sensor_RED2&quot; false"/>
    </AppState>
    <AppState Id="2">
     <Command Str="CMD PROP WindowGeometry 1200 660 700 300"/>

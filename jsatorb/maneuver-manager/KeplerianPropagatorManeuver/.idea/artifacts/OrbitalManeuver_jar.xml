@@ -2,9 +2,11 @@
   <artifact type="jar" name="OrbitalManeuver:jar">
     <output-path>$PROJECT_DIR$/..</output-path>
     <root id="archive" name="OrbitalManeuver.jar">
-      <element id="module-output" name="ImpulseManeuver" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="OrbitalManeuver" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-20250107.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.5.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/orekit-11.3.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-core-2.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-geometry-2.3.jar" path-in-jar="/" />
@@ -13,6 +15,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-optim-2.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-filtering-2.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/hipparchus-stat-2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.5.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

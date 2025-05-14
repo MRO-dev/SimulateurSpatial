@@ -1,0 +1,1458 @@
+import org.hipparchus.geometry.euclidean.threed.Vector3D;
+import org.hipparchus.util.FastMath;
+import org.orekit.data.DirectoryCrawler;
+import org.orekit.forces.maneuvers.ImpulseManeuver;
+import org.orekit.frames.Frame;
+import org.orekit.frames.FramesFactory;
+import org.orekit.orbits.KeplerianOrbit;
+import org.orekit.orbits.PositionAngle;
+import org.orekit.propagation.SpacecraftState;
+import org.orekit.propagation.analytical.KeplerianPropagator;
+import org.orekit.propagation.events.DateDetector;
+import org.orekit.time.AbsoluteDate;
+import org.orekit.time.TimeScalesFactory;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.Map;
+
+
+/**
+ * This class implements an orbital inclination-change maneuver strategy.
+ * It performs exactly one burn at whichever node (ascending or descending)
+ * has the lower orbital velocity, thereby minimizing ΔV for the plane change.
+ * It preserves the argument of perigee (AoP) in the final orbit.
+ */
+
+public class InclinaisonStrategy extends AbstractManeuverStrategy {
+
+    // Target inclination in radians (parsed from inc_2).
+    private double INC_2;
+
+    // Store the final spacecraft state after the maneuver for later use.
+    private SpacecraftState finalState;
+
+    // ==============================
+    //          Constructor
+    // ==============================
+    public InclinaisonStrategy(
+            double sma,
+            double ecc,
+            double incDeg,
+            double raanDeg,
+            double aopDeg,
+            double meanAnomDeg,
+            double dryMass,
+            double ergol,
+            double isp,
+            double inc_2,//parametre final inclinaison 2 (degrés)
+            String dateStr,
+            String modeParameter,
+            String commandParameter
+    ) throws IOException {
+        super(modeParameter, commandParameter);
+        this.SMA = sma;
+        this.ECC = ecc;
+        this.INC = FastMath.toRadians(incDeg);
+        this.RAAN = FastMath.toRadians(raanDeg);
+        this.PA = FastMath.toRadians(aopDeg);
+        this.ANO = FastMath.toRadians(meanAnomDeg);
+        this.DRYMASS = dryMass;
+        this.ERGOL = ergol;
+        this.ISP = isp;
+        this.INC_2 = FastMath.toRadians(inc_2);
+        // Normalize negative inclination
+//        if (INC_2 < 0) {
+//            // Convert negative inclination to equivalent positive inclination
+//            INC_2 = FastMath.PI - INC_2;
+//            // Also need to flip RAAN by 180° for complete equivalence
+//            // (though in this simple case it may not be necessary)
+//        }
+        this.DATE = dateStr;
+    }
+
+
+    /**
+     * Rocket equation for final mass after a ΔV: m_final = m_initial * exp(-|ΔV|/(ISP*g0)).
+     */
+
+    public static double calculateFinalMass(double initialMass, double deltaV, double ISP, double g0) {
+        return initialMass * FastMath.exp(-Math.abs(deltaV) / (ISP * g0));
+    }
+
+
+    /**
+     * Validate basic orbital and mass parameters.
+     */
+
+    private void validateOrbitParameters() {
+        if (SMA <= 0) {
+            throw new IllegalArgumentException("Semi-major axis must be positive");
+        }
+        if (DRYMASS <= 0 || ERGOL < 0) {
+            throw new IllegalArgumentException("Invalid mass parameters");
+        }
+    }
+
+
+    /**
+     * Validate that the maneuver is feasible (time and fuel constraints).
+     */
+
+    private void validateManeuverParameters(AbsoluteDate initialDate, AbsoluteDate apsideDate, double finalMass) {
+        System.out.println("Initial Date : "+initialDate);
+        System.out.println("Apside Date : "+apsideDate);
+        if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+            throw new IllegalArgumentException("Initial date must be >= reference apside date");
+        }
+        double fuelThreshold = 1e-3;
+        if (finalMass < DRYMASS || ERGOL < fuelThreshold || DRYMASS <= 0) {
+            throw new IllegalArgumentException("Insufficient mass for inclination change");
+        }
+
+    }
+
+    @Override
+    public void loadMassData(Boolean isMassCalculation) throws IOException {
+        super.loadMassData(isMassCalculation);
+        if (isMassCalculation && cmdData.containsKey("INC_2")) {
+            this.INC_2 = FastMath.toRadians(Double.parseDouble(cmdData.get("INC_2")));
+            // Normalize negative inclination
+//            if (INC_2 < 0) {
+//                // Convert negative inclination to equivalent positive inclination
+//                INC_2 = FastMath.PI - INC_2;
+//                // Also need to flip RAAN by 180° for complete equivalence
+//                // (though in this simple case it may not be necessary)
+//            }
+        }
+        if (cmdData.containsKey("INC_2")) {
+            this.INC_2 = FastMath.toRadians(Double.parseDouble(cmdData.get("INC_2")));
+            // Normalize negative inclination
+//            if (INC_2 < 0) {
+//                // Convert negative inclination to equivalent positive inclination
+//                INC_2 = FastMath.PI - INC_2;
+//                // Also need to flip RAAN by 180° for complete equivalence
+//                // (though in this simple case it may not be necessary)
+//            }
+        }
+    }
+
+    @Override
+    public void loadTimeData(Boolean isTimeCalculation) throws IOException {
+        super.loadTimeData(isTimeCalculation);
+        if (tipData.containsKey("INC_2")) {
+            this.INC_2 = FastMath.toRadians(Double.parseDouble(tipData.get("INC_2")));
+            // Normalize negative inclination
+//            if (INC_2 < 0) {
+//                // Convert negative inclination to equivalent positive inclination
+//                INC_2 = FastMath.PI - INC_2;
+//                // Also need to flip RAAN by 180° for complete equivalence
+//                // (though in this simple case it may not be necessary)
+//            }
+        }
+        System.out.println(" - timeIntermediateParametersFile => ManeuverType: " + MANEUV_TYPE
+                + ", Target Inclination: " + FastMath.toDegrees(INC_2) + "°");
+    }
+
+
+    /**
+     * Returns the date of the ascending node after 'state', or descending node if ascending=false.
+     */
+
+    private AbsoluteDate findNodeDate(SpacecraftState state, boolean ascending) {
+        KeplerianOrbit kep = new KeplerianOrbit(state.getOrbit());
+        double trueAnomaly = kep.getTrueAnomaly();
+        double raan = kep.getRightAscensionOfAscendingNode();
+        double aop = kep.getPerigeeArgument();
+
+        // Ascending node => TA = -(RAAN + AoP) mod 2π
+        // Descending node => that + π
+        double taNode = -(raan + aop) % (2 * FastMath.PI);
+        if (!ascending) {
+            taNode += FastMath.PI;
+        }
+        taNode = taNode % (2 * FastMath.PI);
+        // Si taNode < 0 : on ajoute 2π
+        if (taNode < 0) {
+            taNode += 2 * FastMath.PI;
+        }
+
+        double period = kep.getKeplerianPeriod();
+        double diff = (taNode - trueAnomaly + 2 * FastMath.PI) % (2 * FastMath.PI);
+        double timeToNode = diff / (2 * FastMath.PI) * period;
+
+        // If time is extremely small, skip one orbit to avoid negative or near-zero time
+        if (timeToNode < TIME_TOLERANCE_SECONDS) {
+            timeToNode = period;
+        }
+
+        // System.out.println("timeToNode = " + timeToNode);
+        return state.getDate().shiftedBy(timeToNode);
+    }
+
+
+    /**
+     * Propagate from a known origin orbit to a target date => get state.
+     */
+
+    private SpacecraftState propagateToDate(KeplerianOrbit originOrbit, AbsoluteDate date) {
+        KeplerianPropagator kp = new KeplerianPropagator(originOrbit);
+        return kp.propagate(date);
+    }
+
+    /**
+     * Find the time the orbit crosses Earth’s equator, either ascending or descending,
+     * starting from initState and searching up to 2 orbital periods in the future.
+     *
+     * @param initState  the initial state from which to begin searching
+     * @param ascending  true if we want the ascending crossing (z>0 after crossing),
+     *                   false if we want the descending crossing (z<0 after crossing)
+     * @return the AbsoluteDate when z(t)=0 with z'(t) having the correct sign
+     * @throws RuntimeException if no crossing is found in the 2-period interval
+     */
+    private AbsoluteDate findEquatorCrossing(SpacecraftState initState, boolean ascending) {
+
+        // 1) Basic data: we’ll bracket up to 2 orbital periods from the initial date
+        double period = new KeplerianOrbit(initState.getOrbit()).getKeplerianPeriod();
+        // Expecting a crossing roughly every half orbit, plus a small buffer
+        double searchDuration = period ;
+
+        AbsoluteDate startDate = initState.getDate();
+        AbsoluteDate endDate   = startDate.shiftedBy(searchDuration);
+
+        // 2) We'll define a step size for a "coarse" bracket search
+        double step = 5.0; // 1-minute step. Adjust as needed.
+        KeplerianPropagator bracketProp = new KeplerianPropagator(new KeplerianOrbit(initState.getOrbit()));
+        SpacecraftState previousState = initState;
+        double previousZ = previousState.getPVCoordinates().getPosition().getZ();
+
+        // We'll store two times that bracket the crossing
+        AbsoluteDate bracketStart = null;
+        AbsoluteDate bracketEnd   = null;
+
+        // 3) Coarse step loop: from t=0 to t=searchDuration
+        double t = 0.0;
+        while (t < searchDuration) {
+            AbsoluteDate currentDate = startDate.shiftedBy(t);
+            SpacecraftState currentSt = bracketProp.propagate(currentDate);
+
+            double currentZ = currentSt.getPVCoordinates().getPosition().getZ();
+            // check sign changes from prev step
+            if ((previousZ > 0 && currentZ < 0) || (previousZ < 0 && currentZ > 0)) {
+                // we found a bracket
+                bracketStart = currentDate.shiftedBy(-step);  // the previous step time
+                bracketEnd   = currentDate;
+                break;
+            }
+            previousZ = currentZ;
+            t += step;
+        }
+
+        if (bracketStart == null) {
+            throw new RuntimeException("No equator crossing found in 2 orbital periods!");
+        }
+
+        // 4) Now do a small bisection within bracketStart..bracketEnd to refine z(t)=0
+        //    We can do ~10 iterations or until we are sub-second in time, etc.
+        KeplerianPropagator refineProp = new KeplerianPropagator(new KeplerianOrbit(initState.getOrbit()));
+        double tolerance = 0.0001; // 1 second tolerance for time. Adjust as needed.
+        double left = bracketStart.durationFrom(startDate);
+        double right = bracketEnd.durationFrom(startDate);
+
+        AbsoluteDate crossingDate = null;
+
+        for (int i = 0; i < 10000; i++) { // up to 50 iterations
+            double mid = 0.5 * (left + right);
+            AbsoluteDate midDate = startDate.shiftedBy(mid);
+            SpacecraftState midSt = refineProp.propagate(midDate);
+            double midZ = midSt.getPVCoordinates().getPosition().getZ();
+
+            // check sign at left
+            AbsoluteDate leftDate = startDate.shiftedBy(left);
+            double leftZ = refineProp.propagate(leftDate).getPVCoordinates().getPosition().getZ();
+
+            if (midZ == 0.0) {
+                crossingDate = midDate;
+                break;
+            }
+            if ((leftZ > 0 && midZ < 0) || (leftZ < 0 && midZ > 0)) {
+                // crossing in [left, mid]
+                right = mid;
+            } else {
+                // crossing in [mid, right]
+                left = mid;
+            }
+
+            if ((right - left) < tolerance) {
+                // we’re close enough
+                crossingDate = startDate.shiftedBy(mid);
+                break;
+            }
+        }
+
+        if (crossingDate == null) {
+            // fallback
+            crossingDate = startDate.shiftedBy(0.5*(left + right));
+        }
+
+        // 5) Now confirm the sign of z'(t) for ascending or descending
+        //    We can check velocity’s z-component at crossingDate
+        SpacecraftState crossSt = refineProp.propagate(crossingDate);
+        double vz = crossSt.getPVCoordinates().getVelocity().getZ();
+        boolean isAscending = (vz > 0);
+
+        if (ascending && !isAscending) {
+            // The crossing we found is descending => possibly we want the next crossing
+            // (we can shift by half an orbit or we can do a second bracket search after crossingDate).
+            // For simplicity, let’s do a second bracket approach from crossingDate+some step
+            // or just throw an exception for this demonstration.
+            throw new RuntimeException("Found descending node, but user requested ascending!");
+        } else if (!ascending && isAscending) {
+            // Similarly, user wants descending but we found ascending
+            throw new RuntimeException("Found ascending node, but user requested descending!");
+        }
+
+        System.out.println("Equator crossing found at " + crossingDate +
+                (ascending ? " (ascending)" : " (descending)"));
+        return crossingDate;
+    }
+
+
+    // Execute la maneuvre de changement d'inclinaison
+    @Override
+    public void computeAndExecute() throws IOException, ParseException {
+
+        double startTime = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+        validateOrbitParameters();
+
+        Frame eme2000 = FramesFactory.getEME2000();
+        MqttService mqttService = new MqttService();
+
+        // Build times
+        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+
+        // Construct orbit at apside date
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+
+        double initialMass = DRYMASS + ERGOL;
+        this.m0 = initialMass;
+        validateManeuverParameters(initialDate, apsideDate, initialMass);
+
+        // Propagate to initial date
+        KeplerianPropagator prop = new KeplerianPropagator(orbitAtApside);
+        logState("apside", new SpacecraftState(orbitAtApside, initialMass));
+        SpacecraftState stateAtInitial = prop.propagate(initialDate);
+        KeplerianOrbit initialOrbit = new KeplerianOrbit(stateAtInitial.getOrbit());
+        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
+        logState("initial", initialState);
+
+        // -------------- Main Logic --------------
+        double incEps = 1e-3;   // threshold for near-0 inc (radians)
+        double eccThreshold = 0.05;   // "high e" threshold
+        double currentInc = initialOrbit.getI();
+
+        System.out.println("Current inc= " + FastMath.toDegrees(currentInc)
+                + "°, ECC= " + ECC);
+
+        // Case A: near eq + high e => wait for apogee
+        if (currentInc <= incEps && ECC >= eccThreshold) {
+            System.out.println("Case A: near-eq + high e => wait for apogee.");
+
+            // 1) find next apogee
+            AbsoluteDate apogeeDate = findNextApogee(initialState);
+            double smallShift = 1.0;
+            AbsoluteDate burnDate = apogeeDate.shiftedBy(smallShift);
+
+            // 2) get velocity at apogee
+            SpacecraftState stateApogee = propagateToDate(initialOrbit, apogeeDate);
+            Vector3D velocityApg = stateApogee.getPVCoordinates().getVelocity();
+            double speedApg = velocityApg.getNorm();
+
+            // Build local radial/east/north
+            Vector3D positionApg = stateApogee.getPVCoordinates().getPosition();
+            Vector3D radialUnit = positionApg.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+            double signNorth = FastMath.signum(velocityApg.getZ());
+
+            double vHorizFinal = speedApg * FastMath.cos(INC_2);
+            double vVertFinal = speedApg * FastMath.sin(INC_2) * signNorth;
+
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocityApg);
+
+            // build impulse
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // propagate
+            KeplerianPropagator mp = new KeplerianPropagator(initialOrbit);
+            mp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = mp.propagate(burnDate);
+
+            double dvApogee = deltaVVector.getNorm();
+            double massAfterBurn = calculateFinalMass(initialMass, dvApogee, ISP, g0);
+
+            KeplerianOrbit orbitAfter = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitAfter.getA(),
+                    orbitAfter.getE(),
+                    orbitAfter.getI(),
+                    orbitAfter.getPerigeeArgument(),
+                    orbitAfter.getRightAscensionOfAscendingNode(),
+                    orbitAfter.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfterBurn);
+            logState("final", this.finalState);
+
+            double fuelUsed = initialMass - massAfterBurn;
+            System.out.println("Apogee burn => dv= " + dvApogee
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+            Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+            // Validate end horizon date
+            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+            }
+            Utils.writeJsonPayload(secondPayload);
+            if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
+                throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
+            }
+            Utils.logResults(resultFileName, finalState, finalOrbit,
+                    this.m0, DRYMASS);
+            writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+
+            writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+            mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+
+            return;
+        }
+
+        // Case B: near eq + low e => immediate single-burn
+        else if (currentInc <= 0.1) {
+            System.out.println("Case B: near-eq + low e => immediate single-burn.");
+
+            // If the difference is negligible, do nothing
+            double deltaInc = INC_2 - currentInc;
+            if (Math.abs(deltaInc) < 1e-4) {
+                System.out.println("No significant inc change => no burn.");
+                // Just log results & return
+                Utils.logResults(resultFileName, initialState, initialOrbit, this.m0, DRYMASS);
+                return;
+            }
+
+            // Build local frame for immediate burn
+            Vector3D velocity = initialState.getPVCoordinates().getVelocity();
+            double speed = velocity.getNorm();
+
+            Vector3D position = initialState.getPVCoordinates().getPosition();
+            Vector3D radialUnit = position.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+
+            double signNorth = FastMath.signum(velocity.getZ());
+            double vHorizFinal = speed * FastMath.cos(INC_2);
+            double vVertFinal = speed * FastMath.sin(INC_2) * signNorth;
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocity);
+
+            AbsoluteDate burnDate = initialDate.shiftedBy(0.001);
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            KeplerianPropagator manProp = new KeplerianPropagator(initialOrbit);
+            manProp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = manProp.propagate(burnDate);
+
+            double dvImmediate = deltaVVector.getNorm();
+            double massAfter = calculateFinalMass(initialMass, dvImmediate, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitPost.getA(),
+                    orbitPost.getE(),
+                    orbitPost.getI(),
+                    orbitPost.getPerigeeArgument(),
+                    orbitPost.getRightAscensionOfAscendingNode(),
+                    orbitPost.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfter);
+            logState("final", this.finalState);
+
+            double fuelUsed = initialMass - massAfter;
+            System.out.println("Immediate burn => dv= " + dvImmediate
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+            Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+            if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+                throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+            }
+            Utils.writeJsonPayload(secondPayload);
+            if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
+                throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
+            }
+            Utils.logResults(resultFileName, finalState, finalOrbit,
+                    this.m0, DRYMASS);
+            writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+            writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+            mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+
+            return;
+        }
+
+// ======================
+// CASE C LOGIC
+// ======================
+        else {
+            System.out.println("Case C: inc >= threshold => do node-based approach.");
+
+            // 1) ascend node
+            KeplerianPropagator ascendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate ascNodeDate = findNodeDate(initialState, true);
+            SpacecraftState ascNodeState = ascendProp.propagate(ascNodeDate);
+            ascNodeState = new SpacecraftState(ascNodeState.getOrbit(), initialMass);
+            double speedAsc = ascNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // 2) descend node
+            KeplerianPropagator descendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate descNodeDate = findNodeDate(initialState, false);
+            SpacecraftState descNodeState = descendProp.propagate(descNodeDate);
+            descNodeState = new SpacecraftState(descNodeState.getOrbit(), initialMass);
+            double speedDesc = descNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // choose slower node
+            final boolean useAscending = (speedAsc <= speedDesc);
+            AbsoluteDate chosenNodeDate = useAscending ? ascNodeDate : descNodeDate;
+            SpacecraftState chosenNodeState = useAscending ? ascNodeState : descNodeState;
+            double speedNode = useAscending ? speedAsc : speedDesc;
+
+            System.out.println("Ascending node speed= " + speedAsc
+                    + " m/s, descending= " + speedDesc + " m/s => picking "
+                    + (useAscending ? "ascending" : "descending") + " node, speed= " + speedNode);
+
+            // 3) Attempt a single-impulse plane change at that node
+            double currentIncRad = initialOrbit.getI();
+            double deltaInc = INC_2 - currentIncRad; // can be negative if inc_2 < inc
+            // ---------------- 3) build ΔV that gives the target inclination ----------------
+            Vector3D nodePos = chosenNodeState.getPVCoordinates().getPosition();
+            Vector3D nodeVel = chosenNodeState.getPVCoordinates().getVelocity();
+            speedNode = nodeVel.getNorm();
+
+// local unit vectors at the node
+                             // direction of motion
+            Vector3D zUnit     = new Vector3D(0, 0, 1);          // Earth’s north
+            // 3) build plane‐change ΔV at that node
+            double Δi = INC_2 - currentIncRad;               // change in inclination
+// decompose existing velocity
+            Vector3D radialUnit = nodePos.normalize();
+            double vr = Vector3D.dotProduct(nodeVel, radialUnit);
+            Vector3D radialComp = radialUnit.scalarMultiply(vr);
+
+// transverse (tangential + out‐of‐plane) axes
+            Vector3D eastUnit  = zUnit.crossProduct(nodePos).normalize(); // along-track
+            Vector3D northUnit = zUnit;                                  // cross-track
+
+// flight-path angle φ
+            double phi = FastMath.atan2(vr, Math.sqrt(speedNode*speedNode - vr*vr));
+
+// rotated tangential component
+            double vt = speedNode * FastMath.cos(phi);
+            double v_tang_final = vt * FastMath.cos(Δi);
+            double v_cross_final = vt * FastMath.sin(Δi) * FastMath.signum(nodeVel.getZ());
+            Vector3D tangentialFinal =
+                    eastUnit.scalarMultiply(v_tang_final)
+                            .add(northUnit.scalarMultiply(v_cross_final));
+
+// recombine and compute ΔV
+            Vector3D vDesired = radialComp.add(tangentialFinal);
+            Vector3D deltaVVector  = vDesired.subtract(nodeVel);
+
+
+            double   dvMagnitude   = deltaVVector.getNorm();           // still ≈ 2 v sin(Δi/2)
+
+
+
+            double burnShift = 0.001;
+            AbsoluteDate burnTriggerDate = chosenNodeDate.shiftedBy(burnShift);
+            DateDetector burnTrigger = new DateDetector(burnTriggerDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // 4) propagate +0.001 s
+            KeplerianPropagator manPropNode = new KeplerianPropagator(initialOrbit);
+            manPropNode.addEventDetector(singleBurn);
+            AbsoluteDate postBurnDate = burnTriggerDate.shiftedBy(0.001);
+            SpacecraftState stateAfterBurn = manPropNode.propagate(postBurnDate);
+
+            double dvNode = deltaVVector.getNorm();
+            double massAfterNode = calculateFinalMass(initialMass, dvNode, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            double finalIncDeg = FastMath.toDegrees(orbitPost.getI());
+
+            System.out.println("Node-based => dv= " + dvNode
+                    + " m/s, used= " + (initialMass - massAfterNode)
+                    + " kg, final inc= " + finalIncDeg + "°");
+
+            // Decide if inclination is good enough
+            double incError = Math.abs(finalIncDeg - FastMath.toDegrees(INC_2));
+
+            if (incError <= 0.5) {
+                // We accept this partial result
+                System.out.println("Inclination is within 0.5° => We'll keep node-based result");
+                KeplerianOrbit finalOrbit = new KeplerianOrbit(orbitPost);
+                this.finalState = new SpacecraftState(finalOrbit, massAfterNode);
+                logState("final", this.finalState);
+                Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+                if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+                }
+                Utils.writeJsonPayload(secondPayload);
+                if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
+                    throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
+                }
+                Utils.logResults(resultFileName, finalState, finalOrbit, this.m0, DRYMASS);
+                writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+                writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+                mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+                // log + store
+
+            } else {
+                // Not close enough => attempt a burn at the actual equator crossing
+                System.out.println("Inclination off by " + incError + "° => attempt equator crossing approach");
+
+                // 5) We'll revert to old initialOrbit & do the "purely out-of-plane at equator crossing"
+                //    e.g. find time when lat=0 ascending => do same dv=2v sin(...) approach
+
+                // (a) find equator crossing date
+                // (a) find equator-crossing date
+                boolean wantAscending = deltaInc >= 0;
+                AbsoluteDate eqCrossingDate;
+                try {
+                    eqCrossingDate = findEquatorCrossing(initialState, wantAscending);
+                } catch (RuntimeException wrongSense) {
+                    System.out.println("Desired node not found (" + wrongSense.getMessage()
+                            + "). Trying the opposite node.");
+                    eqCrossingDate = findEquatorCrossing(initialState, !wantAscending);
+                }
+
+
+                // (b) compute speed at that crossing
+                KeplerianPropagator eqProp = new KeplerianPropagator(initialOrbit);
+                SpacecraftState eqState = eqProp.propagate(eqCrossingDate);
+                double speedEq = eqState.getPVCoordinates().getVelocity().getNorm();
+                Vector3D eqNodePos = eqState.getPVCoordinates().getPosition();
+                Vector3D eqNodeVel = eqState.getPVCoordinates().getVelocity();
+
+
+                // now your pure‐rotation Δv
+//                double eqDeltaInc = INC_2 - currentIncRad;
+//                double eqDvMagnitude = 2.0 * speedEq * FastMath.sin(Math.abs(eqDeltaInc)/2.0);
+//                // (c) pure‐rotation Δv that preserves |v|
+//                double di     = eqDeltaInc;           // rotation angle in radians
+//                Vector3D v      ;              // the orbital speed at the node
+//                // at equator crossing:
+//                Vector3D rHat       = eqNodePos.normalize();         // radial axis
+//                v          = eqNodeVel;                     // current velocity
+//                di           = INC_2 - currentIncRad;         // desired tilt
+//// compute rotated velocity: Rodriguez’ rotation formula
+//                Vector3D vRotated =
+//                        v.scalarMultiply(FastMath.cos(di))
+//                                .add(rHat.crossProduct(v).scalarMultiply(FastMath.sin(di)))
+//                                .add(rHat.scalarMultiply(Vector3D.dotProduct(rHat, v) * (1 - FastMath.cos(di))));
+//// the pure‐plane‐change ΔV:
+//                Vector3D eqDeltaV = vRotated.subtract(v);
+                Vector3D rHat  = eqNodePos.normalize();
+                Vector3D v     = eqNodeVel;
+                double   di    = INC_2 - currentIncRad;
+
+// determine crossing sense from the z-velocity
+                boolean isAscending = (v.getZ() > 0);
+
+// choose axis direction so +di always tilts you toward the target plane
+                Vector3D axis = isAscending ? rHat : rHat.negate();
+
+// Rodrigues’ rotation about “axis” by +di
+                Vector3D vRotated =
+                        v.scalarMultiply(FastMath.cos(di))
+                                .add(axis.crossProduct(v).scalarMultiply(FastMath.sin(di)))
+                                .add(axis.scalarMultiply(Vector3D.dotProduct(axis, v) * (1 - FastMath.cos(di))));
+
+// now your pure plane-change ΔV
+                Vector3D eqDeltaV = vRotated.subtract(v);
+                double eqDvUsed = eqDeltaV.getNorm();
+                double eqMassAfter = calculateFinalMass(initialMass, eqDvUsed, ISP, g0);
+// …then build your ImpulseManeuver(eqBurnDate, eqDeltaV, ISP) as before…
+
+
+
+
+
+                // Before creating the ImpulseManeuver, add:
+                Vector3D testVelocity = eqNodeVel.add(eqDeltaV);
+                System.out.println("DEBUG: Equator crossing position = " + eqNodePos.getNorm()/1000.0 + " km");
+                System.out.println("DEBUG: Original velocity = " + eqNodeVel.getNorm() + " m/s");
+//                System.out.println("DEBUG: Delta-V magnitude = " + eqDvMagnitude + " m/s");
+                System.out.println("DEBUG: Delta-V vector = [" + eqDeltaV.getX() + ", " + eqDeltaV.getY() + ", " + eqDeltaV.getZ() + "]");
+                System.out.println("DEBUG: New velocity = " + testVelocity.getNorm() + " m/s");
+                System.out.println("DEBUG: Original velocity vector = [" + eqNodeVel.getX() + ", " + eqNodeVel.getY() + ", " + eqNodeVel.getZ() + "]");
+                System.out.println("DEBUG: New velocity vector = [" + testVelocity.getX() + ", " + testVelocity.getY() + ", " + testVelocity.getZ() + "]");
+                System.out.println("DEBUG: Orbital velocity at this radius = " + Math.sqrt(MU/eqNodePos.getNorm()) + " m/s");
+                System.out.println("DEBUG: Escape velocity at this radius = " + Math.sqrt(2*MU/eqNodePos.getNorm()) + " m/s");
+                double specificEnergy = 0.5 * testVelocity.getNorm() * testVelocity.getNorm() - MU / eqNodePos.getNorm();
+                System.out.println("DEBUG: Specific energy = " + specificEnergy + " m²/s²");
+                System.out.println("DEBUG: Energy threshold for hyperbolic = 0.0 m²/s²");
+                double dotProduct = eqNodeVel.normalize().dotProduct(eqDeltaV.normalize());
+                System.out.println("DEBUG: Cosine of angle between velocity and delta-V = " + dotProduct);
+                System.out.println("DEBUG: Should be near 0.0 for purely cross-track burn");
+                if (specificEnergy >= 0) {
+                    System.out.println("Warning: Burn would result in hyperbolic orbit (energy=" + specificEnergy + ")");
+                    // Either reduce the burn or handle differently
+                    throw new IllegalArgumentException("Inclination change too large for single burn - would create Hyperbolic inclinaison orbit");
+                }
+
+                AbsoluteDate eqBurnDate = eqCrossingDate.shiftedBy(0.001);
+                ImpulseManeuver eqBurn = new ImpulseManeuver(new DateDetector(eqBurnDate), eqDeltaV, ISP);
+
+                // (d) propagate +0.001 s from eq crossing
+                KeplerianPropagator eqManProp = new KeplerianPropagator(initialOrbit);
+                eqManProp.addEventDetector(eqBurn);
+                AbsoluteDate eqPostDate = eqBurnDate.shiftedBy(0.001);
+                SpacecraftState eqFinalState = eqManProp.propagate(eqPostDate);
+
+//                double eqDvUsed = eqDvMagnitude;
+//                double eqMassAfter = calculateFinalMass(initialMass, eqDvUsed, ISP, g0);
+                KeplerianOrbit eqOrbitPost = new KeplerianOrbit(eqFinalState.getOrbit());
+                double eqIncDeg = FastMath.toDegrees(eqOrbitPost.getI());
+
+                System.out.println("Equator-based => dv= " + eqDvUsed
+                        + " m/s, used= " + (initialMass - eqMassAfter)
+                        + " kg, final inc= " + eqIncDeg + "°");
+
+                // accept that orbit
+                this.finalState = new SpacecraftState(eqOrbitPost, eqMassAfter);
+                logState("final", this.finalState);
+                Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+                if (!isEqualOrAfterWithTolerance(endHorizonDate, stateAfterBurn.getDate(), TIME_TOLERANCE_SECONDS)) {
+                    throw new IllegalArgumentException("Initial date must be before the end of horizon time!");
+                }
+                Utils.writeJsonPayload(secondPayload);
+                if (finalState.getA()<0 || finalState.getE()>1 || Double.isNaN(finalState.getA()) || Double.isNaN(finalState.getE()) ) {
+                    throw new IllegalArgumentException("Inclinaison failed ! Hyperbolic inclinaison maneuver !");
+                }
+                System.out.printf("Raw final inc = %.12f°\n", FastMath.toDegrees(finalState.getI()));
+                Utils.logResults(resultFileName, finalState, eqOrbitPost, this.m0, DRYMASS);
+                writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+                writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+                mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+                //Utils.logResults(resultFileName, finalState, eqOrbitPost, eqMassAfter, DRYMASS);
+            }
+        }
+        double finalIncDeg =
+                FastMath.toDegrees(new KeplerianOrbit(finalState.getOrbit()).getI());
+
+        // Console
+        System.out.println("[RESULT] Final inclination  : " + finalIncDeg + "°");
+
+        double elapsedSec = (System.currentTimeMillis() - startTime) * 1e-3;
+        System.out.println("Inclination maneuver completed in " + elapsedSec + " s");
+    }
+
+    // Helper to keep angle in [0,2π)
+    private static double normalizeAngle0to2pi(double angle) {
+        angle = angle % (2*Math.PI);
+        if (angle < 0) angle += 2*Math.PI;
+        return angle;
+    }
+
+    private static void logState(final String label, final SpacecraftState s) {
+        KeplerianOrbit o = new KeplerianOrbit(s.getOrbit());
+
+        // Normalize mean and true anomaly to [0, 2π)
+        double meanAnomaly = normalizeAngle0to2pi(o.getMeanAnomaly());
+        double trueAnomaly = normalizeAngle0to2pi(o.getTrueAnomaly());
+
+        System.out.printf(
+                "\n[%s]\n" +
+                        "  Epoch   : %s\n" +
+                        "  Mass    : %.3f kg\n" +
+                        "  a       : %.3f km\n" +
+                        "  e       : %.8f\n" +
+                        "  i       : %.3f °\n" +
+                        "  RAAN    : %.3f °\n" +
+                        "  ω (PA)  : %.3f °\n" +
+                        "  M       : %.3f °\n" +
+                        "  ν (TA)  : %.3f °\n",
+                label,
+                s.getDate(),
+                s.getMass(),
+                o.getA() / 1000.0,
+                o.getE(),
+                FastMath.toDegrees(o.getI()),
+                FastMath.toDegrees(o.getRightAscensionOfAscendingNode()),
+                FastMath.toDegrees(o.getPerigeeArgument()),
+                FastMath.toDegrees(meanAnomaly),  // Use normalized mean anomaly
+                FastMath.toDegrees(trueAnomaly)   // Use normalized true anomaly
+        );
+    }
+
+    // =========================
+    //  ADAPTED ERGOL CONSUMPTION
+    // =========================
+    @Override
+    public void calculateErgolConsumption() throws IOException {
+        // We'll replicate the "Case A/B/C" logic in an approximate form.
+
+        double initialMass = DRYMASS + ERGOL;
+        this.m0 = initialMass;
+
+        double startTime = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+//        validateOrbitParameters();
+
+        Frame eme2000 = FramesFactory.getEME2000();
+        MqttService mqttService = new MqttService();
+
+        // Build times
+        AbsoluteDate dateTLE = new AbsoluteDate(DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate initialDate = dateTLE.shiftedBy(manoeuverRelativeDate);
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+
+        // Construct orbit at apside date
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+
+
+//        validateManeuverParameters(initialDate, apsideDate, initialMass);
+
+        // Propagate to initial date
+        KeplerianPropagator prop = new KeplerianPropagator(orbitAtApside);
+        SpacecraftState stateAtInitial = prop.propagate(initialDate);
+        KeplerianOrbit initialOrbit = new KeplerianOrbit(stateAtInitial.getOrbit());
+        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
+
+        // -------------- Main Logic --------------
+        double incEps = 2e-3;   // threshold for near-0 inc (radians)
+        double eccThreshold = 0.05;   // "high e" threshold
+        double currentInc = initialOrbit.getI();
+
+        System.out.println("Current inc= " + FastMath.toDegrees(currentInc)
+                + "°, ECC= " + ECC);
+
+        // Case A: near eq + high e => wait for apogee
+        if (currentInc <= incEps && ECC >= eccThreshold) {
+            System.out.println("Case A: near-eq + high e => wait for apogee.");
+
+            // 1) find next apogee
+            AbsoluteDate apogeeDate = findNextApogee(initialState);
+            double smallShift = 1.0;
+            AbsoluteDate burnDate = apogeeDate.shiftedBy(smallShift);
+
+            // 2) get velocity at apogee
+            SpacecraftState stateApogee = propagateToDate(initialOrbit, apogeeDate);
+            Vector3D velocityApg = stateApogee.getPVCoordinates().getVelocity();
+            double speedApg = velocityApg.getNorm();
+
+            // Build local radial/east/north
+            Vector3D positionApg = stateApogee.getPVCoordinates().getPosition();
+            Vector3D radialUnit = positionApg.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+            double signNorth = FastMath.signum(velocityApg.getZ());
+
+            double vHorizFinal = speedApg * FastMath.cos(INC_2);
+            double vVertFinal = speedApg * FastMath.sin(INC_2) * signNorth;
+
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocityApg);
+
+            // build impulse
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // propagate
+            KeplerianPropagator mp = new KeplerianPropagator(initialOrbit);
+            mp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = mp.propagate(burnDate);
+
+            double dvApogee = deltaVVector.getNorm();
+            double massAfterBurn = calculateFinalMass(initialMass, dvApogee, ISP, g0);
+
+            KeplerianOrbit orbitAfter = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitAfter.getA(),
+                    orbitAfter.getE(),
+                    orbitAfter.getI(),
+                    orbitAfter.getPerigeeArgument(),
+                    orbitAfter.getRightAscensionOfAscendingNode(),
+                    orbitAfter.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfterBurn);
+
+            double fuelUsed = initialMass - massAfterBurn;
+            System.out.println("Apogee burn => dv= " + dvApogee
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+//            Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+//            Utils.writeJsonPayload(secondPayload);
+            fuelUsed = initialMass - massAfterBurn;
+
+            System.out.println("Fuel used " + fuelUsed + " kg");
+            Utils.appendLineToFile(consommationErgolsFile, String.valueOf(fuelUsed));
+//            writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+//            writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+//            mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+
+            return;
+        }
+
+        // Case B: near eq + low e => immediate single-burn
+        else if (currentInc <= 0.1) {
+            System.out.println("Case B: near-eq + low e => immediate single-burn.");
+
+            // If the difference is negligible, do nothing
+            double deltaInc = INC_2 - currentInc;
+            if (Math.abs(deltaInc) < 1e-4) {
+                System.out.println("No significant inc change => no burn.");
+                // Just log results & return
+                Utils.logResults(resultFileName, initialState, initialOrbit, this.m0, DRYMASS);
+                return;
+            }
+
+            // Build local frame for immediate burn
+            Vector3D velocity = initialState.getPVCoordinates().getVelocity();
+            double speed = velocity.getNorm();
+
+            Vector3D position = initialState.getPVCoordinates().getPosition();
+            Vector3D radialUnit = position.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+
+            double signNorth = FastMath.signum(velocity.getZ());
+            double vHorizFinal = speed * FastMath.cos(INC_2);
+            double vVertFinal = speed * FastMath.sin(INC_2) * signNorth;
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocity);
+
+            AbsoluteDate burnDate = initialDate.shiftedBy(0.001);
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            KeplerianPropagator manProp = new KeplerianPropagator(initialOrbit);
+            manProp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = manProp.propagate(burnDate);
+
+            double dvImmediate = deltaVVector.getNorm();
+            double massAfter = calculateFinalMass(initialMass, dvImmediate, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitPost.getA(),
+                    orbitPost.getE(),
+                    orbitPost.getI(),
+                    orbitPost.getPerigeeArgument(),
+                    orbitPost.getRightAscensionOfAscendingNode(),
+                    orbitPost.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfter);
+
+            double fuelUsed = initialMass - massAfter;
+            System.out.println("Immediate burn => dv= " + dvImmediate
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+//            Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+//            Utils.writeJsonPayload(secondPayload);
+            fuelUsed = initialMass - massAfter;
+
+            System.out.println("Fuel used " + fuelUsed + " kg");
+            Utils.appendLineToFile(consommationErgolsFile, String.valueOf(fuelUsed));
+//            writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+//            writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+//            mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+
+            return;
+        }
+
+// ======================
+// CASE C LOGIC
+// ======================
+        else {
+            System.out.println("Case C: inc >= threshold => do node-based approach.");
+
+            // 1) ascend node
+            KeplerianPropagator ascendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate ascNodeDate = findNodeDate(initialState, true);
+            SpacecraftState ascNodeState = ascendProp.propagate(ascNodeDate);
+            ascNodeState = new SpacecraftState(ascNodeState.getOrbit(), initialMass);
+            double speedAsc = ascNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // 2) descend node
+            KeplerianPropagator descendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate descNodeDate = findNodeDate(initialState, false);
+            SpacecraftState descNodeState = descendProp.propagate(descNodeDate);
+            descNodeState = new SpacecraftState(descNodeState.getOrbit(), initialMass);
+            double speedDesc = descNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // choose slower node
+            final boolean useAscending = (speedAsc <= speedDesc);
+            AbsoluteDate chosenNodeDate = useAscending ? ascNodeDate : descNodeDate;
+            SpacecraftState chosenNodeState = useAscending ? ascNodeState : descNodeState;
+            double speedNode = useAscending ? speedAsc : speedDesc;
+
+            System.out.println("Ascending node speed= " + speedAsc
+                    + " m/s, descending= " + speedDesc + " m/s => picking "
+                    + (useAscending ? "ascending" : "descending") + " node, speed= " + speedNode);
+
+            // 3) Attempt a single-impulse plane change at that node
+            double currentIncRad = initialOrbit.getI();
+            double deltaInc = INC_2 - currentIncRad; // can be negative if inc_2 < inc
+            double dvMagnitude = 2.0 * speedNode * FastMath.sin(Math.abs(deltaInc) / 2.0);
+
+            // local normal direction
+            Vector3D nodePos = chosenNodeState.getPVCoordinates().getPosition();
+            Vector3D nodeVel = chosenNodeState.getPVCoordinates().getVelocity();
+            Vector3D crossTrackUnit = nodePos.crossProduct(nodeVel).normalize();
+
+            double baseSign  = (deltaInc >= 0.0) ? +1.0 : -1.0;
+            double nodeSign  = useAscending ? +1.0 : -1.0;  // flip for descending node
+            Vector3D burnDirection = crossTrackUnit.scalarMultiply(baseSign * nodeSign);
+
+            // Then the full impulse:
+            Vector3D deltaVVector = burnDirection.scalarMultiply(dvMagnitude);
+
+            double burnShift = 0.001;
+            AbsoluteDate burnTriggerDate = chosenNodeDate.shiftedBy(burnShift);
+            DateDetector burnTrigger = new DateDetector(burnTriggerDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // 4) propagate +0.001 s
+            KeplerianPropagator manPropNode = new KeplerianPropagator(initialOrbit);
+            manPropNode.addEventDetector(singleBurn);
+            AbsoluteDate postBurnDate = burnTriggerDate.shiftedBy(0.001);
+            SpacecraftState stateAfterBurn = manPropNode.propagate(postBurnDate);
+
+            double dvNode = deltaVVector.getNorm();
+            double massAfterNode = calculateFinalMass(initialMass, dvNode, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            double finalIncDeg = FastMath.toDegrees(orbitPost.getI());
+
+            System.out.println("Node-based => dv= " + dvNode
+                    + " m/s, used= " + (initialMass - massAfterNode)
+                    + " kg, final inc= " + finalIncDeg + "°");
+
+            // Decide if inclination is good enough
+            double incError = Math.abs(finalIncDeg - FastMath.toDegrees(INC_2));
+
+            if (incError <= 0.5) {
+                // We accept this partial result
+                System.out.println("Inclination is within 0.5° => We'll keep node-based result");
+                KeplerianOrbit finalOrbit = new KeplerianOrbit(orbitPost);
+                this.finalState = new SpacecraftState(finalOrbit, massAfterNode);
+//                Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+//                Utils.writeJsonPayload(secondPayload);
+                //Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+                //Utils.writeJsonPayload(secondPayload);
+                double fuelUsed = initialMass - massAfterNode;
+
+                System.out.println("Fuel used " + fuelUsed + " kg");
+                Utils.appendLineToFile(consommationErgolsFile, String.valueOf(fuelUsed));
+//                writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+//                writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+//                mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+                // log + store
+
+            } else {
+                // Not close enough => attempt a burn at the actual equator crossing
+                System.out.println("Inclination off by " + incError + "° => attempt equator crossing approach");
+
+                // 5) We'll revert to old initialOrbit & do the "purely out-of-plane at equator crossing"
+                //    e.g. find time when lat=0 ascending => do same dv=2v sin(...) approach
+
+                // (a) find equator crossing date
+                // (a) find equator-crossing date
+                boolean wantAscending = deltaInc >= 0;
+                AbsoluteDate eqCrossingDate;
+                try {
+                    eqCrossingDate = findEquatorCrossing(initialState, wantAscending);
+                } catch (RuntimeException wrongSense) {
+                    System.out.println("Desired node not found (" + wrongSense.getMessage()
+                            + "). Trying the opposite node.");
+                    eqCrossingDate = findEquatorCrossing(initialState, !wantAscending);
+                }
+
+
+                // (b) compute speed at that crossing
+                KeplerianPropagator eqProp = new KeplerianPropagator(initialOrbit);
+                SpacecraftState eqState = eqProp.propagate(eqCrossingDate);
+                double speedEq = eqState.getPVCoordinates().getVelocity().getNorm();
+
+                // (c) dv for inc change
+                double eqDeltaInc = INC_2 - currentIncRad;
+                double eqDvMagnitude = 2.0 * speedEq * FastMath.sin(Math.abs(eqDeltaInc)/2.0);
+
+                Vector3D eqNodePos = eqState.getPVCoordinates().getPosition();
+                Vector3D eqNodeVel = eqState.getPVCoordinates().getVelocity();
+                Vector3D eqCrossTrack = eqNodePos.crossProduct(eqNodeVel).normalize();
+                double vz          = eqState.getPVCoordinates().getVelocity().getZ(); // <-- here
+                boolean isAsc      = (vz > 0);               // TRUE = ascending crossing
+                double nodeSignEq  = isAsc ? +1.0 : -1.0;    // +1 ASC, −1 DSC
+                double baseSignEq  = (eqDeltaInc >= 0.0) ? +1.0 : -1.0;
+                Vector3D eqBurnDirection = eqCrossTrack.scalarMultiply(baseSignEq * nodeSignEq);
+                Vector3D eqDeltaV = eqBurnDirection.scalarMultiply(eqDvMagnitude);
+
+                AbsoluteDate eqBurnDate = eqCrossingDate.shiftedBy(0.001);
+                ImpulseManeuver eqBurn = new ImpulseManeuver(new DateDetector(eqBurnDate), eqDeltaV, ISP);
+
+                // (d) propagate +0.001 s from eq crossing
+                KeplerianPropagator eqManProp = new KeplerianPropagator(initialOrbit);
+                eqManProp.addEventDetector(eqBurn);
+                AbsoluteDate eqPostDate = eqBurnDate.shiftedBy(0.001);
+                SpacecraftState eqFinalState = eqManProp.propagate(eqPostDate);
+
+                double eqDvUsed = eqDvMagnitude;
+                double eqMassAfter = calculateFinalMass(initialMass, eqDvUsed, ISP, g0);
+                KeplerianOrbit eqOrbitPost = new KeplerianOrbit(eqFinalState.getOrbit());
+                double eqIncDeg = FastMath.toDegrees(eqOrbitPost.getI());
+
+                System.out.println("Equator-based => dv= " + eqDvUsed
+                        + " m/s, used= " + (initialMass - eqMassAfter)
+                        + " kg, final inc= " + eqIncDeg + "°");
+
+                // accept that orbit
+                this.finalState = new SpacecraftState(eqOrbitPost, eqMassAfter);
+                //Map<String, String> secondPayload = Utils.createDatePayload(stateAfterBurn.getDate(), endHorizonDate);
+                //Utils.writeJsonPayload(secondPayload);
+                double fuelUsed = initialMass - eqMassAfter;
+
+                System.out.println("Fuel used " + fuelUsed + " kg");
+                Utils.appendLineToFile(consommationErgolsFile, String.valueOf(fuelUsed));
+//                writeManeuverTimestamp(postManeuverDateFileName, stateAfterBurn.getDate());
+//                writeManeuverTimestamp(lastManeuverDateFile, stateAfterBurn.getDate());
+//                mqttService.sendFileViaMQTT(resultFileName, publishTopic);
+                //Utils.logResults(resultFileName, finalState, eqOrbitPost, eqMassAfter, DRYMASS);
+            }
+        }
+        double finalIncDeg =
+                FastMath.toDegrees(new KeplerianOrbit(finalState.getOrbit()).getI());
+
+        // Console
+        System.out.println("[RESULT] Final inclination  : " + finalIncDeg + "°");
+
+        double elapsedSec = (System.currentTimeMillis() - startTime) * 1e-3;
+        System.out.println("Inclination maneuver completed in " + elapsedSec + " s");
+
+
+    }
+
+
+    /**
+     * Find next apogee from 'state'. Apogee => TA=π.
+     */
+
+    private AbsoluteDate findNextApogee(SpacecraftState state) {
+        KeplerianOrbit kep = new KeplerianOrbit(state.getOrbit());
+        double currentTA = kep.getTrueAnomaly();
+        double period = kep.getKeplerianPeriod();
+
+        double diff = (FastMath.PI - currentTA + 2 * FastMath.PI) % (2 * FastMath.PI);
+        if (diff < 1e-10) {
+            diff += 2 * FastMath.PI;
+        }
+        double fraction = diff / (2 * FastMath.PI);
+        return state.getDate().shiftedBy(fraction * period);
+    }
+
+    // =========================
+    //  ADAPTED REACH ORBIT TIME
+    // =========================
+    @Override
+    public void processReachOrbitTime() throws IOException {
+        double startTime = System.currentTimeMillis();
+        manager.addProvider(new DirectoryCrawler(orekitData));
+        validateOrbitParameters();
+
+        Frame eme2000 = FramesFactory.getEME2000();
+        MqttService mqttService = new MqttService();
+
+        // Build times
+        AbsoluteDate initialDate = Utils.parseDateFromTimestamp(DATE);
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
+        AbsoluteDate endHorizonDate = new AbsoluteDate(endDateString, TimeScalesFactory.getUTC());
+
+        // Construct orbit at apside date
+        KeplerianOrbit orbitAtApside = new KeplerianOrbit(
+                SMA, ECC, INC, PA, RAAN, ANO, PositionAngle.MEAN,
+                eme2000, apsideDate, MU
+        );
+
+        double initialMass = DRYMASS + ERGOL;
+        this.m0 = initialMass;
+        validateManeuverParameters(initialDate, apsideDate, initialMass);
+
+        // Propagate to initial date
+        KeplerianPropagator prop = new KeplerianPropagator(orbitAtApside);
+        SpacecraftState stateAtInitial = prop.propagate(initialDate);
+        KeplerianOrbit initialOrbit = new KeplerianOrbit(stateAtInitial.getOrbit());
+        SpacecraftState initialState = new SpacecraftState(initialOrbit, initialMass);
+
+        // For reference or partial re-injection
+        double originalPA = initialOrbit.getPerigeeArgument();
+        double originalRAAN = initialOrbit.getRightAscensionOfAscendingNode();
+
+        // -------------- Main Logic --------------
+        double incEps = 1e-3;   // threshold for near-0 inc (radians)
+        double eccThreshold = 0.05;   // "high e" threshold
+        double currentInc = initialOrbit.getI();
+
+        System.out.println("Current inc= " + FastMath.toDegrees(currentInc)
+                + "°, ECC= " + ECC);
+
+        // Case A: near eq + high e => wait for apogee
+        if (currentInc <= incEps && ECC >= eccThreshold) {
+            System.out.println("Case A: near-eq + high e => wait for apogee.");
+
+            // 1) find next apogee
+            AbsoluteDate apogeeDate = findNextApogee(initialState);
+            double smallShift = 1.0;
+            AbsoluteDate burnDate = apogeeDate.shiftedBy(smallShift);
+
+            // 2) get velocity at apogee
+            SpacecraftState stateApogee = propagateToDate(initialOrbit, apogeeDate);
+            Vector3D velocityApg = stateApogee.getPVCoordinates().getVelocity();
+            double speedApg = velocityApg.getNorm();
+
+            // Build local radial/east/north
+            Vector3D positionApg = stateApogee.getPVCoordinates().getPosition();
+            Vector3D radialUnit = positionApg.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+            double signNorth = FastMath.signum(velocityApg.getZ());
+
+            double vHorizFinal = speedApg * FastMath.cos(INC_2);
+            double vVertFinal = speedApg * FastMath.sin(INC_2) * signNorth;
+
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocityApg);
+
+            // build impulse
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // propagate
+            KeplerianPropagator mp = new KeplerianPropagator(initialOrbit);
+            mp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = mp.propagate(burnDate);
+
+            double dvApogee = deltaVVector.getNorm();
+            double massAfterBurn = calculateFinalMass(initialMass, dvApogee, ISP, g0);
+
+            KeplerianOrbit orbitAfter = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitAfter.getA(),
+                    orbitAfter.getE(),
+                    orbitAfter.getI(),
+                    orbitAfter.getPerigeeArgument(),
+                    orbitAfter.getRightAscensionOfAscendingNode(),
+                    orbitAfter.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfterBurn);
+
+            double fuelUsed = initialMass - massAfterBurn;
+            System.out.println("Apogee burn => dv= " + dvApogee
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+
+            Utils.logApsideDate(apsideFile, stateAfterBurn.getDate());
+
+            return;
+        }
+
+        // Case B: near eq + low e => immediate single-burn
+        else if (currentInc <= 0.1) {
+            System.out.println("Case B: near-eq + low e => immediate single-burn.");
+
+            // If the difference is negligible, do nothing
+            double deltaInc = INC_2 - currentInc;
+            if (Math.abs(deltaInc) < 1e-4) {
+                System.out.println("No significant inc change => no burn.");
+                // Just log results & return
+                Utils.logResults(resultFileName, initialState, initialOrbit, initialMass, DRYMASS);
+                return;
+            }
+
+            // Build local frame for immediate burn
+            Vector3D velocity = initialState.getPVCoordinates().getVelocity();
+            double speed = velocity.getNorm();
+
+            Vector3D position = initialState.getPVCoordinates().getPosition();
+            Vector3D radialUnit = position.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+
+            double signNorth = FastMath.signum(velocity.getZ());
+            double vHorizFinal = speed * FastMath.cos(INC_2);
+            double vVertFinal = speed * FastMath.sin(INC_2) * signNorth;
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(velocity);
+
+            AbsoluteDate burnDate = initialDate.shiftedBy(0.001);
+            DateDetector burnTrigger = new DateDetector(burnDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            KeplerianPropagator manProp = new KeplerianPropagator(initialOrbit);
+            manProp.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = manProp.propagate(burnDate);
+
+            double dvImmediate = deltaVVector.getNorm();
+            double massAfter = calculateFinalMass(initialMass, dvImmediate, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitPost.getA(),
+                    orbitPost.getE(),
+                    orbitPost.getI(),
+                    orbitPost.getPerigeeArgument(),
+                    orbitPost.getRightAscensionOfAscendingNode(),
+                    orbitPost.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfter);
+
+            double fuelUsed = initialMass - massAfter;
+            System.out.println("Immediate burn => dv= " + dvImmediate
+                    + " m/s, fuel= " + fuelUsed + " kg, final inc= "
+                    + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+            Utils.logApsideDate(apsideFile, stateAfterBurn.getDate());
+
+            return;
+        }
+
+        // Case C: standard approach => pick node with lower velocity
+        else {
+            System.out.println("Case C: inc >= threshold => do node-based approach.");
+
+            // 1) ascend node
+            KeplerianPropagator ascendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate ascNodeDate = findNodeDate(initialState, true);
+            SpacecraftState ascNodeState = ascendProp.propagate(ascNodeDate);
+            ascNodeState = new SpacecraftState(ascNodeState.getOrbit(), initialMass);
+            double speedAsc = ascNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // 2) descend node
+            KeplerianPropagator descendProp = new KeplerianPropagator(initialOrbit);
+            AbsoluteDate descNodeDate = findNodeDate(initialState, false);
+            SpacecraftState descNodeState = descendProp.propagate(descNodeDate);
+            descNodeState = new SpacecraftState(descNodeState.getOrbit(), initialMass);
+            double speedDesc = descNodeState.getPVCoordinates().getVelocity().getNorm();
+
+            // choose slower node
+            final boolean useAscending = (speedAsc <= speedDesc);
+            AbsoluteDate chosenNodeDate = useAscending ? ascNodeDate : descNodeDate;
+            SpacecraftState chosenNodeState = useAscending ? ascNodeState : descNodeState;
+            double speedNode = useAscending ? speedAsc : speedDesc;
+
+            System.out.println("Ascending node speed= " + speedAsc
+                    + " m/s, descending= " + speedDesc + " m/s => picking "
+                    + (useAscending ? "ascending" : "descending") + " node, speed= " + speedNode);
+
+            // 3) build out-of-plane burn
+            Vector3D nodePos = chosenNodeState.getPVCoordinates().getPosition();
+            Vector3D nodeVel = chosenNodeState.getPVCoordinates().getVelocity();
+            double signNorth = FastMath.signum(nodeVel.getZ());
+
+            Vector3D radialUnit = nodePos.normalize();
+            Vector3D northUnit = new Vector3D(0, 0, 1);
+            Vector3D eastUnit = northUnit.crossProduct(radialUnit).normalize();
+
+            double vHorizFinal = speedNode * FastMath.cos(INC_2);
+            double vVertFinal = speedNode * FastMath.sin(INC_2) * signNorth;
+            Vector3D vDesired = eastUnit.scalarMultiply(vHorizFinal)
+                    .add(northUnit.scalarMultiply(vVertFinal));
+            Vector3D deltaVVector = vDesired.subtract(nodeVel);
+
+            double burnShift = 0.001;
+            AbsoluteDate burnTriggerDate = chosenNodeDate.shiftedBy(burnShift);
+            DateDetector burnTrigger = new DateDetector(burnTriggerDate);
+            ImpulseManeuver singleBurn = new ImpulseManeuver(burnTrigger, deltaVVector, ISP);
+
+            // 4) propagate
+            KeplerianPropagator manPropNode = new KeplerianPropagator(initialOrbit);
+            manPropNode.addEventDetector(singleBurn);
+            SpacecraftState stateAfterBurn = manPropNode.propagate(burnTriggerDate);
+
+            double dvNode = deltaVVector.getNorm();
+            double massAfterNode = calculateFinalMass(initialMass, dvNode, ISP, g0);
+
+            KeplerianOrbit orbitPost = new KeplerianOrbit(stateAfterBurn.getOrbit());
+            KeplerianOrbit finalOrbit = new KeplerianOrbit(
+                    orbitPost.getA(),
+                    orbitPost.getE(),
+                    orbitPost.getI(),
+                    orbitPost.getPerigeeArgument(),
+                    orbitPost.getRightAscensionOfAscendingNode(),
+                    orbitPost.getMeanAnomaly(),
+                    PositionAngle.MEAN,
+                    eme2000,
+                    stateAfterBurn.getDate(),
+                    MU
+            );
+            this.finalState = new SpacecraftState(finalOrbit, massAfterNode);
+
+            double fuelUsed = initialMass - massAfterNode;
+            System.out.println("Node-based => dv= " + dvNode
+                    + " m/s, used= " + fuelUsed
+                    + " kg, final inc= " + FastMath.toDegrees(finalOrbit.getI()) + "°");
+
+            Utils.logApsideDate(apsideFile, stateAfterBurn.getDate());
+
+        }
+
+        double elapsedSec = (System.currentTimeMillis() - startTime) * 1e-3;
+        System.out.println("Inclination maneuver completed in " + elapsedSec + " s");
+    }
+}

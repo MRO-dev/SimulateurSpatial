@@ -1,0 +1,7 @@
+DryMass, ErgolMass, DV, ManeuverType, ISP
+895
+3395.610028
+0
+Unknown
+0
+

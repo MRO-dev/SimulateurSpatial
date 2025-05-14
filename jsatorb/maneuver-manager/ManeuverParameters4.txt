@@ -1,5 +1,5 @@
 ManeuverType, SMA_1,SMA_2
-Hohmann
-32486.97
-12698
+Inclinaison
+19999.99
+88
 

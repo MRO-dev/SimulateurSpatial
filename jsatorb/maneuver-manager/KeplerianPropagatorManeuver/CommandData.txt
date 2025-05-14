@@ -1,16 +1,16 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, Maneuver_Type, SMA_2, ecc_2
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, DELTA_THETA
 
-6700.000421285339
+14999.98
 0.0000001
-005.0000
-003.0000
-003.0000
-003.0000
-1000
+065.0000
+000.0000
+011.7090
+125.291
+895
 0
 0
 0
-4000
-Hohmann
-25000
+4217.292764
+Phasage
+52
 

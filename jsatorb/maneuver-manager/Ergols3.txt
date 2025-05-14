@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-650
-3246
+895
+1462.455305
 0
 Unknown
 0

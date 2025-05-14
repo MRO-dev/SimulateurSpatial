@@ -1,4 +1,4 @@
-ManeuverType, SMA_2
-Hohmann
-25000
+ManeuverType, INC_2
+Phasage
+52
 

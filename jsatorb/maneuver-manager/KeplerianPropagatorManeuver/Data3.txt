@@ -1,0 +1,16 @@
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, INC_2
+2025-04-30T19:36:37.273Z
+14999.990000000105
+1e-7
+025.0000
+360
+348.291
+191.709
+895
+0
+0
+3000
+4217.293386
+Inclinaison
+85
+

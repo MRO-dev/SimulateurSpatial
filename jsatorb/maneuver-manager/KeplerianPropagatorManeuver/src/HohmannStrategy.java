@@ -123,34 +123,6 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
         }
     }
 
-    /**
-     * Writes a timestamp to the specified file in the required format
-     */
-    private void writeManeuverTimestamp(String fileName, AbsoluteDate maneuverDate) throws IOException {
-        // Calculate timestamp
-        AbsoluteDate epoch = new AbsoluteDate(1970, 1, 1, 0, 0, 0.000, TimeScalesFactory.getUTC());
-        double durationInSeconds = maneuverDate.durationFrom(epoch);
-        long timestampMillis = Math.round(durationInSeconds * 1000);
-
-        // Write to file
-        try (FileWriter writer = new FileWriter(fileName, true);
-             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
-            bufferedWriter.newLine();
-            bufferedWriter.write("Date post - maneuver");
-            bufferedWriter.newLine();
-
-            // For lastManeuverDateFile, write the AbsoluteDate string
-            if (fileName.equals(lastManeuverDateFile)) {
-                bufferedWriter.write(String.valueOf(maneuverDate));
-            } else {
-                // For other files, write the timestamp in milliseconds
-                bufferedWriter.write(String.valueOf(timestampMillis));
-            }
-
-            bufferedWriter.newLine();
-        }
-    }
-
     @Override
     public void loadMassData(Boolean isMassCalculation) throws IOException {
         super.loadMassData(isMassCalculation);
@@ -532,11 +504,17 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
         printAttributes();
         double start = System.currentTimeMillis();
         // 1) Parse the initial date
+        AbsoluteDate apsideDate = new AbsoluteDate(APSIDE_DATE, TimeScalesFactory.getUTC());
         AbsoluteDate initialDate = Utils.parseDateFromTimestamp(DATE);
         System.out.println("Initial date: " + initialDate);
         try {
             // 2) (Optional) Validate. E.g., if you still want to ensure SMA>0, etc.
             validateOrbitParameters();
+            if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
+                throw new IllegalArgumentException(
+                        "Initial date must be equal to or later than the apside date within the allowed tolerance.");
+            }
+
             // 3) Just compute the time to apogee for Hohmann
             double timeToApogee = calculateTimeToApogee(SMA, SMA_2);
             // 4) The 'second maneuver date' is initialDate + timeToApogee
