@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-895
-8500
+687
+6708.929589
 0
 Unknown
 0

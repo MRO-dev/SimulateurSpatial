@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-895
-1462.455305
+2478
+8500
 0
 Unknown
 0

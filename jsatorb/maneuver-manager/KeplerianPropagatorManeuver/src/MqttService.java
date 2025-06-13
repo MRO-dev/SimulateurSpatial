@@ -33,12 +33,15 @@ public class MqttService {
 
             // Publier le message
             client.publish(publishTopic, message);
+            Thread.sleep(100);
 
             System.out.println("Fichier '" + filePath + "' envoyé via MQTT !");
             client.disconnect();
 
         } catch (MqttException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -95,10 +98,10 @@ public class MqttService {
             message.setQos(2);  // "Exactly once" QoS
             client.publish(publishTopic, message);
             System.out.println("File info published. Now waiting for the trigger message on '" + triggerTopic + "'...");
-
+//            Thread.sleep(100);
             // Block until we receive the trigger
             latch.await();
-
+//            Thread.sleep(100);
             System.out.println("Trigger message received! Resuming execution...");
 
             // Disconnect if you want to stop using the client

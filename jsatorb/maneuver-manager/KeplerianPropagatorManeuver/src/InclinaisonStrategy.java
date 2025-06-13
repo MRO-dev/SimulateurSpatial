@@ -112,7 +112,7 @@ public class InclinaisonStrategy extends AbstractManeuverStrategy {
         if (SMA <= 0) {
             throw new IllegalArgumentException("Semi-major axis must be positive");
         }
-        if (DRYMASS <= 0 || ERGOL < 0) {
+        if (DRYMASS <= 0 || ERGOL <= 0) {
             throw new IllegalArgumentException("Invalid mass parameters");
         }
     }

@@ -382,7 +382,7 @@ public abstract class AbstractManeuverStrategy implements ManeuverStrategy {
     }
 
     @Override
-    public abstract void computeAndExecute() throws IOException, java.text.ParseException;
+    public abstract void computeAndExecute() throws IOException, java.text.ParseException, InterruptedException;
 
     @Override
     public abstract void calculateErgolConsumption() throws IOException;

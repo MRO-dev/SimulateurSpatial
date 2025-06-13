@@ -45,7 +45,12 @@ public class Utils {
         bufferedWriter.write(String.format("%.12f", finalState.getA() / 1000.0));
         System.out.println("SMA (Semi-major axis): " + finalState.getA() / 1000.0 + " km");
         bufferedWriter.newLine();
-        bufferedWriter.write(String.format("%.7f", finalState.getE()));
+        final double MIN_ECC = 0.0000001;
+        double outE =finalState.getE();
+        if (FastMath.abs(outE) < MIN_ECC) {
+            outE=0.0000001;
+        }
+        bufferedWriter.write(String.format("%.7f", outE));
         // convert to degrees
         double degI      = FastMath.toDegrees(finalState.getI());
 // define your minimum swing (in degrees)

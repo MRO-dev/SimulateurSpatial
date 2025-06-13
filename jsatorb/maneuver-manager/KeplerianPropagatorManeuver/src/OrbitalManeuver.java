@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class OrbitalManeuver {
 
-    public static void main(String[] args) throws IOException, ParseException {
+    public static void main(String[] args) throws IOException, ParseException, InterruptedException {
 
         // ------------------------------------------------------------------
         // 1) Read modeParameter, commandParameter from system properties

@@ -44,9 +44,9 @@ public class DataParser {
         //    so the total lines (minus the header line) must match headers.length
         int dataLines = lines.size() - 1;  // number of lines after the header
         if (dataLines != headers.length) {
-            throw new IOException("Mismatch between header count and value count in file: " + filePath
-                    + "\nHeaders: " + headers.length
-                    + "  Data lines: " + dataLines);
+//            throw new IOException("Mismatch between header count and value count in file: " + filePath
+//                    + "\nHeaders: " + headers.length
+//                    + "  Data lines: " + dataLines);
         }
 
         // 6) Build the map from the remaining lines

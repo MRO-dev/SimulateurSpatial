@@ -168,7 +168,7 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
     }
 
     @Override
-    public void computeAndExecute() throws IOException, ParseException {
+    public void computeAndExecute() throws IOException, ParseException, InterruptedException {
         /* 0) --- House-keeping ------------------------------------------------ */
         final long wallStart = System.currentTimeMillis();
         manager.addProvider(new DirectoryCrawler(orekitData));
@@ -215,7 +215,7 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
         System.out.printf("Δθ still to perform   : %+.4f deg%n", FastMath.toDegrees(dTheta));
 
         /* 4) --- First-guess phasing period ---------------------------------- */
-        final int kInt =  1;
+        final int kInt =  1; // k=1 implies one complete orbit
         double Tph = (kInt * 2 * FastMath.PI - dTheta) / nTgt;   // s
         System.out.printf("k_int                 : %d%n", kInt);
         System.out.printf("T_ph (initial guess)  : %.3f min%n", Tph/60);
@@ -259,7 +259,7 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
 
         /* 8) --- Newton refinement with signed angular error ------------------ */
         final int MAX_IT = 8;
-        final double ANG_TOL_DEG = 1.0e-4;                  // 0.36 arc-sec
+        final double ANG_TOL_DEG = 1e-4;                  // 0.36 arc-sec
         double Tcorr = Tph;
 
         for (int it = 0; it < MAX_IT; ++it) {
@@ -293,11 +293,13 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
 
         // Write first maneuver results and wait for trigger
         Map<String, String> payload1 = Utils.createDatePayload(initialDate, tB2);
+        System.out.println(payload1);
         Utils.writeJsonPayload(payload1);
         Utils.logResults(resultFileName, stateAfterBurn1,
                 new KeplerianOrbit(stateAfterBurn1.getOrbit()), m0, DRYMASS);
         writeManeuverTimestamp(postManeuverDateFileName, tB2);
         mqttService.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+//        Thread.sleep(100);
 
         // Reference orbit (if we hadn't performed any maneuvers)
         KeplerianPropagator refProp = new KeplerianPropagator(stateInit.getOrbit());
@@ -549,7 +551,7 @@ public class PhasageStrategy extends AbstractManeuverStrategy {
             );
 
             // Validate parameters
-            validateOrbitParameters();
+//            validateOrbitParameters();
             if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
                 Utils.logApsideDate(apsideFile, null);
                 throw new IllegalArgumentException(

@@ -1,16 +1,17 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, DELTA_THETA
-2025-05-13T13:03:51.999Z
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thrust, ISP, Ergol mass, Simu duration stop, ManeuverType, DV
+2025-06-13T16:21:54.000Z
 14999.993677051854
-1e-7
+0.0000001
 045.0000
 000.0000
 000.0000
-200
-895
+150
+2478
 0
 0
 300
 8500
-Phasage
-50
+3602
+Impulse
+638
 

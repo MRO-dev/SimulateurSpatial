@@ -1,8 +1,8 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, DELTA_THETA
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, INC_2
 
 14999.98
-0.0000001
-065.0000
+0.000001
+0.0000
 000.0000
 011.7090
 125.291
@@ -11,6 +11,6 @@ DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol 
 0
 0
 4217.292764
-Phasage
-52
+Inclinaison
+180
 

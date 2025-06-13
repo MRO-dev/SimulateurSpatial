@@ -349,7 +349,7 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
 //    }
 
     @Override
-    public void computeAndExecute() throws IOException, ParseException {
+    public void computeAndExecute() throws IOException, ParseException, InterruptedException {
         double start = System.currentTimeMillis();
         manager.addProvider(new DirectoryCrawler(orekitData));
 
@@ -416,6 +416,7 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
 
         // Wait for MQTT trigger before second maneuver
         mqttService.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+//        Thread.sleep(100);
 
         // ---------- Second Maneuver (DV2) ----------
         // Propagate to apogee/perigee for second maneuver
@@ -510,7 +511,9 @@ public class HohmannStrategy extends AbstractManeuverStrategy {
         System.out.println("Initial date: " + initialDate);
         try {
             // 2) (Optional) Validate. E.g., if you still want to ensure SMA>0, etc.
-            validateOrbitParameters();
+            if (SMA <= 0 || SMA_2 <= 6600) {
+                throw new IllegalArgumentException("Semi-major axis must be positive or superior to 6600 km");
+            }
             if (!isEqualOrAfterWithTolerance(initialDate, apsideDate, TIME_TOLERANCE_SECONDS)) {
                 Utils.logApsideDate(apsideFile, null);
                 throw new IllegalArgumentException(

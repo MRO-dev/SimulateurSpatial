@@ -9,7 +9,7 @@ public interface ManeuverStrategy {
      * Perform the necessary computations and produce the final results,
      * including any file outputs or MQTT steps.
      */
-    void computeAndExecute() throws IOException, ParseException;
+    void computeAndExecute() throws IOException, ParseException, InterruptedException;
     void calculateErgolConsumption() throws IOException;
     void processReachOrbitTime() throws IOException;
 
