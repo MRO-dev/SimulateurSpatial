@@ -46,7 +46,7 @@ services:
     image: anthonyeae/reposetoibien:monnode
     user: "1000:1000"
     environment:
-      - NODE_OPTIONS=--max_old_space_size=16384
+      - NODE_OPTIONS=--max_old_space_size=24576
       - VIRTUAL_HOST=127.0.0.1
       - VIRTUAL_PORT=1880
       - VIRTUAL_NETWORK=nginx-proxy
