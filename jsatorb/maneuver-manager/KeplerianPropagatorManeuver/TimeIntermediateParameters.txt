@@ -1,4 +1,5 @@
-ManeuverType, INC_2
-Phasage
-75
+ManeuverType, SMA_2, SMA_INT
+Bi-Elliptic
+8000
+6000
 

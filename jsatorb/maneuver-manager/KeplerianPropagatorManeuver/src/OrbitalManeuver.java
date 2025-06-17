@@ -16,7 +16,7 @@ public class OrbitalManeuver {
         // 1) Read modeParameter, commandParameter from system properties
         // ------------------------------------------------------------------
         String modeParameter    = System.getProperty("modeParameter", "blue1");
-        String commandParameter = System.getProperty("commandParameter", "compute");
+        String commandParameter = System.getProperty("commandParameter", "determineOrbitInstant");
         String dataFileToParse = getString(modeParameter);
         String commandDataFileToParse = getCommandDataString(modeParameter);
 
@@ -110,6 +110,27 @@ public class OrbitalManeuver {
                     ergol,
                     isp,
                     delta_theta,
+                    dateStr,
+                    modeParameter,
+                    commandParameter
+            );
+        }
+        else if ("Bi-elliptique".equalsIgnoreCase(maneuverType)) {
+            double sma2      = Double.parseDouble(commandData.get("SMA_2")) * 1000.0;
+            double sma_int      = Double.parseDouble(commandData.get("SMA_INT")) * 1000.0;
+            System.out.println("Inc "+incDeg);// for Incli target
+            strategy = new BiEllipticStrategy(
+                    sma,
+                    ecc,
+                    incDeg,
+                    raanDeg,
+                    aopDeg,
+                    meanAnom,
+                    dryMass,
+                    ergol,
+                    isp,
+                    sma2,
+                    sma_int,
                     dateStr,
                     modeParameter,
                     commandParameter

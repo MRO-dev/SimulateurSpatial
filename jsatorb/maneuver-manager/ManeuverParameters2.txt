@@ -1,5 +1,5 @@
 ManeuverType, SMA_1,SMA_2
-Phasage
-24999.96
-245
+Bi-elliptique
+14999.99
+36000
 

@@ -1,4 +1,5 @@
-ManeuverType, SMA_2
-Hohmann
-25000
+ManeuverType, SMA_2, SMA_INT
+Bi-elliptique
+16000
+8000
 

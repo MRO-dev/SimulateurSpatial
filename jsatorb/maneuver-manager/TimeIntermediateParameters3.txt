@@ -1,4 +1,5 @@
-ManeuverType, INC_2
-Inclinaison
-167
+ManeuverType, SMA_2, SMA_INT
+Bi-elliptique
+36000
+25000
 

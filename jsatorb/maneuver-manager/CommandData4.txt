@@ -1,16 +1,17 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2, SMA_INT
 
-49999.18
+19999.99
 0.0000001
-074.0000
+045.0000
 150
 015.0000
-245
-15489
+150
+2478
 0
 0
 0
-59450
-Hohmann
+9500
+Bi-elliptique
+36000
 25000
 

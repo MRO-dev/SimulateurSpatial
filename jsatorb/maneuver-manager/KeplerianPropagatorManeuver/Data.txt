@@ -1,4 +1,4 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, INC_2
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2, SMA_INT
 2025-05-12T14:55:31.778Z
 14999.990000000105
 1e-7
@@ -11,6 +11,7 @@ DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol 
 0
 3000
 4217.292764
-Inclinaison
-0
+Bi-Elliptic
+8000
+6000
 
