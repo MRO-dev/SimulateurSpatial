@@ -35,10 +35,6 @@ Le projet initial est issu du travail de M. Anthony LEBATTEUX :\
 
 1. **Tableau de bord**
 
-![Une image contenant texte, capture d’écran, Logiciel multimédia, logiciel
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.001.png)
-
 **I.1. 	Présentation générale du tableau de bord** 
 
 Le tableau de bord comprend une page principale dotée de plusieurs boutons, dont les fonctionnalités sont détaillées ci-dessous.
@@ -77,33 +73,6 @@ Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a38
 
 
 **Description des boutons du DashBoard**
-
-![Une image contenant texte, capture d’écran, logiciel, Système d’exploitation
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.003.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - **« DELETE MEMS » :**\
   Supprime les fichiers MEMs contenant les données des trajectoires des satellites utilisateurs (BLUE/RED).
@@ -151,27 +120,17 @@ Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a38
 
 **II.	Réalisation d’une manœuvre sur un satellite**
 
-![Une image contenant texte, capture d’écran, logiciel, Logiciel multimédia
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.004.jpeg)
 
 **II.1.	Initialisation des paramètres**
 
 Initialisation des paramètres selon le formulaire suivant :
 
-![Une image contenant texte, logiciel, Logiciel multimédia, Icône d’ordinateur
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.005.jpeg)
 
 - Vérifiez et validez les paramètres suivants : inclinaison, RAAN, excentricité, AoP, anomalie moyenne, SMA, masse sèche (Dry Mass) et masse initiale d’ergol (Initial Ergol Mass).
 - Sélectionnez ensuite une date initiale, puis cliquez sur **« B1 TLE UPDATE »** et validez afin d'initialiser le satellite.
 
 **II.2.	Réalisation d’une manœuvre manuelle**
 
-
-![Une image contenant texte, capture d’écran, logiciel, Logiciel multimédia
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.006.png)
 
 
 
@@ -203,10 +162,6 @@ Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a38
 
 
 **II.3. Réalisation d’une manœuvre prédéfinie**
-
-![Une image contenant texte, Appareils électroniques, capture d’écran, logiciel
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.007.png)
 
 
 
