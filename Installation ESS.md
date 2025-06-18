@@ -43,28 +43,12 @@ docker pull anthonyeae/reposetoibien:monmongo
 
 - Lancez les conteneurs Docker suivants :
 
-  - Docker **jsatorb** (icône EAE) 
+- Docker **jsatorb** (icône EAE) 
 
-    ![Une image contenant texte, Police, logo, graphisme
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.e359b00d-41a8-4161-a519-9a4f8e625838.001.png)
-
-
-  - Docker **Node-Red** (icône par défaut de Node-Red). 
-
-![Une image contenant symbole, Panneau de stop, Panneau de signalisation, rouge
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.e359b00d-41a8-4161-a519-9a4f8e625838.002.png)
-
+- Docker **Node-Red** (icône par défaut de Node-Red). 
 
 
 - L’icône **VTS** sert à lancer l’interface de visualisation des satellites avec notamment une modélisation 3D ainsi qu’un planisphère. 
-
-![](Aspose.Words.e359b00d-41a8-4161-a519-9a4f8e625838.003.png)
-
-
-
-![](Aspose.Words.e359b00d-41a8-4161-a519-9a4f8e625838.004.png)
 
 Une fois ces services démarrés, une page web contenant le tableau de bord du simulateur spatial s’ouvrira automatiquement.
 
