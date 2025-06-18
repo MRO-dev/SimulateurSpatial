@@ -58,11 +58,6 @@ Les autres onglets ne sont pas utilisés dans le cadre de ce projet.
 Cette fonctionnalité permet de fixer une période de simulation en indiquant une date de début et une date de fin. Toutes les manœuvres orbitales effectuées doivent obligatoirement s’inscrire dans cet intervalle temporel.
 
 
-![Une image contenant texte, capture d’écran, logiciel, Logiciel multimédia
-
-Le contenu généré par l’IA peut être incorrect.](Aspose.Words.3bae6ac2-a381-4f90-870e-74b47082fe6b.002.png)
-
-
 
 
 
