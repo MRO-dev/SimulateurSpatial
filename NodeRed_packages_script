@@ -1,0 +1,28 @@
+node-red
+CTR+C
+cd ~/.node-red
+npm install --unsafe-perm \
+  node-red-admin \
+  node-red-dashboard \
+  node-red-contrib-web-worldmap \
+  node-red-contrib-ui-state-trail \
+  node-red-node-ui-table \
+  node-red-node-ui-list \
+  node-red-contrib-jwt \
+  node-red-contrib-telegrambot \
+  @semtech-wsp-apps/node-red-contrib-loracloud-utils \
+  node-red-contrib-influxdb \
+  node-red-contrib-ttn \
+  node-red-node-mongodb \
+  node-red-contrib-sms-free-mobile \
+  node-red-node-geofence \
+  node-red-contrib-satellites \
+  node-red-contrib-persist \
+  node-red-contrib-boolean-logic \
+  node-red-contrib-html-entities \
+  node-red-contrib-join-wait \
+  node-red-contrib-tcp-client \
+  node-red-contrib-ui-artless-gauge \
+  node-red-contrib-ui-media \
+  node-red-node-ui-iframe \
+  node-red-node-tail
