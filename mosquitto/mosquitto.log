@@ -37949,3 +37949,123 @@
 1751369442: mosquitto version 2.0.20 running
 1751369448: New connection from 172.17.0.5:36672 on port 1883.
 1751369448: New client connected from 172.17.0.5:36672 as nodered_264792e4c757d4c5 (p2, c1, k60).
+1751370951: mosquitto version 2.0.20 starting
+1751370951: Config loaded from /mosquitto/config/mosquitto.conf.
+1751370951: Opening ipv4 listen socket on port 1883.
+1751370951: mosquitto version 2.0.20 running
+1751370972: New connection from 172.17.0.5:38436 on port 1883.
+1751370972: New client connected from 172.17.0.5:38436 as nodered_e9edce8ada4dfe21 (p2, c1, k60).
+1751371132: New connection from 172.17.0.5:53004 on port 1883.
+1751371132: New client connected from 172.17.0.5:53004 as JavaMQTTSender_1751371132201 (p2, c1, k60).
+1751371132: Client JavaMQTTSender_1751371132201 disconnected.
+1751371132: New connection from 172.17.0.5:53006 on port 1883.
+1751371133: New client connected from 172.17.0.5:53006 as JavaMQTTSender (p2, c1, k60).
+1751371133: Client JavaMQTTSender disconnected.
+1751371345: New connection from 172.17.0.5:40602 on port 1883.
+1751371346: New client connected from 172.17.0.5:40602 as JavaMQTTSender (p2, c1, k60).
+1751371346: Client JavaMQTTSender disconnected.
+1751371511: New connection from 172.17.0.5:47512 on port 1883.
+1751371511: New client connected from 172.17.0.5:47512 as JavaMQTTSender_1751371511078 (p2, c1, k60).
+1751371511: Client JavaMQTTSender_1751371511078 disconnected.
+1751371511: New connection from 172.17.0.5:47522 on port 1883.
+1751371512: New client connected from 172.17.0.5:47522 as JavaMQTTSender (p2, c1, k60).
+1751371512: Client JavaMQTTSender disconnected.
+1751371696: New connection from 172.17.0.5:33734 on port 1883.
+1751371696: New client connected from 172.17.0.5:33734 as JavaMQTTSender_1751371696593 (p2, c1, k60).
+1751371697: Client JavaMQTTSender_1751371696593 disconnected.
+1751371697: New connection from 172.17.0.5:33740 on port 1883.
+1751371698: New client connected from 172.17.0.5:33740 as JavaMQTTSender_1751371697668 (p2, c1, k60).
+1751371698: Client JavaMQTTSender_1751371697668 disconnected.
+1751371698: New connection from 172.17.0.5:33746 on port 1883.
+1751371698: New client connected from 172.17.0.5:33746 as JavaMQTTSender (p2, c1, k60).
+1751371698: Client JavaMQTTSender disconnected.
+1751372339: New connection from 172.17.0.5:40624 on port 1883.
+1751372339: New client connected from 172.17.0.5:40624 as JavaMQTTSender_1751372339402 (p2, c1, k60).
+1751372340: Client JavaMQTTSender_1751372339402 disconnected.
+1751372340: New connection from 172.17.0.5:40626 on port 1883.
+1751372340: New client connected from 172.17.0.5:40626 as JavaMQTTSender_1751372340237 (p2, c1, k60).
+1751372340: Client JavaMQTTSender_1751372340237 disconnected.
+1751372340: New connection from 172.17.0.5:40630 on port 1883.
+1751372341: New client connected from 172.17.0.5:40630 as JavaMQTTSender (p2, c1, k60).
+1751372341: Client JavaMQTTSender disconnected.
+1751372752: Saving in-memory database to /mosquitto/config/mosquitto//mosquitto.db.
+1751372752: Error saving in-memory database, unable to open /mosquitto/config/mosquitto//mosquitto.db.new for writing.
+1751372752: Error: No such file or directory.
+1751373128: New connection from 172.17.0.5:60786 on port 1883.
+1751373128: New client connected from 172.17.0.5:60786 as JavaMQTTSender_1751373128598 (p2, c1, k60).
+1751373129: Client JavaMQTTSender_1751373128598 disconnected.
+1751373129: New connection from 172.17.0.5:51168 on port 1883.
+1751373129: New client connected from 172.17.0.5:51168 as JavaMQTTSender_1751373129368 (p2, c1, k60).
+1751373129: Client JavaMQTTSender_1751373129368 disconnected.
+1751373129: New connection from 172.17.0.5:51182 on port 1883.
+1751373130: New client connected from 172.17.0.5:51182 as JavaMQTTSender (p2, c1, k60).
+1751373130: Client JavaMQTTSender disconnected.
+1751373516: New connection from 172.17.0.5:56724 on port 1883.
+1751373516: New client connected from 172.17.0.5:56724 as JavaMQTTSender_1751373516032 (p2, c1, k60).
+1751373517: Client JavaMQTTSender_1751373516032 disconnected.
+1751373517: New connection from 172.17.0.5:56732 on port 1883.
+1751373517: New client connected from 172.17.0.5:56732 as JavaMQTTSender_1751373517160 (p2, c1, k60).
+1751373517: Client JavaMQTTSender_1751373517160 disconnected.
+1751373517: New connection from 172.17.0.5:56748 on port 1883.
+1751373518: New client connected from 172.17.0.5:56748 as JavaMQTTSender (p2, c1, k60).
+1751373518: Client JavaMQTTSender disconnected.
+1751373770: New connection from 172.17.0.5:42616 on port 1883.
+1751373771: New client connected from 172.17.0.5:42616 as JavaMQTTSender_1751373770935 (p2, c1, k60).
+1751373771: Client JavaMQTTSender_1751373770935 disconnected.
+1751373771: New connection from 172.17.0.5:42626 on port 1883.
+1751373772: New client connected from 172.17.0.5:42626 as JavaMQTTSender_1751373771807 (p2, c1, k60).
+1751373772: Client JavaMQTTSender_1751373771807 disconnected.
+1751373772: New connection from 172.17.0.5:42632 on port 1883.
+1751373772: New client connected from 172.17.0.5:42632 as JavaMQTTSender (p2, c1, k60).
+1751373772: Client JavaMQTTSender disconnected.
+1751374161: New connection from 172.17.0.5:50064 on port 1883.
+1751374161: New client connected from 172.17.0.5:50064 as JavaMQTTSender_1751374161517 (p2, c1, k60).
+1751374162: Client JavaMQTTSender_1751374161517 disconnected.
+1751374162: New connection from 172.17.0.5:50076 on port 1883.
+1751374162: New client connected from 172.17.0.5:50076 as JavaMQTTSender_1751374162476 (p2, c1, k60).
+1751374163: Client JavaMQTTSender_1751374162476 disconnected.
+1751374163: New connection from 172.17.0.5:50088 on port 1883.
+1751374163: New client connected from 172.17.0.5:50088 as JavaMQTTSender (p2, c1, k60).
+1751374163: Client JavaMQTTSender disconnected.
+1751374435: mosquitto version 2.0.20 starting
+1751374435: Config loaded from /mosquitto/config/mosquitto.conf.
+1751374435: Opening ipv4 listen socket on port 1883.
+1751374435: mosquitto version 2.0.20 running
+1751374441: New connection from 172.17.0.5:55914 on port 1883.
+1751374441: New client connected from 172.17.0.5:55914 as nodered_9e3126b1b49c11e7 (p2, c1, k60).
+1751374529: New connection from 172.17.0.5:32914 on port 1883.
+1751374529: New client connected from 172.17.0.5:32914 as JavaMQTTSender_1751374529304 (p2, c1, k60).
+1751374530: Client JavaMQTTSender_1751374529304 disconnected.
+1751374530: New connection from 172.17.0.5:32928 on port 1883.
+1751374530: New client connected from 172.17.0.5:32928 as JavaMQTTSender_1751374530236 (p2, c1, k60).
+1751374531: Client JavaMQTTSender_1751374530236 disconnected.
+1751374531: New connection from 172.17.0.5:32938 on port 1883.
+1751374531: New client connected from 172.17.0.5:32938 as JavaMQTTSender (p2, c1, k60).
+1751374531: Client JavaMQTTSender disconnected.
+1751374715: New connection from 172.17.0.5:44856 on port 1883.
+1751374715: New client connected from 172.17.0.5:44856 as JavaMQTTSender_1751374715551 (p2, c1, k60).
+1751374716: Client JavaMQTTSender_1751374715551 disconnected.
+1751374716: New connection from 172.17.0.5:44860 on port 1883.
+1751374716: New client connected from 172.17.0.5:44860 as JavaMQTTSender_1751374716508 (p2, c1, k60).
+1751374717: Client JavaMQTTSender_1751374716508 disconnected.
+1751374717: New connection from 172.17.0.5:44874 on port 1883.
+1751374717: New client connected from 172.17.0.5:44874 as JavaMQTTSender (p2, c1, k60).
+1751374717: Client JavaMQTTSender disconnected.
+1751375207: New connection from 172.17.0.5:39164 on port 1883.
+1751375208: New client connected from 172.17.0.5:39164 as JavaMQTTSender_1751375207771 (p2, c1, k60).
+1751375208: Client JavaMQTTSender_1751375207771 disconnected.
+1751375208: New connection from 172.17.0.5:39174 on port 1883.
+1751375209: New client connected from 172.17.0.5:39174 as JavaMQTTSender_1751375208855 (p2, c1, k60).
+1751375209: Client JavaMQTTSender_1751375208855 disconnected.
+1751375209: New connection from 172.17.0.5:43168 on port 1883.
+1751375209: New client connected from 172.17.0.5:43168 as JavaMQTTSender (p2, c1, k60).
+1751375209: Client JavaMQTTSender disconnected.
+1751375638: New connection from 172.17.0.5:53632 on port 1883.
+1751375638: New client connected from 172.17.0.5:53632 as JavaMQTTSender_1751375638499 (p2, c1, k60).
+1751375639: Client JavaMQTTSender_1751375638499 disconnected.
+1751375639: New connection from 172.17.0.5:49498 on port 1883.
+1751375639: New client connected from 172.17.0.5:49498 as JavaMQTTSender_1751375639543 (p2, c1, k60).
+1751375640: Client JavaMQTTSender_1751375639543 disconnected.
+1751375640: New connection from 172.17.0.5:49508 on port 1883.
+1751375640: New client connected from 172.17.0.5:49508 as JavaMQTTSender (p2, c1, k60).
+1751375640: Client JavaMQTTSender disconnected.

@@ -261,7 +261,7 @@ public class BiEllipticStrategy extends AbstractManeuverStrategy {
         KeplerianOrbit orbitAfterSecond = new KeplerianOrbit(stateAfterSecond.getOrbit());
         logState("state@secondManeuver", stateAfterSecond);
         // Log after second maneuver
-        Map<String, String> payload2 = Utils.createDatePayload(firstBurnEndDate, endHorizonDate);
+        Map<String, String> payload2 = Utils.createDatePayload(initialDate, endHorizonDate);
         Utils.writeJsonPayload(payload2);
         Utils.logResults(resultFileName, stateAfterSecond, orbitAfterSecond, initialMass, DRYMASS);
         writeManeuverTimestamp(postManeuverDateFileName, secondBurnEndDate);
@@ -293,7 +293,7 @@ public class BiEllipticStrategy extends AbstractManeuverStrategy {
         KeplerianOrbit finalOrbit = new KeplerianOrbit(finalState.getOrbit());
         logState("state@final", finalState);
         // Log after third (final) maneuver
-        Map<String, String> payload3 = Utils.createDatePayload(secondBurnEndDate, endHorizonDate);
+        Map<String, String> payload3 = Utils.createDatePayload(initialDate, endHorizonDate);
         Utils.writeJsonPayload(payload3);
         Utils.logResults(resultFileName, finalState, finalOrbit, initialMass, DRYMASS);
         writeManeuverTimestamp(postManeuverDateFileName, finalState.getDate());
