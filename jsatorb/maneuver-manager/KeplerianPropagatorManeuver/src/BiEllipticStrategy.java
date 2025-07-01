@@ -226,12 +226,21 @@ public class BiEllipticStrategy extends AbstractManeuverStrategy {
         KeplerianOrbit orbitAfterFirst = new KeplerianOrbit(stateAfterFirst.getOrbit());
         logState("state@firstBurnEnd", stateAfterFirst);
         // Log after first maneuver
-        Map<String, String> payload1 = Utils.createDatePayload(initialDate, firstBurnEndDate);
+        Map<String, String> payload1 = Utils.createDatePayload(initialDate, endHorizonDate);
         Utils.writeJsonPayload(payload1);
         Utils.logResults(resultFileName, stateAfterFirst, orbitAfterFirst, initialMass, DRYMASS);
         writeManeuverTimestamp(postManeuverDateFileName, firstBurnEndDate);
+//        try {
+//            Thread.sleep(50);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         mqttService.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
-
+        try {
+            Thread.sleep(90);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         // ---------- Second Maneuver (at apogee r3) ----------
         // Propagate to apogee time for second burn
         propagator = new KeplerianPropagator(stateAfterFirst.getOrbit());
@@ -252,11 +261,21 @@ public class BiEllipticStrategy extends AbstractManeuverStrategy {
         KeplerianOrbit orbitAfterSecond = new KeplerianOrbit(stateAfterSecond.getOrbit());
         logState("state@secondManeuver", stateAfterSecond);
         // Log after second maneuver
-        Map<String, String> payload2 = Utils.createDatePayload(firstBurnEndDate, secondBurnEndDate);
+        Map<String, String> payload2 = Utils.createDatePayload(firstBurnEndDate, endHorizonDate);
         Utils.writeJsonPayload(payload2);
         Utils.logResults(resultFileName, stateAfterSecond, orbitAfterSecond, initialMass, DRYMASS);
         writeManeuverTimestamp(postManeuverDateFileName, secondBurnEndDate);
+//        try {
+//            Thread.sleep(50);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         mqttService.sendFileAndWaitForTrigger(resultFileName, publishTopic, triggerTopic);
+//        try {
+//            Thread.sleep(75);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
         // ---------- Third Maneuver (at perigee r2) ----------
         // Propagate to perigee time for third burn

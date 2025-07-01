@@ -1,8 +1,7 @@
-DryMass, ErgolMass, ISP, ManeuverType, SMA_1, SMA_2
+DryMass, ErgolMass, DV, ManeuverType, ISP
 2478
 9500
 0
-Bi-elliptique
-19999.99
-36000
+Unknown
+0
 

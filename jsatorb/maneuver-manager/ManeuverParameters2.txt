@@ -1,5 +1,5 @@
 ManeuverType, SMA_1,SMA_2
 Bi-elliptique
-14999.99
-36000
+24999.99
+25000
 
