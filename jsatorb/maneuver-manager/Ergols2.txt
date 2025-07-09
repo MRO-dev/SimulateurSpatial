@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-2478
-7500
+6520
+3393.304551
 0
 Unknown
 0

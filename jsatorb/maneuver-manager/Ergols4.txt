@@ -1,6 +1,6 @@
 DryMass, ErgolMass, DV, ManeuverType, ISP
-2478
-9500
+69850
+250
 0
 Unknown
 0

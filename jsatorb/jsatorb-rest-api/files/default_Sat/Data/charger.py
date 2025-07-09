@@ -8,6 +8,7 @@ def backup_files(source_dir):
     # Chemin du répertoire de sauvegarde
     backup_dir = os.path.join(source_dir, "Backup")
     
+    
     # Supprime le dossier Backup s'il existe, puis le recrée
     if os.path.exists(backup_dir):
         shutil.rmtree(backup_dir)
@@ -20,10 +21,13 @@ def backup_files(source_dir):
     for file in files:
         source_path = os.path.join(source_dir, file)
         backup_path = os.path.join(backup_dir, file)
+        
+        
         # Vérifie si c'est un fichier et s'il se termine par .TXT
         if os.path.isfile(source_path) and file.endswith(".TXT"):
             shutil.copy2(source_path, backup_path)
             print("Copied {} to {}".format(source_path, backup_path))
+       
 
     # Copie tout le dossier "Manoeuver" dans "Backup"
     manoeuver_dir = os.path.join(source_dir, "Manoeuver")
@@ -108,6 +112,7 @@ delete_manoeuver_dir(currentWorkingDirectory)
 #    en mettant les .txt réguliers dans le top-level et les fichiers spéciaux dans Manoeuver
 backup_directory = os.path.join(currentWorkingDirectory, "Backup")
 copy_backup_to_source(backup_directory, currentWorkingDirectory)
+
 
 # 4. Ensuite, copie certains fichiers depuis le dossier local "Manoeuver" vers /app/maneuver-manager
 local_manoeuver = os.path.join(currentWorkingDirectory, "Manoeuver")

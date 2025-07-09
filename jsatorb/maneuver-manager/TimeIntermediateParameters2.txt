@@ -1,5 +1,4 @@
-ManeuverType, SMA_2, SMA_INT
-Bi-elliptique
-25000
-12500
+ManeuverType, DELTA_THETA
+Phasage
+150
 

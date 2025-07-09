@@ -1,17 +1,16 @@
-DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, SMA_2, SMA_INT
+DATE, SMA, ECC, INC, RAAN, AoP, MeanAnom, Dry Mass, SurfRef, Thurst, ISP, Ergol mass, ManeuverType, DELTA_THETA
 
-69000.26
+19999.99
 0.0000001
-145
+045.0000
+000.0000
+000.0000
+000.0000
+6520
+0
+0
+0
+7892
+Phasage
 150
-145
-250
-158
-0
-0
-0
-5000
-Bi-elliptique
-25000
-12500
 

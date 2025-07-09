@@ -38,6 +38,7 @@ backup_dir = os.path.join(currentWorkingDirectory, "Backup")
 
 # Directory containing the 'Result...' and '...ManeuverDate...' files
 result_file_dir = "/app/maneuver-manager"
+vts_file_dir = "/app/jsatorb-rest-api/files/default_Sat"
 
 # Now we copy these special files directly into Backup:
 def copy_if_exists(filename):
@@ -78,4 +79,9 @@ files_to_copy = [
 
 for f in files_to_copy:
     copy_if_exists(f)
+    
+vts_file = os.path.join(vts_file_dir, 'default_Sat.vts')
+if os.path.exists(vts_file):
+    shutil.copy2(vts_file, backup_dir)
+    print("Copied '{}' from {} to {}".format('default_Sat.vts', vts_file, backup_dir))
 
