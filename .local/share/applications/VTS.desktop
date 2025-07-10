@@ -2,7 +2,7 @@
 Version=1.0
 Name=VTS
 Comment=Launch Node-RED Docker container in bash mode
-Exec=gnome-terminal -- bash -c "$HOME/.local/share/applications/VTSlaunch.sh"
+Exec=gnome-terminal -- bash -c "$HOME/.local/share/applications/starterVTS.sh"
 Icon=VTS.png
 Terminal=true
 Type=Application
