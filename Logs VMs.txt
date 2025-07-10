@@ -1,0 +1,26 @@
+Logs VMs :
+
+SimulateurSpatial
+login : simulateurspatial
+mdp : simulateur
+mdp_root : simulateur
+
+Blue1 :
+login : blue1
+mdp : blue
+mdp_root : @zerty123
+
+Blue2 :
+login : blue2
+mdp : blue
+mdp_root : @zerty123
+
+Red1 :
+login : red1
+mdp : red
+mdp_root : @zerty123
+
+Red2 :
+login : red2
+mdp : red
+mdp_root : @zerty123

@@ -1,0 +1,47 @@
+#!/bin/sh
+set -e
+
+# 1. Install Java JRE
+# Alpine:
+apk add --no-cache openjdk8-jre
+
+# If on Debian/Ubuntu, comment out the apk line above and uncomment below:
+# apt-get update
+# apt-get install -y openjdk-8-jre-headless
+
+# 2. Install Node-RED globally
+npm install -g --unsafe-perm node-red java-with-jre
+
+# 3. Install the Node-RED Admin tool
+npm install -g node-red-admin
+
+# 4. Install contrib nodes and dashboards
+npm install -g \
+  node-red-dashboard \
+  node-red-contrib-web-worldmap \
+  node-red-contrib-ui-state-trail \
+  node-red-node-ui-table \
+  node-red-node-ui-list \
+  node-red-contrib-jwt \
+  node-red-contrib-telegrambot \
+  @semtech-wsp-apps/node-red-contrib-loracloud-utils \
+  node-red-contrib-influxdb \
+  node-red-contrib-ttn \
+  node-red-node-mongodb \
+  node-red-contrib-sms-free-mobile \
+  node-red-contrib-satellites \
+  node-red-contrib-persist \
+  node-red-contrib-boolean-logic \
+  node-red-contrib-html-entities \
+  node-red-contrib-join-wait \
+  node-red-contrib-tcp-client \
+  node-red-contrib-ui-artless-gauge \
+  node-red-contrib-ui-media \
+  node-red-node-ui-iframe \
+  node-red-node-tail
+
+# 5. (Re)build production-only modules in your project (if you have a package.json)
+# cd /path/to/your/.node-red
+# npm install --unsafe-perm --no-update-notifier --no-fund --only=production
+
+echo "✅ Java, Node-RED and all requested nodes have been installed."
